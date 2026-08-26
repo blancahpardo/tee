@@ -1,13 +1,14 @@
-# Vídeos del Tema 1 — TEE
+# TEE — Técnicas y estrategias de comunicación escrita en español
 
-Vídeos de apoyo del Tema 1 ("Comunicación, lengua y registro") de la asignatura *Técnicas y estrategias de comunicación escrita en español* (Universidad Pontificia Comillas).
+Material docente de la asignatura *Técnicas y estrategias de comunicación escrita en español* (Universidad Pontificia Comillas), organizado por tema.
 
-🔗 **Acceso:** https://blancahpardo.github.io/tee-videos-t1/  (protegido con contraseña, facilitada en clase/Moodle)
+🔗 **Acceso:** https://blancahpardo.github.io/tee/
 
-## Contenido
+## Estructura
 
-- **Serie 1 — Cápsulas del Tema 1:** 5 vídeos breves, uno por concepto clave.
-- **Serie 2 — Recopilación:** 2 vídeos recopilatorios del Tema 1.
+- `index.html` — portada de la asignatura, con acceso a cada tema.
+- `t1/` — Tema 1 · La comunicación (protegido con contraseña, facilitada en clase/Moodle). Incluye manual teórico en PDF, 7 vídeos explicativos y un cómic didáctico.
+- Temas 2-4: pendientes de publicar.
 
 ## Autoría y derechos
 

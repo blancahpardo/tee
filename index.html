@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tema 1 · Vídeos — TEE</title>
+<title>TEE — Técnicas y estrategias de comunicación escrita en español</title>
 <style>
   :root {
     --azul: #003B5C;
@@ -17,13 +17,15 @@
   body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #FFFFFF;
+    background: var(--azul);
     color: var(--gris);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
   }
   header {
-    background: var(--azul);
-    color: #FFFFFF;
-    padding: 40px 6vw 34px;
+    padding: 60px 6vw 20px;
+    text-align: center;
   }
   header .kicker {
     color: var(--amar);
@@ -31,241 +33,119 @@
     font-weight: bold;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
   header h1 {
-    margin: 0 0 8px;
-    font-size: clamp(26px, 4vw, 38px);
+    color: #FFFFFF;
+    font-size: clamp(26px, 4.2vw, 40px);
+    margin: 0 0 10px;
   }
   header p {
-    margin: 0;
     color: var(--humo);
-    font-size: 15px;
+    font-size: 14px;
+    margin: 0;
   }
   main {
-    max-width: 980px;
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 6vw 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    align-content: start;
   }
-  section + section {
-    margin-top: 46px;
-  }
-  section h2 {
-    color: var(--azul);
-    font-size: 22px;
-    margin: 0 0 4px;
-  }
-  section .section-note {
-    font-size: 13px;
-    color: var(--humo);
-    margin: 0 0 22px;
-  }
-  .video-card {
-    background: var(--claro);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 22px;
-    box-shadow: 0 2px 10px rgba(159, 177, 186, 0.28);
-  }
-  .video-card .meta {
+  .tema-btn {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-bottom: 12px;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .video-card h3 {
-    margin: 0;
-    color: var(--azul);
-    font-size: 17px;
-  }
-  .video-card .badges {
-    display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 8px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 14px;
+    padding: 28px 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    transition: transform 0.15s ease;
   }
-  .video-card .badge {
-    background: var(--azul);
-    color: var(--amar);
-    font-size: 11px;
+  .tema-btn:hover {
+    transform: translateY(-3px);
+  }
+  .tema-num {
+    font-size: 13px;
     font-weight: bold;
-    letter-spacing: 1px;
-    padding: 4px 10px;
+    color: var(--amar);
+    background: var(--azul);
+    padding: 4px 12px;
     border-radius: 20px;
-    white-space: nowrap;
+    letter-spacing: 1px;
   }
-  .video-card .dl {
-    font-size: 11px;
+  .tema-title {
+    font-size: 19px;
     font-weight: bold;
     color: var(--azul);
-    text-decoration: none;
-    border: 1.5px solid var(--azul);
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
+    margin-top: 4px;
   }
-  .video-card .dl:hover {
-    background: var(--azul);
-    color: #FFFFFF;
+  .tema-btn.disabled {
+    background: rgba(255,255,255,0.12);
+    cursor: default;
+    box-shadow: none;
   }
-  video {
-    width: 100%;
-    max-height: 62vh;
-    display: block;
-    border-radius: 6px;
-    background: #000;
-    outline: none;
+  .tema-btn.disabled .tema-num {
+    background: rgba(255,255,255,0.2);
+    color: var(--humo);
   }
-  footer {
-    text-align: center;
-    padding: 26px 6vw 40px;
+  .tema-btn.disabled .tema-title {
+    color: var(--humo);
+  }
+  .tema-soon {
     font-size: 11px;
     color: var(--humo);
     font-style: italic;
   }
-
-  /* --- Pantalla de contraseña --- */
-  #gate {
-    position: fixed;
-    inset: 0;
-    background: var(--azul);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    z-index: 999;
-  }
-  #gate .box {
-    max-width: 380px;
-    width: 100%;
+  footer {
     text-align: center;
-  }
-  #gate .kicker {
-    color: var(--amar);
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  #gate h1 {
-    color: #FFFFFF;
-    font-size: 26px;
-    margin: 0 0 10px;
-  }
-  #gate p {
+    padding: 20px 6vw 34px;
+    font-size: 11px;
     color: var(--humo);
-    font-size: 14px;
-    margin: 0 0 26px;
-  }
-  #gate input {
-    width: 100%;
-    padding: 13px 16px;
-    border-radius: 8px;
-    border: none;
-    font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 14px;
-    outline: 2px solid transparent;
-  }
-  #gate input:focus {
-    outline: 2px solid var(--amar);
-  }
-  #gate button {
-    width: 100%;
-    padding: 13px 16px;
-    border-radius: 8px;
-    border: none;
-    background: var(--amar);
-    color: var(--azul-d);
-    font-size: 15px;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-  }
-  #gate button:hover {
-    filter: brightness(1.06);
-  }
-  #gate .error {
-    color: #FFB3B3;
-    font-size: 13px;
-    margin-top: 12px;
-    min-height: 18px;
-  }
-  #page {
-    display: none;
+    font-style: italic;
   }
 </style>
 </head>
 <body>
 
-<div id="gate">
-  <div class="box">
-    <div class="kicker">Tema 1 · Comunicación, lengua y registro</div>
-    <h1>Vídeos del Tema 1</h1>
-    <p>Contenido protegido. Introduce la contraseña facilitada en clase / Moodle.</p>
-    <input type="password" id="pw" placeholder="Contraseña" autofocus>
-    <button id="enter">Acceder</button>
-    <div class="error" id="err"></div>
+<header>
+  <div class="kicker">Universidad Pontificia Comillas</div>
+  <h1>Técnicas y estrategias de comunicación escrita en español</h1>
+  <p>Elige un tema para acceder a su material</p>
+</header>
+
+<main>
+  <a class="tema-btn" href="t1/index.html">
+    <span class="tema-num">TEMA 1</span>
+    <span class="tema-title">La comunicación</span>
+  </a>
+  <div class="tema-btn disabled">
+    <span class="tema-num">TEMA 2</span>
+    <span class="tema-title">El discurso escrito</span>
+    <span class="tema-soon">Próximamente</span>
   </div>
-</div>
+  <div class="tema-btn disabled">
+    <span class="tema-num">TEMA 3</span>
+    <span class="tema-title">La corrección de estilo</span>
+    <span class="tema-soon">Próximamente</span>
+  </div>
+  <div class="tema-btn disabled">
+    <span class="tema-num">TEMA 4</span>
+    <span class="tema-title">La escritura académica</span>
+    <span class="tema-soon">Próximamente</span>
+  </div>
+</main>
 
-<div id="page">
-  <header>
-    <div class="kicker">Tema 1 · Comunicación, lengua y registro</div>
-    <h1>Vídeos del Tema 1</h1>
-    <p>Técnicas y estrategias de comunicación escrita en español · Material audiovisual de apoyo</p>
-  </header>
-  <main id="content"></main>
-  <footer>
-    © Dra. Blanca Hernández Pardo · Técnicas y estrategias de comunicación escrita en español · Universidad Pontificia Comillas
-  </footer>
-</div>
-
-<script>
-(function() {
-  var HASH = "91a4b15adda5c3159f61b623514f34258f883686a9d8ad5f8066c822fe78c5c5";
-  var PAYLOAD = "PHNlY3Rpb24+CiAgICA8aDI+U2VyaWUgMSDigJQgQ8OhcHN1bGFzIGRlbCBUZW1hIDE8L2gyPgogICAgPHAgY2xhc3M9InNlY3Rpb24tbm90ZSI+Q2luY28gdsOtZGVvcywgdW5vIHBvciBjb25jZXB0byBjbGF2ZSBkZWwgYmxvcXVlLjwvcD4KCiAgICA8ZGl2IGNsYXNzPSJ2aWRlby1jYXJkIj4KICAgICAgPGRpdiBjbGFzcz0ibWV0YSI+CiAgICAgICAgPGgzPjEuMSDCtyBJY2ViZXJnIGRlIGxhIGNvbXVuaWNhY2nDs248L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjk6NDE8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IjEuMS4gSWNlYmVyZ19kZV9sYV9jb211bmljYWNpw7NuLm1wNCIgZG93bmxvYWQ+RGVzY2FyZ2FyPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPHZpZGVvIGNvbnRyb2xzPgogICAgICAgIDxzb3VyY2Ugc3JjPSIxLjEuIEljZWJlcmdfZGVfbGFfY29tdW5pY2FjacOzbi5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+MS4yIMK3IEVsIG1vZGVsbyBkZSBsZW5ndWE8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjk6MDc8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IjEuMi4gRWwgbW9kZWxvIGRlIGxlbmd1YS5tcDQiIGRvd25sb2FkPkRlc2NhcmdhcjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDx2aWRlbyBjb250cm9scz4KICAgICAgICA8c291cmNlIHNyYz0iMS4yLiBFbCBtb2RlbG8gZGUgbGVuZ3VhLm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KICAgICAgICBUdSBuYXZlZ2Fkb3Igbm8gYWRtaXRlIGxhIHJlcHJvZHVjY2nDs24gZGUgdsOtZGVvIEhUTUw1LgogICAgICA8L3ZpZGVvPgogICAgPC9kaXY+CgogICAgPGRpdiBjbGFzcz0idmlkZW8tY2FyZCI+CiAgICAgIDxkaXYgY2xhc3M9Im1ldGEiPgogICAgICAgIDxoMz4xLjMgwrcgSGFibGFkbywgZXNjcml0byB5IGRpZ2l0YWw8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjg6MDM8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IjEuMy4gSGFibGFkbyxfZXNjcml0b195X2RpZ2l0YWwubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IjEuMy4gSGFibGFkbyxfZXNjcml0b195X2RpZ2l0YWwubXA0IiB0eXBlPSJ2aWRlby9tcDQiPgogICAgICAgIFR1IG5hdmVnYWRvciBubyBhZG1pdGUgbGEgcmVwcm9kdWNjacOzbiBkZSB2w61kZW8gSFRNTDUuCiAgICAgIDwvdmlkZW8+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJ2aWRlby1jYXJkIj4KICAgICAgPGRpdiBjbGFzcz0ibWV0YSI+CiAgICAgICAgPGgzPjEuNCDCtyBFbCByZWdpc3RybyBjb211bmljYXRpdm88L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjk6MTY8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IjEuNC4gRWxfUmVnaXN0cm9fQ29tdW5pY2F0aXZvLm1wNCIgZG93bmxvYWQ+RGVzY2FyZ2FyPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPHZpZGVvIGNvbnRyb2xzPgogICAgICAgIDxzb3VyY2Ugc3JjPSIxLjQuIEVsX1JlZ2lzdHJvX0NvbXVuaWNhdGl2by5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+MS41IMK3IExhIGFuYXRvbcOtYSBkZSB1biB0ZXh0bzwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iYmFkZ2VzIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJiYWRnZSI+NjoxMzwvc3Bhbj4KICAgICAgICAgIDxhIGNsYXNzPSJkbCIgaHJlZj0iMS41LiBMYV9hbmF0b23DrWFfZGVfdW5fdGV4dG8ubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IjEuNS4gTGFfYW5hdG9tw61hX2RlX3VuX3RleHRvLm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KICAgICAgICBUdSBuYXZlZ2Fkb3Igbm8gYWRtaXRlIGxhIHJlcHJvZHVjY2nDs24gZGUgdsOtZGVvIEhUTUw1LgogICAgICA8L3ZpZGVvPgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8c2VjdGlvbj4KICAgIDxoMj5TZXJpZSAyIC0gUmVjb3BpbGFjacOzbjwvaDI+CiAgICA8cCBjbGFzcz0ic2VjdGlvbi1ub3RlIj5Ww61kZW9zIHJlY29waWxhdG9yaW9zIGRlbCBUZW1hIDEuPC9wPgoKICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+VsOtZGVvIFQxIMK3IDE8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjEwOjE4PC9zcGFuPgogICAgICAgICAgPGEgY2xhc3M9ImRsIiBocmVmPSJWX1QxXzEubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IlZfVDFfMS5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+VsOtZGVvIFQxIMK3IDI8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjc6NDI8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IlZfVDFfMi5tcDQiIGRvd25sb2FkPkRlc2NhcmdhcjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDx2aWRlbyBjb250cm9scz4KICAgICAgICA8c291cmNlIHNyYz0iVl9UMV8yLm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KICAgICAgICBUdSBuYXZlZ2Fkb3Igbm8gYWRtaXRlIGxhIHJlcHJvZHVjY2nDs24gZGUgdsOtZGVvIEhUTUw1LgogICAgICA8L3ZpZGVvPgogICAgPC9kaXY+CiAgPC9zZWN0aW9uPg==";
-
-  function sha256Hex(text) {
-    var enc = new TextEncoder().encode(text);
-    return crypto.subtle.digest("SHA-256", enc).then(function(buf) {
-      return Array.prototype.map.call(new Uint8Array(buf), function(b) {
-        return b.toString(16).padStart(2, "0");
-      }).join("");
-    });
-  }
-
-  function reveal() {
-    document.getElementById("content").innerHTML =
-      decodeURIComponent(escape(atob(PAYLOAD)));
-    document.getElementById("gate").style.display = "none";
-    document.getElementById("page").style.display = "block";
-    try { sessionStorage.setItem("t1_unlocked", "1"); } catch (e) {}
-  }
-
-  function tryUnlock() {
-    var val = document.getElementById("pw").value;
-    sha256Hex(val).then(function(hex) {
-      if (hex === HASH) {
-        reveal();
-      } else {
-        document.getElementById("err").textContent = "Contraseña incorrecta.";
-      }
-    });
-  }
-
-  document.getElementById("enter").addEventListener("click", tryUnlock);
-  document.getElementById("pw").addEventListener("keydown", function(e) {
-    if (e.key === "Enter") tryUnlock();
-  });
-
-  try {
-    if (sessionStorage.getItem("t1_unlocked") === "1") reveal();
-  } catch (e) {}
-})();
-</script>
+<footer>
+  © Dra. Blanca Hernández Pardo · Técnicas y estrategias de comunicación escrita en español · Universidad Pontificia Comillas
+</footer>
 
 </body>
 </html>
