@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>TextLab · Centro de mando</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --azul-osc:#00283F; --amarillo:#F4C542; --gris:#34484F;
+    --gris-claro:#F3F3F4; --blanco:#FFFFFF; --rojo:#C0392B; --verde:#2E7D5B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--azul-osc); color:var(--blanco);
+    min-height:100vh; overflow-x:hidden;
+  }
+  .screen{ display:none; min-height:100vh; padding:5vh 6vw; }
+  .screen.active{ display:flex; flex-direction:column; }
+  /* ---- Briefing screen ---- */
+  #briefing{ justify-content:center; align-items:flex-start; gap:1.4rem; position:relative; }
+  .dots{ position:absolute; bottom:2.5vh; left:6vw; display:flex; gap:.5rem; }
+  .dots span{ width:.7rem; height:.7rem; border-radius:50%; background:var(--amarillo); display:inline-block; }
+  .kicker{ color:var(--amarillo); font-weight:700; letter-spacing:.08em; font-size:1rem; }
+  h1{ font-size:clamp(2rem, 5vw, 3.4rem); margin:.2rem 0 0; }
+  .lead{ max-width:760px; font-size:1.25rem; line-height:1.55; color:#E7EDF0; }
+  .lead b{ color:var(--amarillo); }
+  .urgent{ max-width:760px; font-size:1.25rem; line-height:1.5; color:var(--amarillo); font-weight:700; }
+  .btn{
+    margin-top:1.2rem; background:var(--amarillo); color:var(--azul-osc); border:none; border-radius:999px;
+    padding:1rem 2.2rem; font-size:1.15rem; font-weight:700; cursor:pointer; font-family:inherit;
+    box-shadow:0 8px 24px rgba(0,0,0,.35); transition:transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn.secondary{ background:transparent; border:2px solid rgba(255,255,255,.5); color:var(--blanco); box-shadow:none;}
+  /* ---- Dashboard screen ---- */
+  #dashboard{ background:var(--gris-claro); color:var(--gris); }
+  .topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:1.4rem; }
+  .topbar h2{ color:var(--azul); margin:0; font-size:1.6rem; }
+  .backlink{ color:var(--azul); background:none; border:none; font-family:inherit; font-size:1rem; cursor:pointer; text-decoration:underline; }
+  .layout{ display:grid; grid-template-columns:1.1fr 1.4fr; gap:1.6rem; flex:1; }
+  .phases{ display:flex; flex-direction:column; gap:.7rem; }
+  .phase-btn{
+    text-align:left; border:none; border-radius:14px; padding:.9rem 1.1rem; cursor:pointer; font-family:inherit;
+    background:var(--blanco); box-shadow:0 2px 10px rgba(0,0,0,.06); display:flex; justify-content:space-between; align-items:center;
+  }
+  .phase-btn.active{ background:var(--azul); color:var(--blanco); }
+  .phase-btn .n{ font-weight:700; }
+  .phase-btn .t{ font-size:.9rem; opacity:.75; }
+  .timer-card{
+    background:var(--blanco); border-radius:20px; padding:2rem; box-shadow:0 4px 24px rgba(0,0,0,.08);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem;
+  }
+  #phaseTitle{ color:var(--azul); font-size:1.4rem; font-weight:700; margin:0; text-align:center; }
+  #phaseDesc{ text-align:center; color:var(--gris); max-width:560px; line-height:1.5; }
+  .clock-wrap{ position:relative; width:280px; height:280px; }
+  svg{ transform:rotate(-90deg); }
+  circle{ fill:none; stroke-width:14; }
+  .bg-ring{ stroke:var(--gris-claro); }
+  .fg-ring{ stroke:var(--amarillo); stroke-linecap:round; transition:stroke-dashoffset 1s linear, stroke .3s; }
+  .fg-ring.warn{ stroke: var(--rojo); }
+  #clockText{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-size:3.2rem; font-weight:700; color:var(--azul); font-variant-numeric:tabular-nums;
+  }
+  .controls{ display:flex; gap:.8rem; }
+  .ctrl-btn{
+    border:none; border-radius:999px; padding:.7rem 1.5rem; font-family:inherit; font-size:1rem; font-weight:700;
+    cursor:pointer; background:var(--azul); color:var(--blanco);
+  }
+  .ctrl-btn.alt{ background:var(--gris-claro); color:var(--azul); }
+  .flash{ animation:flash 1s infinite; }
+  @keyframes flash{ 0%,100%{ background:var(--blanco);} 50%{ background:#FBEAEA; } }
+  /* ---- Pie de autoría y referencias ---- */
+  .tee-footer{ background:var(--azul-osc); color:#C9D6DD; padding:2.2rem 6vw 2.4rem; font-size:.82rem; line-height:1.55; border-top:1px solid rgba(255,255,255,.15); }
+  .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .tee-footer ul{ margin:0 0 1.5rem; padding-left:1.1rem; max-width:760px; }
+  .tee-footer li{ margin-bottom:.5rem; }
+  .tee-footer .tee-copy{ margin:0; max-width:760px; opacity:.9; }
+</style>
+</head>
+<body>
+
+<div id="briefing" class="screen active">
+  <div class="kicker">TEXTLAB · CONSULTORA DE COMUNICACIÓN</div>
+  <h1>Apagón en la centralita</h1>
+  <p class="lead">Son las 8:00 de la mañana. Formáis parte del nuevo equipo de TextLab. Esta noche, un fallo en el servidor ha borrado los metadatos de <b>seis textos</b> que debían enviarse hoy: no sabemos quién los escribió, para quién ni por qué canal.</p>
+  <p class="urgent">El cliente los necesita identificados antes de que acabe la reunión de las 9:00. Sois el equipo de guardia. Tenéis sesenta minutos.</p>
+  <button class="btn" onclick="goTo('dashboard')">Abrir el centro de mando →</button>
+  <div class="dots"><span></span><span></span><span></span></div>
+</div>
+
+<div id="dashboard" class="screen">
+  <div class="topbar">
+    <h2>Centro de mando · Cronómetro de sesión</h2>
+    <button class="backlink" onclick="goTo('briefing')">← Volver al briefing</button>
+  </div>
+  <div class="layout">
+    <div class="phases" id="phaseList"></div>
+    <div class="timer-card" id="timerCard">
+      <p id="phaseTitle"></p>
+      <p id="phaseDesc"></p>
+      <div class="clock-wrap">
+        <svg width="280" height="280">
+          <circle class="bg-ring" cx="140" cy="140" r="120"></circle>
+          <circle class="fg-ring" id="ring" cx="140" cy="140" r="120"></circle>
+        </svg>
+        <div id="clockText">00:00</div>
+      </div>
+      <div class="controls">
+        <button class="ctrl-btn" id="startBtn" onclick="toggleTimer()">Iniciar</button>
+        <button class="ctrl-btn alt" onclick="resetTimer()">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="tee-footer">
+  <h3>Referencias</h3>
+  <ul>
+    <li>Halliday, M. A. K. (1982). <em>El lenguaje como semiótica social: La interpretación social del lenguaje y del significado</em>. Fondo de Cultura Económica. (Obra original publicada en 1978)</li>
+    <li>Cassany, D. (1989). <em>Describir el escribir: Cómo se aprende a escribir</em>. Paidós.</li>
+    <li>Instituto Cervantes. (s. f.). Registro. En <em>Diccionario de términos clave de ELE</em>. Centro Virtual Cervantes. https://cvc.cervantes.es/ensenanza/biblioteca_ele/diccio_ele/diccionario/registro.htm</li>
+  </ul>
+  <p class="tee-copy">© Dr.ª Blanca Hernández Pardo · Técnicas y Estrategias de Expresión Escrita (TEE) · Tema 1: Perfiladores de registro<br>
+  Queda prohibida la difusión, distribución o reproducción total o parcial de este material sin autorización expresa de la autora.</p>
+</footer>
+
+<script>
+const phases = [
+  {n:"Fase 0", t:"Aterrizaje narrativo", min:5, desc:"Lee el briefing en voz alta (pantalla anterior). Reparte o proyecta los seis fragmentos."},
+  {n:"Fase 1", t:"Exploración individual", min:8, desc:"Cada estudiante lee los seis fragmentos en silencio y rellena la ficha relámpago, sin comentar nada aún."},
+  {n:"Fase 2", t:"Informe en parejas", min:22, desc:"Cada pareja recibe 2 fragmentos y completa el informe de perfil lingüístico: campo, modo, tenor y evidencias."},
+  {n:"Fase 3", t:"Contraste en grupos de 4", min:17, desc:"Cada pareja se junta con otra que trabajó textos distintos. Exponen sin desvelar la conclusión y construyen la historia que conecta los seis textos."},
+  {n:"Fase 4", t:"Puesta en común", min:8, desc:"Comparte el diagnóstico más debatido. El docente revela la clave y cierra conectando con el manual."},
+];
+let current = 0, remaining = phases[0].min*60, total = phases[0].min*60, running=false, timerId=null;
+const R = 120, C = 2*Math.PI*R;
+const ring = document.getElementById('ring');
+ring.style.strokeDasharray = C;
+
+function goTo(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='dashboard') renderPhaseList();
+}
+function renderPhaseList(){
+  const list = document.getElementById('phaseList');
+  list.innerHTML = '';
+  phases.forEach((p,i)=>{
+    const b = document.createElement('button');
+    b.className = 'phase-btn' + (i===current ? ' active' : '');
+    b.innerHTML = `<span class="n">${p.n} · ${p.t}</span><span class="t">${p.min} min</span>`;
+    b.onclick = ()=> selectPhase(i);
+    list.appendChild(b);
+  });
+  updateTimerCard();
+}
+function selectPhase(i){
+  current = i; remaining = phases[i].min*60; total = remaining; running=false;
+  clearInterval(timerId);
+  document.getElementById('startBtn').textContent = 'Iniciar';
+  document.getElementById('timerCard').classList.remove('flash');
+  ring.classList.remove('warn');
+  renderPhaseList();
+}
+function updateTimerCard(){
+  const p = phases[current];
+  document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
+  document.getElementById('phaseDesc').textContent = p.desc;
+  drawClock();
+}
+function drawClock(){
+  const m = String(Math.floor(remaining/60)).padStart(2,'0');
+  const s = String(remaining%60).padStart(2,'0');
+  document.getElementById('clockText').textContent = `${m}:${s}`;
+  const frac = total>0 ? remaining/total : 0;
+  ring.style.strokeDashoffset = C*(1-frac);
+  if(remaining <= 30){ ring.classList.add('warn'); } else { ring.classList.remove('warn'); }
+}
+function toggleTimer(){
+  running = !running;
+  document.getElementById('startBtn').textContent = running ? 'Pausar' : 'Reanudar';
+  if(running){
+    timerId = setInterval(()=>{
+      remaining--;
+      if(remaining <= 0){
+        remaining = 0; drawClock(); clearInterval(timerId); running=false;
+        document.getElementById('startBtn').textContent = 'Iniciar';
+        document.getElementById('timerCard').classList.add('flash');
+      } else { drawClock(); }
+    },1000);
+  } else {
+    clearInterval(timerId);
+  }
+}
+function resetTimer(){
+  running=false; clearInterval(timerId);
+  remaining = phases[current].min*60; total = remaining;
+  document.getElementById('startBtn').textContent = 'Iniciar';
+  document.getElementById('timerCard').classList.remove('flash');
+  drawClock();
+}
+</script>
+</body>
+</html>

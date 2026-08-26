@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El taller de cohesión · Chuleta</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --amarillo:#F4C542; --gris:#34484F; --gris-claro:#F3F3F4; --blanco:#FFFFFF;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--gris-claro); color:var(--gris);
+    padding:2.2rem 3vw 3rem;
+  }
+  .head{ display:flex; align-items:center; gap:1rem; margin-bottom:.3rem; }
+  .head .dot{ width:.9rem; height:.9rem; border-radius:50%; background:var(--amarillo); }
+  h1{ color:var(--azul); font-size:2rem; margin:0; }
+  .sub{ color:var(--gris); font-size:1.05rem; margin:.2rem 0 1.8rem 2rem; max-width:820px; }
+  .grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:1.3rem; align-items:start; }
+  .card{ background:var(--blanco); border-radius:16px; padding:1.4rem 1.5rem; box-shadow:0 3px 16px rgba(0,0,0,.08); }
+  .card h2{ color:var(--azul); font-size:1.2rem; margin:.1rem 0 1rem; display:flex; align-items:center; gap:.5rem; }
+  .card h2 .badge{
+    width:2rem; height:2rem; border-radius:50%; background:var(--azul); color:var(--blanco); font-size:1.1rem;
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  table{ width:100%; border-collapse:collapse; font-size:.88rem; }
+  td{ padding:.4rem .2rem; border-bottom:1px solid var(--gris-claro); vertical-align:top; }
+  td.from{ color:#8A2E2E; font-weight:700; white-space:nowrap; }
+  td.to{ color:#1F6F4A; font-weight:700; }
+  .arrow{ color:#B9C2C6; padding:0 .3rem; }
+  .mech{ margin-bottom:1rem; }
+  .mech .name{ font-weight:700; color:var(--azul); font-size:.95rem; }
+  .mech .ex{ font-size:.87rem; color:var(--gris); margin-top:.15rem; line-height:1.4; }
+  .mech .ex .old{ text-decoration:line-through; color:#B33; }
+  .mech .ex .new{ color:#1F6F4A; font-weight:700; }
+  .conn-group{ margin-bottom:.9rem; }
+  .conn-group .fn{
+    display:inline-block; background:#EAF1F5; color:var(--azul); font-weight:700; font-size:.78rem;
+    padding:.2rem .55rem; border-radius:999px; margin-bottom:.35rem;
+  }
+  .conn-list{ font-size:.88rem; line-height:1.5; }
+  footer{ text-align:center; margin-top:2rem; font-size:.85rem; color:#8A97A0; }
+</style>
+</head>
+<body>
+  <div class="head"><span class="dot"></span><h1>El taller de cohesión</h1></div>
+  <p class="sub">Chuleta de repuestos para reparar textos: verbos baúl, mecanismos de referencia y conectores. Tenla a mano durante las tres estaciones.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2><span class="badge">1</span>Verbos baúl → verbos precisos</h2>
+      <table>
+        <tr><td class="from">hacer</td><td class="arrow">→</td><td class="to">organizar, elaborar, redactar, cometer</td></tr>
+        <tr><td class="from">poner</td><td class="arrow">→</td><td class="to">colgar, incluir, situar, exponer</td></tr>
+        <tr><td class="from">dar</td><td class="arrow">→</td><td class="to">repartir, ofrecer, provocar, transmitir</td></tr>
+        <tr><td class="from">tener</td><td class="arrow">→</td><td class="to">celebrar, mantener, presentar, sufrir</td></tr>
+        <tr><td class="from">decir</td><td class="arrow">→</td><td class="to">afirmar, sostener, argumentar, señalar</td></tr>
+        <tr><td class="from">coger</td><td class="arrow">→</td><td class="to">tomar, seleccionar, adoptar</td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge">2</span>Mecanismos de referencia</h2>
+      <div class="mech">
+        <div class="name">Elipsis</div>
+        <div class="ex">La biblioteca amplía su horario. <span class="new">Ø</span> Abrirá también los sábados.</div>
+      </div>
+      <div class="mech">
+        <div class="name">Pronombre</div>
+        <div class="ex">Vimos a la ponente. <span class="new">La</span> entrevistamos después.</div>
+      </div>
+      <div class="mech">
+        <div class="name">Sinónimo</div>
+        <div class="ex">El estudio... <span class="new">la investigación</span> concluye que...</div>
+      </div>
+      <div class="mech">
+        <div class="name">Hiperónimo</div>
+        <div class="ex">El manzano floreció. <span class="new">El árbol</span> daba sombra.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2><span class="badge">3</span>Banco de conectores</h2>
+      <div class="conn-group"><span class="fn">Adición</span><div class="conn-list">además, asimismo, también, igualmente</div></div>
+      <div class="conn-group"><span class="fn">Contraste</span><div class="conn-list">por un lado / por otro lado, sin embargo, no obstante, en cambio</div></div>
+      <div class="conn-group"><span class="fn">Causa</span><div class="conn-list">porque, ya que, dado que, puesto que</div></div>
+      <div class="conn-group"><span class="fn">Consecuencia</span><div class="conn-list">por ello, por tanto, en consecuencia, así pues</div></div>
+      <div class="conn-group"><span class="fn">Concesión</span><div class="conn-list">aunque, con todo, aun así, pese a ello</div></div>
+      <div class="conn-group"><span class="fn">Orden</span><div class="conn-list">en primer lugar, a continuación, por último</div></div>
+      <div class="conn-group"><span class="fn">Ejemplificación</span><div class="conn-list">por ejemplo, es decir, en otras palabras</div></div>
+    </div>
+  </div>
+
+  <footer>Tema 2 · El taller de cohesión · Técnicas y estrategias de comunicación escrita en español · Universidad Pontificia Comillas</footer>
+</body>
+</html>

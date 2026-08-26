@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tema 4 · La escritura académica — TEE</title>
+<style>
+  :root {
+    --azul: #003B5C;
+    --azul-d: #00283F;
+    --amar: #F4C542;
+    --gris: #34484F;
+    --claro: #F3F3F4;
+    --humo: #9FB1BA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+    color: var(--gris);
+  }
+  a { color: inherit; }
+
+  #gate {
+    position: fixed; inset: 0; background: var(--azul);
+    display: flex; align-items: center; justify-content: center;
+    padding: 24px; z-index: 999;
+  }
+  #gate .box { max-width: 380px; width: 100%; text-align: center; }
+  #gate .kicker {
+    color: var(--amar); font-size: 12px; font-weight: bold;
+    letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px;
+  }
+  #gate h1 { color: #FFFFFF; font-size: 26px; margin: 0 0 10px; }
+  #gate p { color: var(--humo); font-size: 14px; margin: 0 0 26px; }
+  #gate input {
+    width: 100%; padding: 13px 16px; border-radius: 8px; border: none;
+    font-size: 15px; font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 14px; outline: 2px solid transparent;
+  }
+  #gate input:focus { outline: 2px solid var(--amar); }
+  #gate button.submit {
+    width: 100%; padding: 13px 16px; border-radius: 8px; border: none;
+    background: var(--amar); color: var(--azul-d); font-size: 15px; font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; cursor: pointer;
+  }
+  #gate button.submit:hover { filter: brightness(1.06); }
+  #gate .error { color: #FFB3B3; font-size: 13px; margin-top: 12px; min-height: 18px; }
+
+  #page { display: none; }
+  main { max-width: 980px; margin: 0 auto; padding: 48px 6vw 60px; }
+
+  .kicker {
+    color: var(--amar); font-size: 12px; font-weight: bold;
+    letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .view > h1 { color: var(--azul); font-size: 32px; margin: 0 0 34px; }
+
+  .hub-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px; margin-bottom: 30px;
+  }
+  .hub-btn {
+    display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+    background: var(--claro); border: none; border-radius: 12px; padding: 26px 22px;
+    cursor: pointer; text-align: left; box-shadow: 0 2px 10px rgba(159,177,186,0.28);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .hub-btn:hover { background: #E9ECEE; }
+  .hub-icon { font-size: 30px; margin-bottom: 4px; }
+  .hub-label { font-size: 17px; font-weight: bold; color: var(--azul); }
+  .hub-desc { font-size: 12.5px; color: var(--humo); }
+  .hub-disclaimer { font-size: 11px; color: var(--humo); font-style: italic; margin-top: 2px; }
+
+  .back-home { font-size: 13px; color: var(--humo); text-decoration: none; }
+  .back-home:hover { color: var(--azul); }
+
+  .sub-view h2 { color: var(--azul); font-size: 24px; margin: 18px 0 4px; }
+  .sub-view .section-note { font-size: 13px; color: var(--humo); margin: 0 0 24px; }
+  .back-btn {
+    background: none; border: 1.5px solid var(--azul); color: var(--azul);
+    font-size: 13px; font-weight: bold; padding: 6px 14px; border-radius: 20px;
+    cursor: pointer; font-family: Arial, Helvetica, sans-serif;
+  }
+  .back-btn:hover { background: var(--azul); color: #FFFFFF; }
+
+  .dl-big {
+    display: inline-block; background: var(--amar); color: var(--azul-d);
+    font-weight: bold; font-size: 14px; text-decoration: none;
+    padding: 10px 20px; border-radius: 20px; margin-bottom: 18px;
+  }
+  .pdf-frame, .office-frame, .resource-frame {
+    width: 100%; height: 78vh; border: none; border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(159,177,186,0.28);
+  }
+
+  .mini-gate {
+    max-width: 360px; background: var(--claro); border-radius: 12px;
+    padding: 26px; margin-top: 10px;
+  }
+  .mini-gate p { font-size: 13px; color: var(--gris); margin: 0 0 16px; }
+  .mini-gate input {
+    width: 100%; padding: 11px 14px; border-radius: 8px; border: 1.5px solid var(--humo);
+    font-size: 14px; font-family: Arial, Helvetica, sans-serif; margin-bottom: 12px;
+  }
+  .mini-gate button.submit {
+    padding: 10px 20px; border-radius: 20px; border: none;
+    background: var(--azul); color: #FFFFFF; font-size: 13px; font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif; cursor: pointer;
+  }
+  .mini-gate button.submit:hover { filter: brightness(1.15); }
+  .mini-gate .error { color: #B00020; font-size: 12px; margin-top: 10px; min-height: 16px; }
+
+  section + section { margin-top: 46px; }
+  section h2.serie-title { color: var(--azul); font-size: 22px; margin: 0 0 4px; }
+  .video-card {
+    background: var(--claro); border-radius: 10px; padding: 20px; margin-bottom: 22px;
+    box-shadow: 0 2px 10px rgba(159, 177, 186, 0.28);
+  }
+  .video-card .meta {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin-bottom: 12px; flex-wrap: wrap; gap: 6px;
+  }
+  .video-card h3 { margin: 0; color: var(--azul); font-size: 17px; }
+  .video-card .badges { display: flex; align-items: center; gap: 8px; }
+  .video-card .badge {
+    background: var(--azul); color: var(--amar); font-size: 11px; font-weight: bold;
+    letter-spacing: 1px; padding: 4px 10px; border-radius: 20px; white-space: nowrap;
+  }
+  .video-card .dl {
+    font-size: 11px; font-weight: bold; color: var(--azul); text-decoration: none;
+    border: 1.5px solid var(--azul); padding: 3px 10px; border-radius: 20px; white-space: nowrap;
+  }
+  .video-card .dl:hover { background: var(--azul); color: #FFFFFF; }
+  video {
+    width: 100%; max-height: 62vh; display: block; border-radius: 6px;
+    background: #000; outline: none;
+  }
+
+  footer {
+    text-align: center; padding: 26px 6vw 40px; font-size: 11px;
+    color: var(--humo); font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <div class="kicker">Tema 4 · La escritura académica</div>
+    <h1>TEE</h1>
+    <p>Contenido protegido. Introduce la contraseña facilitada en clase / Moodle.</p>
+    <input type="password" id="pw" placeholder="Contraseña" autofocus>
+    <button class="submit" id="enter">Acceder</button>
+    <div class="error" id="err"></div>
+  </div>
+</div>
+
+<div id="page">
+  <main id="content"></main>
+  <footer>
+    © Dra. Blanca Hernández Pardo · Técnicas y estrategias de comunicación escrita en español · Universidad Pontificia Comillas
+  </footer>
+</div>
+
+<script>
+(function() {
+  var HASH = "cbabd244b8d4c6392cd0cdc9ba288a5e3c15991604ab3e568d1a2c50043d4af0";
+  var PAYLOAD = "CjxkaXYgaWQ9Imh1YiIgY2xhc3M9InZpZXciPgogIDxkaXYgY2xhc3M9ImtpY2tlciI+VGVtYSA0IMK3IExhIGVzY3JpdHVyYSBhY2Fkw6ltaWNhPC9kaXY+CiAgPGgxPsK/UXXDqSBxdWllcmVzIGNvbnN1bHRhcj88L2gxPgogIDxkaXYgY2xhc3M9Imh1Yi1ncmlkIj4KICAgIDxidXR0b24gY2xhc3M9Imh1Yi1idG4iIGRhdGEtdmlldz0ibWFudWFsIj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1pY29uIj7wn5OYPC9zcGFuPgogICAgICA8c3BhbiBjbGFzcz0iaHViLWxhYmVsIj5NYW51YWwgdGXDs3JpY288L3NwYW4+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItZGVzYyI+TGVjdHVyYSBlbiBQREYsIGRlc2NhcmdhYmxlPC9zcGFuPgogICAgPC9idXR0b24+CiAgICA8YnV0dG9uIGNsYXNzPSJodWItYnRuIiBkYXRhLXZpZXc9InZpZGVvcyI+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItaWNvbiI+8J+OrDwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1sYWJlbCI+VsOtZGVvcyBleHBsaWNhdGl2b3M8L3NwYW4+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItZGVzYyI+OSB2w61kZW9zLCByZXByb2R1Y2Npw7NuIGVuIGxhIHDDoWdpbmE8L3NwYW4+CiAgICA8L2J1dHRvbj4KICAgIDxidXR0b24gY2xhc3M9Imh1Yi1idG4iIGRhdGEtdmlldz0iY29taWNzIj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1pY29uIj7wn5OWPC9zcGFuPgogICAgICA8c3BhbiBjbGFzcz0iaHViLWxhYmVsIj5Dw7NtaWNzIGRpZMOhY3RpY29zPC9zcGFuPgogICAgICA8c3BhbiBjbGFzcz0iaHViLWRlc2MiPjMgY8OzbWljcywgdW5vIHBvciBjYWRhIHVubzwvc3Bhbj4KICAgIDwvYnV0dG9uPgogICAgPGJ1dHRvbiBjbGFzcz0iaHViLWJ0biIgZGF0YS12aWV3PSJyZXMtcjEiPgogICAgICA8c3BhbiBjbGFzcz0iaHViLWljb24iPvCflbXvuI88L3NwYW4+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItbGFiZWwiPkFnZW5jaWEgZGUgVmVyaWZpY2FjacOzbiBkZSBGdWVudGVzPC9zcGFuPgogICAgICA8c3BhbiBjbGFzcz0iaHViLWRlc2MiPlByw6FjdGljYSBlbiBjYXNhIGRlIGNpdGFjacOzbiB5IHJlZmVyZW5jaWFjacOzbiBBUEEgNzwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1kaXNjbGFpbWVyIj5MYSBjb250cmFzZcOxYSBzZSBpbmRpY2Fyw6EgZW4gZWwgYXVsYSBjdWFuZG8gY29ycmVzcG9uZGEuPC9zcGFuPgogICAgPC9idXR0b24+CiAgPC9kaXY+CiAgPGEgY2xhc3M9ImJhY2staG9tZSIgaHJlZj0iLi4vaW5kZXguaHRtbCI+4oaQIFZvbHZlciBhIGxhIGFzaWduYXR1cmE8L2E+CjwvZGl2Pgo8ZGl2IGlkPSJ2aWV3LW1hbnVhbCIgY2xhc3M9InZpZXcgc3ViLXZpZXciIGhpZGRlbj4KICA8YnV0dG9uIGNsYXNzPSJiYWNrLWJ0biIgZGF0YS1iYWNrPSJodWIiPuKGkCBWb2x2ZXI8L2J1dHRvbj4KICA8aDI+TWFudWFsIHRlw7NyaWNvIMK3IFRlbWEgNDwvaDI+CiAgPHAgY2xhc3M9InNlY3Rpb24tbm90ZSI+TGEgZXNjcml0dXJhIGFjYWTDqW1pY2EuIFB1ZWRlcyBsZWVybG8gYXF1w60gbyBkZXNjYXJnYXJsby48L3A+CiAgPGEgY2xhc3M9ImRsLWJpZyIgaHJlZj0ibWFudWFsX3Q0LnBkZiIgZG93bmxvYWQ+4qyHIERlc2NhcmdhciBQREY8L2E+CiAgPGlmcmFtZSBjbGFzcz0icGRmLWZyYW1lIiBzcmM9Im1hbnVhbF90NC5wZGYiIHRpdGxlPSJNYW51YWwgdGXDs3JpY28gVGVtYSA0Ij48L2lmcmFtZT4KPC9kaXY+CjxkaXYgaWQ9InZpZXctdmlkZW9zIiBjbGFzcz0idmlldyBzdWItdmlldyIgaGlkZGVuPgogIDxidXR0b24gY2xhc3M9ImJhY2stYnRuIiBkYXRhLWJhY2s9Imh1YiI+4oaQIFZvbHZlcjwvYnV0dG9uPgogIDxoMj5Ww61kZW9zIGV4cGxpY2F0aXZvcyDCtyBUZW1hIDQ8L2gyPgogIDxzZWN0aW9uPgogICAgPGRpdiBjbGFzcz0idmlkZW8tY2FyZCI+CiAgICAgIDxkaXYgY2xhc3M9Im1ldGEiPgogICAgICAgIDxoMz4xIMK3IFF1w6kgZXMgbGEgZXNjcml0dXJhIGFjYWTDqW1pY2E8L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjY6MjA8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IlZfVDRfMS5tcDQiIGRvd25sb2FkPkRlc2NhcmdhcjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDx2aWRlbyBjb250cm9scz4KICAgICAgICA8c291cmNlIHNyYz0iVl9UNF8xLm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KICAgICAgICBUdSBuYXZlZ2Fkb3Igbm8gYWRtaXRlIGxhIHJlcHJvZHVjY2nDs24gZGUgdsOtZGVvIEhUTUw1LgogICAgICA8L3ZpZGVvPgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJ2aWRlby1jYXJkIj4KICAgICAgPGRpdiBjbGFzcz0ibWV0YSI+CiAgICAgICAgPGgzPjIgwrcgRWwgcHJvY2VzbyBkZSBlc2NyaXR1cmEgYWNhZMOpbWljYTwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iYmFkZ2VzIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJiYWRnZSI+Nzo1Mzwvc3Bhbj4KICAgICAgICAgIDxhIGNsYXNzPSJkbCIgaHJlZj0iVl9UNF8yLm1wNCIgZG93bmxvYWQ+RGVzY2FyZ2FyPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPHZpZGVvIGNvbnRyb2xzPgogICAgICAgIDxzb3VyY2Ugc3JjPSJWX1Q0XzIubXA0IiB0eXBlPSJ2aWRlby9tcDQiPgogICAgICAgIFR1IG5hdmVnYWRvciBubyBhZG1pdGUgbGEgcmVwcm9kdWNjacOzbiBkZSB2w61kZW8gSFRNTDUuCiAgICAgIDwvdmlkZW8+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+MyDCtyBFc3RydWN0dXJhIGRlbCB0cmFiYWpvIGFjYWTDqW1pY288L2gzPgogICAgICAgIDxkaXYgY2xhc3M9ImJhZGdlcyI+CiAgICAgICAgICA8c3BhbiBjbGFzcz0iYmFkZ2UiPjY6NDg8L3NwYW4+CiAgICAgICAgICA8YSBjbGFzcz0iZGwiIGhyZWY9IlZfVDRfMy5tcDQiIGRvd25sb2FkPkRlc2NhcmdhcjwvYT4KICAgICAgICA8L2Rpdj4KICAgICAgPC9kaXY+CiAgICAgIDx2aWRlbyBjb250cm9scz4KICAgICAgICA8c291cmNlIHNyYz0iVl9UNF8zLm1wNCIgdHlwZT0idmlkZW8vbXA0Ij4KICAgICAgICBUdSBuYXZlZ2Fkb3Igbm8gYWRtaXRlIGxhIHJlcHJvZHVjY2nDs24gZGUgdsOtZGVvIEhUTUw1LgogICAgICA8L3ZpZGVvPgogICAgPC9kaXY+CiAgICA8ZGl2IGNsYXNzPSJ2aWRlby1jYXJkIj4KICAgICAgPGRpdiBjbGFzcz0ibWV0YSI+CiAgICAgICAgPGgzPjQgwrcgQXJndW1lbnRhY2nDs24gYWNhZMOpbWljYTwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iYmFkZ2VzIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJiYWRnZSI+Njo1Njwvc3Bhbj4KICAgICAgICAgIDxhIGNsYXNzPSJkbCIgaHJlZj0iVl9UNF80Lm1wNCIgZG93bmxvYWQ+RGVzY2FyZ2FyPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPHZpZGVvIGNvbnRyb2xzPgogICAgICAgIDxzb3VyY2Ugc3JjPSJWX1Q0XzQubXA0IiB0eXBlPSJ2aWRlby9tcDQiPgogICAgICAgIFR1IG5hdmVnYWRvciBubyBhZG1pdGUgbGEgcmVwcm9kdWNjacOzbiBkZSB2w61kZW8gSFRNTDUuCiAgICAgIDwvdmlkZW8+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+NSDCtyBHw6luZXJvcyBhY2Fkw6ltaWNvcyBmcmVjdWVudGVzPC9oMz4KICAgICAgICA8ZGl2IGNsYXNzPSJiYWRnZXMiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImJhZGdlIj44OjA5PC9zcGFuPgogICAgICAgICAgPGEgY2xhc3M9ImRsIiBocmVmPSJWX1Q0XzUubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IlZfVDRfNS5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0idmlkZW8tY2FyZCI+CiAgICAgIDxkaXYgY2xhc3M9Im1ldGEiPgogICAgICAgIDxoMz42IMK3IENpdGFzLCByZWZlcmVuY2lhcyB5IEFQQSA3LsKqIGVkaWNpw7NuPC9oMz4KICAgICAgICA8ZGl2IGNsYXNzPSJiYWRnZXMiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImJhZGdlIj43OjE4PC9zcGFuPgogICAgICAgICAgPGEgY2xhc3M9ImRsIiBocmVmPSJWX1Q0XzYubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IlZfVDRfNi5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0idmlkZW8tY2FyZCI+CiAgICAgIDxkaXYgY2xhc3M9Im1ldGEiPgogICAgICAgIDxoMz43IMK3IFBsYWdpbyBlIGludGVncmlkYWQgYWNhZMOpbWljYTwvaDM+CiAgICAgICAgPGRpdiBjbGFzcz0iYmFkZ2VzIj4KICAgICAgICAgIDxzcGFuIGNsYXNzPSJiYWRnZSI+NTo1Njwvc3Bhbj4KICAgICAgICAgIDxhIGNsYXNzPSJkbCIgaHJlZj0iVl9UNF83Lm1wNCIgZG93bmxvYWQ+RGVzY2FyZ2FyPC9hPgogICAgICAgIDwvZGl2PgogICAgICA8L2Rpdj4KICAgICAgPHZpZGVvIGNvbnRyb2xzPgogICAgICAgIDxzb3VyY2Ugc3JjPSJWX1Q0XzcubXA0IiB0eXBlPSJ2aWRlby9tcDQiPgogICAgICAgIFR1IG5hdmVnYWRvciBubyBhZG1pdGUgbGEgcmVwcm9kdWNjacOzbiBkZSB2w61kZW8gSFRNTDUuCiAgICAgIDwvdmlkZW8+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9InZpZGVvLWNhcmQiPgogICAgICA8ZGl2IGNsYXNzPSJtZXRhIj4KICAgICAgICA8aDM+OCDCtyBVc28gYWNhZMOpbWljbyBkZSBsYSBpbnRlbGlnZW5jaWEgYXJ0aWZpY2lhbCBnZW5lcmF0aXZhPC9oMz4KICAgICAgICA8ZGl2IGNsYXNzPSJiYWRnZXMiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImJhZGdlIj42OjMzPC9zcGFuPgogICAgICAgICAgPGEgY2xhc3M9ImRsIiBocmVmPSJWX1Q0XzgubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IlZfVDRfOC5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0idmlkZW8tY2FyZCI+CiAgICAgIDxkaXYgY2xhc3M9Im1ldGEiPgogICAgICAgIDxoMz45IMK3IFBhdXRhIGZpbmFsIGRlIHJldmlzacOzbiBkZWwgdHJhYmFqbyBhY2Fkw6ltaWNvPC9oMz4KICAgICAgICA8ZGl2IGNsYXNzPSJiYWRnZXMiPgogICAgICAgICAgPHNwYW4gY2xhc3M9ImJhZGdlIj43OjM3PC9zcGFuPgogICAgICAgICAgPGEgY2xhc3M9ImRsIiBocmVmPSJWX1Q0XzkubXA0IiBkb3dubG9hZD5EZXNjYXJnYXI8L2E+CiAgICAgICAgPC9kaXY+CiAgICAgIDwvZGl2PgogICAgICA8dmlkZW8gY29udHJvbHM+CiAgICAgICAgPHNvdXJjZSBzcmM9IlZfVDRfOS5tcDQiIHR5cGU9InZpZGVvL21wNCI+CiAgICAgICAgVHUgbmF2ZWdhZG9yIG5vIGFkbWl0ZSBsYSByZXByb2R1Y2Npw7NuIGRlIHbDrWRlbyBIVE1MNS4KICAgICAgPC92aWRlbz4KICAgIDwvZGl2PgogIDwvc2VjdGlvbj4KPC9kaXY+CjxkaXYgaWQ9InZpZXctY29taWNzIiBjbGFzcz0idmlldyBzdWItdmlldyIgaGlkZGVuPgogIDxidXR0b24gY2xhc3M9ImJhY2stYnRuIiBkYXRhLWJhY2s9Imh1YiI+4oaQIFZvbHZlcjwvYnV0dG9uPgogIDxoMj5Dw7NtaWNzIGRpZMOhY3RpY29zIMK3IFRlbWEgNDwvaDI+CiAgPHAgY2xhc3M9InNlY3Rpb24tbm90ZSI+RWxpZ2UgdW4gY8OzbWljIHBhcmEgdmlzdWFsaXphcmxvLjwvcD4KICA8ZGl2IGNsYXNzPSJodWItZ3JpZCI+CiAgICA8YnV0dG9uIGNsYXNzPSJodWItYnRuIiBkYXRhLXZpZXc9ImNvbWljMSI+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItaWNvbiI+8J+Tljwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1sYWJlbCI+QVBBIE1hZ2ljIFF1ZXN0PC9zcGFuPgogICAgPC9idXR0b24+CiAgICA8YnV0dG9uIGNsYXNzPSJodWItYnRuIiBkYXRhLXZpZXc9ImNvbWljMiI+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItaWNvbiI+8J+Tljwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1sYWJlbCI+R3XDrWEgcGlyYXRhIGRlIEFQQSA3LsKqIGVkaWNpw7NuPC9zcGFuPgogICAgPC9idXR0b24+CiAgICA8YnV0dG9uIGNsYXNzPSJodWItYnRuIiBkYXRhLXZpZXc9ImNvbWljMyI+CiAgICAgIDxzcGFuIGNsYXNzPSJodWItaWNvbiI+8J+Tljwvc3Bhbj4KICAgICAgPHNwYW4gY2xhc3M9Imh1Yi1sYWJlbCI+TWFmYWxkYSB5IGxvcyBmb3JtYXRvcyBhY2Fkw6ltaWNvczwvc3Bhbj4KICAgIDwvYnV0dG9uPgogIDwvZGl2Pgo8L2Rpdj4KPGRpdiBpZD0idmlldy1jb21pYzEiIGNsYXNzPSJ2aWV3IHN1Yi12aWV3IiBoaWRkZW4+CiAgPGJ1dHRvbiBjbGFzcz0iYmFjay1idG4iIGRhdGEtYmFjaz0idmlldy1jb21pY3MiPuKGkCBWb2x2ZXI8L2J1dHRvbj4KICA8aDI+QVBBIE1hZ2ljIFF1ZXN0PC9oMj4KICA8aWZyYW1lIGNsYXNzPSJvZmZpY2UtZnJhbWUiIHNyYz0iaHR0cHM6Ly92aWV3Lm9mZmljZWFwcHMubGl2ZS5jb20vb3AvZW1iZWQuYXNweD9zcmM9aHR0cHMlM0ElMkYlMkZibGFuY2FocGFyZG8uZ2l0aHViLmlvJTJGdGVlJTJGdDQlMkZjb21pY190NF8xLnBwc3giIHRpdGxlPSJBUEEgTWFnaWMgUXVlc3QiPjwvaWZyYW1lPgo8L2Rpdj4KPGRpdiBpZD0idmlldy1jb21pYzIiIGNsYXNzPSJ2aWV3IHN1Yi12aWV3IiBoaWRkZW4+CiAgPGJ1dHRvbiBjbGFzcz0iYmFjay1idG4iIGRhdGEtYmFjaz0idmlldy1jb21pY3MiPuKGkCBWb2x2ZXI8L2J1dHRvbj4KICA8aDI+R3XDrWEgcGlyYXRhIGRlIEFQQSA3LsKqIGVkaWNpw7NuPC9oMj4KICA8aWZyYW1lIGNsYXNzPSJvZmZpY2UtZnJhbWUiIHNyYz0iaHR0cHM6Ly92aWV3Lm9mZmljZWFwcHMubGl2ZS5jb20vb3AvZW1iZWQuYXNweD9zcmM9aHR0cHMlM0ElMkYlMkZibGFuY2FocGFyZG8uZ2l0aHViLmlvJTJGdGVlJTJGdDQlMkZjb21pY190NF8yLnBwc3giIHRpdGxlPSJHdcOtYSBwaXJhdGEgZGUgQVBBIDcuwqogZWRpY2nDs24iPjwvaWZyYW1lPgo8L2Rpdj4KPGRpdiBpZD0idmlldy1jb21pYzMiIGNsYXNzPSJ2aWV3IHN1Yi12aWV3IiBoaWRkZW4+CiAgPGJ1dHRvbiBjbGFzcz0iYmFjay1idG4iIGRhdGEtYmFjaz0idmlldy1jb21pY3MiPuKGkCBWb2x2ZXI8L2J1dHRvbj4KICA8aDI+TWFmYWxkYSB5IGxvcyBmb3JtYXRvcyBhY2Fkw6ltaWNvczwvaDI+CiAgPGlmcmFtZSBjbGFzcz0ib2ZmaWNlLWZyYW1lIiBzcmM9Imh0dHBzOi8vdmlldy5vZmZpY2VhcHBzLmxpdmUuY29tL29wL2VtYmVkLmFzcHg/c3JjPWh0dHBzJTNBJTJGJTJGYmxhbmNhaHBhcmRvLmdpdGh1Yi5pbyUyRnRlZSUyRnQ0JTJGY29taWNfdDRfMy5wcHN4IiB0aXRsZT0iTWFmYWxkYSB5IGxvcyBmb3JtYXRvcyBhY2Fkw6ltaWNvcyI+PC9pZnJhbWU+CjwvZGl2Pgo8ZGl2IGlkPSJ2aWV3LXJlcy1yMSIgY2xhc3M9InZpZXcgc3ViLXZpZXciIGhpZGRlbj4KICA8YnV0dG9uIGNsYXNzPSJiYWNrLWJ0biIgZGF0YS1iYWNrPSJodWIiPuKGkCBWb2x2ZXI8L2J1dHRvbj4KICA8aDI+QWdlbmNpYSBkZSBWZXJpZmljYWNpw7NuIGRlIEZ1ZW50ZXM8L2gyPgogIDxkaXYgY2xhc3M9Im1pbmktZ2F0ZSIgaWQ9InJlcy1yMS1nYXRlIj4KICAgIDxwPkFjdGl2aWRhZCBwcm90ZWdpZGEuIExhIGNvbnRyYXNlw7FhIHNlIGluZGljYXLDoSBlbiBlbCBhdWxhIGN1YW5kbyBjb3JyZXNwb25kYS48L3A+CiAgICA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIGlkPSJyZXMtcjEtcHciIHBsYWNlaG9sZGVyPSJDb250cmFzZcOxYSI+CiAgICA8YnV0dG9uIGNsYXNzPSJzdWJtaXQiIGRhdGEtbWluaS11bmxvY2s9InIxIj5BY2NlZGVyPC9idXR0b24+CiAgICA8ZGl2IGNsYXNzPSJlcnJvciIgaWQ9InJlcy1yMS1lcnIiPjwvZGl2PgogIDwvZGl2PgogIAo8L2Rpdj4=";
+  var RESOURCES_PAYLOAD = "eyJyMSI6IHsiaGFzaCI6Ijk4NDBmMTMyNjZmOWE0YzVkNzk0NTFjNzMyOTZjN2I5ZWNlYzYyYzY3YTdjYjIwZjQ1NTkzNTgzZTA3MWRmNTAiLCAia2luZCI6ImV4dGVybmFsIiwgInRhcmdldCI6Imh0dHBzOi8vYmxhbmNhaHBhcmRvLmdpdGh1Yi5pby9kZXRlY3RpdmUtZGUtZnVlbnRlcy1hcGE3LyJ9fQ==";
+  var RESOURCES = null;
+
+  function sha256Hex(text) {
+    var enc = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", enc).then(function(buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function(b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("");
+    });
+  }
+
+  function showView(id) {
+    document.querySelectorAll(".view").forEach(function(v) { v.hidden = true; });
+    var el = document.getElementById(id) || document.getElementById("view-" + id);
+    if (el) el.hidden = false;
+  }
+
+  function wireNav() {
+    document.querySelectorAll(".hub-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() { showView(btn.dataset.view); });
+    });
+    document.querySelectorAll("[data-back]").forEach(function(btn) {
+      btn.addEventListener("click", function() { showView(btn.dataset.back); });
+    });
+    document.querySelectorAll("[data-mini-unlock]").forEach(function(btn) {
+      var rid = btn.dataset.miniUnlock;
+      var cfg = RESOURCES[rid];
+      function tryMini() {
+        var val = document.getElementById("res-" + rid + "-pw").value;
+        sha256Hex(val).then(function(hex) {
+          if (hex === cfg.hash) {
+            document.getElementById("res-" + rid + "-gate").hidden = true;
+            if (cfg.kind === "external") {
+              window.location.href = cfg.target;
+            } else {
+              var frame = document.getElementById("res-" + rid + "-frame");
+              frame.src = cfg.target;
+              frame.hidden = false;
+            }
+          } else {
+            document.getElementById("res-" + rid + "-err").textContent = "Contraseña incorrecta.";
+          }
+        });
+      }
+      btn.addEventListener("click", tryMini);
+      document.getElementById("res-" + rid + "-pw").addEventListener("keydown", function(e) {
+        if (e.key === "Enter") tryMini();
+      });
+    });
+  }
+
+  function reveal() {
+    document.getElementById("content").innerHTML =
+      decodeURIComponent(escape(atob(PAYLOAD)));
+    RESOURCES = JSON.parse(decodeURIComponent(escape(atob(RESOURCES_PAYLOAD))));
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("page").style.display = "block";
+    wireNav();
+    try { sessionStorage.setItem("t4_unlocked", "1"); } catch (e) {}
+  }
+
+  function tryUnlock() {
+    var val = document.getElementById("pw").value;
+    sha256Hex(val).then(function(hex) {
+      if (hex === HASH) {
+        reveal();
+      } else {
+        document.getElementById("err").textContent = "Contraseña incorrecta.";
+      }
+    });
+  }
+
+  document.getElementById("enter").addEventListener("click", tryUnlock);
+  document.getElementById("pw").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") tryUnlock();
+  });
+
+  try {
+    if (sessionStorage.getItem("t4_unlocked") === "1") reveal();
+  } catch (e) {}
+})();
+</script>
+
+</body>
+</html>

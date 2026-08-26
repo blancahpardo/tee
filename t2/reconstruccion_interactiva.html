@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El archivo mezclado · Reconstrucción</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --amarillo:#F4C542; --gris:#34484F; --gris-claro:#F3F3F4;
+    --blanco:#FFFFFF; --verde:#2E7D5B; --rojo:#B3261E;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--gris-claro); color:var(--gris); }
+  header{ background:#00283F; color:var(--blanco); padding:1.3rem 2rem; }
+  header h1{ margin:0; font-size:1.5rem; }
+  header p{ margin:.3rem 0 0; color:#C9D6DD; font-size:.95rem; }
+  .wrap{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; padding:1.4rem 2rem; align-items:start; }
+  .col{ background:var(--blanco); border-radius:14px; padding:1rem; box-shadow:0 2px 12px rgba(0,0,0,.07); min-height:520px; }
+  .col h2{ font-size:1.05rem; color:var(--azul); margin:.1rem 0 .8rem; }
+  .col.pool h2{ color:var(--gris); }
+  .dropzone{ min-height:460px; border:2px dashed #D8DEE1; border-radius:10px; padding:.5rem; transition:background .15s; }
+  .dropzone.dragover{ background:#EAF1F5; border-color:var(--azul); }
+  .card{
+    background:var(--gris-claro); border-radius:8px; padding:.6rem .7rem; margin-bottom:.55rem; font-size:.86rem;
+    line-height:1.35; cursor:grab; border-left:5px solid #B9C2C6; user-select:none;
+  }
+  .card:active{ cursor:grabbing; }
+  .card .tag{ font-weight:700; color:var(--azul); margin-right:.3rem; }
+  .card.correct{ border-left-color:var(--verde); background:#E8F3EC; }
+  .card.wrong{ border-left-color:var(--rojo); background:#FBEAEA; }
+  .toolbar{ display:flex; gap:.8rem; padding:0 2rem 1.4rem; }
+  button{
+    font-family:inherit; border:none; border-radius:999px; padding:.7rem 1.5rem; font-size:.95rem; font-weight:700;
+    cursor:pointer;
+  }
+  #checkBtn{ background:var(--azul); color:var(--blanco); }
+  #resetBtn{ background:var(--gris-claro); color:var(--gris); border:1px solid #D8DEE1; }
+  #score{ align-self:center; font-weight:700; }
+  /* ---- Pie de autoría y referencias ---- */
+  .tee-footer{ background:#00283F; color:#C9D6DD; padding:2rem 2rem 2.2rem; font-size:.82rem; line-height:1.55; margin-top:.6rem; }
+  .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .tee-footer ul{ margin:0 0 1.4rem; padding-left:1.1rem; max-width:780px; }
+  .tee-footer li{ margin-bottom:.5rem; }
+  .tee-footer .tee-copy{ margin:0; max-width:780px; opacity:.9; }
+</style>
+</head>
+<body>
+<header>
+  <h1>El archivo mezclado</h1>
+  <p>Arrastra cada fragmento a la columna del texto al que crees que pertenece, y ordénalos de introducción a cierre.</p>
+</header>
+
+<div class="wrap">
+  <div class="col pool">
+    <h2>Fragmentos sueltos</h2>
+    <div class="dropzone" id="pool"></div>
+  </div>
+  <div class="col">
+    <h2>Texto A</h2>
+    <div class="dropzone" id="colA" data-col="A"></div>
+  </div>
+  <div class="col">
+    <h2>Texto B</h2>
+    <div class="dropzone" id="colB" data-col="B"></div>
+  </div>
+</div>
+
+<div class="toolbar">
+  <button id="checkBtn">Comprobar</button>
+  <button id="resetBtn">Reiniciar</button>
+  <span id="score"></span>
+</div>
+
+<footer class="tee-footer">
+  <h3>Referencias</h3>
+  <ul>
+    <li>Cassany, D. (1995). <em>La cocina de la escritura</em>. Anagrama.</li>
+    <li>Bernárdez, E. (1982). <em>Introducción a la lingüística del texto</em>. Espasa-Calpe.</li>
+    <li>Halliday, M. A. K., y Hasan, R. (1976). <em>Cohesion in English</em>. Longman.</li>
+  </ul>
+  <p class="tee-copy">© Dr.ª Blanca Hernández Pardo · Técnicas y Estrategias de Expresión Escrita (TEE) · Tema 2: Detectives de la coherencia<br>
+  Queda prohibida la difusión, distribución o reproducción total o parcial de este material sin autorización expresa de la autora.</p>
+</footer>
+
+<script>
+const fragments = [
+  {id:1, group:"B", pos:4, text:"Algunos especialistas aconsejan mantener horarios regulares de sueño y limitar el uso de pantallas antes de acostarse."},
+  {id:2, group:"A", pos:1, text:"El teletrabajo se popularizó de forma acelerada a partir de 2020 y, desde entonces, se ha convertido en una modalidad habitual en numerosos sectores."},
+  {id:3, group:"B", pos:6, text:"Por todo ello, resulta necesario que las universidades incorporen programas de acompañamiento que ayuden al alumnado a gestionar mejor el descanso."},
+  {id:4, group:"A", pos:5, text:"Diversos estudios recomiendan establecer pausas activas cada cierto tiempo para reducir sus efectos."},
+  {id:5, group:"B", pos:1, text:"Numerosos estudiantes universitarios experimentan dificultades para conciliar el sueño durante los periodos de exámenes."},
+  {id:6, group:"A", pos:3, text:"La fatiga digital se define como el agotamiento físico y mental derivado de un uso prolongado de pantallas y videollamadas."},
+  {id:7, group:"B", pos:3, text:"Entre sus consecuencias más habituales se encuentran la pérdida de concentración, el bajo rendimiento y el aumento del estrés."},
+  {id:8, group:"A", pos:6, text:"En definitiva, el teletrabajo exige nuevas estrategias de organización que protejan la salud digital de quienes lo practican."},
+  {id:9, group:"B", pos:2, text:"Este fenómeno, conocido como insomnio situacional, suele estar asociado a la ansiedad y a la sobrecarga de tareas académicas."},
+  {id:10, group:"A", pos:4, text:"Entre sus síntomas más frecuentes se encuentran la dificultad para concentrarse, la irritabilidad y las molestias oculares."},
+  {id:11, group:"B", pos:5, text:"No obstante, muchos estudiantes desconocen estas recomendaciones o no encuentran el tiempo necesario para aplicarlas."},
+  {id:12, group:"A", pos:2, text:"Sin embargo, esta forma de trabajo trae consigo un fenómeno cada vez más estudiado: la fatiga digital."},
+];
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+let dragged = null;
+
+function makeCard(f){
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.draggable = true;
+  el.dataset.id = f.id;
+  el.innerHTML = `<span class="tag">${f.id}.</span>${f.text}`;
+  el.addEventListener('dragstart', e=>{ dragged = el; e.dataTransfer.effectAllowed='move'; setTimeout(()=>el.style.opacity='0.4',0); });
+  el.addEventListener('dragend', ()=>{ el.style.opacity='1'; });
+  return el;
+}
+
+document.getElementById('pool').append(...shuffle(fragments).map(makeCard));
+
+['pool','colA','colB'].forEach(id=>{
+  const zone = document.getElementById(id);
+  zone.addEventListener('dragover', e=>{
+    e.preventDefault();
+    zone.classList.add('dragover');
+    const after = getDragAfterElement(zone, e.clientY);
+    if(!dragged) return;
+    if(after == null){ zone.appendChild(dragged); } else { zone.insertBefore(dragged, after); }
+  });
+  zone.addEventListener('dragleave', ()=> zone.classList.remove('dragover'));
+  zone.addEventListener('drop', e=>{ e.preventDefault(); zone.classList.remove('dragover'); });
+});
+
+function getDragAfterElement(container, y){
+  const els = [...container.querySelectorAll('.card:not([style*="opacity: 0.4"])')];
+  return els.reduce((closest, child)=>{
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height/2;
+    if(offset < 0 && offset > closest.offset){ return {offset, element: child}; }
+    return closest;
+  }, {offset: -Infinity}).element;
+}
+
+document.getElementById('checkBtn').addEventListener('click', ()=>{
+  let correct = 0, total = fragments.length;
+  ['A','B'].forEach(g=>{
+    const zone = document.getElementById('col'+g);
+    [...zone.children].forEach((card, idx)=>{
+      const f = fragments.find(x=>x.id == card.dataset.id);
+      const ok = f.group === g && f.pos === idx+1;
+      card.classList.remove('correct','wrong');
+      card.classList.add(ok ? 'correct' : 'wrong');
+      if(ok) correct++;
+    });
+  });
+  document.getElementById('score').textContent = `${correct} / ${total} en su grupo y posición correctos`;
+});
+
+document.getElementById('resetBtn').addEventListener('click', ()=>{
+  document.getElementById('pool').innerHTML = '';
+  document.getElementById('colA').innerHTML = '';
+  document.getElementById('colB').innerHTML = '';
+  document.getElementById('pool').append(...shuffle(fragments).map(makeCard));
+  document.getElementById('score').textContent = '';
+});
+</script>
+</body>
+</html>

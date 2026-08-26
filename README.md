@@ -7,8 +7,12 @@ Material docente de la asignatura *Técnicas y estrategias de comunicación escr
 ## Estructura
 
 - `index.html` — portada de la asignatura, con acceso a cada tema.
-- `t1/` — Tema 1 · La comunicación (protegido con contraseña, facilitada en clase/Moodle). Incluye manual teórico en PDF, 7 vídeos explicativos y un cómic didáctico.
-- Temas 2-4: pendientes de publicar.
+- `t1/` — Tema 1 · La comunicación
+- `t2/` — Tema 2 · El discurso escrito
+- `t3/` — Tema 3 · La corrección de estilo
+- `t4/` — Tema 4 · La escritura académica
+
+Cada tema está protegido con una contraseña (facilitada en clase/Moodle) y da acceso a: manual teórico en PDF, vídeos explicativos incrustados, cómic(s) didáctico(s) y, cuando corresponde, algún recurso interactivo adicional con su propia contraseña.
 
 ## Autoría y derechos
 

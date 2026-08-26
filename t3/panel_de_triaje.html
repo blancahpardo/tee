@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Urgencias del texto · Panel de triaje</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --amarillo:#F4C542; --gris:#34484F; --gris-claro:#F3F3F4; --blanco:#FFFFFF;
+    --verde:#2E7D5B; --rojo:#B3261E; --monitor:#0B2E22;
+  }
+  *{box-sizing:border-box;}
+  body{ margin:0; font-family:Arial, Helvetica, sans-serif; background:var(--gris-claro); color:var(--gris); }
+  header{ background:#00283F; color:var(--blanco); padding:1.2rem 2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.6rem;}
+  header h1{ margin:0; font-size:1.4rem; }
+  header p{ margin:.2rem 0 0; color:#C9D6DD; font-size:.9rem; }
+  #scorebox{ background:var(--monitor); color:#7CFFB2; font-family:"Courier New", monospace; padding:.5rem 1rem; border-radius:8px; font-size:1.1rem; font-weight:700; }
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px,1fr)); gap:1rem; padding:1.4rem 2rem; }
+  .patient{
+    background:var(--blanco); border-radius:14px; padding:1rem; box-shadow:0 2px 10px rgba(0,0,0,.07);
+    cursor:pointer; border-top:6px solid #B9C2C6; transition:transform .12s;
+  }
+  .patient:hover{ transform:translateY(-2px); }
+  .patient.done{ border-top-color:var(--verde); }
+  .patient .num{ font-weight:700; color:var(--azul); font-size:.85rem; }
+  .patient .txt{ font-size:.86rem; margin-top:.4rem; line-height:1.35; max-height:4.6em; overflow:hidden; }
+  .patient .status{ margin-top:.6rem; font-size:.78rem; font-weight:700; color:#8A97A0; }
+  .patient.done .status{ color:var(--verde); }
+
+  .overlay{ position:fixed; inset:0; background:rgba(0,20,30,.6); display:none; align-items:center; justify-content:center; padding:2vh 2vw; z-index:10;}
+  .overlay.active{ display:flex; }
+  .modal{ background:var(--blanco); border-radius:18px; max-width:640px; width:100%; max-height:92vh; overflow:auto; padding:1.8rem; position:relative; }
+  .modal h2{ color:var(--azul); margin:0 0 .3rem; font-size:1.25rem; }
+  .modal .orig{ background:var(--gris-claro); border-radius:10px; padding:.9rem 1rem; font-style:italic; margin:.8rem 0 1.1rem; }
+  .catbtns{ display:grid; grid-template-columns:1fr 1fr; gap:.6rem; margin-bottom:1rem; }
+  .catbtns button{
+    font-family:inherit; border:2px solid var(--gris-claro); background:var(--blanco); border-radius:10px; padding:.6rem;
+    font-size:.9rem; font-weight:700; color:var(--gris); cursor:pointer;
+  }
+  .catbtns button.right{ border-color:var(--verde); background:#E8F3EC; color:var(--verde); }
+  .catbtns button.wrong{ border-color:var(--rojo); background:#FBEAEA; color:var(--rojo); }
+  .reveal{ display:none; border-top:1px solid var(--gris-claro); padding-top:1rem; margin-top:.5rem;}
+  .reveal.show{ display:block; }
+  .reveal .row{ margin-bottom:.6rem; }
+  .reveal .row b{ color:var(--azul); display:block; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em;}
+  .closeBtn{ position:absolute; top:1rem; right:1.1rem; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--gris); }
+  .navbtn{ margin-top:1.2rem; background:var(--azul); color:var(--blanco); border:none; border-radius:999px; padding:.6rem 1.4rem; font-family:inherit; font-weight:700; cursor:pointer;}
+  /* ---- Pie de autoría y referencias ---- */
+  .tee-footer{ background:#00283F; color:#C9D6DD; padding:2rem 2rem 2.2rem; font-size:.82rem; line-height:1.55; }
+  .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .tee-footer ul{ margin:0 0 1.4rem; padding-left:1.1rem; max-width:780px; }
+  .tee-footer li{ margin-bottom:.5rem; }
+  .tee-footer .tee-copy{ margin:0; max-width:780px; opacity:.9; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Urgencias del Texto</h1>
+    <p>Panel de triaje · Elige la categoría de la dolencia y comprueba tu diagnóstico</p>
+  </div>
+  <div id="scorebox">0 / 12 altas</div>
+</header>
+
+<div class="grid" id="grid"></div>
+
+<div class="overlay" id="overlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<footer class="tee-footer">
+  <h3>Referencias</h3>
+  <ul>
+    <li>Real Academia Española y Asociación de Academias de la Lengua Española. (2005). <em>Diccionario panhispánico de dudas</em>. https://www.rae.es/dpd/</li>
+    <li>Real Academia Española y Asociación de Academias de la Lengua Española. (2009). <em>Nueva gramática de la lengua española</em>. Espasa.</li>
+    <li>Real Academia Española y Asociación de Academias de la Lengua Española. (2010). <em>Ortografía de la lengua española</em>. Espasa.</li>
+  </ul>
+  <p class="tee-copy">© Dr.ª Blanca Hernández Pardo · Técnicas y Estrategias de Expresión Escrita (TEE) · Tema 3: Clínica de estilo<br>
+  Queda prohibida la difusión, distribución o reproducción total o parcial de este material sin autorización expresa de la autora.</p>
+</footer>
+
+<script>
+const cats = ["Morfosintaxis","Léxico","Ortotipografía","Puntuación"];
+const pacientes = [
+  {n:1, texto:"Estoy segura que ha llegado tarde.", cat:"Morfosintaxis", dolencia:"Queísmo", diag:"Falta la preposición «de» exigida por «estar seguro de que».", trat:"Estoy segura de que ha llegado tarde."},
+  {n:2, texto:"Pienso de que deberíamos revisar el informe.", cat:"Morfosintaxis", dolencia:"Dequeísmo", diag:"Se añade una «de» que «pensar» no exige en esta construcción.", trat:"Pienso que deberíamos revisar el informe."},
+  {n:3, texto:"A la directora la comunicaron la noticia esta mañana.", cat:"Morfosintaxis", dolencia:"Laísmo", diag:"«Comunicar algo a alguien» exige complemento indirecto («le»), no directo («la»).", trat:"A la directora le comunicaron la noticia esta mañana."},
+  {n:4, texto:"Compré un libro y le dejé en el tren.", cat:"Morfosintaxis", dolencia:"Leísmo de cosa", diag:"«Libro» es complemento directo de cosa: corresponde «lo», no «le».", trat:"Compré un libro y lo dejé en el tren."},
+  {n:5, texto:"Habían muchos motivos para sospechar.", cat:"Morfosintaxis", dolencia:"Concordancia indebida con «haber» impersonal", diag:"El «haber» impersonal es invariable: no concuerda en plural.", trat:"Había muchos motivos para sospechar."},
+  {n:6, texto:"El informe pone que las cifras han bajado.", cat:"Léxico", dolencia:"Verbo baúl", diag:"«Poner» es un verbo comodín que sustituye a uno más preciso.", trat:"El informe indica (o refleja) que las cifras han bajado."},
+  {n:7, texto:"Subió arriba a por el informe y volvió a repetir la misma explicación otra vez.", cat:"Léxico", dolencia:"Redundancia / pleonasmo", diag:"«Subir arriba», «volver a repetir» y «otra vez» duplican información.", trat:"Subió a por el informe y repitió la misma explicación."},
+  {n:8, texto:"El árbitro decidió infringir una sanción al jugador.", cat:"Léxico", dolencia:"Parónimo (infringir / infligir)", diag:"«Infringir» es quebrantar una norma; «imponer un castigo» es «infligir».", trat:"El árbitro decidió infligir una sanción al jugador."},
+  {n:9, texto:"El Rector inauguró el Congreso de Lingüística el próximo Lunes.", cat:"Ortotipografía", dolencia:"Mayúsculas indebidas", diag:"Los cargos y los días de la semana se escriben en minúscula.", trat:"El rector inauguró el Congreso de Lingüística el próximo lunes."},
+  {n:10, texto:"El informe utiliza el término stakeholders sin explicarlo.", cat:"Ortotipografía", dolencia:"Extranjerismo crudo sin marcar", diag:"Los extranjerismos no adaptados deben escribirse en cursiva.", trat:"El informe utiliza el término stakeholders (en cursiva) sin explicarlo."},
+  {n:11, texto:"Los estudiantes que llegaron tarde, no pudieron entrar al examen.", cat:"Puntuación", dolencia:"Coma indebida entre sujeto y predicado", diag:"No debe separarse con coma el sujeto de su predicado.", trat:"Los estudiantes que llegaron tarde no pudieron entrar al examen."},
+  {n:12, texto:"Había tres razones para no ir; llovía mucho, hacía frío y estaba cansada.", cat:"Puntuación", dolencia:"Punto y coma en lugar de dos puntos", diag:"Ante una enumeración explicativa corresponden dos puntos.", trat:"Había tres razones para no ir: llovía mucho, hacía frío y estaba cansada."},
+];
+const done = new Set();
+
+function renderGrid(){
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+  pacientes.forEach(p=>{
+    const card = document.createElement('div');
+    card.className = 'patient' + (done.has(p.n) ? ' done' : '');
+    card.innerHTML = `<div class="num">PACIENTE N.º ${p.n}</div><div class="txt">${p.texto}</div><div class="status">${done.has(p.n) ? '✓ Alta médica dada' : 'Pendiente de diagnóstico'}</div>`;
+    card.onclick = ()=> openModal(p.n);
+    grid.appendChild(card);
+  });
+  document.getElementById('scorebox').textContent = `${done.size} / 12 altas`;
+}
+
+function openModal(n){
+  const p = pacientes.find(x=>x.n===n);
+  const modal = document.getElementById('modal');
+  modal.innerHTML = `
+    <button class="closeBtn" onclick="closeModal()">×</button>
+    <h2>Paciente n.º ${p.n}</h2>
+    <div class="orig">«${p.texto}»</div>
+    <p style="font-size:.9rem;color:var(--gris);margin:0 0 .6rem;">¿A qué categoría pertenece la dolencia?</p>
+    <div class="catbtns" id="catbtns"></div>
+    <div class="reveal" id="reveal">
+      <div class="row"><b>Dolencia</b>${p.dolencia}</div>
+      <div class="row"><b>Diagnóstico</b>${p.diag}</div>
+      <div class="row"><b>Tratamiento</b>${p.trat}</div>
+      <button class="navbtn" onclick="closeModal()">Cerrar historial</button>
+    </div>
+  `;
+  const btnBox = document.getElementById('catbtns');
+  cats.forEach(c=>{
+    const b = document.createElement('button');
+    b.textContent = c;
+    b.onclick = ()=>{
+      [...btnBox.children].forEach(x=>x.disabled=true);
+      if(c === p.cat){ b.classList.add('right'); } else {
+        b.classList.add('wrong');
+        [...btnBox.children].find(x=>x.textContent===p.cat).classList.add('right');
+      }
+      done.add(p.n);
+      document.getElementById('reveal').classList.add('show');
+    };
+    btnBox.appendChild(b);
+  });
+  document.getElementById('overlay').classList.add('active');
+}
+function closeModal(){
+  document.getElementById('overlay').classList.remove('active');
+  renderGrid();
+}
+document.getElementById('overlay').addEventListener('click', e=>{ if(e.target.id==='overlay') closeModal(); });
+renderGrid();
+</script>
+</body>
+</html>
