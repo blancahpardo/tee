@@ -1,0 +1,1146 @@
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+
+const ROOT = __dirname;
+const REPO = 'blancahpardo/tee';
+const TEACHER_PASSWORD = 'profe_27';
+const STUDENT_PASSWORD = 'medusa';
+
+function sha256(text) {
+  return crypto.createHash('sha256').update(text, 'utf8').digest('hex');
+}
+function b64(str) {
+  return Buffer.from(str, 'utf8').toString('base64');
+}
+function esc(s) {
+  return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+// ---- Palette (reused verbatim from the TEE site template, per la usuaria) ----
+const CSS_BASE = `
+:root {
+  --azul: #003B5C;
+  --azul-d: #00283F;
+  --amar: #F4C542;
+  --gris: #34484F;
+  --claro: #F3F3F4;
+  --humo: #9FB1BA;
+  --verde: #2E7D32;
+  --rojo: #B00020;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--gris); background:#fff; }
+a { color: inherit; }
+`;
+
+const CSS_INDEX = `
+${CSS_BASE}
+body { background: var(--azul); min-height:100vh; display:flex; flex-direction:column; }
+#gate { position:fixed; inset:0; background:var(--azul); display:flex; align-items:center; justify-content:center; padding:24px; z-index:999; }
+#gate .box { max-width:380px; width:100%; text-align:center; }
+#gate .kicker { color:var(--amar); font-size:12px; font-weight:bold; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:10px; }
+#gate h1 { color:#fff; font-size:26px; margin:0 0 10px; }
+#gate p { color:var(--humo); font-size:14px; margin:0 0 26px; }
+#gate input { width:100%; padding:13px 16px; border-radius:8px; border:none; font-size:15px; font-family:Arial,Helvetica,sans-serif; margin-bottom:14px; outline:2px solid transparent; }
+#gate input:focus { outline:2px solid var(--amar); }
+#gate button.submit { width:100%; padding:13px 16px; border-radius:8px; border:none; background:var(--amar); color:var(--azul-d); font-size:15px; font-weight:bold; font-family:Arial,Helvetica,sans-serif; cursor:pointer; }
+#gate button.submit:hover { filter:brightness(1.06); }
+#gate .error { color:#FFB3B3; font-size:13px; margin-top:12px; min-height:18px; }
+#page { display:none; min-height:100vh; flex:1; flex-direction:column; }
+header { padding: 60px 6vw 20px; text-align:center; }
+header .kicker { color: var(--amar); font-size:12px; font-weight:bold; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:10px; }
+header h1 { color:#fff; font-size:clamp(26px,4.2vw,40px); margin:0 0 6px; }
+header .author { color: var(--amar); font-size:14px; font-weight:bold; margin:0 0 12px; }
+header p { color: var(--humo); font-size:14px; margin:0; }
+main { flex:1; max-width:1000px; width:100%; margin:0 auto; padding:40px 6vw 60px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; align-content:start; }
+.tema-btn { display:flex; flex-direction:column; align-items:flex-start; gap:8px; background:#fff; border:none; border-radius:14px; padding:28px 24px; text-decoration:none; box-shadow:0 4px 16px rgba(0,0,0,.18); transition:transform .15s ease; }
+.tema-btn:hover { transform:translateY(-3px); }
+.tema-num { font-size:13px; font-weight:bold; color:var(--amar); background:var(--azul); padding:4px 12px; border-radius:20px; letter-spacing:1px; }
+.tema-title { font-size:19px; font-weight:bold; color:var(--azul); margin-top:4px; }
+.tema-btn { position:relative; }
+.tema-btn .teacher-hint { position:absolute; top:12px; right:14px; font-size:10px; font-weight:bold; padding:2px 8px; border-radius:10px; }
+.tema-btn .teacher-hint.on { background:#DFF3E0; color:var(--verde); }
+.tema-btn .teacher-hint.off { background:#FBEAEC; color:var(--rojo); }
+footer { text-align:center; padding:20px 6vw 34px; font-size:11px; color:var(--humo); font-style:italic; }
+.teacher-link { display:block; margin:0 auto 18px; background:none; border:none; color:var(--humo); font-size:12px; cursor:pointer; font-family:Arial,Helvetica,sans-serif; text-decoration:underline; }
+.teacher-link:hover { color:#fff; }
+.teacher-wrap { max-width:1000px; width:100%; margin:0 auto; padding:0 6vw; }
+.teacher-banner { background:var(--azul-d); color:#fff; border-radius:12px; padding:18px 22px; margin:0 0 10px; }
+.teacher-banner strong { color: var(--amar); }
+.teacher-banner p { font-size:13px; margin:6px 0 0; color:var(--humo); }
+.teacher-token-row { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.teacher-token-row input { flex:1; min-width:220px; padding:9px 12px; border-radius:8px; border:none; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+.teacher-token-row button { background:var(--amar); color:var(--azul-d); border:none; border-radius:8px; padding:9px 16px; font-size:13px; font-weight:bold; cursor:pointer; font-family:Arial,Helvetica,sans-serif; }
+.teacher-status { font-size:12px; margin-top:10px; min-height:16px; }
+.teacher-toggle-list { list-style:none; padding:0; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.teacher-toggle-list li { background:rgba(255,255,255,.08); border-radius:8px; padding:10px 14px; display:flex; align-items:center; gap:10px; font-size:13px; }
+.teacher-toggle-list input { width:18px; height:18px; }
+`;
+
+const CSS_TOPIC = `
+${CSS_BASE}
+#gate { position:fixed; inset:0; background:var(--azul); display:flex; align-items:center; justify-content:center; padding:24px; z-index:999; }
+#gate .box { max-width:380px; width:100%; text-align:center; }
+#gate .kicker { color:var(--amar); font-size:12px; font-weight:bold; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:10px; }
+#gate h1 { color:#fff; font-size:26px; margin:0 0 10px; }
+#gate p { color:var(--humo); font-size:14px; margin:0 0 26px; }
+#gate input { width:100%; padding:13px 16px; border-radius:8px; border:none; font-size:15px; font-family:Arial,Helvetica,sans-serif; margin-bottom:14px; outline:2px solid transparent; }
+#gate input:focus { outline:2px solid var(--amar); }
+#gate button.submit { width:100%; padding:13px 16px; border-radius:8px; border:none; background:var(--amar); color:var(--azul-d); font-size:15px; font-weight:bold; font-family:Arial,Helvetica,sans-serif; cursor:pointer; }
+#gate button.submit:hover { filter:brightness(1.06); }
+#gate .error { color:#FFB3B3; font-size:13px; margin-top:12px; min-height:18px; }
+#page { display:none; }
+main { max-width:980px; margin:0 auto; padding:48px 6vw 60px; }
+.kicker { color:var(--amar); font-size:12px; font-weight:bold; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:8px; }
+.view > h1 { color:var(--azul); font-size:32px; margin:0 0 34px; }
+.hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-bottom:30px; }
+.hub-btn { display:flex; flex-direction:column; align-items:flex-start; gap:6px; background:var(--claro); border:none; border-radius:12px; padding:26px 22px; cursor:pointer; text-align:left; box-shadow:0 2px 10px rgba(159,177,186,.28); font-family:Arial,Helvetica,sans-serif; position:relative; }
+.hub-btn:hover { background:#E9ECEE; }
+.hub-icon { font-size:30px; margin-bottom:4px; }
+.hub-label { font-size:17px; font-weight:bold; color:var(--azul); }
+.hub-desc { font-size:12.5px; color:var(--humo); }
+.back-home { font-size:13px; color:var(--humo); text-decoration:none; }
+.back-home:hover { color:var(--azul); }
+.sub-view h2 { color:var(--azul); font-size:24px; margin:18px 0 4px; }
+.sub-view .section-note { font-size:13px; color:var(--humo); margin:0 0 24px; }
+.back-btn { background:none; border:1.5px solid var(--azul); color:var(--azul); font-size:13px; font-weight:bold; padding:6px 14px; border-radius:20px; cursor:pointer; font-family:Arial,Helvetica,sans-serif; }
+.back-btn:hover { background:var(--azul); color:#fff; }
+.dl-big { display:inline-block; background:var(--amar); color:var(--azul-d); font-weight:bold; font-size:14px; text-decoration:none; padding:10px 20px; border-radius:20px; margin-bottom:18px; }
+.pdf-frame { width:100%; height:78vh; border:none; border-radius:8px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+.img-frame { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+.video-frame { display:block; width:100%; max-height:62vh; border-radius:6px; background:#000; }
+.office-frame, .interactive-frame { width:100%; height:78vh; border:none; border-radius:8px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+.video-card { background:var(--claro); border-radius:10px; padding:20px; margin-bottom:22px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+.video-card-meta { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:6px; }
+.video-card-meta h3 { margin:0; color:var(--azul); font-size:17px; }
+.video-card-badges { display:flex; align-items:center; gap:8px; }
+.video-card-badges .badge { background:var(--azul); color:var(--amar); font-size:11px; font-weight:bold; letter-spacing:1px; padding:4px 10px; border-radius:20px; white-space:nowrap; }
+.dl-mini { font-size:11px; font-weight:bold; color:var(--azul); text-decoration:none; border:1.5px solid var(--azul); padding:3px 10px; border-radius:20px; white-space:nowrap; }
+.dl-mini:hover { background:var(--azul); color:#fff; }
+.ref-intro { color:var(--azul); font-size:16px; margin:0 0 16px; }
+.ref-item { font-size:13.5px; color:var(--gris); line-height:1.6; margin:0 0 16px; padding-left:28px; text-indent:-28px; }
+.ref-item a { color:var(--azul); word-break:break-all; }
+.ref-item em { font-style:italic; }
+.notice { font-size:12px; color:var(--humo); font-style:italic; margin-top:10px; }
+/* quiz */
+.quiz-start { background:var(--claro); border-radius:12px; padding:26px; }
+.quiz-start p { font-size:14px; margin:0 0 18px; }
+.quiz-btn { background:var(--azul); color:#fff; border:none; border-radius:20px; padding:11px 22px; font-size:14px; font-weight:bold; cursor:pointer; font-family:Arial,Helvetica,sans-serif; }
+.quiz-btn:hover { filter:brightness(1.15); }
+.quiz-progress { font-size:12px; color:var(--humo); margin-bottom:6px; }
+.quiz-q { background:var(--claro); border-radius:12px; padding:24px; margin-bottom:18px; }
+.quiz-q h3 { color:var(--azul); font-size:17px; margin:0 0 18px; }
+.quiz-opt { display:block; width:100%; text-align:left; background:#fff; border:1.5px solid var(--humo); border-radius:8px; padding:12px 16px; margin-bottom:10px; font-size:14px; cursor:pointer; font-family:Arial,Helvetica,sans-serif; color:var(--gris); }
+.quiz-opt:hover { border-color:var(--azul); }
+.quiz-opt.correct { border-color:var(--verde); background:#EAF6EB; font-weight:bold; }
+.quiz-opt.incorrect { border-color:var(--rojo); background:#FBEAEC; }
+.quiz-opt[disabled] { cursor:default; }
+.quiz-feedback { font-size:13px; color:var(--gris); background:#fff; border-radius:8px; padding:12px 16px; margin-top:4px; margin-bottom:16px; border-left:3px solid var(--azul); }
+.quiz-score { font-size:26px; font-weight:bold; color:var(--azul); margin-bottom:8px; }
+.quiz-result { background:var(--claro); border-radius:12px; padding:30px; text-align:center; }
+/* teacher panel */
+.teacher-banner { background:var(--azul-d); color:#fff; border-radius:12px; padding:18px 22px; margin-bottom:24px; }
+.teacher-banner strong { color: var(--amar); }
+.teacher-banner p { font-size:13px; margin:6px 0 0; color:var(--humo); }
+.teacher-token-row { display:flex; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.teacher-token-row input { flex:1; min-width:220px; padding:9px 12px; border-radius:8px; border:none; font-size:13px; font-family:Arial,Helvetica,sans-serif; }
+.teacher-token-row button { background:var(--amar); color:var(--azul-d); border:none; border-radius:8px; padding:9px 16px; font-size:13px; font-weight:bold; cursor:pointer; font-family:Arial,Helvetica,sans-serif; }
+.teacher-status { font-size:12px; margin-top:10px; min-height:16px; }
+.teacher-toggle-list { list-style:none; padding:0; margin:16px 0 0; display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+.teacher-toggle-list li { background:rgba(255,255,255,.08); border-radius:8px; padding:10px 14px; display:flex; align-items:center; gap:10px; font-size:13px; }
+.teacher-toggle-list input { width:18px; height:18px; }
+.hub-btn .teacher-hint { position:absolute; top:10px; right:12px; font-size:10px; font-weight:bold; padding:2px 8px; border-radius:10px; }
+.hub-btn .teacher-hint.on { background:#DFF3E0; color:var(--verde); }
+.hub-btn .teacher-hint.off { background:#FBEAEC; color:var(--rojo); }
+footer { text-align:center; padding:26px 6vw 40px; font-size:11px; color:var(--humo); font-style:italic; }
+`;
+
+const ICONS = { manual: '📘', principal: '📓', evaluable: '📝', practica: '🧪', quiz: '❓' };
+const LABELS = {
+  manual: 'Manual teórico', principal: 'Cuaderno principal', evaluable: 'Cuaderno evaluable',
+  practica: 'Prácticas', quiz: 'Cuestionario de práctica'
+};
+const DESCS = {
+  manual: 'Lectura en PDF, descargable',
+  principal: 'Descarga el cuaderno de trabajo',
+  evaluable: 'Descarga la plantilla del entregable',
+  practica: 'Documento de la práctica (solo lectura)',
+  quiz: '10 preguntas al azar, puntuación sobre 10'
+};
+
+function copyrightFooter(temaLabel) {
+  return `© Dra. Blanca Hernández Pardo · Técnicas y estrategias de comunicación escrita en español${temaLabel ? ' · ' + temaLabel : ''}<br>Queda prohibida la difusión, distribución o reproducción total o parcial de este material sin autorización expresa de la autora.`;
+}
+
+function existingViews(tema) {
+  return tema.viewOrder.filter(v => tema.views[v] && tema.views[v].exists);
+}
+
+function viewIcon(v, tema) { return tema.views[v].icon || ICONS[v] || '📄'; }
+function viewLabel(v, tema) { return tema.views[v].label || LABELS[v] || v; }
+function viewDesc(v, tema) { return tema.views[v].desc || DESCS[v] || ''; }
+
+function buildHub(tema) {
+  const buttons = existingViews(tema).map(v => {
+    return `<button class="hub-btn" data-view="${v}" data-type="${v}" style="display:none">
+      <span class="teacher-hint" data-hint="${v}"></span>
+      <span class="hub-icon">${viewIcon(v, tema)}</span>
+      <span class="hub-label">${esc(viewLabel(v, tema))}</span>
+      <span class="hub-desc">${esc(viewDesc(v, tema))}</span>
+    </button>`;
+  }).join('\n    ');
+  const toggles = existingViews(tema).map(v =>
+    `<li><input type="checkbox" id="chk-${v}" data-type="${v}"><label for="chk-${v}">${esc(viewLabel(v, tema))}</label></li>`
+  ).join('\n      ');
+  return `<div id="hub" class="view">
+  <div class="kicker">${esc(tema.kicker)}</div>
+  <div id="teacher-panel" class="teacher-banner" hidden>
+    <strong>⚙ Modo profesora</strong>
+    <p>Pega aquí tu token de GitHub (solo para esta sesión de navegador; se pierde al cerrar la pestaña) y marca qué materiales ve el alumnado. Los cambios se publican en 1-2 minutos.</p>
+    <div class="teacher-token-row">
+      <input type="password" id="gh-token" placeholder="Token de GitHub (ghp_... o github_pat_...)">
+      <button id="gh-token-save">Guardar token de esta sesión</button>
+    </div>
+    <div class="teacher-status" id="teacher-status"></div>
+    <ul class="teacher-toggle-list">
+      ${toggles}
+    </ul>
+  </div>
+  <h1>¿Qué quieres consultar?</h1>
+  <div class="hub-grid">
+    ${buttons}
+  </div>
+  <a class="back-home" href="../index.html">← Volver a la asignatura</a>
+</div>`;
+}
+
+function buildManualView(tema) {
+  if (!tema.views.manual || !tema.views.manual.exists) return '';
+  const f = tema.views.manual.file;
+  return `<div id="view-manual" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>Manual teórico · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Puedes leerlo aquí o descargarlo.</p>
+  <a class="dl-big" href="${f}" download>⬇ Descargar PDF</a>
+  <iframe class="pdf-frame" src="${f}" title="Manual teórico ${esc(tema.titleShort)}"></iframe>
+</div>`;
+}
+
+function buildViewerDownloadView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Puedes leerlo aquí o descargarlo.</p>
+  <a class="dl-big" href="${cfg.file}" download>⬇ Descargar PDF</a>
+  <iframe class="pdf-frame" src="${cfg.file}" title="${esc(label)}"></iframe>
+</div>`;
+}
+
+function buildVideoView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Puedes verlo aquí o descargarlo.</p>
+  <a class="dl-big" href="${cfg.file}" download>⬇ Descargar vídeo</a>
+  <video class="video-frame" src="${cfg.file}" controls preload="metadata"></video>
+</div>`;
+}
+
+function buildImageView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Solo puede consultarse aquí, sin descarga.</p>
+  <img class="img-frame" src="${cfg.file}" alt="${esc(label)} · ${esc(tema.titleShort)}">
+</div>`;
+}
+
+function buildVideoGroupView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  const cards = cfg.items.map(it => `<div class="video-card">
+      <div class="video-card-meta">
+        <h3>${esc(it.label)}</h3>
+        <div class="video-card-badges">
+          ${it.duration ? `<span class="badge">${esc(it.duration)}</span>` : ''}
+          <a class="dl-mini" href="${it.file}" download>Descargar</a>
+        </div>
+      </div>
+      <video class="video-frame" controls preload="metadata">
+        <source src="${it.file}" type="video/mp4">
+      </video>
+    </div>`).join('\n    ');
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.items.length} vídeos, reproducción en la página.</p>
+  ${cards}
+</div>`;
+}
+
+function officeEmbedSrc(tema, file) {
+  const pageUrl = `https://blancahpardo.github.io/${REPO.split('/')[1]}/${tema.dir}/${file}`;
+  return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(pageUrl)}`;
+}
+
+function buildOfficeView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.desc2 || ''}</p>
+  <iframe class="office-frame" src="${officeEmbedSrc(tema, cfg.file)}" title="${esc(label)}"></iframe>
+</div>`;
+}
+
+function buildOfficeGroupView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  const subButtons = cfg.items.map(it => `<button class="hub-btn" data-view="${viewKey}-${it.id}">
+      <span class="hub-icon">📖</span>
+      <span class="hub-label">${esc(it.label)}</span>
+    </button>`).join('\n    ');
+  const leaves = cfg.items.map(it => `<div id="view-${viewKey}-${it.id}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="${viewKey}">← Volver</button>
+  <h2>${esc(it.label)} · ${esc(tema.titleShort)}</h2>
+  <iframe class="office-frame" src="${officeEmbedSrc(tema, it.file)}" title="${esc(it.label)}"></iframe>
+</div>`).join('\n');
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Elige un cómic para visualizarlo.</p>
+  <div class="hub-grid">
+    ${subButtons}
+  </div>
+</div>
+${leaves}`;
+}
+
+function buildInteractiveView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.desc2 || 'Actividad interactiva.'}</p>
+  <iframe class="interactive-frame" src="${cfg.file}" title="${esc(label)}"></iframe>
+</div>`;
+}
+
+function buildExternalView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.desc2 || ''}</p>
+  <a class="dl-big" href="${cfg.url}" target="_blank" rel="noopener">Ir a ${esc(cfg.linkLabel || label)} ↗</a>
+</div>`;
+}
+
+function buildReflistView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  const items = cfg.refs.map(r => `<p class="ref-item">${esc(r.author)} (${esc(r.date)}). ${esc(r.title)} <em>[${esc(r.type)}]</em>. ${esc(r.platform)}. <a href="${r.url}" target="_blank" rel="noopener">${esc(r.url)}</a></p>`).join('\n  ');
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <h3 class="ref-intro">Recursos de LinguAIstica</h3>
+  ${items}
+</div>`;
+}
+
+function buildDownloadView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.note || 'Descarga el fichero para trabajar con él en tu ordenador.'}</p>
+  <a class="dl-big" href="${cfg.file}" download>⬇ Descargar</a>
+</div>`;
+}
+
+function buildViewerGroupView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  const extraLink = cfg.extraDownload
+    ? `<a class="dl-big" href="${cfg.extraDownload.file}" download>⬇ ${esc(cfg.extraDownload.label)}</a>`
+    : '';
+  if (cfg.items.length === 1) {
+    const it = cfg.items[0];
+    return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Documento de solo lectura, sin descarga.${cfg.extraDownload ? ' Los materiales que necesitas para trabajarla se descargan aparte, más abajo.' : ''}</p>
+  ${extraLink}
+  <iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(label)}"></iframe>
+</div>`;
+  }
+  const subButtons = cfg.items.map(it => `<button class="hub-btn" data-view="${viewKey}-${it.id}">
+      <span class="hub-icon">🧪</span>
+      <span class="hub-label">${esc(it.label)}</span>
+      <span class="hub-desc">Documento (solo lectura)</span>
+    </button>`).join('\n    ');
+  const leaves = cfg.items.map(it => `<div id="view-${viewKey}-${it.id}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="${viewKey}">← Volver</button>
+  <h2>${esc(it.label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Documento de solo lectura, sin descarga.</p>
+  <iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(it.label)}"></iframe>
+</div>`).join('\n');
+  return `<div id="view-${viewKey}" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">Elige el documento que quieras consultar.</p>
+  ${extraLink}
+  <div class="hub-grid">
+    ${subButtons}
+  </div>
+</div>
+${leaves}`;
+}
+
+function buildQuizView(tema) {
+  const cfg = tema.views.quiz;
+  if (!cfg || !cfg.exists) return '';
+  return `<div id="view-quiz" class="view sub-view" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>Cuestionario de práctica · ${esc(tema.titleShort)}</h2>
+  <div id="quiz-root"></div>
+</div>`;
+}
+
+function buildTopicHtml(tema) {
+  const fixedViews = ['manual', 'principal', 'evaluable', 'practica', 'quiz'];
+  const extraKeys = tema.viewOrder.filter(v => !fixedViews.includes(v));
+  const extraHtml = extraKeys.map(v => {
+    const cfg = tema.views[v];
+    if (!cfg || !cfg.exists) return '';
+    if (cfg.kind === 'viewergroup') return buildViewerGroupView(v, tema);
+    if (cfg.kind === 'viewerdownload') return buildViewerDownloadView(v, tema);
+    if (cfg.kind === 'image') return buildImageView(v, tema);
+    if (cfg.kind === 'video') return buildVideoView(v, tema);
+    if (cfg.kind === 'videogroup') return buildVideoGroupView(v, tema);
+    if (cfg.kind === 'office') return buildOfficeView(v, tema);
+    if (cfg.kind === 'officegroup') return buildOfficeGroupView(v, tema);
+    if (cfg.kind === 'interactive') return buildInteractiveView(v, tema);
+    if (cfg.kind === 'external') return buildExternalView(v, tema);
+    if (cfg.kind === 'reflist') return buildReflistView(v, tema);
+    return buildDownloadView(v, tema);
+  });
+
+  const payloadHtml = [
+    buildHub(tema),
+    buildManualView(tema),
+    buildDownloadView('principal', tema),
+    buildDownloadView('evaluable', tema),
+    buildViewerGroupView('practica', tema),
+    ...extraHtml,
+    buildQuizView(tema)
+  ].filter(Boolean).join('\n');
+
+  const hash = sha256(STUDENT_PASSWORD);
+  const teacherHash = sha256(TEACHER_PASSWORD);
+  const payloadB64 = b64(payloadHtml);
+
+  let quizManual = '[]', quizCuaderno = '[]';
+  if (tema.views.quiz && tema.views.quiz.exists) {
+    quizManual = JSON.stringify(JSON.parse(fs.readFileSync(path.join(ROOT, tema.dir, 'quiz_manual.json'), 'utf8')).quiz);
+    quizCuaderno = JSON.stringify(JSON.parse(fs.readFileSync(path.join(ROOT, tema.dir, 'quiz_cuaderno.json'), 'utf8')).quiz);
+  }
+
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${esc(tema.titleFull)} — TEE</title>
+<style>${CSS_TOPIC}</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <div class="kicker">${esc(tema.kicker)}</div>
+    <h1>TEE</h1>
+    <p>Contenido protegido. Introduce la contraseña facilitada en clase.</p>
+    <input type="password" id="pw" placeholder="Contraseña" autofocus>
+    <button class="submit" id="enter">Acceder</button>
+    <div class="error" id="err"></div>
+  </div>
+</div>
+
+<div id="page">
+  <main id="content"></main>
+  <footer>
+    ${copyrightFooter(tema.titleShort)}
+  </footer>
+</div>
+
+<script>
+(function() {
+  var HASH = "${hash}";
+  var TEACHER_HASH = "${teacherHash}";
+  var PAYLOAD = "${payloadB64}";
+  var QUIZ_MANUAL = ${quizManual};
+  var QUIZ_CUADERNO = ${quizCuaderno};
+  var SESSION_KEY = "tee_unlocked";
+  var REPO = "${REPO}";
+  var LOCAL_CONFIG = "config.json";
+  var GH_CONFIG_PATH = "${tema.dir}/config.json";
+  var ROOT_CONFIG = "../config.json";
+  var TEMA_KEY = "${tema.dir}";
+  var isTeacher = false;
+  var configSha = null;
+
+  function sha256Hex(text) {
+    var enc = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", enc).then(function(buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function(b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("");
+    });
+  }
+
+  function showView(id) {
+    document.querySelectorAll(".view").forEach(function(v) { v.hidden = true; });
+    var el = document.getElementById(id) || document.getElementById("view-" + id);
+    if (el) el.hidden = false;
+  }
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  var quizState = null;
+
+  function renderQuizStart() {
+    var root = document.getElementById("quiz-root");
+    if (!root) return;
+    root.innerHTML =
+      '<div class="quiz-start">' +
+      '<p>10 preguntas: 5 elegidas al azar del banco del manual y 5 del banco del cuaderno. Puedes repetir el intento tantas veces como quieras — cada vez se vuelven a elegir y reordenar las preguntas.</p>' +
+      '<button class="quiz-btn" id="quiz-begin">Empezar</button>' +
+      '</div>';
+    document.getElementById("quiz-begin").addEventListener("click", startQuiz);
+  }
+
+  function startQuiz() {
+    var fromManual = shuffle(QUIZ_MANUAL).slice(0, 5);
+    var fromCuaderno = shuffle(QUIZ_CUADERNO).slice(0, 5);
+    quizState = { questions: shuffle(fromManual.concat(fromCuaderno)), index: 0, score: 0 };
+    renderQuizQuestion();
+  }
+
+  function renderQuizQuestion() {
+    var root = document.getElementById("quiz-root");
+    var total = quizState.questions.length;
+    if (quizState.index >= total) {
+      root.innerHTML =
+        '<div class="quiz-result">' +
+        '<div class="quiz-score">' + quizState.score + ' / ' + total + '</div>' +
+        '<p>Puntuación de este intento.</p>' +
+        '<button class="quiz-btn" id="quiz-retry">Volver a intentar</button>' +
+        '</div>';
+      document.getElementById("quiz-retry").addEventListener("click", startQuiz);
+      return;
+    }
+    var q = quizState.questions[quizState.index];
+    var opts = shuffle(q.answerOptions);
+    var html = '<div class="quiz-progress">Pregunta ' + (quizState.index + 1) + ' de ' + total + ' · Puntuación provisional: ' + quizState.score + '</div>';
+    html += '<div class="quiz-q"><h3>' + q.question + '</h3>';
+    opts.forEach(function(opt, i) {
+      html += '<button class="quiz-opt" data-idx="' + i + '">' + opt.text + '</button>';
+    });
+    html += '<div class="quiz-feedback" id="quiz-feedback" hidden></div>';
+    html += '</div>';
+    root.innerHTML = html;
+    var buttons = root.querySelectorAll(".quiz-opt");
+    buttons.forEach(function(btn, i) {
+      btn.addEventListener("click", function() {
+        buttons.forEach(function(b) { b.disabled = true; });
+        var chosen = opts[i];
+        if (chosen.isCorrect) { btn.classList.add("correct"); quizState.score++; }
+        else {
+          btn.classList.add("incorrect");
+          buttons.forEach(function(b2, j) { if (opts[j].isCorrect) b2.classList.add("correct"); });
+        }
+        var fb = document.getElementById("quiz-feedback");
+        fb.hidden = false;
+        fb.textContent = chosen.rationale || (chosen.isCorrect ? "Correcto." : "Incorrecto.");
+        var next = document.createElement("button");
+        next.className = "quiz-btn";
+        next.style.marginTop = "14px";
+        next.textContent = quizState.index + 1 < total ? "Siguiente" : "Ver puntuación";
+        next.addEventListener("click", function() { quizState.index++; renderQuizQuestion(); });
+        root.querySelector(".quiz-q").appendChild(next);
+      });
+    });
+  }
+
+  function wireNav() {
+    document.querySelectorAll(".hub-btn").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        showView(btn.dataset.view);
+        if (btn.dataset.view === "quiz") renderQuizStart();
+      });
+    });
+    document.querySelectorAll("[data-back]").forEach(function(btn) {
+      btn.addEventListener("click", function() { showView(btn.dataset.back); });
+    });
+  }
+
+  function applyStudentVisibility(config) {
+    document.querySelectorAll(".hub-btn[data-type]").forEach(function(btn) {
+      var t = btn.dataset.type;
+      btn.style.display = config[t] ? "" : "none";
+    });
+  }
+
+  function applyTeacherHints(config) {
+    document.querySelectorAll(".teacher-hint[data-hint]").forEach(function(span) {
+      var t = span.dataset.hint;
+      var on = !!config[t];
+      span.textContent = on ? "visible" : "oculto";
+      span.className = "teacher-hint " + (on ? "on" : "off");
+    });
+    document.querySelectorAll("#teacher-panel input[type=checkbox][data-type]").forEach(function(chk) {
+      chk.checked = !!config[chk.dataset.type];
+    });
+  }
+
+  function fetchConfig() {
+    return fetch(LOCAL_CONFIG + "?t=" + Date.now()).then(function(r) { return r.json(); });
+  }
+
+  function ghHeaders(token) {
+    return { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" };
+  }
+
+  function ghGetFile(token) {
+    return fetch("https://api.github.com/repos/" + REPO + "/contents/" + GH_CONFIG_PATH, { headers: ghHeaders(token) })
+      .then(function(r) {
+        if (!r.ok) throw new Error("No se pudo leer el fichero (" + r.status + ")");
+        return r.json();
+      })
+      .then(function(data) {
+        configSha = data.sha;
+        return JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\\n/g, "")))));
+      });
+  }
+
+  function ghSaveFile(token, configObj) {
+    var content = btoa(unescape(encodeURIComponent(JSON.stringify(configObj, null, 2) + "\\n")));
+    return fetch("https://api.github.com/repos/" + REPO + "/contents/" + GH_CONFIG_PATH, {
+      method: "PUT",
+      headers: Object.assign({ "Content-Type": "application/json" }, ghHeaders(token)),
+      body: JSON.stringify({
+        message: "Modo profesora: actualizar visibilidad de materiales (" + GH_CONFIG_PATH + ")",
+        content: content,
+        sha: configSha
+      })
+    }).then(function(r) {
+      if (!r.ok) return r.text().then(function(t) { throw new Error("Error al guardar (" + r.status + "): " + t); });
+      return r.json();
+    }).then(function(data) {
+      configSha = data.content.sha;
+    });
+  }
+
+  function getToken() {
+    try { return sessionStorage.getItem("gh_pat") || ""; } catch (e) { return ""; }
+  }
+  function setToken(t) {
+    try { sessionStorage.setItem("gh_pat", t); } catch (e) {}
+  }
+
+  function setStatus(msg, isError) {
+    var el = document.getElementById("teacher-status");
+    if (!el) return;
+    el.textContent = msg;
+    el.style.color = isError ? "#FFB3B3" : "#9FE6A0";
+  }
+
+  function initTeacherPanel() {
+    document.getElementById("teacher-panel").hidden = false;
+    var tokenInput = document.getElementById("gh-token");
+    tokenInput.value = getToken();
+
+    document.getElementById("gh-token-save").addEventListener("click", function() {
+      setToken(tokenInput.value.trim());
+      setStatus(tokenInput.value.trim() ? "Token guardado para esta sesión." : "Token borrado.");
+      refreshFromGithub();
+    });
+
+    document.querySelectorAll("#teacher-panel input[type=checkbox][data-type]").forEach(function(chk) {
+      chk.addEventListener("change", function() {
+        var token = getToken();
+        if (!token) { setStatus("Pega primero tu token de GitHub.", true); chk.checked = !chk.checked; return; }
+        setStatus("Guardando...");
+        ghGetFile(token).then(function(current) {
+          current[chk.dataset.type] = chk.checked;
+          return ghSaveFile(token, current).then(function() { return current; });
+        }).then(function(current) {
+          applyTeacherHints(current);
+          setStatus("Guardado ✓ — el alumnado lo verá en 1-2 minutos.");
+        }).catch(function(err) {
+          chk.checked = !chk.checked;
+          setStatus(err.message, true);
+        });
+      });
+    });
+
+    refreshFromGithub();
+
+    function refreshFromGithub() {
+      var token = getToken();
+      if (!token) { fetchConfig().then(applyTeacherHints); return; }
+      setStatus("Cargando estado actual...");
+      ghGetFile(token).then(function(current) {
+        applyTeacherHints(current);
+        setStatus("Conectado. Puedes marcar/desmarcar materiales.");
+      }).catch(function(err) { setStatus(err.message, true); fetchConfig().then(applyTeacherHints); });
+    }
+  }
+
+  function reveal(teacherMode) {
+    isTeacher = teacherMode;
+    document.getElementById("content").innerHTML = decodeURIComponent(escape(atob(PAYLOAD)));
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("page").style.display = "block";
+    wireNav();
+    if (teacherMode) {
+      document.querySelectorAll(".hub-btn[data-type]").forEach(function(btn) { btn.style.display = ""; });
+      initTeacherPanel();
+    } else {
+      fetchConfig().then(applyStudentVisibility);
+    }
+    try { sessionStorage.setItem(SESSION_KEY, teacherMode ? "teacher" : "1"); } catch (e) {}
+  }
+
+  function tryUnlock() {
+    var val = document.getElementById("pw").value;
+    sha256Hex(val).then(function(hex) {
+      if (hex === TEACHER_HASH) { reveal(true); return; }
+      if (hex === HASH) {
+        fetch(ROOT_CONFIG + "?t=" + Date.now()).then(function(r) { return r.json(); }).then(function(rootCfg) {
+          if (rootCfg[TEMA_KEY] === false) {
+            document.getElementById("err").textContent = "Este tema no está disponible por el momento.";
+          } else {
+            reveal(false);
+          }
+        }).catch(function() { reveal(false); });
+        return;
+      }
+      document.getElementById("err").textContent = "Contraseña incorrecta.";
+    });
+  }
+
+  document.getElementById("enter").addEventListener("click", tryUnlock);
+  document.getElementById("pw").addEventListener("keydown", function(e) { if (e.key === "Enter") tryUnlock(); });
+
+  try {
+    var saved = sessionStorage.getItem(SESSION_KEY);
+    if (saved === "teacher") reveal(true);
+    else if (saved === "1") reveal(false);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>`;
+}
+
+function buildIndexHtml(temas) {
+  const buttons = temas.map(t => `<a class="tema-btn" data-tema="${t.dir}" href="${t.dir}/index.html" style="display:none">
+    <span class="teacher-hint" data-hint="${t.dir}"></span>
+    <span class="tema-num">${esc(t.numLabel)}</span>
+    <span class="tema-title">${esc(t.titleShort)}</span>
+  </a>`).join('\n  ');
+  const teacherHash = sha256(TEACHER_PASSWORD);
+  const toggles = temas.map(t =>
+    `<li><input type="checkbox" id="chk-tema-${t.dir}" data-tema="${t.dir}"><label for="chk-tema-${t.dir}">${esc(t.numLabel)} · ${esc(t.titleShort)}</label></li>`
+  ).join('\n      ');
+  const studentHash = sha256(STUDENT_PASSWORD);
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEE — Técnicas y estrategias de comunicación escrita en español</title>
+<style>${CSS_INDEX}</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">
+    <div class="kicker">Técnicas y estrategias de comunicación escrita en español</div>
+    <h1>TEE</h1>
+    <p>Contenido protegido. Introduce la contraseña facilitada en clase.</p>
+    <input type="password" id="pw" placeholder="Contraseña" autofocus>
+    <button class="submit" id="enter">Acceder</button>
+    <div class="error" id="err"></div>
+  </div>
+</div>
+
+<div id="page">
+<header>
+  <div class="kicker">Técnicas y estrategias de comunicación escrita en español</div>
+  <h1>Materiales de la asignatura</h1>
+  <p class="author">Dra. Blanca Hernández Pardo</p>
+  <p>Elige un tema para acceder a su material</p>
+</header>
+<div class="teacher-wrap">
+  <div id="teacher-panel-index" class="teacher-banner" hidden>
+    <strong>⚙ Modo profesora</strong>
+    <p>Pega aquí tu token de GitHub (solo para esta sesión de navegador; se pierde al cerrar la pestaña) y marca qué temas ve el alumnado. Los cambios se publican en 1-2 minutos.</p>
+    <div class="teacher-token-row">
+      <input type="password" id="gh-token" placeholder="Token de GitHub (ghp_... o github_pat_...)">
+      <button id="gh-token-save">Guardar token de esta sesión</button>
+    </div>
+    <div class="teacher-status" id="teacher-status"></div>
+    <ul class="teacher-toggle-list">
+      ${toggles}
+    </ul>
+  </div>
+</div>
+<main>
+  ${buttons}
+</main>
+<button class="teacher-link" id="teacher-toggle-link">⚙ Modo profesora</button>
+<footer>
+  ${copyrightFooter()}
+</footer>
+</div>
+
+<script>
+(function() {
+  var HASH = "${studentHash}";
+  var TEACHER_HASH = "${teacherHash}";
+  var SESSION_KEY = "tee_unlocked";
+  var REPO = "${REPO}";
+  var LOCAL_CONFIG = "config.json";
+  var GH_CONFIG_PATH = "config.json";
+  var configSha = null;
+  var isTeacher = false;
+
+  function sha256Hex(text) {
+    var enc = new TextEncoder().encode(text);
+    return crypto.subtle.digest("SHA-256", enc).then(function(buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function(b) {
+        return b.toString(16).padStart(2, "0");
+      }).join("");
+    });
+  }
+
+  function fetchConfig() {
+    return fetch(LOCAL_CONFIG + "?t=" + Date.now()).then(function(r) { return r.json(); });
+  }
+
+  function ghHeaders(token) {
+    return { "Authorization": "Bearer " + token, "Accept": "application/vnd.github+json" };
+  }
+
+  function ghGetFile(token) {
+    return fetch("https://api.github.com/repos/" + REPO + "/contents/" + GH_CONFIG_PATH, { headers: ghHeaders(token) })
+      .then(function(r) {
+        if (!r.ok) throw new Error("No se pudo leer el fichero (" + r.status + ")");
+        return r.json();
+      })
+      .then(function(data) {
+        configSha = data.sha;
+        return JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\\n/g, "")))));
+      });
+  }
+
+  function ghSaveFile(token, configObj) {
+    var content = btoa(unescape(encodeURIComponent(JSON.stringify(configObj, null, 2) + "\\n")));
+    return fetch("https://api.github.com/repos/" + REPO + "/contents/" + GH_CONFIG_PATH, {
+      method: "PUT",
+      headers: Object.assign({ "Content-Type": "application/json" }, ghHeaders(token)),
+      body: JSON.stringify({
+        message: "Modo profesora: actualizar visibilidad de temas (" + GH_CONFIG_PATH + ")",
+        content: content,
+        sha: configSha
+      })
+    }).then(function(r) {
+      if (!r.ok) return r.text().then(function(t) { throw new Error("Error al guardar (" + r.status + "): " + t); });
+      return r.json();
+    }).then(function(data) {
+      configSha = data.content.sha;
+    });
+  }
+
+  function getToken() {
+    try { return sessionStorage.getItem("gh_pat") || ""; } catch (e) { return ""; }
+  }
+  function setToken(t) {
+    try { sessionStorage.setItem("gh_pat", t); } catch (e) {}
+  }
+
+  function setStatus(msg, isError) {
+    var el = document.getElementById("teacher-status");
+    if (!el) return;
+    el.textContent = msg;
+    el.style.color = isError ? "#FFB3B3" : "#9FE6A0";
+  }
+
+  function applyVisibility(config) {
+    document.querySelectorAll(".tema-btn[data-tema]").forEach(function(btn) {
+      if (isTeacher) { btn.style.display = ""; return; }
+      var k = btn.dataset.tema;
+      btn.style.display = (config[k] === false) ? "none" : "";
+    });
+  }
+
+  function applyTeacherHints(config) {
+    document.querySelectorAll(".teacher-hint[data-hint]").forEach(function(span) {
+      var k = span.dataset.hint;
+      var on = config[k] !== false;
+      span.textContent = on ? "visible" : "oculto";
+      span.className = "teacher-hint " + (on ? "on" : "off");
+    });
+    document.querySelectorAll("#teacher-panel-index input[type=checkbox][data-tema]").forEach(function(chk) {
+      chk.checked = config[chk.dataset.tema] !== false;
+    });
+  }
+
+  function initTeacherPanel() {
+    document.getElementById("teacher-panel-index").hidden = false;
+    applyVisibility({});
+    var tokenInput = document.getElementById("gh-token");
+    tokenInput.value = getToken();
+
+    document.getElementById("gh-token-save").addEventListener("click", function() {
+      setToken(tokenInput.value.trim());
+      setStatus(tokenInput.value.trim() ? "Token guardado para esta sesión." : "Token borrado.");
+      refreshFromGithub();
+    });
+
+    document.querySelectorAll("#teacher-panel-index input[type=checkbox][data-tema]").forEach(function(chk) {
+      chk.addEventListener("change", function() {
+        var token = getToken();
+        if (!token) { setStatus("Pega primero tu token de GitHub.", true); chk.checked = !chk.checked; return; }
+        setStatus("Guardando...");
+        ghGetFile(token).then(function(current) {
+          current[chk.dataset.tema] = chk.checked;
+          return ghSaveFile(token, current).then(function() { return current; });
+        }).then(function(current) {
+          applyTeacherHints(current);
+          setStatus("Guardado ✓ — el alumnado lo verá en 1-2 minutos.");
+        }).catch(function(err) {
+          chk.checked = !chk.checked;
+          setStatus(err.message, true);
+        });
+      });
+    });
+
+    refreshFromGithub();
+
+    function refreshFromGithub() {
+      var token = getToken();
+      if (!token) { fetchConfig().then(applyTeacherHints); return; }
+      setStatus("Cargando estado actual...");
+      ghGetFile(token).then(function(current) {
+        applyTeacherHints(current);
+        setStatus("Conectado. Puedes marcar/desmarcar temas.");
+      }).catch(function(err) { setStatus(err.message, true); fetchConfig().then(applyTeacherHints); });
+    }
+  }
+
+  function reveal(teacherMode) {
+    isTeacher = teacherMode;
+    document.getElementById("gate").style.display = "none";
+    document.getElementById("page").style.display = "flex";
+    if (teacherMode) {
+      initTeacherPanel();
+    } else {
+      fetchConfig().then(applyVisibility).catch(function() {});
+    }
+    try { sessionStorage.setItem(SESSION_KEY, teacherMode ? "teacher" : "1"); } catch (e) {}
+  }
+
+  function tryUnlock() {
+    var val = document.getElementById("pw").value;
+    sha256Hex(val).then(function(hex) {
+      if (hex === TEACHER_HASH) { reveal(true); return; }
+      if (hex === HASH) { reveal(false); return; }
+      document.getElementById("err").textContent = "Contraseña incorrecta.";
+    });
+  }
+
+  document.getElementById("enter").addEventListener("click", tryUnlock);
+  document.getElementById("pw").addEventListener("keydown", function(e) { if (e.key === "Enter") tryUnlock(); });
+
+  document.getElementById("teacher-toggle-link").addEventListener("click", function() {
+    var val = prompt("Contraseña de profesora:");
+    if (val === null) return;
+    sha256Hex(val).then(function(hex) {
+      if (hex === TEACHER_HASH) reveal(true);
+      else alert("Contraseña incorrecta.");
+    });
+  });
+
+  try {
+    var saved = sessionStorage.getItem(SESSION_KEY);
+    if (saved === "teacher") reveal(true);
+    else if (saved === "1") reveal(false);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>`;
+}
+
+// ---- Topic configuration ----
+// "exists" = el material existe de verdad (hay fichero) y por tanto tiene botón/subvista construidos.
+// La visibilidad real para el alumnado vive en tX/config.json (editable en vivo desde el modo profesora).
+const TEMAS = [
+  { dir: 't1', numLabel: 'TEMA 1', titleShort: 'La comunicación', titleFull: 'Tema 1 · La comunicación', kicker: 'Tema 1 · La comunicación',
+    viewOrder: ['manual','videos','comic'],
+    views: {
+      manual: { exists: true, file: 'manual_t1.pdf' },
+      videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
+        desc: '7 vídeos, reproducción en la página', items: [
+          { id: 'v1', label: '1.1 · Iceberg de la comunicación', file: '1.1. Iceberg_de_la_comunicación.mp4', duration: '9:41' },
+          { id: 'v2', label: '1.2 · El modelo de lengua', file: '1.2. El modelo de lengua.mp4', duration: '9:07' },
+          { id: 'v3', label: '1.3 · Hablado, escrito y digital', file: '1.3. Hablado,_escrito_y_digital.mp4', duration: '8:03' },
+          { id: 'v4', label: '1.4 · El registro comunicativo', file: '1.4. El_Registro_Comunicativo.mp4', duration: '9:16' },
+          { id: 'v5', label: '1.5 · La anatomía de un texto', file: '1.5. La_anatomía_de_un_texto.mp4', duration: '6:13' },
+          { id: 'v6', label: 'Vídeo T1 · 1', file: 'V_T1_1.mp4', duration: '10:18' },
+          { id: 'v7', label: 'Vídeo T1 · 2', file: 'V_T1_2.mp4', duration: '7:42' }
+        ] },
+      comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
+        desc: 'La adecuación, al estilo One Piece', desc2: 'La adecuación, al estilo One Piece.', file: 'comic_t1.ppsx' }
+    } },
+  { dir: 't2', numLabel: 'TEMA 2', titleShort: 'El discurso escrito', titleFull: 'Tema 2 · El discurso escrito', kicker: 'Tema 2 · El discurso escrito',
+    viewOrder: ['manual','videos','comic','recurso1','recurso2'],
+    views: {
+      manual: { exists: true, file: 'manual_t2.pdf' },
+      videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
+        desc: '10 vídeos, reproducción en la página', items: [
+          { id: 'v1', label: '1 · El texto como unidad comunicativa', file: 'V_T2_1.mp4', duration: '6:49' },
+          { id: 'v2', label: '2 · Propiedades fundamentales de los textos', file: 'V_T2_2.mp4', duration: '6:39' },
+          { id: 'v3', label: '3 · La adecuación', file: 'V_T2_3.mp4', duration: '6:44' },
+          { id: 'v4', label: '4 · La coherencia', file: 'V_T2_4.mp4', duration: '7:49' },
+          { id: 'v5', label: '5 · La cohesión', file: 'V_T2_5.mp4', duration: '8:23' },
+          { id: 'v6', label: '6 · Conectores y marcadores discursivos', file: 'V_T2_6.mp4', duration: '6:46' },
+          { id: 'v7', label: '7 · Modalidades textuales según la dimensión pragmática', file: 'V_T2_7.mp4', duration: '7:56' },
+          { id: 'v8', label: '8 · El proceso de escritura', file: 'V_T2_8.mp4', duration: '6:28' },
+          { id: 'v9', label: '9 · Pauta final de revisión', file: 'V_T2_9.mp4', duration: '7:48' },
+          { id: 'v10', label: '10 · Actividades de aplicación', file: 'V_T2_10.mp4', duration: '6:07' }
+        ] },
+      comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
+        desc: 'Coherencia y cohesión, al estilo Tintín', desc2: 'Coherencia y cohesión, al estilo Tintín.', file: 'comic_t2.ppsx' },
+      recurso1: { exists: true, kind: 'interactive', label: 'Reconstrucción interactiva', icon: '🧩',
+        desc: 'Actividad de la práctica de coherencia', desc2: 'Actividad de la práctica de coherencia.', file: 'reconstruccion_interactiva.html' },
+      recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
+        desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' }
+    } },
+  { dir: 't3', numLabel: 'TEMA 3', titleShort: 'La corrección de estilo', titleFull: 'Tema 3 · La corrección de estilo', kicker: 'Tema 3 · La corrección de estilo',
+    viewOrder: ['manual','videos','comic','recurso1'],
+    views: {
+      manual: { exists: true, file: 'manual_t3.pdf' },
+      videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
+        desc: '8 vídeos, reproducción en la página', items: [
+          { id: 'v1', label: '1 · Corrección, norma y estilo', file: 'V_T3_1.mp4', duration: '6:33' },
+          { id: 'v2', label: '2 · Corrección morfosintáctica', file: 'V_T3_2.mp4', duration: '9:16' },
+          { id: 'v3', label: '3 · Corrección léxica', file: 'V_T3_3.mp4', duration: '7:48' },
+          { id: 'v4', label: '4 · Ortografía y ortotipografía', file: 'V_T3_4.mp4', duration: '7:21' },
+          { id: 'v5', label: '5 · Puntuación', file: 'V_T3_5.mp4', duration: '6:13' },
+          { id: 'v6', label: '6 · Corrección discursiva y organización del texto', file: 'V_T3_6.mp4', duration: '6:50' },
+          { id: 'v7', label: '7 · Naturalidad y precisión en la revisión de estilo', file: 'V_T3_7.mp4', duration: '6:57' },
+          { id: 'v8', label: '8 · Corrección de citas, fuentes y bibliografía', file: 'V_T3_8.mp4', duration: '7:08' }
+        ] },
+      comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
+        desc: 'La corrección de estilo, al estilo Barbie', desc2: 'La corrección de estilo, al estilo Barbie.', file: 'comic_t3.ppsx' },
+      recurso1: { exists: true, kind: 'interactive', label: 'Panel de triaje', icon: '🩺',
+        desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' }
+    } },
+  { dir: 't4', numLabel: 'TEMA 4', titleShort: 'La escritura académica', titleFull: 'Tema 4 · La escritura académica', kicker: 'Tema 4 · La escritura académica',
+    viewOrder: ['manual','videos','comics','avf'],
+    views: {
+      manual: { exists: true, file: 'manual_t4.pdf' },
+      videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
+        desc: '9 vídeos, reproducción en la página', items: [
+          { id: 'v1', label: '1 · Qué es la escritura académica', file: 'V_T4_1.mp4', duration: '6:20' },
+          { id: 'v2', label: '2 · El proceso de escritura académica', file: 'V_T4_2.mp4', duration: '7:53' },
+          { id: 'v3', label: '3 · Estructura del trabajo académico', file: 'V_T4_3.mp4', duration: '6:48' },
+          { id: 'v4', label: '4 · Argumentación académica', file: 'V_T4_4.mp4', duration: '6:56' },
+          { id: 'v5', label: '5 · Géneros académicos frecuentes', file: 'V_T4_5.mp4', duration: '8:09' },
+          { id: 'v6', label: '6 · Citas, referencias y APA 7.ª edición', file: 'V_T4_6.mp4', duration: '7:18' },
+          { id: 'v7', label: '7 · Plagio e integridad académica', file: 'V_T4_7.mp4', duration: '5:56' },
+          { id: 'v8', label: '8 · Uso académico de la inteligencia artificial generativa', file: 'V_T4_8.mp4', duration: '6:33' },
+          { id: 'v9', label: '9 · Pauta final de revisión del trabajo académico', file: 'V_T4_9.mp4', duration: '7:37' }
+        ] },
+      comics: { exists: true, kind: 'officegroup', label: 'Cómics didácticos', icon: '📖',
+        desc: '3 cómics, uno por cada uno', items: [
+          { id: 'c1', label: 'APA Magic Quest', file: 'comic_t4_1.ppsx' },
+          { id: 'c2', label: 'Guía pirata de APA 7.ª edición', file: 'comic_t4_2.ppsx' },
+          { id: 'c3', label: 'Mafalda y los formatos académicos', file: 'comic_t4_3.ppsx' }
+        ] },
+      avf: { exists: true, kind: 'external', label: 'Agencia de Verificación de Fuentes', icon: '🕵️',
+        desc: 'Práctica en casa de citación y referenciación APA 7',
+        desc2: 'Práctica en casa de citación y referenciación APA 7, en una web aparte.',
+        linkLabel: 'la Agencia de Verificación de Fuentes',
+        url: 'https://blancahpardo.github.io/detective-de-fuentes-apa7/' }
+    } }
+];
+
+module.exports = { TEMAS, buildTopicHtml, buildIndexHtml, existingViews, TEACHER_PASSWORD, STUDENT_PASSWORD };
+
+if (require.main === module) {
+  for (const tema of TEMAS) {
+    const html = buildTopicHtml(tema);
+    fs.writeFileSync(path.join(ROOT, tema.dir, 'index.html'), html, 'utf8');
+
+    // Only (re)seed config.json if it doesn't already exist, so live teacher toggles
+    // made via GitHub are never clobbered by a later `node build.js` run.
+    const configPath = path.join(ROOT, tema.dir, 'config.json');
+    if (!fs.existsSync(configPath)) {
+      const seed = {};
+      existingViews(tema).forEach(v => { seed[v] = v === 'manual'; });
+      fs.writeFileSync(configPath, JSON.stringify(seed, null, 2) + '\n', 'utf8');
+      console.log('seeded config for', tema.dir, seed);
+    }
+    console.log('built', tema.dir);
+  }
+  fs.writeFileSync(path.join(ROOT, 'index.html'), buildIndexHtml(TEMAS), 'utf8');
+  console.log('built index.html');
+
+  // Root-level config.json controls whether each topic's card/link is shown at all.
+  // Only seeded if missing, so it never clobbers a live teacher toggle.
+  const rootConfigPath = path.join(ROOT, 'config.json');
+  if (!fs.existsSync(rootConfigPath)) {
+    const rootSeed = {};
+    TEMAS.forEach(t => { rootSeed[t.dir] = true; });
+    fs.writeFileSync(rootConfigPath, JSON.stringify(rootSeed, null, 2) + '\n', 'utf8');
+    console.log('seeded root config.json', rootSeed);
+  }
+
+  console.log('\nContraseña del alumnado (todas las páginas):', STUDENT_PASSWORD);
+  console.log('Contraseña de profesora (todas las páginas):', TEACHER_PASSWORD);
+}
