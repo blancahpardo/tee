@@ -1065,15 +1065,17 @@ const TEMAS = [
     views: {
       manual: { exists: true, file: 'manual_t3.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
-        desc: '8 vídeos, reproducción en la página', items: [
+        desc: '10 vídeos, reproducción en la página', items: [
           { id: 'v1', label: '1 · Corrección, norma y estilo', file: 'V_T3_1.mp4', duration: '6:33' },
           { id: 'v2', label: '2 · Corrección morfosintáctica', file: 'V_T3_2.mp4', duration: '9:16' },
           { id: 'v3', label: '3 · Corrección léxica', file: 'V_T3_3.mp4', duration: '7:48' },
           { id: 'v4', label: '4 · Ortografía y ortotipografía', file: 'V_T3_4.mp4', duration: '7:21' },
           { id: 'v5', label: '5 · Puntuación', file: 'V_T3_5.mp4', duration: '6:13' },
           { id: 'v6', label: '6 · Corrección discursiva y organización del texto', file: 'V_T3_6.mp4', duration: '6:50' },
-          { id: 'v7', label: '7 · Naturalidad y precisión en la revisión de estilo', file: 'V_T3_7.mp4', duration: '6:57' },
-          { id: 'v8', label: '8 · Corrección de citas, fuentes y bibliografía', file: 'V_T3_8.mp4', duration: '7:08' }
+          { id: 'v7', label: '7 · Naturalidad y precisión en la revisión de estilo', file: 'V_T3_7.mp4', duration: '8:24' },
+          { id: 'v8', label: '8 · Corrección de citas, fuentes y bibliografía', file: 'V_T3_8.mp4', duration: '5:32' },
+          { id: 'v9', label: '9 · Pauta final de corrección de estilo', file: 'V_T3_9.mp4', duration: '6:57' },
+          { id: 'v10', label: '10 · Actividades de aplicación', file: 'V_T3_10.mp4', duration: '7:08' }
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La corrección de estilo, al estilo Barbie', desc2: 'La corrección de estilo, al estilo Barbie.', file: 'comic_t3.ppsx' },
