@@ -1,0 +1,1684 @@
+{
+  "quiz": [
+    {
+      "question": "Un estudiante envía el siguiente correo a su tutora: «Tuve mazo de movidas y subí tarde la actividad. Un besiño». ¿Cuál es el principal problema de este texto?",
+      "answerOptions": [
+        {
+          "text": "Falta de adecuación al contexto profesional y académico.",
+          "isCorrect": true,
+          "rationale": "El mensaje utiliza un registro coloquial y un tono de confianza que no corresponden a la situación comunicativa formal entre alumno y docente."
+        },
+        {
+          "text": "Presencia de errores de gramática normativa.",
+          "isCorrect": false,
+          "rationale": "Aunque el registro es inapropiado, las oraciones respetan la estructura gramatical básica del español hablado."
+        },
+        {
+          "text": "Inexistencia de una revisión ortográfica previa.",
+          "isCorrect": false,
+          "rationale": "El problema no reside en la grafía de las palabras, sino en la elección de un léxico y un tratamiento inadecuados para el destinatario."
+        },
+        {
+          "text": "Falta de coherencia en la progresión informativa.",
+          "isCorrect": false,
+          "rationale": "La información es comprensible y lógica; el fallo se encuentra en el plano de la adecuación al registro exigido."
+        }
+      ],
+      "hint": "Reflexiona sobre si el tono y el léxico empleados son los esperados en una relación universitaria formal.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Un editor está revisando un artículo y se encuentra con la duda de si debe escribir «en relación con» o «en relación a». ¿A qué tipo de gramática debe acudir para resolver qué opción es la preferible en la lengua culta?",
+      "answerOptions": [
+        {
+          "text": "Gramática normativa.",
+          "isCorrect": true,
+          "rationale": "Esta gramática es la que orienta sobre los usos considerados correctos, preferibles o desaconsejados en contextos formales."
+        },
+        {
+          "text": "Gramática descriptiva.",
+          "isCorrect": false,
+          "rationale": "Esta rama se limita a registrar cómo hablan realmente los hablantes sin juzgar la corrección del uso."
+        },
+        {
+          "text": "Gramática sincrónica.",
+          "isCorrect": false,
+          "rationale": "Este enfoque estudia el estado de la lengua en un momento dado, pero no se centra específicamente en dictar normas de corrección."
+        },
+        {
+          "text": "Gramática histórica.",
+          "isCorrect": false,
+          "rationale": "Se ocupa de la evolución de la lengua a través del tiempo, no de establecer criterios de prestigio para la redacción actual."
+        }
+      ],
+      "hint": "Identifica qué disciplina lingüística establece los criterios de 'buen uso' y autoridad en la escritura esmerada.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Un autor escribe en su trabajo: «El autor procede a realizar una exposición de la problemática». ¿Cómo se clasifica este fragmento desde el punto de vista del estilo?",
+      "answerOptions": [
+        {
+          "text": "Lenguaje inflado o artificioso por exceso de nominalización.",
+          "isCorrect": true,
+          "rationale": "El uso de verbos vacíos y sustantivos abstractos innecesarios hace que la redacción pierda la naturalidad propia del estilo académico sencillo."
+        },
+        {
+          "text": "Texto con errores graves de gramática descriptiva.",
+          "isCorrect": false,
+          "rationale": "La construcción es gramaticalmente posible en español, por lo que la gramática descriptiva simplemente la registraría como un uso existente."
+        },
+        {
+          "text": "Uso de un registro coloquial inadmisible en el género.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el texto peca de un exceso de formalidad (afectación) que lo aleja de la claridad, no de un tono informal."
+        },
+        {
+          "text": "Error puntual de coherencia discursiva global.",
+          "isCorrect": false,
+          "rationale": "La idea se entiende perfectamente; el fallo es de estilo y precisión léxica, no de conexión lógica entre ideas."
+        }
+      ],
+      "hint": "Observa si la frase utiliza más palabras de las necesarias para expresar una acción simple como 'explicar'.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Si en un texto académico encontramos la expresión «La Corrección De Estilo» (con mayúsculas en cada palabra), ¿qué plano de corrección estamos omitiendo?",
+      "answerOptions": [
+        {
+          "text": "Plano ortotipográfico.",
+          "isCorrect": true,
+          "rationale": "Este plano se encarga del uso correcto de mayúsculas, cursivas y otras convenciones gráficas que no afectan a la ortografía básica de las palabras."
+        },
+        {
+          "text": "Plano discursivo.",
+          "isCorrect": false,
+          "rationale": "El plano discursivo se ocupa de la organización de párrafos y conectores, no de la grafía de las letras individuales."
+        },
+        {
+          "text": "Plano léxico.",
+          "isCorrect": false,
+          "rationale": "El plano léxico revisa la precisión de las palabras elegidas, no cómo se representan visualmente mediante mayúsculas o minúsculas."
+        },
+        {
+          "text": "Plano gramatical.",
+          "isCorrect": false,
+          "rationale": "La gramática se ocupa de la estructura de la oración, mientras que el uso decorativo o incorrecto de mayúsculas es una cuestión tipográfica."
+        }
+      ],
+      "hint": "Considera qué plano normativo regula el uso de los estilos de letra y la distinción entre mayúsculas y minúsculas.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Un revisor detecta que un párrafo mezcla varias ideas sin orden y carece de una idea principal clara. ¿En qué nivel de la corrección de estilo debe trabajar prioritariamente?",
+      "answerOptions": [
+        {
+          "text": "Plano discursivo.",
+          "isCorrect": true,
+          "rationale": "Este plano atiende a la organización de la información, la estructura de los párrafos y la coherencia global del mensaje."
+        },
+        {
+          "text": "Plano ortotipográfico.",
+          "isCorrect": false,
+          "rationale": "Este nivel se limita a convenciones gráficas externas y no resuelve problemas de estructura de pensamiento o contenido."
+        },
+        {
+          "text": "Plano morfosintáctico.",
+          "isCorrect": false,
+          "rationale": "Se ocupa de la corrección interna de cada oración, pero no de la jerarquía de ideas entre diferentes oraciones de un párrafo."
+        },
+        {
+          "text": "Plano de adecuación.",
+          "isCorrect": false,
+          "rationale": "Aunque un texto desordenado es inadecuado, el problema técnico específico radica en la cohesión y organización textual."
+        }
+      ],
+      "hint": "Busca el plano que se encarga de la 'arquitectura' del texto y la relación entre sus partes.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Durante la fase de revisión, un estudiante decide corregir todas las tildes antes de comprobar si la estructura de los apartados es lógica. ¿Por qué este orden es ineficiente?",
+      "answerOptions": [
+        {
+          "text": "Porque la revisión debe ir de lo global a lo local.",
+          "isCorrect": true,
+          "rationale": "Si se corrigen detalles ortográficos en párrafos que luego podrían ser eliminados o reestructurados, se realiza un trabajo doble innecesario."
+        },
+        {
+          "text": "Porque la ortografía no importa si la estructura es buena.",
+          "isCorrect": false,
+          "rationale": "La ortografía es fundamental para la credibilidad, pero metodológicamente se sitúa en las fases finales de pulido."
+        },
+        {
+          "text": "Porque la gramática normativa solo se aplica a textos ya terminados.",
+          "isCorrect": false,
+          "rationale": "La norma debe tenerse en cuenta durante todo el proceso, aunque la corrección técnica detallada sea más eficaz al final."
+        },
+        {
+          "text": "Porque primero se debe atender a la gramática descriptiva.",
+          "isCorrect": false,
+          "rationale": "La gramática descriptiva no es una fase de revisión, sino un enfoque de estudio lingüístico."
+        }
+      ],
+      "hint": "Piensa en qué sucede con el esfuerzo invertido en corregir una frase si finalmente decides que esa frase no debe estar en el texto.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Un lingüista estudia el uso de la palabra «guion» con tilde en ciertos países de América, aunque la norma académica actual la prescriba sin tilde. ¿Qué tipo de gramática está ejerciendo este lingüista?",
+      "answerOptions": [
+        {
+          "text": "Gramática descriptiva.",
+          "isCorrect": true,
+          "rationale": "Se limita a observar y registrar los usos reales y las variantes de los hablantes sin imponer un criterio de corrección."
+        },
+        {
+          "text": "Gramática normativa.",
+          "isCorrect": false,
+          "rationale": "Si fuera normativa, el lingüista estaría señalando el error y recomendando la forma sin tilde obligatoria."
+        },
+        {
+          "text": "Gramática ortotipográfica.",
+          "isCorrect": false,
+          "rationale": "Este término no existe como rama de la gramática; la ortotipografía es un plano de corrección, no una disciplina descriptiva."
+        },
+        {
+          "text": "Gramática prescriptiva.",
+          "isCorrect": false,
+          "rationale": "La gramática prescriptiva es sinónimo de normativa; busca establecer lo que 'debe ser', no describir lo que 'es'."
+        }
+      ],
+      "hint": "Diferencia entre el acto de observar cómo se habla/escribe y el acto de dictar cómo se debe hacer.",
+      "tags": [
+        "CP",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "Observa la siguiente oración: «El análisis, en el apartado segundo del informe que entregó el grupo después de revisar las fuentes, de los conectores resulta insuficiente». ¿Cuál es el principal problema de claridad que presenta?",
+      "answerOptions": [
+        {
+          "text": "La separación excesiva entre el núcleo del sujeto y su complemento.",
+          "isCorrect": true,
+          "rationale": "El orden sintáctico se ve interrumpido por un inciso muy largo que separa 'el análisis' de 'de los conectores', dificultando la comprensión inmediata."
+        },
+        {
+          "text": "El uso de una estructura pasiva perifrástica innecesaria.",
+          "isCorrect": false,
+          "rationale": "Aunque la oración es compleja, el verbo principal está en voz activa y no se emplean formas del verbo 'ser' con participio."
+        },
+        {
+          "text": "La falta de concordancia entre el sujeto y el verbo principal.",
+          "isCorrect": false,
+          "rationale": "El sujeto 'el análisis' y el verbo 'resulta' concuerdan correctamente en singular, por lo que el problema no es gramatical sino de orden."
+        },
+        {
+          "text": "La presencia de una subordinación adjetiva mal construida.",
+          "isCorrect": false,
+          "rationale": "La cláusula 'que entregó el grupo' es gramaticalmente correcta; el obstáculo reside en su ubicación dentro de la frase."
+        }
+      ],
+      "hint": "Fíjate en la distancia física que hay entre la palabra 'análisis' y lo que realmente se está analizando.",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "Un estudiante redacta: «El objetivo es analizar el texto, la comparación de ejemplos y que el alumno corrija errores». ¿Cómo debería reformularse para evitar la asimetría sintáctica?",
+      "answerOptions": [
+        {
+          "text": "«El objetivo es analizar el texto, comparar ejemplos y corregir errores».",
+          "isCorrect": true,
+          "rationale": "Esta versión mantiene el paralelismo utilizando tres infinitivos para cumplir la misma función dentro de la enumeración."
+        },
+        {
+          "text": "«El objetivo es el análisis, comparar ejemplos y la corrección de errores».",
+          "isCorrect": false,
+          "rationale": "Esta opción persiste en mezclar categorías gramaticales diferentes (sustantivo, infinitivo, sustantivo) para elementos jerárquicamente iguales."
+        },
+        {
+          "text": "«El objetivo es analizar el texto, comparando ejemplos y corrigiendo errores».",
+          "isCorrect": false,
+          "rationale": "El uso de gerundios en esta estructura no soluciona la asimetría y puede generar ambigüedad sobre la finalidad del objetivo."
+        },
+        {
+          "text": "«El objetivo es que analice el texto, la comparación de ejemplos y la corrección».",
+          "isCorrect": false,
+          "rationale": "Mezcla una oración subordinada con sustantivos, lo que rompe la fluidez y la simetría que requiere una enumeración académica."
+        }
+      ],
+      "hint": "Busca que todos los elementos de la lista compartan la misma categoría gramatical (todos verbos o todos sustantivos).",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "Para referirse a una mujer que posee la máxima categoría docente en la universidad, ¿cuál es la forma recomendada en el registro académico actual?",
+      "answerOptions": [
+        {
+          "text": "La catedrática.",
+          "isCorrect": true,
+          "rationale": "La norma académica actual recomienda y asienta el uso de formas femeninas para cargos y profesiones desempeñados por mujeres."
+        },
+        {
+          "text": "La catedrático.",
+          "isCorrect": false,
+          "rationale": "El uso del sustantivo masculino con artículo femenino se considera hoy una forma no recomendada para este tipo de profesiones."
+        },
+        {
+          "text": "La señora catedrático.",
+          "isCorrect": false,
+          "rationale": "Esta fórmula añade una marca de cortesía innecesaria y mantiene un masculino gramatical que no se ajusta a la recomendación de feminización."
+        },
+        {
+          "text": "La mujer catedrático.",
+          "isCorrect": false,
+          "rationale": "Es una forma redundante y poco natural en el discurso académico, que dispone de un término específico en femenino."
+        }
+      ],
+      "hint": "Recuerda que la lengua actual prefiere la flexión de género en los sustantivos de profesiones y cargos.",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "Identifica el error en el uso de clíticos en la siguiente oración: «A la profesora la entregué el borrador del TFG ayer por la tarde».",
+      "answerOptions": [
+        {
+          "text": "Laísmo: se usa 'la' cuando la función sintáctica es de complemento indirecto.",
+          "isCorrect": true,
+          "rationale": "Al entregar algo 'a alguien', ese alguien es el destinatario (CI) y requiere el pronombre 'le', no 'la'."
+        },
+        {
+          "text": "Leísmo: se debería haber usado 'lo' para referirse a la profesora.",
+          "isCorrect": false,
+          "rationale": "El leísmo se refiere al uso de 'le' por 'lo'; en este caso, el error es el uso de un pronombre de complemento directo femenino para un indirecto."
+        },
+        {
+          "text": "Loísmo: el pronombre 'la' debería sustituirse por 'lo' por cortesía.",
+          "isCorrect": false,
+          "rationale": "El loísmo es el uso de 'lo' para el complemento indirecto, y no tiene relación con fórmulas de cortesía académica."
+        },
+        {
+          "text": "Falta de duplicación: los complementos indirectos nunca llevan pronombre si aparece el nombre.",
+          "isCorrect": false,
+          "rationale": "En español, la duplicación del complemento indirecto con el pronombre átono es frecuente y a menudo necesaria, el problema es el género del pronombre."
+        }
+      ],
+      "hint": "Pregunta al verbo: ¿Qué entregué? (CD) ¿A quién se lo entregué? (CI).",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "Selecciona la oración que respeta el régimen preposicional correcto de los verbos.",
+      "answerOptions": [
+        {
+          "text": "«El éxito de la investigación consiste en aplicar el método ciego».",
+          "isCorrect": true,
+          "rationale": "El verbo 'consistir' rige obligatoriamente la preposición 'en' para introducir su complemento."
+        },
+        {
+          "text": "«El autor insistió de que los datos eran definitivos».",
+          "isCorrect": false,
+          "rationale": "El verbo 'insistir' rige la preposición 'en'; usar 'de' constituye un caso de dequeísmo por mal uso del régimen verbal."
+        },
+        {
+          "text": "«El alumno se dio cuenta que el examen era el lunes».",
+          "isCorrect": false,
+          "rationale": "La locución 'darse cuenta' exige la preposición 'de'; omitirla es un error de queísmo."
+        },
+        {
+          "text": "«La conclusión se basa a los resultados obtenidos».",
+          "isCorrect": false,
+          "rationale": "El verbo 'basar' (o su forma pronominal) rige la preposición 'en', no 'a', que es un calco de otras estructuras."
+        }
+      ],
+      "hint": "Ciertos verbos están 'casados' con una preposición específica; 'consistir' siempre va con 'en'.",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "Aplica la prueba de sustitución por el pronombre 'eso' para determinar cuál de estas frases es correcta.",
+      "answerOptions": [
+        {
+          "text": "«Me alegro de que hayas revisado el léxico».",
+          "isCorrect": true,
+          "rationale": "Al sustituir, decimos 'Me alegro de eso', lo que confirma que la preposición 'de' es necesaria antes de 'que'."
+        },
+        {
+          "text": "«Pienso de que el texto es demasiado largo».",
+          "isCorrect": false,
+          "rationale": "La sustitución daría 'Pienso de eso', lo cual es incorrecto en este contexto; lo adecuado es 'Pienso eso' (Pienso que...)."
+        },
+        {
+          "text": "«Estoy convencida que la bibliografía está completa».",
+          "isCorrect": false,
+          "rationale": "Se dice 'Estoy convencida de eso', por lo que la omisión de la preposición en la frase original es un error de queísmo."
+        },
+        {
+          "text": "«El profesor opina de que falta un capítulo».",
+          "isCorrect": false,
+          "rationale": "El verbo 'opinar' no rige 'de' para su complemento directo ('Opina eso'); por tanto, es un caso de dequeísmo."
+        }
+      ],
+      "hint": "Sustituye mentalmente todo lo que va después de 'que' por la palabra 'ESO'.",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿Cuál es la forma correcta del plural para el término «currículum» si se opta por usar la variante adaptada al español?",
+      "answerOptions": [
+        {
+          "text": "currículos",
+          "isCorrect": true,
+          "rationale": "La forma adaptada 'currículo' sigue las reglas generales del español y forma su plural añadiendo '-s'."
+        },
+        {
+          "text": "currículums",
+          "isCorrect": false,
+          "rationale": "Aunque se usa en el habla corriente, la norma prefiere la adaptación plena al español o el uso del latinismo crudo sin '-s'."
+        },
+        {
+          "text": "currícula",
+          "isCorrect": false,
+          "rationale": "Es el plural neutro latino, pero su uso en español se considera un cultismo innecesario frente a la forma adaptada."
+        },
+        {
+          "text": "currículum",
+          "isCorrect": false,
+          "rationale": "A diferencia de términos como 'análisis', esta palabra no es invariable y debe marcar el plural si se usa en español."
+        }
+      ],
+      "hint": "Piensa en cómo se pluralizan las palabras españolas terminadas en 'o'.",
+      "tags": [
+        "CP",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "En un borrador académico lees: «La problemática objeto de análisis presenta una elevada complejidad». ¿Cuál sería la revisión más adecuada según los criterios de léxico claro y preciso?",
+      "answerOptions": [
+        {
+          "text": "El problema analizado es complejo.",
+          "isCorrect": true,
+          "rationale": "Sustituye la abstracción innecesaria y el lenguaje inflado por términos directos y precisos que mantienen el rigor académico."
+        },
+        {
+          "text": "La cuestión a analizar es muy difícil de entender.",
+          "isCorrect": false,
+          "rationale": "Aunque simplifica, utiliza un tono ligeramente menos formal y pierde la precisión técnica de 'complejo'."
+        },
+        {
+          "text": "La problemática analizada resulta de gran dificultad.",
+          "isCorrect": false,
+          "rationale": "Mantiene el término «problemática», un redimensionamiento innecesario cuando basta con «problema»."
+        },
+        {
+          "text": "Se procederá al análisis del problema complejo.",
+          "isCorrect": false,
+          "rationale": "Incurre en lenguaje infiltrado al usar la fórmula perifrástica 'proceder al análisis' en lugar de un verbo simple."
+        }
+      ],
+      "hint": "Identifica qué términos alargan la frase sin aportar un significado nuevo o más exacto.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Un estudiante escribe en su conclusión: «El autor hace una crítica sobre el tema principal». Para evitar el uso de un 'verbo baúl', ¿qué opción mejora la precisión léxica?",
+      "answerOptions": [
+        {
+          "text": "El autor realiza una crítica sobre el tema principal.",
+          "isCorrect": false,
+          "rationale": "Sustituye un verbo baúl ('hacer') por otro similar ('realizar') sin aportar mayor carga semántica a la acción."
+        },
+        {
+          "text": "El autor critica la falta de rigor en los datos.",
+          "isCorrect": true,
+          "rationale": "Utiliza un verbo pleno que nombra directamente la operación intelectual realizada, eliminando la vaguedad del sustantivo 'tema'."
+        },
+        {
+          "text": "El autor dice que el tema principal está mal.",
+          "isCorrect": false,
+          "rationale": "Cae en otro verbo baúl ('decir') y emplea un léxico demasiado coloquial para el registro universitario."
+        },
+        {
+          "text": "El autor pone en duda el tema principal.",
+          "isCorrect": false,
+          "rationale": "Aunque es más preciso que 'hacer', 'poner en duda' es una locución que sigue siendo menos exacta que el verbo específico 'criticar'."
+        }
+      ],
+      "hint": "Busca el verbo que describa específicamente la acción intelectual de evaluar negativamente algo.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "En la revisión de un texto sobre economía, encuentras la expresión: «...el uso de divisas extranjeras es habitual». ¿Qué fenómeno léxico se produce aquí?",
+      "answerOptions": [
+        {
+          "text": "Una redundancia evitable.",
+          "isCorrect": true,
+          "rationale": "El término 'divisa' ya incluye en su definición el concepto de 'moneda extranjera', por lo que el adjetivo no aporta información nueva."
+        },
+        {
+          "text": "Un uso correcto de léxico técnico.",
+          "isCorrect": false,
+          "rationale": "Aunque los términos son técnicos, la combinación repite información de forma innecesaria en un contexto académico."
+        },
+        {
+          "text": "Una impropiedad léxica por confusión de parónimos.",
+          "isCorrect": false,
+          "rationale": "No hay confusión entre palabras de forma parecida, sino una acumulación de significados idénticos."
+        },
+        {
+          "text": "Un caso de lenguaje infiltrado administrativo.",
+          "isCorrect": false,
+          "rationale": "El error no es la excesiva formalidad o abstracción, sino la repetición lógica del concepto."
+        }
+      ],
+      "hint": "Piensa en el significado inherente a la palabra 'divisa'.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Un fragmento dice: «Para solicitar la beca, el alumno debe aplicar en la plataforma antes de mayo». ¿Cuál es el diagnóstico correcto sobre el uso del verbo 'aplicar'?",
+      "answerOptions": [
+        {
+          "text": "Es un calco del inglés 'apply' que debe sustituirse por 'solicitar' o 'presentar su candidatura'.",
+          "isCorrect": true,
+          "rationale": "El uso de 'aplicar' con el sentido de pedir algo formalmente es un falso amigo del inglés 'to apply'."
+        },
+        {
+          "text": "Es un término preciso y plenamente adecuado al registro administrativo actual.",
+          "isCorrect": false,
+          "rationale": "Ignora que en español 'aplicar' significa poner algo sobre otra cosa o emplear una ley, no solicitar un puesto o beca."
+        },
+        {
+          "text": "Es una palabra comodín que en este contexto podría cambiarse por 'hacer'.",
+          "isCorrect": false,
+          "rationale": "No es una palabra de significado general, sino un uso impropio basado en una traducción literal de otra lengua."
+        },
+        {
+          "text": "Es un parónimo de 'implicar' que genera cierta ambigüedad en la lectura.",
+          "isCorrect": false,
+          "rationale": "No existe una confusión formal con 'implicar' en este contexto, sino un error de significado por influencia externa."
+        }
+      ],
+      "hint": "Analiza si el significado de 'aplicar' en español coincide realmente con realizar una solicitud formal.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Si un texto académico sobre derecho penal confunde los términos 'infligir' e 'infringir', ¿qué tipo de error léxico está cometiendo?",
+      "answerOptions": [
+        {
+          "text": "Confusión de parónimos.",
+          "isCorrect": true,
+          "rationale": "Se trata de palabras con una forma muy similar pero significados distintos (causar daño vs. quebrantar una norma)."
+        },
+        {
+          "text": "Uso de palabras baúl.",
+          "isCorrect": false,
+          "rationale": "Ninguno de los dos verbos tiene un significado genérico o impreciso; el error es de elección semántica."
+        },
+        {
+          "text": "Pleonasmo innecesario.",
+          "isCorrect": false,
+          "rationale": "No se está repitiendo información, sino utilizando una palabra por otra debido a su parecido fonético."
+        },
+        {
+          "text": "Redimensionamiento léxico.",
+          "isCorrect": false,
+          "rationale": "No se está intentando elevar el tono con una palabra más larga, sino que se está errando en el concepto."
+        }
+      ],
+      "hint": "Considera el parecido formal entre ambos verbos y cómo eso induce al error.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "En la frase «Hay muchas cosas que influyen en el aprendizaje», ¿por qué se desaconseja el uso de 'cosas' en un contexto académico?",
+      "answerOptions": [
+        {
+          "text": "Porque 'cosas' es una palabra comodín que oculta la precisión de los conceptos implicados (factores, variables, elementos).",
+          "isCorrect": true,
+          "rationale": "En la escritura universitaria se debe identificar con exactitud a qué se refiere el autor para evitar la vaguedad."
+        },
+        {
+          "text": "Porque es un término coloquial que la RAE prohíbe expresamente en cualquier registro.",
+          "isCorrect": false,
+          "rationale": "La palabra no está prohibida, sino que su uso se considera pobre o poco profesional en registros formales."
+        },
+        {
+          "text": "Porque genera una redundancia semántica evidente con el verbo 'influyen'.",
+          "isCorrect": false,
+          "rationale": "No hay repetición de significado entre 'cosas' e 'influyen', solo falta de precisión en el sujeto."
+        },
+        {
+          "text": "Porque constituye un calco semántico tomado directamente del inglés.",
+          "isCorrect": false,
+          "rationale": "Es una palabra genuina del español, su problema es la falta de carga informativa, no su origen."
+        }
+      ],
+      "hint": "Piensa en qué palabra alternativa daría más información al lector sobre qué está influyendo exactamente.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Al corregir un trabajo lees: «La climatología de la zona es muy calurosa en verano». ¿Cuál es el problema de precisión léxica aquí presente?",
+      "answerOptions": [
+        {
+          "text": "Redimensionamiento léxico: se usa 'climatología' (la disciplina) en vez de 'clima' (el fenómeno).",
+          "isCorrect": true,
+          "rationale": "Es un error común elegir la palabra más larga o técnica pensando que suena mejor, cuando 'climatología' es el estudio y no el estado del tiempo."
+        },
+        {
+          "text": "Uso de un falso amigo procedente del inglés climatology.",
+          "isCorrect": false,
+          "rationale": "No se trata de una traducción errónea, sino de una confusión entre la ciencia y su objeto de estudio."
+        },
+        {
+          "text": "Presencia de una muletilla o palabra comodín vacía de contenido.",
+          "isCorrect": false,
+          "rationale": "La palabra tiene un significado muy específico; el error es aplicarlo a un contexto que no le corresponde."
+        },
+        {
+          "text": "Inadecuación por un registro excesivamente coloquial para el contexto.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el error nace de intentar usar un registro excesivamente formal o culto de manera equivocada."
+        }
+      ],
+      "hint": "Distingue entre el nombre de una ciencia o estudio y lo que esa ciencia estudia realmente.",
+      "tags": [
+        "CP",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Un estudiante redacta la siguiente frase para su TFG: «Solo me falta redactar el guión del último capítulo». Según las novedades de la RAE (2010), ¿qué corrección ortográfica es necesaria?",
+      "answerOptions": [
+        {
+          "text": "Eliminar la tilde de la palabra «guion».",
+          "isCorrect": true,
+          "rationale": "La norma actual considera a «guion» un monosílabo ortográfico a efectos de acentuación, por lo que no debe llevar tilde."
+        },
+        {
+          "text": "Añadir tilde a la palabra «solo» para evitar ambigüedad.",
+          "isCorrect": false,
+          "rationale": "La normativa de 2010 desaconseja la tilde en el adverbio «solo» incluso en casos de posible ambigüedad."
+        },
+        {
+          "text": "Escribir «Capítulo» con mayúscula inicial por ser un sustantivo relevante.",
+          "isCorrect": false,
+          "rationale": "Los sustantivos comunes como capítulo no deben llevar mayúscula inicial a menos que formen parte de un nombre propio o título específico."
+        },
+        {
+          "text": "Sustituir «redactar» por «hacer» para simplificar el estilo.",
+          "isCorrect": false,
+          "rationale": "Sustituir un verbo preciso por un «verbo baúl» como «hacer» empobrece el léxico académico en lugar de mejorarlo."
+        }
+      ],
+      "hint": "Recuerda el tratamiento que reciben las palabras que se perciben como monosílabos tras la reforma de 2010.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "En un informe académico aparece escrito: «El ex-decano y el ex alto cargo asistieron al evento». ¿Cuál es la forma correcta de escribir el primer cargo mencionado?",
+      "answerOptions": [
+        {
+          "text": "exdecano",
+          "isCorrect": true,
+          "rationale": "Los prefijos se escriben unidos a la base cuando esta consta de una sola palabra (univerbal)."
+        },
+        {
+          "text": "ex decano",
+          "isCorrect": false,
+          "rationale": "La escritura separada se reserva para bases pluriverbales, como ocurre en «ex alto cargo»."
+        },
+        {
+          "text": "Ex-decano",
+          "isCorrect": false,
+          "rationale": "El uso del guion con prefijos solo se da en casos excepcionales (como ante mayúsculas) y no se usa mayúscula por cortesía en el cargo."
+        },
+        {
+          "text": "ex–decano",
+          "isCorrect": false,
+          "rationale": "El uso de la raya para unir prefijos es un error ortotipográfico, ya que la raya tiene funciones delimitadoras de incisos."
+        }
+      ],
+      "hint": "Los prefijos suelen comportarse de forma distinta según si la palabra que acompañan es simple o compuesta.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Analiza esta frase: «La presentación de los resultados, confirma la validez de la hipótesis planteada». ¿Qué error de puntuación presenta?",
+      "answerOptions": [
+        {
+          "text": "La presencia de la llamada «coma criminal» entre sujeto y verbo.",
+          "isCorrect": true,
+          "rationale": "No se debe escribir coma para separar el sujeto («La presentación de los resultados») del predicado, salvo que haya un inciso."
+        },
+        {
+          "text": "La falta de un punto y coma antes de «confirma».",
+          "isCorrect": false,
+          "rationale": "El punto y coma no tiene sentido en esta posición ya que cortaría la relación sintáctica básica de la oración."
+        },
+        {
+          "text": "La ausencia de dos puntos después de la palabra «resultados».",
+          "isCorrect": false,
+          "rationale": "Los dos puntos se usan para anunciar explicaciones o enumeraciones, no para separar el sujeto de su acción."
+        },
+        {
+          "text": "El uso de la coma es correcto porque marca una pausa respiratoria necesaria.",
+          "isCorrect": false,
+          "rationale": "La puntuación no transcribe la oralidad ni las pausas respiratorias, sino la estructura sintáctica."
+        }
+      ],
+      "hint": "Fíjate en la relación directa que existe entre quién realiza la acción y el verbo principal.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "En la revisión de un borrador, encuentras esta oración: «El autor no explicó el por que de su decisión». ¿Cuál es la forma correcta de escribir el término destacado?",
+      "answerOptions": [
+        {
+          "text": "porqué",
+          "isCorrect": true,
+          "rationale": "Se escribe como una sola palabra y con tilde cuando funciona como sustantivo sinónimo de «motivo» o «razón»."
+        },
+        {
+          "text": "por qué",
+          "isCorrect": false,
+          "rationale": "Esta forma se reserva para oraciones interrogativas (directas o indirectas) o exclamativas."
+        },
+        {
+          "text": "porque",
+          "isCorrect": false,
+          "rationale": "Es una conjunción causal que se usa para introducir una explicación o respuesta, no funciona como sustantivo."
+        },
+        {
+          "text": "por que",
+          "isCorrect": false,
+          "rationale": "Se trata de la preposición «por» seguida del relativo «que» o una conjunción, lo cual no encaja en esta estructura sustantivada."
+        }
+      ],
+      "hint": "Observa que el término va precedido por un artículo, lo que indica que se está usando como un nombre.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Estás revisando la traducción de un artículo y lees: «El feedback recibido fue positivo». ¿Qué recomendación darías?",
+      "answerOptions": [
+        {
+          "text": "Escribir «feedback» en cursiva por ser un extranjerismo crudo.",
+          "isCorrect": true,
+          "rationale": "Los términos de otras lenguas no adaptados deben marcarse con cursiva para señalar su origen extranjero."
+        },
+        {
+          "text": "Escribir «feedback» entre comillas para resaltar su importancia.",
+          "isCorrect": false,
+          "rationale": "Las comillas no se usan habitualmente para extranjerismos si se dispone de cursiva, ni para dar énfasis conceptual."
+        },
+        {
+          "text": "Poner «feedback» con mayúscula inicial.",
+          "isCorrect": false,
+          "rationale": "No hay ninguna regla normativa que justifique la mayúscula en este sustantivo común."
+        },
+        {
+          "text": "Sustituir obligatoriamente por «retroalimentación» sin otra opción.",
+          "isCorrect": false,
+          "rationale": "Aunque es preferible usar el término en español, la norma permite el extranjerismo siempre que se use la marca gráfica adecuada (cursiva)."
+        }
+      ],
+      "hint": "Considera el tratamiento gráfico que reciben las palabras que no pertenecen al sistema lingüístico del español.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "En un párrafo aparece el siguiente inciso: «La corrección —en opinión de la autora— es una lectura técnica». ¿Es correcto el uso de los signos?",
+      "answerOptions": [
+        {
+          "text": "Sí, utiliza rayas para destacar el inciso y estas deben abrirse y cerrarse.",
+          "isCorrect": true,
+          "rationale": "Las rayas (—) son correctas para incisos destacados y, al estar en mitad de la oración, deben ser dobles."
+        },
+        {
+          "text": "No, debería usar guiones cortos (-) para unir las palabras al inciso.",
+          "isCorrect": false,
+          "rationale": "El guion corto tiene funciones de unión de palabras, no de delimitación de incisos textuales."
+        },
+        {
+          "text": "No, los incisos solo pueden marcarse con comas en textos académicos.",
+          "isCorrect": false,
+          "rationale": "Existen tres opciones para incisos (comas, rayas y paréntesis), cada una con un grado distinto de aislamiento."
+        },
+        {
+          "text": "Sí, pero sobra la raya de cierre antes del verbo.",
+          "isCorrect": false,
+          "rationale": "Si el inciso no termina al final del enunciado, es obligatorio cerrar la raya para no dejar la estructura abierta."
+        }
+      ],
+      "hint": "Identifica la diferencia de longitud y función entre el signo de unión de palabras y el de delimitación de ideas.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Un autor escribe en su introducción: «En el Mes de Junio, los Estudiantes deben entregar el Trabajo». ¿Qué corrección de mayúsculas es necesaria?",
+      "answerOptions": [
+        {
+          "text": "Escribir «mes», «junio», «estudiantes» y «trabajo» en minúscula.",
+          "isCorrect": true,
+          "rationale": "Los meses, los nombres de cargos o colectivos genéricos y los nombres de tareas comunes no llevan mayúscula en español."
+        },
+        {
+          "text": "Mantener «Junio» en mayúscula por ser un nombre propio de mes.",
+          "isCorrect": false,
+          "rationale": "A diferencia del inglés, en español los meses del año se escriben con minúscula inicial."
+        },
+        {
+          "text": "Poner «Mes» en minúscula pero mantener «Estudiantes» por respeto.",
+          "isCorrect": false,
+          "rationale": "La mayúscula no debe usarse para mostrar respeto o importancia conceptual en textos académicos normativos."
+        },
+        {
+          "text": "Solo debe corregirse «Trabajo», pues es el único sustantivo común de la lista.",
+          "isCorrect": false,
+          "rationale": "Todos los elementos señalados funcionan como sustantivos comunes en este contexto y deben ir en minúscula."
+        }
+      ],
+      "hint": "Recuerda que en español la mayúscula tiene un uso mucho más restringido que en otras lenguas como el inglés o el alemán.",
+      "tags": [
+        "CP",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Observa la siguiente oración: «La implementación de las nuevas pautas de corrección por el departamento, mejorará la calidad de los trabajos». ¿Qué error de puntuación presenta?",
+      "answerOptions": [
+        {
+          "text": "Se ha omitido una coma necesaria después de «corrección» para delimitar un inciso.",
+          "isCorrect": false,
+          "rationale": "La estructura no presenta un inciso, sino un sujeto complejo que no debe fragmentarse."
+        },
+        {
+          "text": "Contiene una 'coma criminal' entre el sujeto y el verbo de la oración.",
+          "isCorrect": true,
+          "rationale": "No se debe escribir coma entre sujeto y verbo aunque el sujeto sea largo o el hablante realice una pausa oral."
+        },
+        {
+          "text": "Faltan dos puntos después de «departamento» para anunciar la consecuencia.",
+          "isCorrect": false,
+          "rationale": "Los dos puntos no se utilizan para separar el sujeto del predicado en una estructura lineal simple."
+        },
+        {
+          "text": "Debería usarse un punto y coma en lugar de la coma para separar unidades de sentido.",
+          "isCorrect": false,
+          "rationale": "El punto y coma separa proposiciones relacionadas, no el sujeto de su propio verbo."
+        }
+      ],
+      "hint": "Identifica cuál es el sujeto de la oración y su relación directa con la acción de 'mejorar'.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "En el fragmento «La cohesión —especialmente la referencia— facilita la lectura», ¿qué función cumplen las rayas según la jerarquía de signos?",
+      "answerOptions": [
+        {
+          "text": "Actúan como signos de primer orden para organizar las unidades principales.",
+          "isCorrect": false,
+          "rationale": "Las rayas se clasifican como signos de segundo orden porque introducen información secundaria o incisos."
+        },
+        {
+          "text": "Sustituyen a los dos puntos en su función de anunciar una explicación técnica.",
+          "isCorrect": false,
+          "rationale": "Aunque las rayas encierran una explicación, su función es delimitar un inciso y no anunciar una enumeración o cita."
+        },
+        {
+          "text": "Funcionan como signos de segundo orden para destacar un inciso dentro de la oración.",
+          "isCorrect": true,
+          "rationale": "Las rayas se usan para incisos que se quieren resaltar más que con las comas."
+        },
+        {
+          "text": "Indican que la información encerrada es puramente lateral y prescindible, como los paréntesis.",
+          "isCorrect": false,
+          "rationale": "Si bien es un inciso, las rayas aportan un grado de énfasis mayor que el aislamiento 'lejano' que proporcionan los paréntesis."
+        }
+      ],
+      "hint": "Considera si el signo organiza la estructura global o introduce un elemento aclaratorio resaltado.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "Un estudiante escribe: «El texto es breve sin embargo, resulta confuso». ¿Cómo debe corregirse aplicando los signos de primer orden?",
+      "answerOptions": [
+        {
+          "text": "«El texto es breve, sin embargo resulta confuso».",
+          "isCorrect": false,
+          "rationale": "Esta opción crea un enlace débil; los conectores adversativos largos suelen requerir una puntuación más fuerte previa."
+        },
+        {
+          "text": "«El texto es breve; sin embargo, resulta confuso».",
+          "isCorrect": true,
+          "rationale": "Conviene aislar conectores como «sin embargo» con punto y coma (o punto) delante y coma detrás."
+        },
+        {
+          "text": "«El texto es breve: sin embargo resulta confuso».",
+          "isCorrect": false,
+          "rationale": "Los dos puntos se usan para explicar o resumir, no para introducir una oposición mediante un conector."
+        },
+        {
+          "text": "«El texto es breve sin embargo resulta confuso».",
+          "isCorrect": false,
+          "rationale": "La ausencia de signos dificulta la lectura y no delimita el conector discursivo."
+        }
+      ],
+      "hint": "Recuerda la pauta específica para aislar conectores que vinculan dos oraciones independientes.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "Para cerrar un análisis con la frase «La conclusión es clara: el texto necesita una revisión», ¿por qué se eligen los dos puntos?",
+      "answerOptions": [
+        {
+          "text": "Porque sustituyen a una coma que separaría erróneamente el sujeto del predicado.",
+          "isCorrect": false,
+          "rationale": "Los dos puntos no tienen la función de 'corregir' una coma criminal, sino una función comunicativa propia."
+        },
+        {
+          "text": "Porque anuncian una explicación, consecuencia o síntesis de lo dicho anteriormente.",
+          "isCorrect": true,
+          "rationale": "Los dos puntos se utilizan para anunciar una reformulación o conclusión de la idea previa."
+        },
+        {
+          "text": "Porque son el único signo de primer orden que permite cerrar una oración académica.",
+          "isCorrect": false,
+          "rationale": "El punto es el signo principal de cierre; los dos puntos tienen una función de apertura hacia lo que sigue."
+        },
+        {
+          "text": "Porque indican una pausa más larga que el punto y coma pero más breve que el punto.",
+          "isCorrect": false,
+          "rationale": "La puntuación no se basa en la duración de las pausas, sino en la relación lógica entre las unidades."
+        }
+      ],
+      "hint": "Piensa en qué relación establecen los dos puntos entre la primera parte de la frase y la afirmación final.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "En el caso «En absoluto, es negociable», la coma es fundamental porque:",
+      "answerOptions": [
+        {
+          "text": "Marca la entonación necesaria para que la frase suene académica.",
+          "isCorrect": false,
+          "rationale": "La puntuación busca la claridad del sentido, no simplemente un efecto de estilo sonoro."
+        },
+        {
+          "text": "Evita que el adverbio 'no' (implícito) afecte a toda la frase, cambiando el significado.",
+          "isCorrect": true,
+          "rationale": "Como muestra este ejemplo, la coma puede determinar si se niega algo anterior o si se califica lo que sigue."
+        },
+        {
+          "text": "Permite que el lector tome aire antes de leer el adjetivo principal.",
+          "isCorrect": false,
+          "rationale": "Nuevamente, el criterio de la respiración no es la base de la puntuación."
+        },
+        {
+          "text": "Es una coma obligatoria tras cualquier locución adverbial al inicio de frase.",
+          "isCorrect": false,
+          "rationale": "No siempre es obligatoria; su presencia o ausencia depende de si se quiere aislar el elemento o si este modifica directamente al verbo."
+        }
+      ],
+      "hint": "Considera cómo cambiaría el sentido si quitamos la coma: «En absoluto es negociable».",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Cuál es el uso correcto del punto en relación con los paréntesis en un texto académico?",
+      "answerOptions": [
+        {
+          "text": "El punto siempre debe ir dentro del paréntesis para cerrar la idea secundaria.",
+          "isCorrect": false,
+          "rationale": "Solo va dentro si el enunciado completo e independiente está contenido en los paréntesis."
+        },
+        {
+          "text": "El punto se coloca fuera del paréntesis cuando este forma parte de una oración mayor.",
+          "isCorrect": true,
+          "rationale": "Si el paréntesis está integrado en un enunciado, el punto de cierre de este se pone después."
+        },
+        {
+          "text": "Se debe poner un punto antes y otro después del paréntesis para mayor claridad.",
+          "isCorrect": false,
+          "rationale": "Duplicar el punto es incorrecto y entorpece la lectura sin aportar valor gramatical."
+        },
+        {
+          "text": "No se debe poner punto si la oración termina con un paréntesis.",
+          "isCorrect": false,
+          "rationale": "Toda oración debe cerrarse con un signo de puntuación final, generalmente el punto."
+        }
+      ],
+      "hint": "Evalúa si el paréntesis es un 'añadido' a una frase que aún no ha terminado de puntuarse.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Por qué se afirma que «la puntuación no transcribe la oralidad»?",
+      "answerOptions": [
+        {
+          "text": "Porque las reglas de puntuación son arbitrarias y no tienen relación con el lenguaje hablado.",
+          "isCorrect": false,
+          "rationale": "Existe una relación, pero no es de transcripción directa; la puntuación obedece a la estructura lógica y sintáctica."
+        },
+        {
+          "text": "Porque su función principal es delimitar unidades sintácticas y textuales para guiar la interpretación.",
+          "isCorrect": true,
+          "rationale": "La puntuación organiza el sentido y la jerarquía del escrito, no las pausas físicas de la voz."
+        },
+        {
+          "text": "Porque en el registro académico se prohíbe puntuar basándose en el ritmo de la frase.",
+          "isCorrect": false,
+          "rationale": "No se prohíbe el ritmo, pero se advierte que el ritmo oral no garantiza una puntuación gramaticalmente correcta."
+        },
+        {
+          "text": "Porque los signos de puntuación se inventaron antes de que existiera la gramática normativa.",
+          "isCorrect": false,
+          "rationale": "Esta es una afirmación histórica incorrecta que no tiene base en los materiales proporcionados."
+        }
+      ],
+      "hint": "Reflexiona sobre si ponemos comas para 'respirar' o para 'separar piezas' del mensaje.",
+      "tags": [
+        "CP",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "Analice el siguiente fragmento de un borrador académico: «El estudio de la cohesión es fundamental en Lingüística. Por otro lado, la ciudad de Madrid tiene un clima mediterráneo continentalizado. La cohesión permite que el texto sea una unidad de sentido». ¿Qué problema de corrección discursiva presenta?",
+      "answerOptions": [
+        {
+          "text": "Laconismo",
+          "isCorrect": false,
+          "rationale": "El laconismo se refiere a la falta de desarrollo de una idea, no a la inserción de información no relacionada."
+        },
+        {
+          "text": "Digresión",
+          "isCorrect": true,
+          "rationale": "Se introduce una idea ajena al hilo argumental (el clima de Madrid) que rompe la coherencia del texto."
+        },
+        {
+          "text": "Paráfrasis excesiva",
+          "isCorrect": false,
+          "rationale": "No se está repitiendo la misma idea con otras palabras, sino introduciendo un tema totalmente distinto."
+        },
+        {
+          "text": "Precipitación",
+          "isCorrect": false,
+          "rationale": "La precipitación implica concluir sin evidencias suficientes, lo cual no es el error principal en este caso de falta de unidad temática."
+        }
+      ],
+      "hint": "Fíjese en si todas las oraciones contribuyen al mismo tema o si alguna se desvía del objetivo.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Para revisar un párrafo, decide eliminar la segunda oración. Al hacerlo, observa que el párrafo pierde totalmente su sentido y el lector ya no entiende la afirmación central. ¿Qué ha identificado probablemente en esa segunda oración?",
+      "answerOptions": [
+        {
+          "text": "Una idea secundaria",
+          "isCorrect": false,
+          "rationale": "Las ideas secundarias pueden eliminarse o moverse sin que el núcleo del mensaje se pierda por completo."
+        },
+        {
+          "text": "Un marcador discursivo",
+          "isCorrect": false,
+          "rationale": "Los marcadores ayudan a la fluidez, pero su eliminación no suele destruir el sentido lógico de la proposición principal."
+        },
+        {
+          "text": "La idea principal",
+          "isCorrect": true,
+          "rationale": "La idea principal es la que sostiene el sentido del párrafo; si se elimina, la unidad informativa se desmorona."
+        },
+        {
+          "text": "Una digresión",
+          "isCorrect": false,
+          "rationale": "Si fuera una digresión, la eliminación de la frase mejoraría la claridad del párrafo en lugar de destruirla."
+        }
+      ],
+      "hint": "Piense en cuál es el elemento indispensable que articula el significado de una unidad textual.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Desea unir estas dos ideas: «El autor defiende la validez de la encuesta. Los datos muestran un margen de error elevado». ¿Qué conector es más adecuado para mantener la coherencia entre ambas ideas?",
+      "answerOptions": [
+        {
+          "text": "Además",
+          "isCorrect": false,
+          "rationale": "Este conector se usa para añadir información que suma en la misma dirección, no para contrastar ideas opuestas."
+        },
+        {
+          "text": "Sin embargo",
+          "isCorrect": true,
+          "rationale": "Este conector marca una relación de contraste o contraargumentación, adecuada para oponer la tesis del autor y los datos reales."
+        },
+        {
+          "text": "Por tanto",
+          "isCorrect": false,
+          "rationale": "Este conector indica consecuencia lógica, pero los datos negativos no son consecuencia de la defensa del autor."
+        },
+        {
+          "text": "En síntesis",
+          "isCorrect": false,
+          "rationale": "Se usa para resumir o recapitular, no para introducir una objeción a una afirmación previa."
+        }
+      ],
+      "hint": "Observe si la segunda idea apoya a la primera o si presenta una dificultad o contradicción.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Un párrafo de un TFG ocupa una página y media sin ningún punto y aparte. ¿Cuál es el riesgo principal desde el punto de vista de la organización del texto?",
+      "answerOptions": [
+        {
+          "text": "Incurrir en laconismo",
+          "isCorrect": false,
+          "rationale": "El laconismo es brevedad excesiva; un párrafo de página y media es precisamente lo contrario."
+        },
+        {
+          "text": "Fragmentar el razonamiento",
+          "isCorrect": false,
+          "rationale": "La fragmentación ocurre con párrafos demasiado breves; aquí el problema es el bloque compacto de información."
+        },
+        {
+          "text": "Ocultar la estructura del razonamiento",
+          "isCorrect": true,
+          "rationale": "Los párrafos excesivamente largos dificultan que el lector identifique el avance de las ideas y las pausas lógicas."
+        },
+        {
+          "text": "Uso excesivo de conectores",
+          "isCorrect": false,
+          "rationale": "La longitud del párrafo no implica necesariamente que se hayan usado muchos conectores, sino que falta división temática."
+        }
+      ],
+      "hint": "Considere cómo afecta visual y cognitivamente un bloque de texto muy denso al lector.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Un fragmento dice: «El cambio climático afecta a los glaciares. Esto ocurre por el aumento de temperaturas». Si el autor desea evitar el estilo nominal y ganar viveza verbal, ¿qué cambio es preferible?",
+      "answerOptions": [
+        {
+          "text": "Se procede a la afectación de los glaciares por el clima.",
+          "isCorrect": false,
+          "rationale": "Esta versión utiliza nominalizaciones innecesarias («afectación») que conviene evitar."
+        },
+        {
+          "text": "El aumento de temperaturas funde los glaciares.",
+          "isCorrect": true,
+          "rationale": "Sustituir sustantivos abstractos y verbos baúl por verbos de acción precisos ('funde') mejora la claridad académica."
+        },
+        {
+          "text": "Existe una problemática de temperaturas en los glaciares.",
+          "isCorrect": false,
+          "rationale": "El uso de 'problemática' es un ejemplo de lenguaje inflado que no aporta precisión al proceso físico descrito."
+        },
+        {
+          "text": "Se llevará a cabo un deshielo debido al clima.",
+          "isCorrect": false,
+          "rationale": "Utilizar 'llevar a cabo' es un rodeo verbal (verbo baúl + sustantivo) que debilita la fuerza de la oración."
+        }
+      ],
+      "hint": "Busque la opción que utilice un verbo que describa directamente la acción en lugar de rodearla con sustantivos.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Al leer el primer párrafo de un texto, observa que se afirma una tesis muy audaz pero no se explica por qué ni se citan fuentes. ¿Qué defecto discursivo presenta?",
+      "answerOptions": [
+        {
+          "text": "Digresión",
+          "isCorrect": false,
+          "rationale": "No hay un desvío del tema, sino una falta de profundidad en el tratamiento del tema propuesto."
+        },
+        {
+          "text": "Precipitación",
+          "isCorrect": true,
+          "rationale": "La precipitación ocurre cuando se llega a conclusiones o se hacen afirmaciones sin aportar las razones o evidencias suficientes."
+        },
+        {
+          "text": "Estilo nominal",
+          "isCorrect": false,
+          "rationale": "El estilo nominal se refiere a la estructura gramatical (exceso de sustantivos), no a la solidez de los argumentos."
+        },
+        {
+          "text": "Laconismo",
+          "isCorrect": false,
+          "rationale": "Aunque están relacionados, el laconismo es una brevedad generalizada; la precipitación se enfoca en el salto lógico hacia una conclusión."
+        }
+      ],
+      "hint": "Considere qué término describe el hecho de concluir algo antes de haberlo demostrado debidamente.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Analice el siguiente párrafo: «Se entiende por cohesión la red de relaciones semánticas y sintácticas entre los enunciados de un texto. Es, por tanto, una propiedad formal y perceptible». ¿Qué tipo de párrafo es?",
+      "answerOptions": [
+        {
+          "text": "Párrafo comparativo",
+          "isCorrect": false,
+          "rationale": "No se están contrastando dos conceptos o perspectivas diferentes."
+        },
+        {
+          "text": "Párrafo definitorio",
+          "isCorrect": true,
+          "rationale": "Su función principal es delimitar y explicar el significado de un concepto específico ('cohesión')."
+        },
+        {
+          "text": "Párrafo introductorio",
+          "isCorrect": false,
+          "rationale": "Aunque puede estar al inicio, su contenido es una definición técnica, no una presentación de la estructura del trabajo."
+        },
+        {
+          "text": "Párrafo conclusivo",
+          "isCorrect": false,
+          "rationale": "El párrafo está estableciendo las bases conceptuales, no recapitulando resultados finales."
+        }
+      ],
+      "hint": "Identifique si la intención del autor es explicar qué es algo o simplemente avanzar en la estructura.",
+      "tags": [
+        "CP",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Un estudiante ha terminado su primer borrador y detecta varias tildes faltantes y un uso inconsistente de las mayúsculas. ¿Qué debería priorizar antes de corregir esos detalles ortotipográficos?",
+      "answerOptions": [
+        {
+          "text": "La revisión del encargo para comprobar si el texto responde al enfoque y alcance solicitados.",
+          "isCorrect": true,
+          "rationale": "La revisión debe ser descendente, de lo global a lo local; corregir el encargo y la estructura es prioritario para evitar trabajar sobre párrafos que podrían ser eliminados."
+        },
+        {
+          "text": "La corrección de la puntuación para asegurar que las unidades de sentido estén bien delimitadas.",
+          "isCorrect": false,
+          "rationale": "La puntuación y la ortotipografía son niveles locales que deben esperar a la revisión estructural, aunque estén próximos entre sí en el proceso de corrección."
+        },
+        {
+          "text": "La sustitución de verbos baúl por términos más precisos para mejorar la calidad léxica.",
+          "isCorrect": false,
+          "rationale": "El nivel léxico es posterior a la revisión del encargo, la estructura y la coherencia discursiva del texto."
+        },
+        {
+          "text": "La normalización de las citas y la bibliografía según la normativa APA 7.ª edición.",
+          "isCorrect": false,
+          "rationale": "La revisión de fuentes es uno de los últimos pasos, por lo que no es la prioridad inicial cuando el texto aún requiere ajustes globales."
+        }
+      ],
+      "hint": "Recuerda la jerarquía de la revisión: de lo global y estructural a lo local y formal.",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Observas el siguiente fragmento: «El estudio de los casos clínicos, revela una tendencia al alza». ¿Qué criterio de corrección se está vulnerando?",
+      "answerOptions": [
+        {
+          "text": "La prohibición de colocar una coma entre el sujeto y el verbo de la oración.",
+          "isCorrect": true,
+          "rationale": "La lista de comprobación especifica explícitamente que no debe haber coma entre sujeto y verbo, ya que rompe la unidad sintáctica básica."
+        },
+        {
+          "text": "La necesidad de utilizar comas para delimitar un inciso o aclaración necesaria.",
+          "isCorrect": false,
+          "rationale": "No se trata de un inciso, sino de una coma mal colocada que separa el núcleo del sujeto del predicado."
+        },
+        {
+          "text": "La falta de concordancia gramatical entre el núcleo del sujeto y el verbo principal.",
+          "isCorrect": false,
+          "rationale": "La concordancia es correcta (singular-singular); el error es exclusivamente de puntuación ortotipográfica."
+        },
+        {
+          "text": "El uso de un registro excesivamente coloquial para un contexto académico universitario.",
+          "isCorrect": false,
+          "rationale": "El registro es formal y adecuado; el problema radica en la estructura sintáctica y su reflejo en la puntuación."
+        }
+      ],
+      "hint": "Identifica los constituyentes básicos de la oración: ¿quién realiza la acción y cuál es el verbo?",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Si al revisar la morfosintaxis de un texto encuentras la frase «Es seguro de que el examen será difícil», ¿qué ajuste deberías realizar según la prueba de sustitución?",
+      "answerOptions": [
+        {
+          "text": "Eliminar la preposición 'de' porque la construcción no la exige (dequeísmo).",
+          "isCorrect": true,
+          "rationale": "Al sustituir por 'eso' decimos 'Es seguro eso', no 'Es seguro de eso'; por tanto, la preposición sobra."
+        },
+        {
+          "text": "Mantener la preposición 'de' porque el adjetivo 'seguro' siempre rige esa preposición.",
+          "isCorrect": false,
+          "rationale": "Aunque 'estar seguro de' es correcto, en construcciones atributivas impersonales como 'es seguro que', la preposición es incorrecta."
+        },
+        {
+          "text": "Cambiar 'que' por 'el cual' para evitar la repetición de la conjunción en el párrafo.",
+          "isCorrect": false,
+          "rationale": "El uso de 'el cual' en lugar de un 'que' completivo es gramaticalmente incorrecto y no soluciona el problema del dequeísmo."
+        },
+        {
+          "text": "Sustituir 'difícil' por un parónimo más académico como 'arduo' para mejorar el léxico.",
+          "isCorrect": false,
+          "rationale": "Mejorar el léxico es una tarea posterior y no corrige el error sintáctico de la preposición indebida."
+        }
+      ],
+      "hint": "Aplica la prueba de sustitución: ¿dices 'es seguro eso' o 'es seguro de eso'?",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "¿Por qué es un error metodológico corregir las tildes y las comas antes de revisar la estructura y los párrafos de un texto?",
+      "answerOptions": [
+        {
+          "text": "Porque si se decide eliminar o reordenar secciones completas, se habría perdido tiempo puliendo detalles de un texto descartado.",
+          "isCorrect": true,
+          "rationale": "Corregir lo local antes de lo global conlleva el riesgo de trabajar doble si el contenido cambia significativamente."
+        },
+        {
+          "text": "Porque la normativa académica de la RAE prioriza siempre el sentido del discurso sobre la ortografía.",
+          "isCorrect": false,
+          "rationale": "La RAE no establece una jerarquía de importancia entre sentido y ortografía; este orden se sigue por eficiencia técnica."
+        },
+        {
+          "text": "Porque los correctores automáticos ya se encargan de la ortotipografía al final del proceso de escritura.",
+          "isCorrect": false,
+          "rationale": "La corrección no se reduce a pasar un corrector automático: requiere una lectura técnica."
+        },
+        {
+          "text": "Porque la coherencia discursiva determina automáticamente la posición de las comas y las tildes.",
+          "isCorrect": false,
+          "rationale": "La puntuación ayuda a la coherencia, pero no es una consecuencia automática; son planos distintos que requieren atención específica."
+        }
+      ],
+      "hint": "Piensa en la eficiencia del trabajo: ¿qué ocurre con el tiempo invertido si borras un párrafo ya corregido?",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Estás revisando la ortotipografía de un TFG. ¿Cómo deberías presentar los títulos de libros y el uso de comillas?",
+      "answerOptions": [
+        {
+          "text": "Títulos en cursiva y comillas angulares (« ») para citas integradas.",
+          "isCorrect": true,
+          "rationale": "Los títulos de obras independientes van en cursiva y las comillas preferentes en español son las angulares."
+        },
+        {
+          "text": "Títulos entre comillas inglesas (\" \") y cursiva para enfatizar conceptos clave.",
+          "isCorrect": false,
+          "rationale": "Los títulos de libros no suelen ir entre comillas y no conviene usar mayúsculas o cursivas solo para destacar importancia."
+        },
+        {
+          "text": "Títulos en negrita y comillas simples (' ') para delimitar capítulos del texto.",
+          "isCorrect": false,
+          "rationale": "La negrita no es una convención habitual para títulos, y las comillas simples se reservan para niveles internos de citación."
+        },
+        {
+          "text": "Títulos con mayúsculas iniciales en todas las palabras y sin ningún tipo de resalte.",
+          "isCorrect": false,
+          "rationale": "Conviene evitar el uso excesivo de mayúsculas y usar la cursiva para identificar títulos de obras."
+        }
+      ],
+      "hint": "Recuerda cuál es el tipo de comillas preferente en español.",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Un informe académico presenta párrafos muy breves, de apenas dos líneas cada uno. ¿Cuál es el diagnóstico más probable?",
+      "answerOptions": [
+        {
+          "text": "El texto sufre de fragmentación del razonamiento, dificultando la progresión de la idea dominante.",
+          "isCorrect": true,
+          "rationale": "Párrafos excesivamente breves suelen romper el hilo lógico; el párrafo debe ser una unidad de sentido con una idea central desarrollada."
+        },
+        {
+          "text": "El texto es muy claro y dinámico, cumpliendo con la exigencia de sencillez universitaria.",
+          "isCorrect": false,
+          "rationale": "La brevedad excesiva no es sinónimo de claridad; puede dar una impresión de falta de profundidad o de esquema desarticulado."
+        },
+        {
+          "text": "El autor ha evitado con éxito los bloques compactos de texto que fatigan al lector.",
+          "isCorrect": false,
+          "rationale": "Aunque se deben evitar los bloques compactos, el extremo opuesto (la fragmentación) también es un error de organización discursiva."
+        },
+        {
+          "text": "Es un estilo adecuado para la introducción, pero no para el desarrollo de conceptos.",
+          "isCorrect": false,
+          "rationale": "Incluso en la introducción, los párrafos deben tener una estructura mínima que presente el tema y los objetivos con cohesión."
+        }
+      ],
+      "hint": "El párrafo es la 'unidad de sentido': ¿puede una idea compleja desarrollarse siempre en solo dos líneas?",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Un redactor decide incluir la frase «El porqué de esta decisión es complejo» en sus conclusiones. Desde el punto de vista ortotipográfico, el uso de 'porqué' en esta frase es:",
+      "answerOptions": [
+        {
+          "text": "Correcto, porque funciona como un sustantivo equivalente a 'motivo' o 'causa'.",
+          "isCorrect": true,
+          "rationale": "Se escribe 'porqué' (junto y con tilde) cuando va precedido de determinante y actúa como nombre."
+        },
+        {
+          "text": "Incorrecto, debería ser 'porque' por ser una explicación de carácter causal.",
+          "isCorrect": false,
+          "rationale": "'Porque' es una conjunción que introduce una oración subordinada, no puede actuar como núcleo de un sintagma nominal."
+        },
+        {
+          "text": "Incorrecto, debería ser 'por qué' ya que implica una pregunta indirecta sobre la decisión.",
+          "isCorrect": false,
+          "rationale": "Aunque hay una interrogación implícita, gramaticalmente aquí funciona como sustantivo con artículo, no como pronombre interrogativo."
+        },
+        {
+          "text": "Dudoso, ya que en textos académicos se prefiere siempre el uso de 'la razón por la que'.",
+          "isCorrect": false,
+          "rationale": "Aunque existan alternativas, 'el porqué' es una forma perfectamente válida y académica de expresar la causa."
+        }
+      ],
+      "hint": "Fíjate si la palabra va precedida por un artículo ('el') y si puedes sustituirla por 'el motivo'.",
+      "tags": [
+        "CP",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "En un entorno académico, ¿cuál es la reformulación más adecuada para el fragmento: «Pienso de que el trabajo está bien porque hace una explicación del tema»?",
+      "answerOptions": [
+        {
+          "text": "Considero que el trabajo explica adecuadamente el tema.",
+          "isCorrect": true,
+          "rationale": "Esta opción elimina el dequeísmo, sustituye el verbo baúl por una forma léxica precisa y utiliza un registro formal natural."
+        },
+        {
+          "text": "Pienso que el trabajo está bien porque realiza una explicación del tema.",
+          "isCorrect": false,
+          "rationale": "Aunque corrige el dequeísmo, mantiene el uso de un verbo baúl combinado con una nominalización innecesaria."
+        },
+        {
+          "text": "Considero de que el trabajo está bien y explica el tema.",
+          "isCorrect": false,
+          "rationale": "Mantiene el error de dequeísmo al introducir la preposición 'de' ante una oración completiva que no la requiere."
+        },
+        {
+          "text": "Desde mi humilde opinión, el autor procede a realizar una explicación sobre el tema.",
+          "isCorrect": false,
+          "rationale": "Incurre en el uso de lenguaje inflado y fórmulas artificiosas que restan naturalidad y precisión al texto académico."
+        }
+      ],
+      "hint": "Identifica y elimina el uso innecesario de la preposición 'de' y busca un verbo que nombre directamente la acción.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "Analice la siguiente oración: «Me di cuenta que faltaba una fuente bibliográfica». ¿Qué fenómeno de incorrección lingüística presenta?",
+      "answerOptions": [
+        {
+          "text": "Queísmo.",
+          "isCorrect": true,
+          "rationale": "Se produce al omitir la preposición 'de' exigida por el régimen del verbo pronominal 'darse cuenta'."
+        },
+        {
+          "text": "Dequeísmo.",
+          "isCorrect": false,
+          "rationale": "Este error consistiría en añadir una preposición 'de' innecesaria, lo cual es el caso opuesto al ejemplo analizado."
+        },
+        {
+          "text": "Uso de verbo baúl.",
+          "isCorrect": false,
+          "rationale": "El error no reside en la falta de precisión del verbo, sino en la estructura sintáctica de la subordinada."
+        },
+        {
+          "text": "Falta de adecuación al registro.",
+          "isCorrect": false,
+          "rationale": "Aunque es un error gramatical, no se trata de una elección de registro informal, sino de una omisión de un elemento obligatorio de la norma."
+        }
+      ],
+      "hint": "Realiza la prueba de sustituir la oración subordinada por el pronombre 'esto' o 'eso'.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "En el fragmento: «La claridad del texto, depende de la puntuación», ¿cuál es el diagnóstico correcto sobre el uso de la coma?",
+      "answerOptions": [
+        {
+          "text": "Es una 'coma criminal' porque separa el sujeto del verbo.",
+          "isCorrect": true,
+          "rationale": "La norma prohíbe colocar una coma entre los constituyentes básicos de la oración (sujeto y predicado) cuando no hay un inciso."
+        },
+        {
+          "text": "Es una coma de inciso necesaria para enfatizar el sujeto.",
+          "isCorrect": false,
+          "rationale": "Los incisos deben estar delimitados por dos comas y contener información secundaria, lo que no ocurre en esta estructura simple."
+        },
+        {
+          "text": "Es una coma de elipsis que sustituye a un verbo omitido.",
+          "isCorrect": false,
+          "rationale": "La coma de elipsis se usa cuando el verbo ya se ha mencionado o se sobreentiende, pero aquí el verbo 'depende' está explícito."
+        },
+        {
+          "text": "Es una coma obligatoria para marcar una pausa respiratoria.",
+          "isCorrect": false,
+          "rationale": "La puntuación no se rige por las pausas de la respiración, sino por la organización lógica y sintáctica del mensaje."
+        }
+      ],
+      "hint": "Analiza la relación gramatical entre 'La claridad del texto' y 'depende'.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "Un estudiante escribe: «Insistió que debíamos revisar las citas». ¿Cómo debe corregirse según el régimen preposicional?",
+      "answerOptions": [
+        {
+          "text": "Insistió en que debíamos revisar las citas.",
+          "isCorrect": true,
+          "rationale": "El verbo 'insistir' rige la preposición 'en' para introducir el complemento de régimen, por lo que su omisión es un error."
+        },
+        {
+          "text": "Insistió de que debíamos revisar las citas.",
+          "isCorrect": false,
+          "rationale": "Se incurriría en un error de dequeísmo, ya que el verbo no selecciona la preposición 'de'."
+        },
+        {
+          "text": "Insistió que, debíamos revisar las citas.",
+          "isCorrect": false,
+          "rationale": "La introducción de una coma tras el nexo 'que' es incorrecta y no soluciona la carencia de la preposición necesaria."
+        },
+        {
+          "text": "Hizo insistencia en que debíamos revisar las citas.",
+          "isCorrect": false,
+          "rationale": "Aunque gramaticalmente es posible, resulta en un estilo nominal pesado que complica la lectura innecesariamente."
+        }
+      ],
+      "hint": "Recuerda que ciertos verbos exigen una preposición específica para conectar con su complemento.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "Identifique la puntuación correcta para el siguiente enunciado con conector: «El texto es breve sin embargo resulta confuso».",
+      "answerOptions": [
+        {
+          "text": "El texto es breve; sin embargo, resulta confuso.",
+          "isCorrect": true,
+          "rationale": "Los conectores adversativos de cierta longitud deben aislarse mediante signos de puntuación, usualmente punto y coma antes y coma después."
+        },
+        {
+          "text": "El texto es breve, sin embargo resulta confuso.",
+          "isCorrect": false,
+          "rationale": "Colocar solo una coma antes de 'sin embargo' es insuficiente para marcar la jerarquía lógica de la oposición entre las dos ideas."
+        },
+        {
+          "text": "El texto es breve; sin embargo resulta confuso.",
+          "isCorrect": false,
+          "rationale": "Falta la coma posterior al conector, la cual es necesaria para delimitarlo del resto de la oración que introduce."
+        },
+        {
+          "text": "El texto es breve sin embargo, resulta confuso.",
+          "isCorrect": false,
+          "rationale": "La ausencia de puntuación previa al conector crea una lectura continuada que dificulta la identificación del contraste entre enunciados."
+        }
+      ],
+      "hint": "Los conectores lógicos suelen requerir una delimitación que los separe de las unidades de sentido que conectan.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "Ante la frase: «Estoy convencida que la cita es necesaria», ¿qué prueba gramatical confirma si hay un error?",
+      "answerOptions": [
+        {
+          "text": "Sustituir la subordinada por 'de eso' para ver si la preposición se mantiene.",
+          "isCorrect": true,
+          "rationale": "Si al decir 'Estoy convencida de eso' la preposición es necesaria, también debe aparecer ante el nexo 'que'."
+        },
+        {
+          "text": "Preguntar '¿qué narices?' para ver si el nexo debe llevar tilde.",
+          "isCorrect": false,
+          "rationale": "Esta prueba sirve para distinguir interrogativos de relativos, no para detectar la omisión de preposiciones (queísmo)."
+        },
+        {
+          "text": "Eliminar el adjetivo 'convencida' para ver si la frase sigue teniendo sentido.",
+          "isCorrect": false,
+          "rationale": "La eliminación de elementos nucleares no ayuda a determinar la corrección del régimen preposicional de los mismos."
+        },
+        {
+          "text": "Cambiar el orden del sujeto y el predicado para comprobar la concordancia.",
+          "isCorrect": false,
+          "rationale": "La concordancia de número y persona es independiente del problema de la omisión de la preposición en este caso."
+        }
+      ],
+      "hint": "Utiliza un sintagma preposicional simplificado con el pronombre demostrativo neutro.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "¿Cuál es el error presente en la frase: «La autora analiza tres aspectos: el léxico, la puntuación, y el registro»?",
+      "answerOptions": [
+        {
+          "text": "El uso de la coma antes de la conjunción copulativa 'y' en una enumeración simple.",
+          "isCorrect": true,
+          "rationale": "En español, por regla general, no se escribe coma delante de la conjunción 'y' cuando esta cierra una enumeración de elementos simples."
+        },
+        {
+          "text": "El uso de los dos puntos para anunciar una enumeración.",
+          "isCorrect": false,
+          "rationale": "Los dos puntos están correctamente empleados aquí porque introducen una lista de elementos anunciada previamente."
+        },
+        {
+          "text": "La falta de mayúscula inicial después de los dos puntos.",
+          "isCorrect": false,
+          "rationale": "Después de dos puntos se escribe minúscula si lo que sigue es una enumeración o una explicación que no es una cita textual o nombre propio."
+        },
+        {
+          "text": "El uso de comas para separar los elementos de la lista.",
+          "isCorrect": false,
+          "rationale": "Las comas son el signo estándar para separar los términos de una enumeración cuando estos no contienen internamente otras comas."
+        }
+      ],
+      "hint": "Fíjate en la puntuación que precede inmediatamente al último elemento de la lista.",
+      "tags": [
+        "CP",
+        "T3_8"
+      ]
+    }
+  ]
+}

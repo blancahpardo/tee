@@ -1,0 +1,244 @@
+{
+  "quiz": [
+    {
+      "question": "Según el principio de cooperación de Grice, ¿en qué consiste la máxima de \"manera\"?",
+      "answerOptions": [
+        {
+          "text": "En proporcionar la cantidad justa de información, evitando tanto la brevedad excesiva como la redundancia.",
+          "isCorrect": false,
+          "rationale": "Este precepto corresponde a la máxima de cantidad, que regula la dosificación de la información necesaria."
+        },
+        {
+          "text": "En asegurar que la contribución sea pertinente y esté relacionada directamente con el tema del intercambio.",
+          "isCorrect": false,
+          "rationale": "La pertinencia temática es el núcleo de la máxima de relación, no de la de manera."
+        },
+        {
+          "text": "En evitar la falsedad y no afirmar aquello de lo que no se tienen pruebas suficientes.",
+          "isCorrect": false,
+          "rationale": "La veracidad y la justificación de las afirmaciones son requisitos de la máxima de calidad."
+        },
+        {
+          "text": "En ser claro, ordenado, breve y evitar ambigüedades u oscuridades en la expresión.",
+          "isCorrect": true,
+          "rationale": "La máxima de manera se centra en la forma en que se transmite el mensaje para facilitar una interpretación inequívoca."
+        }
+      ],
+      "hint": "Esta máxima no se refiere al contenido o la verdad de lo que se dice, sino al modo en que se organiza el enunciado.",
+      "tags": [
+        "CT",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función primordial de la lengua estándar en una comunidad lingüística diversa y policéntrica?",
+      "answerOptions": [
+        {
+          "text": "Actuar como una variedad supradialectal estable que garantice la intercomprensión en contextos institucionales.",
+          "isCorrect": true,
+          "rationale": "El estándar neutraliza localismos y rasgos marcados para servir de modelo común en la administración, la educación y los medios."
+        },
+        {
+          "text": "Imponer el dialecto de una región específica como el único modelo de corrección moral y cultural.",
+          "isCorrect": false,
+          "rationale": "El español actual es policéntrico y el estándar no se basa en la superioridad de una región sobre otras."
+        },
+        {
+          "text": "Sustituir el uso de registros coloquiales en la vida privada para elevar el nivel cultural de la población.",
+          "isCorrect": false,
+          "rationale": "El estándar convive con las variedades coloquiales y se activa solo cuando la situación comunicativa lo requiere."
+        },
+        {
+          "text": "Eliminar la posibilidad de evolución diacrónica mediante la fijación inamovible de las reglas ortográficas.",
+          "isCorrect": false,
+          "rationale": "Aunque aporta estabilidad, el estándar no impide el cambio natural de las lenguas vivas a lo largo del tiempo."
+        }
+      ],
+      "hint": "Considera qué variedad se utiliza para que un manual universitario sea entendido igual en España, México o Argentina.",
+      "tags": [
+        "CT",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "En el análisis del discurso, ¿qué diferencia fundamental establece el modelo de Koch y Oesterreicher entre \"medio\" y \"concepción\"?",
+      "answerOptions": [
+        {
+          "text": "Que todo mensaje transmitido por el canal gráfico debe tener obligatoriamente una concepción formal y planificada.",
+          "isCorrect": false,
+          "rationale": "Existen textos escritos, como los chats, que poseen una concepción oral debido a su inmediatez y espontaneidad."
+        },
+        {
+          "text": "Que la distinción entre oralidad y escritura es absoluta y no admite zonas híbridas o continuos discursivos.",
+          "isCorrect": false,
+          "rationale": "El modelo defiende precisamente un continuo donde el medio físico y la configuración comunicativa pueden no coincidir."
+        },
+        {
+          "text": "Que un texto puede usar el medio escrito pero presentar una concepción oral por su inmediatez y dependencia del contexto.",
+          "isCorrect": true,
+          "rationale": "Esta distinción permite explicar fenómenos como la comunicación digital, donde el soporte es gráfico pero el estilo es conversacional."
+        },
+        {
+          "text": "Que la concepción de un discurso depende únicamente de la presencia física simultánea de los interlocutores.",
+          "isCorrect": false,
+          "rationale": "La concepción abarca también factores como el grado de planificación, la emocionalidad y la finalidad socializadora."
+        }
+      ],
+      "hint": "Reflexiona sobre si un mensaje de WhatsApp es realmente 'escritura' en el mismo sentido que un informe técnico.",
+      "tags": [
+        "CT",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "¿En qué consiste la propiedad textual de la \"adecuación\"?",
+      "answerOptions": [
+        {
+          "text": "En el cumplimiento de las reglas de concordancia, ortografía y sintaxis del sistema lingüístico.",
+          "isCorrect": false,
+          "rationale": "Estos aspectos corresponden a la corrección gramatical y normativa, no necesariamente a la adecuación situacional."
+        },
+        {
+          "text": "En la conexión lógica y semántica de las ideas para que el texto sea percibido como una unidad de sentido global.",
+          "isCorrect": false,
+          "rationale": "La estructura interna de sentido y la progresión temática definen la coherencia."
+        },
+        {
+          "text": "En la presencia de mecanismos lingüísticos como anáforas y conectores que cohesionan las oraciones.",
+          "isCorrect": false,
+          "rationale": "La trabazón visible de las unidades del texto es la función de la cohesión."
+        },
+        {
+          "text": "En la elección de rasgos lingüísticos coherentes con la situación comunicativa, el destinatario y el propósito.",
+          "isCorrect": true,
+          "rationale": "La adecuación es la dimensión externa del texto que asegura que este sea oportuno y eficaz para su contexto de uso."
+        }
+      ],
+      "hint": "Un texto puede ser gramaticalmente perfecto pero fallar en esta propiedad si el tono es ofensivo o inoportuno.",
+      "tags": [
+        "CT",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "Según la matriz de diagnóstico, ¿cuál es el error más común al considerar al receptor de un texto universitario?",
+      "answerOptions": [
+        {
+          "text": "Dar por sentado que el lector posee información que no ha sido explicitada.",
+          "isCorrect": true,
+          "rationale": "La falta de autonomía textual ocurre cuando el emisor presupone erróneamente que el receptor conoce el contexto inmediato o datos previos no mencionados."
+        },
+        {
+          "text": "Utilizar un tono excesivamente cortés que dificulte la lectura fluida.",
+          "isCorrect": false,
+          "rationale": "Si bien la cortesía excesiva es un desajuste, el principal riesgo identificado en el análisis del receptor es la brecha informativa o de conocimiento."
+        },
+        {
+          "text": "Desconocer el nivel de estudios alcanzado por el destinatario del mensaje.",
+          "isCorrect": false,
+          "rationale": "Aunque relevante, el diagnóstico se enfoca en las expectativas y necesidades informativas específicas para la interpretación del texto actual."
+        },
+        {
+          "text": "Confundir la relación de jerarquía con una relación de solidaridad.",
+          "isCorrect": false,
+          "rationale": "Este es un problema de tenor o registro, mientras que la pregunta apunta a la gestión de la información que el receptor necesita para comprender."
+        }
+      ],
+      "hint": "Piensa en qué ocurre cuando un escritor olvida que el lector no está en su cabeza ni comparte su contexto físico.",
+      "tags": [
+        "CT",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Un informe contiene la frase: «En el seno del presente documento se procederá a llevar a cabo una explicación pormenorizada de las circunstancias que han tenido lugar en el transcurso de la sesión». ¿Cuál es el problema teórico fundamental de este tipo de redacción con exceso de solemnidad?",
+      "answerOptions": [
+        {
+          "text": "Sacrificar la claridad y la precisión en favor de una complejidad aparente.",
+          "isCorrect": true,
+          "rationale": "La solemnidad vacía utiliza fórmulas hinchadas (como perífrasis innecesarias) que dificultan la comprensión sin añadir valor informativo real."
+        },
+        {
+          "text": "Vulnerar las reglas de concordancia gramatical del estándar culto.",
+          "isCorrect": false,
+          "rationale": "Los textos solemnes suelen ser gramaticalmente correctos; su fallo no es normativo, sino de adecuación y eficacia comunicativa."
+        },
+        {
+          "text": "Utilizar un registro coloquial que no corresponde al género administrativo.",
+          "isCorrect": false,
+          "rationale": "Es el error opuesto; el informe solemne peca por exceso de elevación artificial, no por falta de formalidad."
+        },
+        {
+          "text": "Carecer de una estructura de párrafos definida para organizar los datos.",
+          "isCorrect": false,
+          "rationale": "Aunque la segmentación es clave, el ejemplo se centra específicamente en el uso de fórmulas léxicas y sintácticas innecesariamente pesadas."
+        }
+      ],
+      "hint": "Recuerda que en el ámbito académico, sonar 'complicado' no siempre es sinónimo de escribir 'bien'.",
+      "tags": [
+        "CT",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Un fragmento dice: «El registro depende del contexto. La escritura apareció hace mucho tiempo. Los conectores son importantes. La comunicación sirve para transmitir información». ¿Cuándo se considera que un texto como este carece de coherencia y progresión temática?",
+      "answerOptions": [
+        {
+          "text": "Cuando las oraciones son verdaderas de forma aislada pero no mantienen una línea de avance común.",
+          "isCorrect": true,
+          "rationale": "La coherencia requiere que cada enunciado se relacione con el anterior y el siguiente, construyendo una unidad de sentido global."
+        },
+        {
+          "text": "Cuando el emisor olvida incluir conectores entre los diferentes párrafos.",
+          "isCorrect": false,
+          "rationale": "Esto sería un problema de cohesión (forma); la coherencia se refiere al sentido profundo y a la organización de las ideas (fondo)."
+        },
+        {
+          "text": "Cuando se emplean sinónimos para evitar la repetición de palabras clave.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el uso de sinónimos es un mecanismo que ayuda a mantener el referente y favorece la textura del texto."
+        },
+        {
+          "text": "Cuando el texto presenta un número elevado de errores ortográficos.",
+          "isCorrect": false,
+          "rationale": "La ortografía afecta a la corrección normativa, pero un texto puede ser ortográficamente perfecto y, a la vez, totalmente incoherente."
+        }
+      ],
+      "hint": "Un texto no es una simple suma de frases, sino un tejido donde la información debe fluir de forma lógica.",
+      "tags": [
+        "CT",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Al revisar un texto académico, ¿cuál es el propósito de leerlo desde la perspectiva del receptor?",
+      "answerOptions": [
+        {
+          "text": "Evaluar si el mensaje es comprensible de forma autónoma para el destinatario real.",
+          "isCorrect": true,
+          "rationale": "Esta lectura final permite detectar ambigüedades, falta de datos de contexto o desajustes de tono que el autor, por su cercanía al texto, podría omitir."
+        },
+        {
+          "text": "Asegurar que el texto contenga exactamente el mismo número de palabras que el modelo original.",
+          "isCorrect": false,
+          "rationale": "La eficacia comunicativa no depende de una coincidencia exacta en el número de palabras, sino de la adecuación al propósito."
+        },
+        {
+          "text": "Confirmar que el idiolecto del autor sea claramente reconocible por el profesor.",
+          "isCorrect": false,
+          "rationale": "En la escritura universitaria se suele buscar la neutralidad del estándar, no la marca personal extrema o idiolecto del emisor."
+        },
+        {
+          "text": "Garantizar que todos los conectores utilizados pertenezcan al mismo campo semántico.",
+          "isCorrect": false,
+          "rationale": "Los conectores se eligen por su función lógica (adición, contraste, etc.), no por pertenecer a un mismo campo semántico temático."
+        }
+      ],
+      "hint": "Se trata de un ejercicio de empatía comunicativa para verificar si el 'otro' podrá interpretar nuestra intención.",
+      "tags": [
+        "CT",
+        "T1_2"
+      ]
+    }
+  ]
+}

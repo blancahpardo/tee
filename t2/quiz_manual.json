@@ -1,0 +1,2104 @@
+{
+  "quiz": [
+    {
+      "question": "¿Cuál es la característica principal que define al texto como una unidad comunicativa de orden superior a la oración?",
+      "answerOptions": [
+        {
+          "text": "La correcta concatenación gramatical de enunciados dentro de una misma página.",
+          "isCorrect": false,
+          "rationale": "Esta opción reduce el texto a una mera cuestión sintáctica, ignorando que la unidad se produce por el sentido y la situación comunicativa."
+        },
+        {
+          "text": "Su organización para producir un sentido completo dentro de una situación concreta.",
+          "isCorrect": true,
+          "rationale": "Un texto se define como una unidad semántico-pragmática donde el sentido depende de la relación entre palabras, contexto y expectativas."
+        },
+        {
+          "text": "La ausencia de elementos no verbales que puedan distraer la interpretación del lector.",
+          "isCorrect": false,
+          "rationale": "Es una concepción errónea, ya que el texto incluye explícitamente elementos lingüísticos y no lingüísticos (gráficos, tablas)."
+        },
+        {
+          "text": "La suma extensiva de párrafos que desarrollan un tema general de forma lineal.",
+          "isCorrect": false,
+          "rationale": "Define el texto por su extensión o acumulación y no por su función comunicativa o su arquitectura interna."
+        }
+      ],
+      "hint": "Recuerda que el texto no es solo una suma de frases, sino algo que responde a una intención y un contexto.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "Desde una perspectiva pragmática, ¿qué diferencia existe entre la palabra «Silencio» en un diccionario y en un cartel de biblioteca?",
+      "answerOptions": [
+        {
+          "text": "En el diccionario es una unidad comunicativa y en la biblioteca es un enunciado gramatical.",
+          "isCorrect": false,
+          "rationale": "Confunde los términos; es en la biblioteca donde funciona como una unidad comunicativa completa (texto) con una función reguladora."
+        },
+        {
+          "text": "No existe diferencia alguna, pues la forma verbal y el significado léxico son idénticos.",
+          "isCorrect": false,
+          "rationale": "Ignora la dimensión pragmática, que establece que la situación cambia radicalmente el valor comunicativo de la forma verbal."
+        },
+        {
+          "text": "En la biblioteca actúa como texto que regula una conducta, mientras que en el diccionario es una ilustración léxica.",
+          "isCorrect": true,
+          "rationale": "La adecuación a la situación convierte una sola palabra en un texto con función de uso (regulación de conducta vs. ejemplificación)."
+        },
+        {
+          "text": "El cartel de la biblioteca es un paratexto, mientras que la entrada del diccionario es el texto principal.",
+          "isCorrect": false,
+          "rationale": "Ambos son textos en sí mismos; el paratexto se refiere a elementos que acompañan a un texto principal, no al soporte del mensaje."
+        }
+      ],
+      "hint": "Considera cómo el entorno y la intención de uso modifican el valor de lo que se comunica.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "En el análisis de los niveles del texto, ¿qué aspecto se evalúa específicamente en el nivel discursivo-pragmático?",
+      "answerOptions": [
+        {
+          "text": "La selección léxica basada en la precisión terminológica de un ámbito específico.",
+          "isCorrect": false,
+          "rationale": "Este aspecto pertenece al nivel léxico, que se ocupa de la propiedad y exactitud de las palabras elegidas."
+        },
+        {
+          "text": "El ajuste del escrito al propósito, al destinatario y a las convenciones del género.",
+          "isCorrect": true,
+          "rationale": "El nivel pragmático se centra en la adecuación del texto a la situación externa y a la intención del autor."
+        },
+        {
+          "text": "La disposición de los párrafos y el uso de convenciones tipográficas como la cursiva.",
+          "isCorrect": false,
+          "rationale": "Estas características son propias del nivel gráfico, que se encarga de la superficie visual y la ortografía."
+        },
+        {
+          "text": "La construcción interna de las oraciones y sus relaciones de subordinación.",
+          "isCorrect": false,
+          "rationale": "Este estudio corresponde al nivel morfosintáctico, centrado en la estructura de los enunciados."
+        }
+      ],
+      "hint": "Busca el nivel que mira 'hacia afuera' del texto, conectándolo con los participantes del acto comunicativo.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "Al revisar el nivel textual de un escrito, ¿cuál es el objetivo primordial del autor?",
+      "answerOptions": [
+        {
+          "text": "Asegurar que cada párrafo desarrolle una unidad de contenido o idea dominante.",
+          "isCorrect": true,
+          "rationale": "El nivel textual organiza la información en bloques lógicos (párrafos y secuencias) para garantizar la progresión."
+        },
+        {
+          "text": "Verificar que la puntuación guíe correctamente el ritmo de la lectura lineal.",
+          "isCorrect": false,
+          "rationale": "La puntuación es una herramienta del nivel gráfico, aunque tenga repercusiones en el sentido."
+        },
+        {
+          "text": "Sustituir verbos genéricos por otros que expresen operaciones intelectuales precisas.",
+          "isCorrect": false,
+          "rationale": "La sustitución de 'verbos baúl' es una tarea de mejora propia del nivel léxico."
+        },
+        {
+          "text": "Eliminar cualquier rastro de subjetividad para mantener la neutralidad académica.",
+          "isCorrect": false,
+          "rationale": "La neutralidad y el registro son preocupaciones del nivel pragmático y de adecuación, no de la organización textual interna."
+        }
+      ],
+      "hint": "El nivel textual se centra en cómo se agrupan los enunciados para formar unidades de sentido.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es una de las diferencias cognitivas entre la lectura en soporte digital y la lectura en formato impreso?",
+      "answerOptions": [
+        {
+          "text": "La lectura digital es intrínsecamente inferior para el aprendizaje de modelos textuales.",
+          "isCorrect": false,
+          "rationale": "No existe una jerarquía de calidad entre ambos soportes, sino una diferencia en la gestión de la atención y los procesos."
+        },
+        {
+          "text": "El formato impreso favorece la resolución rápida de problemas mediante enlaces.",
+          "isCorrect": false,
+          "rationale": "Es al revés: la navegación digital es la que activa decisiones rápidas y búsqueda de enlaces."
+        },
+        {
+          "text": "La lectura digital suele activar decisiones rápidas, mientras que el papel favorece la atención lineal.",
+          "isCorrect": true,
+          "rationale": "El soporte impreso facilita una concentración más profunda y sostenida, necesaria para la redacción y revisión crítica."
+        },
+        {
+          "text": "La lectura en papel impide la navegación no lineal necesaria para la investigación académica.",
+          "isCorrect": false,
+          "rationale": "Aunque es más lineal, no impide la investigación; simplemente gestiona la atención de forma distinta al entorno de hipertexto."
+        }
+      ],
+      "hint": "Considera cómo influye el medio en nuestra capacidad de concentración y en la velocidad de nuestras decisiones.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "La curva del olvido de Ebbinghaus muestra que la información leída se pierde de forma acelerada en los primeros días si no se refuerza. ¿Qué consecuencia práctica tiene este fenómeno para el escritor universitario durante la fase de documentación?",
+      "answerOptions": [
+        {
+          "text": "La necesidad de redactar la versión final inmediatamente después de la lectura de fuentes.",
+          "isCorrect": false,
+          "rationale": "Redactar sin planificación previa es contrario a los modelos de escritura como proceso defendidos en la unidad."
+        },
+        {
+          "text": "La importancia de fijar las ideas mediante notas, resúmenes y fichas de lectura durante la investigación.",
+          "isCorrect": true,
+          "rationale": "Como la memoria retiene poco sin repaso, es vital registrar la información para poder usarla semanas después en la redacción."
+        },
+        {
+          "text": "La recomendación de evitar la lectura de demasiadas fuentes para no saturar la memoria a corto plazo.",
+          "isCorrect": false,
+          "rationale": "La solución no es leer menos, sino documentarse con método para compensar la pérdida natural de información."
+        },
+        {
+          "text": "La obligación de memorizar los modelos textuales para que el estilo sea fluido y natural.",
+          "isCorrect": false,
+          "rationale": "El aprendizaje por exposición es progresivo e interiorizado, no basado en la memorización de reglas rígidas."
+        }
+      ],
+      "hint": "Si no tomamos notas mientras leemos, ¿qué ocurre con esa información cuando nos sentamos a escribir tiempo después?",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "¿Por qué se afirma que un párrafo no debe juzgarse solo por la corrección gramatical de sus frases?",
+      "answerOptions": [
+        {
+          "text": "Porque la gramática es un nivel secundario frente a la ortografía y el paratexto.",
+          "isCorrect": false,
+          "rationale": "La gramática no es secundaria, pero es insuficiente por sí sola para crear un texto eficaz."
+        },
+        {
+          "text": "Porque debe cumplir una función específica (definir, comparar, concluir) dentro del conjunto textual.",
+          "isCorrect": true,
+          "rationale": "El valor de un párrafo radica en su contribución al sentido global y su función en la arquitectura del discurso."
+        },
+        {
+          "text": "Porque en el registro académico se prioriza la cantidad de información sobre la forma lingüística.",
+          "isCorrect": false,
+          "rationale": "El registro académico exige equilibrio; la saturación de información sin forma adecuada impide la comprensión."
+        },
+        {
+          "text": "Porque los errores sintácticos son aceptables si la intención comunicativa es clara.",
+          "isCorrect": false,
+          "rationale": "La claridad requiere corrección sintáctica; no puede afirmarse que la gramática pueda descuidarse."
+        }
+      ],
+      "hint": "Considera qué pasaría si un texto tuviera frases perfectas pero no tuviera un orden o propósito claro.",
+      "tags": [
+        "CT",
+        "T2_1"
+      ]
+    },
+    {
+      "question": "¿Qué se entiende por 'textualidad' en el análisis lingüístico de un escrito?",
+      "answerOptions": [
+        {
+          "text": "El conjunto de propiedades que debe cumplir una secuencia de enunciados para funcionar como texto coherente, y no como una simple suma de frases sueltas.",
+          "isCorrect": true,
+          "rationale": "Ambos autores establecieron en 1981 los siete pilares que permiten reconocer una secuencia de enunciados como un texto funcional."
+        },
+        {
+          "text": "La extensión mínima en páginas que debe alcanzar un documento para considerarse un texto académico.",
+          "isCorrect": false,
+          "rationale": "Aunque estos autores son referentes fundamentales en el estudio de la cohesión, la formulación de los siete criterios se atribuye específicamente a Beaugrande y Dressler."
+        },
+        {
+          "text": "El grado de corrección ortográfica y gramatical que presenta un escrito frente a la norma culta.",
+          "isCorrect": false,
+          "rationale": "Estos autores son citados como expertos en el análisis del discurso, pero no son los creadores originales de la lista de los siete criterios de textualidad."
+        },
+        {
+          "text": "La cantidad de citas bibliográficas que contiene un trabajo en relación con su número total de páginas.",
+          "isCorrect": false,
+          "rationale": "A pesar de su relevancia en la lingüística textual y la pragmática, su mención en el texto no se asocia con la formulación inicial de estos criterios específicos."
+        }
+      ],
+      "hint": "Se trata de una pareja de investigadores que publicó un trabajo seminal en el año 1981.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "En el marco de la enseñanza de la escritura, ¿cuál de las siguientes opciones describe mejor la agrupación de los criterios de textualidad?",
+      "answerOptions": [
+        {
+          "text": "Se suelen agrupar en torno a tres propiedades básicas: adecuación, coherencia y cohesión.",
+          "isCorrect": true,
+          "rationale": "Esta síntesis permite organizar los siete criterios teóricos en tres dimensiones prácticas para facilitar el aprendizaje y la revisión de textos."
+        },
+        {
+          "text": "Se dividen estrictamente en criterios gramaticales y criterios pragmáticos sin solapamientos.",
+          "isCorrect": false,
+          "rationale": "Estas propiedades no son compartimentos cerrados: un problema en una puede afectar a las otras."
+        },
+        {
+          "text": "Se clasifican según sean internos al autor o externos al lector exclusivamente.",
+          "isCorrect": false,
+          "rationale": "Esta visión es reduccionista, ya que criterios como la coherencia o la adecuación implican tanto la producción del autor como la interpretación del contexto y el lector."
+        },
+        {
+          "text": "Se organizan únicamente en función de la corrección ortográfica y gramatical de los enunciados.",
+          "isCorrect": false,
+          "rationale": "La textualidad va más allá de la gramática oracional, abarcando dimensiones semánticas y pragmáticas como la intención y la situación."
+        }
+      ],
+      "hint": "Considera cómo se relacionan los siete criterios específicos con las tres propiedades fundamentales del texto analizadas en la unidad.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función principal del criterio de coherencia dentro de las propiedades del texto?",
+      "answerOptions": [
+        {
+          "text": "Garantizar la organización semántica global para que el texto sea percibido como una unidad de sentido.",
+          "isCorrect": true,
+          "rationale": "La coherencia asegura que las ideas tengan una progresión lógica, estabilidad temática y relevancia dentro de una macroestructura."
+        },
+        {
+          "text": "Asegurar que el registro lingüístico sea el apropiado para el nivel académico del destinatario.",
+          "isCorrect": false,
+          "rationale": "El ajuste del registro es una tarea propia de la adecuación, no de la organización interna del sentido."
+        },
+        {
+          "text": "Establecer conexiones gramaticales mediante el uso de pronombres y conectores.",
+          "isCorrect": false,
+          "rationale": "El empleo de mecanismos gramaticales específicos para unir frases es responsabilidad de la cohesión."
+        },
+        {
+          "text": "Mantener la cortesía y las normas sociales en la comunicación institucional.",
+          "isCorrect": false,
+          "rationale": "La cortesía y las normas sociales son variables que se gestionan bajo la propiedad de la adecuación."
+        }
+      ],
+      "hint": "Piensa en la propiedad que permite que el lector reconozca un tema común y una estructura lógica en el mensaje.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "¿Cómo se define el criterio de cohesión en el análisis textual?",
+      "answerOptions": [
+        {
+          "text": "Como el conjunto de conexiones lingüísticas visibles entre las partes que conforman la superficie del texto.",
+          "isCorrect": true,
+          "rationale": "La cohesión se manifiesta a través de recursos como la reiteración, la referencia, la elipsis y los conectores que traban los enunciados."
+        },
+        {
+          "text": "Como la capacidad del texto para ser aceptado como pertinente por el receptor.",
+          "isCorrect": false,
+          "rationale": "El reconocimiento de la pertinencia por parte del lector se define técnicamente como aceptabilidad."
+        },
+        {
+          "text": "Como el grado de equilibrio entre la información conocida y la información novedosa.",
+          "isCorrect": false,
+          "rationale": "Este equilibrio es el objeto de estudio de la informatividad y la progresión temática, no de la cohesión superficial."
+        },
+        {
+          "text": "Como la relación de dependencia que un texto mantiene con otros textos previos.",
+          "isCorrect": false,
+          "rationale": "La relación con otros textos o saberes previos es lo que define el criterio de intertextualidad."
+        }
+      ],
+      "hint": "Busca la propiedad que se encarga de los mecanismos explícitos que mantienen unidos los eslabones de la cadena textual.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "De acuerdo con la distinción necesaria entre las propiedades, ¿qué ocurre si un texto presenta un fallo en la cohesión?",
+      "answerOptions": [
+        {
+          "text": "Puede dificultar la coherencia, ya que el lector podría perder el hilo de los referentes.",
+          "isCorrect": true,
+          "rationale": "Si los pronombres o conectores son confusos, el lector tendrá problemas para reconstruir el sentido global (coherencia) que el autor pretendía."
+        },
+        {
+          "text": "El texto se vuelve automáticamente inadecuado, independientemente del destinatario.",
+          "isCorrect": false,
+          "rationale": "Un texto puede ser adecuado en su registro y situación pero fallar en su cohesión interna; son dimensiones evaluativas distintas."
+        },
+        {
+          "text": "Se invalida únicamente la intencionalidad del autor, pero el sentido global permanece intacto.",
+          "isCorrect": false,
+          "rationale": "Un fallo en la cohesión afecta directamente a la legibilidad y, por extensión, a la reconstrucción del sentido global o coherencia."
+        },
+        {
+          "text": "El problema se limita exclusivamente al nivel ortográfico sin afectar a otras capas textuales.",
+          "isCorrect": false,
+          "rationale": "La cohesión es una propiedad textual de nivel morfosintáctico y léxico, mucho más amplia que la simple corrección ortográfica."
+        }
+      ],
+      "hint": "Considera que estas propiedades no son compartimentos estancos y que existe una interdependencia entre ellas.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "¿En qué consiste el criterio de aceptabilidad dentro de la lingüística textual?",
+      "answerOptions": [
+        {
+          "text": "En el reconocimiento por parte del receptor de que el texto es pertinente y relevante para él.",
+          "isCorrect": true,
+          "rationale": "La aceptabilidad depende de la disposición del lector para cooperar en la interpretación y considerar que el texto le aporta valor."
+        },
+        {
+          "text": "En la intención del autor de convencer al lector mediante argumentos sólidos.",
+          "isCorrect": false,
+          "rationale": "La meta del autor es la intencionalidad; la aceptabilidad es la contraparte desde la perspectiva del receptor."
+        },
+        {
+          "text": "En el cumplimiento estricto de las normas gramaticales de la Real Academia Española.",
+          "isCorrect": false,
+          "rationale": "La aceptabilidad es un criterio pragmático de comunicación, no un juicio exclusivo sobre la corrección normativa."
+        },
+        {
+          "text": "En la capacidad del texto para ser traducido a otros idiomas sin perder su esencia.",
+          "isCorrect": false,
+          "rationale": "La traducibilidad no forma parte de los siete criterios de textualidad de Beaugrande y Dressler."
+        }
+      ],
+      "hint": "Es un criterio que se sitúa en el polo del receptor o lector del mensaje.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "El criterio de intertextualidad se refiere a:",
+      "answerOptions": [
+        {
+          "text": "La relación que el texto mantiene con otros textos y con los saberes previos compartidos.",
+          "isCorrect": true,
+          "rationale": "Ningún texto es una isla; todos se apoyan en convenciones de género, citas de otros autores o conocimientos culturales preexistentes."
+        },
+        {
+          "text": "La organización interna de los párrafos para que no se repitan ideas.",
+          "isCorrect": false,
+          "rationale": "La organización de la información y la evitación de repeticiones son funciones de la coherencia y la cohesión."
+        },
+        {
+          "text": "La capacidad de un texto para ser leído en diferentes soportes digitales.",
+          "isCorrect": false,
+          "rationale": "La adaptabilidad al soporte es una cuestión de diseño paratextual o adecuación al canal, no de intertextualidad."
+        },
+        {
+          "text": "El uso de conectores para vincular dos capítulos distintos de un mismo libro.",
+          "isCorrect": false,
+          "rationale": "El uso de conectores para unir partes de un mismo texto es un mecanismo de cohesión."
+        }
+      ],
+      "hint": "Este concepto sugiere que los textos no son independientes, sino que forman parte de un tejido de discursos previos.",
+      "tags": [
+        "CT",
+        "T2_2"
+      ]
+    },
+    {
+      "question": "¿Cuál es la definición fundamental de la adecuación como propiedad textual?",
+      "answerOptions": [
+        {
+          "text": "El ajuste del texto a la situación comunicativa concreta.",
+          "isCorrect": true,
+          "rationale": "La adecuación se define por la relación entre la forma del texto y el contexto, incluyendo destinatario, finalidad y género."
+        },
+        {
+          "text": "El cumplimiento estricto de las reglas gramaticales y ortográficas.",
+          "isCorrect": false,
+          "rationale": "La corrección gramatical es necesaria, pero un texto puede ser gramaticalmente correcto y no ser adecuado al contexto."
+        },
+        {
+          "text": "La organización lógica de las ideas para formar una unidad de sentido.",
+          "isCorrect": false,
+          "rationale": "Esta descripción corresponde a la coherencia, que mira hacia la organización interna del significado y no hacia el contexto exterior."
+        },
+        {
+          "text": "La conexión lingüística visible entre los enunciados mediante conectores.",
+          "isCorrect": false,
+          "rationale": "Este concepto define la cohesión, que se ocupa de los recursos superficiales de enlace y no del ajuste situacional."
+        }
+      ],
+      "hint": "Considera si esta propiedad mira hacia el interior del texto o hacia la relación con el entorno comunicativo.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "Desde una perspectiva pragmática, ¿qué debe lograr un texto adecuado para ser interpretado correctamente?",
+      "answerOptions": [
+        {
+          "text": "Activar los conocimientos contextuales necesarios en el lector.",
+          "isCorrect": true,
+          "rationale": "La adecuación requiere que el emisor proporcione las claves necesarias para que la información nueva se integre en el contexto del receptor."
+        },
+        {
+          "text": "Evitar cualquier tipo de información implícita o presupuesto.",
+          "isCorrect": false,
+          "rationale": "Un texto sin presupuestos sería excesivamente redundante; la clave es equilibrar lo explícito y lo implícito según el destinatario."
+        },
+        {
+          "text": "Utilizar siempre el máximo grado de formalidad posible.",
+          "isCorrect": false,
+          "rationale": "La formalidad excesiva puede resultar inadecuada en contextos informales o canales que requieran agilidad."
+        },
+        {
+          "text": "Priorizar la función estética sobre la intención comunicativa.",
+          "isCorrect": false,
+          "rationale": "Aunque el estilo es importante, la adecuación se centra en cumplir el propósito comunicativo dentro de una situación dada."
+        }
+      ],
+      "hint": "Piensa en el papel que juega el entorno y el conocimiento compartido entre los interlocutores.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "¿Qué caracteriza al registro académico eficaz según las pautas de adecuación?",
+      "answerOptions": [
+        {
+          "text": "La combinación de claridad, naturalidad y exactitud.",
+          "isCorrect": true,
+          "rationale": "El registro académico no debe ser oscuro; su calidad reside en ser preciso y objetivo sin perder la fluidez."
+        },
+        {
+          "text": "El uso abundante de términos complejos para demostrar autoridad.",
+          "isCorrect": false,
+          "rationale": "El abuso de tecnicismos innecesarios puede dificultar la lectura y se aleja de la claridad que exige la universidad."
+        },
+        {
+          "text": "La eliminación total de cualquier rastro de subjetividad.",
+          "isCorrect": false,
+          "rationale": "La objetividad es clave, pero se admite una subjetividad argumentada o el uso de la primera persona plural metodológica."
+        },
+        {
+          "text": "La preferencia por oraciones muy largas y subordinadas.",
+          "isCorrect": false,
+          "rationale": "Las frases excesivamente complejas suelen oscurecer el razonamiento, algo que conviene evitar mediante la revisión."
+        }
+      ],
+      "hint": "Busca un equilibrio entre el rigor intelectual y la facilidad de comprensión para el lector.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "En el contexto de la adecuación, ¿qué se entiende por 'información compartida'?",
+      "answerOptions": [
+        {
+          "text": "El conjunto de conocimientos que el autor puede dar por sabidos en el lector.",
+          "isCorrect": true,
+          "rationale": "Ajustar la información compartida permite decidir qué debe explicitarse y qué puede quedar implícito para no saturar el texto."
+        },
+        {
+          "text": "La bibliografía que tanto el autor como el lector han consultado previamente.",
+          "isCorrect": false,
+          "rationale": "Aunque las fuentes son parte del contexto, la información compartida es un concepto más amplio de conocimiento mutuo situacional."
+        },
+        {
+          "text": "Los datos que se presentan de forma idéntica en varios apartados del texto.",
+          "isCorrect": false,
+          "rationale": "La repetición de datos dentro del texto es una cuestión de coherencia o cohesión, no de adecuación al conocimiento previo del lector."
+        },
+        {
+          "text": "El uso de un lenguaje común y corriente accesible para todo el mundo.",
+          "isCorrect": false,
+          "rationale": "La información compartida puede ser muy técnica si el destinatario es un experto; no implica necesariamente simplicidad."
+        }
+      ],
+      "hint": "Tiene que ver con la economía informativa y el respeto al nivel de conocimiento del destinatario.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "¿Cuál es un rasgo típico de la 'oralidad infiltrada' que resta adecuación a un texto académico?",
+      "answerOptions": [
+        {
+          "text": "El uso de proformas vagas como 'la cosa' o 'el tema va de'.",
+          "isCorrect": true,
+          "rationale": "Estas expresiones son propias de la conversación espontánea y carecen de la precisión léxica requerida en la universidad."
+        },
+        {
+          "text": "La utilización de la primera persona del plural (nosotros).",
+          "isCorrect": false,
+          "rationale": "El plural de modestia o metodológico es un recurso aceptado en la escritura académica para guiar al lector."
+        },
+        {
+          "text": "La presencia de conectores de orden como 'en primer lugar'.",
+          "isCorrect": false,
+          "rationale": "Los organizadores textuales son marcas de planificación necesarias y deseables en el discurso escrito."
+        },
+        {
+          "text": "El empleo de terminología técnica específica del área de estudio.",
+          "isCorrect": false,
+          "rationale": "La precisión terminológica es, precisamente, una de las marcas de adecuación al registro académico."
+        }
+      ],
+      "hint": "Identifica términos que denoten falta de planificación o excesiva proximidad coloquial.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "En el registro académico, ¿cuál es el problema de un estilo 'inflado' u oscuro?",
+      "answerOptions": [
+        {
+          "text": "Confunde la profundidad intelectual con la complejidad innecesaria.",
+          "isCorrect": true,
+          "rationale": "Un texto académico debe ser claro; el uso de estructuras rebuscadas no añade valor científico y dificulta el seguimiento del razonamiento."
+        },
+        {
+          "text": "Es demasiado breve para cumplir con los estándares universitarios.",
+          "isCorrect": false,
+          "rationale": "El estilo inflado suele pecar de lo contrario: de ser excesivamente largo y redundante sin aportar contenido real."
+        },
+        {
+          "text": "Utiliza un lenguaje demasiado cercano al lector no experto.",
+          "isCorrect": false,
+          "rationale": "El estilo inflado suele alejarse del lector mediante el uso de palabras pretenciosas, no mediante la cercanía."
+        },
+        {
+          "text": "No respeta las normas de citación de la APA.",
+          "isCorrect": false,
+          "rationale": "El estilo se refiere a la redacción y elección léxica, mientras que las citas son una convención formal de intertextualidad."
+        }
+      ],
+      "hint": "Piensa en la diferencia entre un lenguaje preciso y uno que solo busca 'parecer' importante.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "¿Cómo afecta la variable del 'género' a la adecuación de un trabajo universitario?",
+      "answerOptions": [
+        {
+          "text": "Define las expectativas del lector sobre la estructura y el tono del documento.",
+          "isCorrect": true,
+          "rationale": "Cada género (reseña, examen, informe) tiene convenciones propias que el autor debe conocer y respetar para que el texto sea adecuado."
+        },
+        {
+          "text": "Determina únicamente si el texto debe ser escrito a mano o en ordenador.",
+          "isCorrect": false,
+          "rationale": "Eso depende más del canal o soporte que del género textual, que es una categoría de organización discursiva."
+        },
+        {
+          "text": "Impone un límite estricto de palabras que no se puede sobrepasar.",
+          "isCorrect": false,
+          "rationale": "Aunque el género puede sugerir una extensión, la adecuación al género va mucho más allá de la cantidad de palabras."
+        },
+        {
+          "text": "Sustituye a la necesidad de planificar el contenido del texto.",
+          "isCorrect": false,
+          "rationale": "El género es una guía para la planificación, no un proceso que la haga innecesaria."
+        }
+      ],
+      "hint": "Piensa en las reglas no escritas que diferencian un examen de una carta de reclamación.",
+      "tags": [
+        "CT",
+        "T2_3"
+      ]
+    },
+    {
+      "question": "¿Qué propiedad define a la coherencia como la macroestructura semántica de un texto?",
+      "answerOptions": [
+        {
+          "text": "La organización lógica del sentido global que permite percibir el texto como una unidad y no como una suma de frases.",
+          "isCorrect": true,
+          "rationale": "La coherencia se ocupa de la estructura profunda del significado y la interrelación de las ideas para formar un todo comprensible."
+        },
+        {
+          "text": "La presencia de marcas lingüísticas superficiales como conectores y pronombres que enlazan enunciados.",
+          "isCorrect": false,
+          "rationale": "Esta descripción corresponde a la cohesión, que se manifiesta en la superficie del texto, no a la coherencia semántica."
+        },
+        {
+          "text": "El ajuste del discurso al registro, destinatario y propósito de la situación comunicativa.",
+          "isCorrect": false,
+          "rationale": "Se refiere a la adecuación, que analiza la relación del texto con su contexto externo, no su organización interna de sentido."
+        },
+        {
+          "text": "La correcta aplicación de las normas ortográficas y de puntuación en cada párrafo.",
+          "isCorrect": false,
+          "rationale": "Esto pertenece al nivel gráfico y normativo del texto, que es independiente de la estructura semántica global."
+        }
+      ],
+      "hint": "Considera la diferencia entre la estructura interna del significado y los enlaces externos de la lengua.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "En el análisis de la coherencia, ¿cuál es la diferencia fundamental entre el tema y la idea principal?",
+      "answerOptions": [
+        {
+          "text": "El tema es el campo general del que se habla, mientras que la idea principal es lo que se afirma específicamente sobre ese campo.",
+          "isCorrect": true,
+          "rationale": "El tema identifica el asunto y la idea principal constituye la tesis o el núcleo informativo que el autor sostiene sobre dicho asunto."
+        },
+        {
+          "text": "El tema es la información nueva (rema) y la idea principal es la información conocida (tema).",
+          "isCorrect": false,
+          "rationale": "Esta opción confunde la jerarquía de ideas con la progresión temática de las unidades de información."
+        },
+        {
+          "text": "La idea principal siempre aparece al inicio del texto y el tema se desarrolla únicamente en la conclusión.",
+          "isCorrect": false,
+          "rationale": "La ubicación física no define la función conceptual; la idea principal puede estar diluida o situada en distintas partes."
+        },
+        {
+          "text": "El tema se refiere a los aspectos paratextuales y la idea principal a los componentes verbales.",
+          "isCorrect": false,
+          "rationale": "Ambos conceptos pertenecen al nivel semántico del discurso escrito, no a la distinción entre texto y paratexto."
+        }
+      ],
+      "hint": "Piensa en cuál de los dos conceptos tiene un carácter más descriptivo y cuál tiene un carácter más propositivo.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "Según el principio de cooperación de Grice, ¿en qué consiste una implicatura?",
+      "answerOptions": [
+        {
+          "text": "En información que se comunica de forma indirecta y que el lector debe inferir a partir del contexto.",
+          "isCorrect": true,
+          "rationale": "Las implicaturas son significados adicionales que no están en las palabras literales pero que se activan por la cooperación comunicativa."
+        },
+        {
+          "text": "En la repetición de palabras clave para asegurar que el referente se mantenga estable.",
+          "isCorrect": false,
+          "rationale": "Esto describe la reiteración léxica, un recurso de cohesión para mantener el hilo del texto."
+        },
+        {
+          "text": "En la obligación de ser lo más breve posible, omitiendo incluso la idea principal.",
+          "isCorrect": false,
+          "rationale": "Aunque Grice menciona la máxima de cantidad, omitir la idea principal atentaría contra la coherencia y la claridad."
+        },
+        {
+          "text": "En el uso de tecnicismos para demostrar el nivel de especialización del autor.",
+          "isCorrect": false,
+          "rationale": "El léxico especializado es una variable del registro y la adecuación, no una inferencia derivada de la cooperación."
+        }
+      ],
+      "hint": "Tiene que ver con lo que se dice 'entre líneas' basándose en la intención del hablante.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "¿Qué papel juega la contextualización en la organización de un texto coherente?",
+      "answerOptions": [
+        {
+          "text": "Proporcionar o activar los datos necesarios para que el lector pueda interpretar correctamente la información nueva.",
+          "isCorrect": true,
+          "rationale": "Contextualizar es tender un puente entre lo que el lector ya conoce y el nuevo contenido que se va a presentar."
+        },
+        {
+          "text": "Enumerar todas las fuentes bibliográficas al final del trabajo para evitar el plagio.",
+          "isCorrect": false,
+          "rationale": "Esto es una convención de rigor académico y honestidad, pero no es el proceso de activación de marcos interpretativos."
+        },
+        {
+          "text": "Dividir el texto en párrafos de igual extensión para mejorar la estética visual.",
+          "isCorrect": false,
+          "rationale": "La división en párrafos organiza el contenido, pero la contextualización es una operación semántica de fondo."
+        },
+        {
+          "text": "Eliminar cualquier ambigüedad mediante el uso exclusivo de definiciones de diccionario.",
+          "isCorrect": false,
+          "rationale": "La contextualización va más allá de las definiciones; incluye ejemplos, antecedentes y marcos de referencia amplios."
+        }
+      ],
+      "hint": "Se trata de preparar el terreno mental del lector para la nueva información.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "¿Cuándo se produce una progresión temática de 'tema constante'?",
+      "answerOptions": [
+        {
+          "text": "Cuando se mantiene el mismo tema en sucesivos enunciados y se le van asignando diferentes remas.",
+          "isCorrect": true,
+          "rationale": "Este modelo es común en descripciones o enumeraciones donde el foco de atención no cambia, pero sí la información sobre él."
+        },
+        {
+          "text": "Cuando el rema de una oración se convierte automáticamente en el tema de la siguiente.",
+          "isCorrect": false,
+          "rationale": "Esto define la progresión lineal, donde la información nueva sirve de base para el siguiente paso."
+        },
+        {
+          "text": "Cuando el texto se desvía del asunto principal introduciendo anécdotas irrelevantes.",
+          "isCorrect": false,
+          "rationale": "Esto se consideraría una digresión o una ruptura de la coherencia, no un tipo de progresión temática."
+        },
+        {
+          "text": "Cuando de un hipertema general se derivan múltiples subtemas específicos.",
+          "isCorrect": false,
+          "rationale": "Esta es la descripción de la progresión de temas derivados o de estructura de abanico."
+        }
+      ],
+      "hint": "Imagina una estructura donde el sujeto del que se habla no cambia, pero sí lo que se dice de él.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "¿Por qué el párrafo se considera la unidad básica de organización de la coherencia?",
+      "answerOptions": [
+        {
+          "text": "Porque agrupa enunciados relacionados por una misma idea parcial, facilitando la dosificación de la información.",
+          "isCorrect": true,
+          "rationale": "El párrafo segmenta el texto en unidades temáticas menores que contribuyen a la macroestructura global."
+        },
+        {
+          "text": "Porque permite separar físicamente las oraciones que tienen errores gramaticales del resto del texto.",
+          "isCorrect": false,
+          "rationale": "La división en párrafos responde a la organización lógica y semántica, no a una clasificación de errores."
+        },
+        {
+          "text": "Porque su función principal es indicar al lector cuándo debe realizar una pausa larga en la lectura.",
+          "isCorrect": false,
+          "rationale": "Aunque visualmente marca pausas, su esencia académica radica en la unidad de contenido y el desarrollo de ideas."
+        },
+        {
+          "text": "Porque debe contener siempre una introducción, un nudo y un desenlace de forma independiente.",
+          "isCorrect": false,
+          "rationale": "Esa estructura es propia de la narración global; un párrafo suele desarrollar solo una fase o subtema del razonamiento."
+        }
+      ],
+      "hint": "Considera cómo ayuda a digerir el contenido de forma estructurada.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "¿Cuál es el equilibrio ideal entre información explícita e implícita para garantizar la coherencia académica?",
+      "answerOptions": [
+        {
+          "text": "Adaptar la cantidad de información explícita al conocimiento previo del destinatario, evitando tanto la opacidad como la redundancia.",
+          "isCorrect": true,
+          "rationale": "La coherencia depende de dar al lector los datos necesarios sin saturarlo con información que ya conoce o que es irrelevante."
+        },
+        {
+          "text": "Explicitar absolutamente todos los conceptos para que cualquier lector, sin importar su nivel, entienda el texto.",
+          "isCorrect": false,
+          "rationale": "Esto haría que el texto fuera ineficaz y excesivamente largo para el público objetivo académico."
+        },
+        {
+          "text": "Dejar la mayor parte de la información implícita para fomentar la participación activa y creativa del lector.",
+          "isCorrect": false,
+          "rationale": "En el ámbito académico, la claridad es prioritaria; un exceso de implícitos convierte el texto en un enigma difícil de evaluar."
+        },
+        {
+          "text": "Sustituir toda la información implícita por una lista exhaustiva de conectores y marcadores.",
+          "isCorrect": false,
+          "rationale": "Los conectores señalan relaciones, pero no pueden sustituir el contenido informativo o los presupuestos necesarios."
+        }
+      ],
+      "hint": "Se trata de una decisión estratégica basada en la audiencia a la que te diriges.",
+      "tags": [
+        "CT",
+        "T2_4"
+      ]
+    },
+    {
+      "question": "¿Cuál es la distinción fundamental entre la cohesión y la coherencia?",
+      "answerOptions": [
+        {
+          "text": "La cohesión se manifiesta en la superficie lingüística mediante marcas visibles, mientras que la coherencia reside en la organización semántica global.",
+          "isCorrect": true,
+          "rationale": "La cohesión se define por los recursos lingüísticos explícitos que conectan las partes, a diferencia de la coherencia, que se ocupa del sentido y la macroestructura."
+        },
+        {
+          "text": "La cohesión se encarga de la adecuación al destinatario, mientras que la coherencia asegura el uso correcto de conectores gramaticales.",
+          "isCorrect": false,
+          "rationale": "Esta opción confunde la cohesión con la adecuación y reduce la coherencia a una función puramente gramatical que no le corresponde."
+        },
+        {
+          "text": "La cohesión es una propiedad pragmática externa al texto, mientras que la coherencia es estrictamente sintáctica.",
+          "isCorrect": false,
+          "rationale": "La adecuación es la que mira hacia fuera del texto (pragmática); la cohesión es interna y no se limita a la sintaxis, sino a los vínculos superficiales."
+        },
+        {
+          "text": "Ambas son términos sinónimos que describen el uso de conectores y marcadores discursivos para unir oraciones.",
+          "isCorrect": false,
+          "rationale": "Se trata de una distinción necesaria, pues un texto puede estar cohesionado pero ser incoherente si carece de unidad temática."
+        }
+      ],
+      "hint": "Considera qué propiedad se ocupa de los rastros lingüísticos visibles y cuál de la unidad de sentido.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "En el ámbito de la cohesión léxica, ¿en qué consiste el procedimiento de la 'hiperonimia'?",
+      "answerOptions": [
+        {
+          "text": "En la sustitución de un término por otro más general que lo engloba.",
+          "isCorrect": true,
+          "rationale": "La hiperonimia permite mantener el referente utilizando una categoría superior, como sustituir 'ensayo' por 'texto'."
+        },
+        {
+          "text": "En la repetición exacta del mismo término para asegurar la precisión técnica.",
+          "isCorrect": false,
+          "rationale": "La repetición exacta es otro mecanismo de reiteración, pero no implica un cambio hacia una categoría más general."
+        },
+        {
+          "text": "En el uso de palabras con significados opuestos para crear un contraste temático.",
+          "isCorrect": false,
+          "rationale": "Esta definición corresponde a la antonimia, no a la relación jerárquica de inclusión que define al hiperónimo."
+        },
+        {
+          "text": "En la sustitución de una palabra por un término más específico y concreto.",
+          "isCorrect": false,
+          "rationale": "Este procedimiento se denomina hiponimia, que es la relación inversa a la hiperonimia."
+        }
+      ],
+      "hint": "Piensa en la relación jerárquica que va de lo particular a lo general.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "¿Qué caracteriza esencialmente al mecanismo de la deixis en la configuración de un texto?",
+      "answerOptions": [
+        {
+          "text": "Su dependencia directa del contexto de enunciación (quién, dónde y cuándo) para adquirir sentido pleno.",
+          "isCorrect": true,
+          "rationale": "Los deícticos como 'yo', 'aquí' o 'ahora' solo se interpretan correctamente si se conoce la situación en la que se produce el discurso."
+        },
+        {
+          "text": "Su capacidad para anticipar información que será detallada en los párrafos siguientes.",
+          "isCorrect": false,
+          "rationale": "La función de anticipar información corresponde a la catáfora, que es un mecanismo de referencia interna, no situacional."
+        },
+        {
+          "text": "El uso de sinónimos para evitar la fatiga del lector ante la repetición de nombres propios.",
+          "isCorrect": false,
+          "rationale": "Esto describe la sustitución léxica, un recurso de cohesión que no depende de la situación extralingüística de enunciación."
+        },
+        {
+          "text": "La eliminación de elementos lingüísticos que son recuperables por la estructura sintáctica.",
+          "isCorrect": false,
+          "rationale": "Dicha omisión es el mecanismo de la elipsis, que busca la economía textual, no la referencia al contexto situacional."
+        }
+      ],
+      "hint": "Analiza cómo términos como 'este' o 'mañana' cambian su referente según quién los use y en qué momento.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "¿Cuál es la diferencia operativa entre la anáfora y la catáfora?",
+      "answerOptions": [
+        {
+          "text": "La anáfora remite a un elemento ya mencionado, mientras que la catáfora anuncia un elemento que aparecerá después.",
+          "isCorrect": true,
+          "rationale": "Se trata de una distinción de dirección referencial: retrospectiva para la anáfora y prospectiva para la catáfora."
+        },
+        {
+          "text": "La anáfora se utiliza para personas y la catáfora se reserva exclusivamente para conceptos abstractos.",
+          "isCorrect": false,
+          "rationale": "Ambos mecanismos pueden referirse a cualquier tipo de entidad, sea física o conceptual; la diferencia es solo el orden de aparición."
+        },
+        {
+          "text": "La anáfora requiere el uso de pronombres, mientras que la catáfora solo se produce mediante elipsis.",
+          "isCorrect": false,
+          "rationale": "Ambas pueden usar diversos recursos gramaticales; la elipsis es un mecanismo independiente, aunque comparta funciones de economía."
+        },
+        {
+          "text": "La anáfora es un mecanismo de cohesión léxica y la catáfora es un tipo de cohesión gramatical.",
+          "isCorrect": false,
+          "rationale": "Tanto la anáfora como la catáfora son procesos de referencia que suelen clasificarse dentro de la cohesión gramatical."
+        }
+      ],
+      "hint": "Piensa en el orden temporal en el que el lector encuentra el referente y la palabra que lo sustituye.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "¿Cómo contribuye el sistema de determinación (artículos definidos e indefinidos) al mantenimiento del referente?",
+      "answerOptions": [
+        {
+          "text": "Señalando el paso de información nueva (indefinida) a información ya conocida e identificable (definida).",
+          "isCorrect": true,
+          "rationale": "El uso de 'un' para introducir y 'el' para retomar indica al lector que el referente ya forma parte del conocimiento compartido del texto."
+        },
+        {
+          "text": "Utilizando artículos indefinidos durante todo el texto para mantener la objetividad académica.",
+          "isCorrect": false,
+          "rationale": "Mantener solo indefinidos impediría que el lector identificara que se está hablando del mismo objeto ya mencionado."
+        },
+        {
+          "text": "Evitando el uso de artículos antes de los tecnicismos para agilizar la lectura.",
+          "isCorrect": false,
+          "rationale": "La ausencia de determinación suele ser un error en español; los artículos son necesarios para la cohesión y la gramaticalidad."
+        },
+        {
+          "text": "Sustituyendo los artículos por demostrativos de lejanía para crear distancia argumentativa.",
+          "isCorrect": false,
+          "rationale": "Aunque los demostrativos cohesionan, su función principal no es la determinación básica de 'nuevo vs. conocido' que realizan los artículos."
+        }
+      ],
+      "hint": "Recuerda cómo se introduce «una tesis» y luego se retoma como «la tesis».",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "En la cohesión léxica, ¿qué diferencia a una 'proforma' de un 'sinónimo'?",
+      "answerOptions": [
+        {
+          "text": "La proforma sustituye al referente por una palabra semánticamente vacía (como 'esto' o 'dicho elemento'), mientras que el sinónimo aporta un significado léxico propio y equivalente.",
+          "isCorrect": true,
+          "rationale": "Las proformas (como 'cosa' o 'tema') son etiquetas genéricas, mientras que los sinónimos buscan mantener el significado exacto con otra palabra."
+        },
+        {
+          "text": "En que la proforma solo puede usarse al principio de párrafo y el sinónimo en cualquier posición del texto.",
+          "isCorrect": false,
+          "rationale": "Ambos recursos existen en ambas modalidades, aunque la proforma debe limitarse en la escritura académica para evitar la vaguedad."
+        },
+        {
+          "text": "En que el sinónimo es exclusivo de los textos literarios y la proforma solo aparece en textos académicos.",
+          "isCorrect": false,
+          "rationale": "Las proformas léxicas son sustantivos (palabras comodín) y los sinónimos suelen ser nombres o verbos con significados afines."
+        },
+        {
+          "text": "En que la proforma repite literalmente el término anterior y el sinónimo lo sustituye por un antónimo.",
+          "isCorrect": false,
+          "rationale": "Aunque ambos sustituyen, se distinguen en que el sinónimo aporta precisión y la proforma puede restarla si se usa en exceso."
+        }
+      ],
+      "hint": "Piensa en el grado de precisión que aporta cada uno al sustituir un término específico.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "De acuerdo con el texto, ¿qué constituyen las 'cadenas referenciales' en el discurso escrito?",
+      "answerOptions": [
+        {
+          "text": "Conjuntos de expresiones (repeticiones, sinónimos, pronombres) que remiten a un mismo objeto o concepto a lo largo del texto.",
+          "isCorrect": true,
+          "rationale": "Las cadenas referenciales aseguran la continuidad temática al entrelazar distintos recursos para mantener vivo el mismo referente."
+        },
+        {
+          "text": "Listados de conectores ordenados jerárquicamente para estructurar los apartados de un informe.",
+          "isCorrect": false,
+          "rationale": "Las cadenas de conectores no mantienen referentes, sino que establecen relaciones lógicas entre enunciados."
+        },
+        {
+          "text": "Secuencias de oraciones que comparten la misma estructura sintáctica para crear ritmo.",
+          "isCorrect": false,
+          "rationale": "Esta definición se acerca más al paralelismo sintáctico, que es un recurso retórico, no una cadena referencial de cohesión."
+        },
+        {
+          "text": "El conjunto de referencias bibliográficas que se sitúan al final de un trabajo académico.",
+          "isCorrect": false,
+          "rationale": "Aunque se llamen 'referencias', estas son fuentes externas, mientras que las cadenas referenciales son vínculos internos de identidad semántica."
+        }
+      ],
+      "hint": "Imagina un hilo que conecta distintas palabras que, aunque diferentes, hablan de la misma 'cosa'.",
+      "tags": [
+        "CT",
+        "T2_5"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función primordial de los marcadores discursivos en la comunicación escrita según la perspectiva de Portolés y Martín Zorraquino?",
+      "answerOptions": [
+        {
+          "text": "Actuar como elementos ornamentales para elevar el registro del texto académico.",
+          "isCorrect": false,
+          "rationale": "Estos elementos no son adornos, sino herramientas funcionales para la interpretación."
+        },
+        {
+          "text": "Orientar las inferencias del lector para facilitar la interpretación del discurso.",
+          "isCorrect": true,
+          "rationale": "Los conectores sirven como guías que señalan cómo debe relacionarse la información de un segmento con el anterior."
+        },
+        {
+          "text": "Sustituir la estructura lógica del razonamiento cuando esta es inexistente.",
+          "isCorrect": false,
+          "rationale": "Un conector no puede crear una relación lógica que no esté previamente construida en el sentido del texto."
+        },
+        {
+          "text": "Garantizar la corrección gramatical de las oraciones en las que se insertan.",
+          "isCorrect": false,
+          "rationale": "La función de los marcadores es discursiva y pragmática, no estrictamente gramatical o sintáctica a nivel de oración."
+        }
+      ],
+      "hint": "Considera si su papel es meramente estético o si influye en cómo el lector procesa el significado.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "Desde un punto de vista ortográfico, ¿por qué muchos marcadores discursivos suelen escribirse entre pausas gráficas (comas o punto y coma)?",
+      "answerOptions": [
+        {
+          "text": "Debido a que ocupan una posición periférica respecto a la estructura de la oración.",
+          "isCorrect": true,
+          "rationale": "Al no formar parte del núcleo sintáctico de la oración, su independencia se marca mediante la puntuación."
+        },
+        {
+          "text": "Porque su longitud léxica exige obligatoriamente un descanso en la lectura en voz alta.",
+          "isCorrect": false,
+          "rationale": "La puntuación responde a criterios sintácticos y discursivos, no simplemente a la duración de las palabras."
+        },
+        {
+          "text": "Para señalar que el conector es opcional y puede eliminarse sin alterar el sentido.",
+          "isCorrect": false,
+          "rationale": "Aunque sean periféricos, su eliminación puede oscurecer la relación lógica que pretenden explicitar."
+        },
+        {
+          "text": "Por tratarse siempre de conjunciones subordinantes que requieren subordinación escrita.",
+          "isCorrect": false,
+          "rationale": "Muchos marcadores son adverbios o locuciones que funcionan de manera distinta a las conjunciones integradas."
+        }
+      ],
+      "hint": "Reflexiona sobre la ubicación de estos elementos en relación con el sujeto y el predicado.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Qué error fundamental se comete al emplear un conector mal elegido en un texto?",
+      "answerOptions": [
+        {
+          "text": "Forzar una relación lógica que el contenido semántico no sustenta.",
+          "isCorrect": true,
+          "rationale": "El conector debe ser el reflejo de una relación real entre ideas; si no existe tal relación, el marcador resulta incoherente."
+        },
+        {
+          "text": "Utilizar un marcador que pertenece a un registro excesivamente formal.",
+          "isCorrect": false,
+          "rationale": "Aunque puede ser un problema de adecuación, el error de 'mal elegido' suele referirse a la lógica del razonamiento."
+        },
+        {
+          "text": "Omitir la puntuación necesaria antes y después de la locución.",
+          "isCorrect": false,
+          "rationale": "Esto constituye un error ortográfico o de puntuación, pero no necesariamente de elección del conector."
+        },
+        {
+          "text": "Repetir el mismo conector en párrafos consecutivos de forma monótona.",
+          "isCorrect": false,
+          "rationale": "La repetición afecta a la riqueza léxica, pero no implica que el conector sea lógicamente incorrecto."
+        }
+      ],
+      "hint": "Analiza qué sucede cuando usamos 'sin embargo' para unir dos ideas que no se oponen.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Cuál es la recomendación práctica respecto al encadenamiento de múltiples marcadores discursivos?",
+      "answerOptions": [
+        {
+          "text": "Se deben usar al menos dos conectores para asegurar que la transición sea clara.",
+          "isCorrect": false,
+          "rationale": "El uso excesivo de conectores puede producir un efecto artificial y redundante en el texto."
+        },
+        {
+          "text": "Es preferible evitar la redundancia y no encadenar marcadores que expresen lo mismo.",
+          "isCorrect": true,
+          "rationale": "Se desaconseja el uso de fórmulas como «por tanto, en consecuencia», ya que un solo marcador suele ser suficiente."
+        },
+        {
+          "text": "Se recomienda sustituirlos por verbos baúl para simplificar la lectura.",
+          "isCorrect": false,
+          "rationale": "Los verbos baúl son un problema de precisión léxica y no tienen relación con la mejora de los conectores."
+        },
+        {
+          "text": "Deben situarse siempre al final de la oración para no interrumpir el flujo.",
+          "isCorrect": false,
+          "rationale": "La posición del marcador depende de la intención y la estructura, no existe una regla de situarlos al final."
+        }
+      ],
+      "hint": "Piensa en la eficiencia comunicativa y en evitar términos que signifiquen lo mismo consecutivamente.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Qué distingue funcionalmente a los marcadores de 'concesión' de los de 'contraste'?",
+      "answerOptions": [
+        {
+          "text": "Los concesivos anulan totalmente la idea anterior, mientras que los de contraste la suman.",
+          "isCorrect": false,
+          "rationale": "Ninguno de los dos tipos se limita a sumar; ambos gestionan oposiciones de diferente grado."
+        },
+        {
+          "text": "Los concesivos aceptan una objeción sin abandonar la tesis principal.",
+          "isCorrect": true,
+          "rationale": "Marcadores como 'aun así' o 'pese a ello' permiten reconocer una dificultad sin invalidar el argumento central."
+        },
+        {
+          "text": "No existe distinción funcional; son términos sinónimos en la escritura académica.",
+          "isCorrect": false,
+          "rationale": "Se establecen categorías distintas para matizar las diferentes relaciones lógicas entre enunciados."
+        },
+        {
+          "text": "Los de contraste solo se usan en la narración y los concesivos en la descripción.",
+          "isCorrect": false,
+          "rationale": "Ambos tipos son versátiles, aunque tienen un papel fundamental en la argumentación."
+        }
+      ],
+      "hint": "Analiza la función de 'aunque' o 'si bien' frente a 'por el contrario'.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Cuál es la utilidad de los marcadores para 'introducir tema' o 'iniciar un subtema'?",
+      "answerOptions": [
+        {
+          "text": "Permiten cambiar de asunto bruscamente sin necesidad de cohesión.",
+          "isCorrect": false,
+          "rationale": "Al contrario, su función es suavizar la transición y mantener el hilo conductor al abrir un nuevo punto."
+        },
+        {
+          "text": "Servir de cierre definitivo para un razonamiento complejo.",
+          "isCorrect": false,
+          "rationale": "Esta es la función de los marcadores conclusivos o recapitulativos."
+        },
+        {
+          "text": "Señalar la apertura de un nuevo bloque informativo sin romper la unidad del texto.",
+          "isCorrect": true,
+          "rationale": "Fórmulas como 'en cuanto a' o 'por lo que se refiere a' ayudan al lector a situarse en el nuevo foco de atención."
+        },
+        {
+          "text": "Ocultar la falta de documentación sobre un tema específico.",
+          "isCorrect": false,
+          "rationale": "Los conectores son herramientas de organización, no recursos para suplir carencias de contenido."
+        }
+      ],
+      "hint": "Piensa en expresiones como 'en relación con' o 'respecto de'.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Cuál es la relación correcta entre marcadores y la modalidad textual 'expositiva'?",
+      "answerOptions": [
+        {
+          "text": "Predominio absoluto de conectores causales para buscar culpables.",
+          "isCorrect": false,
+          "rationale": "La exposición busca explicar, no necesariamente asignar causalidades personales o culpas."
+        },
+        {
+          "text": "Uso frecuente de reformuladores, ejemplificadores y ordenadores.",
+          "isCorrect": true,
+          "rationale": "Estas herramientas son clave para estructurar definiciones y clasificaciones de forma didáctica y clara."
+        },
+        {
+          "text": "Ausencia total de marcadores para evitar la subjetividad.",
+          "isCorrect": false,
+          "rationale": "Los marcadores son necesarios en la exposición para guiar el orden lógico y la claridad del tema."
+        },
+        {
+          "text": "Uso exclusivo de marcadores deícticos temporales de tipo narrativo.",
+          "isCorrect": false,
+          "rationale": "Los marcadores temporales son propios de la narración de procesos, no de la exposición conceptual pura."
+        }
+      ],
+      "hint": "Enfócate en los recursos necesarios para explicar un concepto difícil de manera ordenada.",
+      "tags": [
+        "CT",
+        "T2_6"
+      ]
+    },
+    {
+      "question": "¿Cuál es la relación teórica entre las modalidades textuales y los géneros discursivos?",
+      "answerOptions": [
+        {
+          "text": "Las modalidades son formas de organizar el discurso que pueden combinarse dentro de un mismo género.",
+          "isCorrect": true,
+          "rationale": "Las modalidades no son compartimentos estancos, sino herramientas organizativas que un género, como un informe, utiliza según sus necesidades pragmáticas."
+        },
+        {
+          "text": "Las modalidades y los géneros son términos sinónimos que se refieren a la estructura externa del texto.",
+          "isCorrect": false,
+          "rationale": "Esta opción confunde el nivel de organización del discurso (modalidad) con la categoría comunicativa socialmente reconocida (género)."
+        },
+        {
+          "text": "Cada género discursivo admite única y exclusivamente una modalidad textual específica.",
+          "isCorrect": false,
+          "rationale": "Se basa en la idea errónea de que los géneros son puros, ignorando que un texto académico suele ser híbrido e integrar diversas secuencias."
+        },
+        {
+          "text": "Las modalidades son categorías cerradas que definen la extensión y el soporte del texto.",
+          "isCorrect": false,
+          "rationale": "Confunde las propiedades pragmáticas de la modalidad con los aspectos paratextuales o físicos del soporte y el formato."
+        }
+      ],
+      "hint": "Considera si un informe de investigación solo puede contener un tipo de explicación o si requiere distintos tipos de secuencias.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "En el ámbito académico, ¿cuál es el propósito principal de la modalidad narrativa?",
+      "answerOptions": [
+        {
+          "text": "Entretener al lector mediante la creación de mundos ficticios y personajes complejos.",
+          "isCorrect": false,
+          "rationale": "Asocia erróneamente la narración solo con la literatura de ficción, olvidando su utilidad técnica en la ciencia."
+        },
+        {
+          "text": "Reconstruir secuencias de hechos, procesos metodológicos o contextos históricos de forma causal.",
+          "isCorrect": true,
+          "rationale": "La narración académica sirve para detallar el desarrollo de experimentos, cronologías de investigación o antecedentes de un fenómeno."
+        },
+        {
+          "text": "Representar únicamente las cualidades estáticas de un objeto de estudio sin considerar el tiempo.",
+          "isCorrect": false,
+          "rationale": "Esta es la definición propia de la descripción, no de la narración, que requiere obligatoriamente una dimensión temporal."
+        },
+        {
+          "text": "Sustituir la argumentación mediante el uso de anécdotas personales no verificables.",
+          "isCorrect": false,
+          "rationale": "Supone que la narración invalida el rigor académico, cuando en realidad puede actuar como un apoyo contextual o ejemplificador."
+        }
+      ],
+      "hint": "Piensa en cómo se explica el paso a paso de un experimento en un laboratorio.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "¿Cómo se define la modalidad expositiva en el contexto pedagógico y académico?",
+      "answerOptions": [
+        {
+          "text": "Como una secuencia de acciones realizadas por participantes en un espacio determinado.",
+          "isCorrect": false,
+          "rationale": "Esta definición corresponde a la narración, centrada en el dinamismo de los hechos y no en la explicación de conceptos."
+        },
+        {
+          "text": "Como la defensa de una postura personal frente a un tema polémico mediante opiniones.",
+          "isCorrect": false,
+          "rationale": "Se confunde con la argumentación, cuya finalidad es persuadir o demostrar, mientras que la exposición busca informar y aclarar."
+        },
+        {
+          "text": "Como la explicación de un tema de manera clara, ordenada y coherente para facilitar su comprensión.",
+          "isCorrect": true,
+          "rationale": "La exposición es la modalidad central para transmitir conocimientos, utilizando recursos como definiciones, ejemplos y clasificaciones."
+        },
+        {
+          "text": "Como una representación lingüística basada únicamente en adjetivos y verbos de estado.",
+          "isCorrect": false,
+          "rationale": "Describe la técnica formal de la descripción, obviando la estructura lógica y explicativa de la exposición."
+        }
+      ],
+      "hint": "Busca la modalidad que tiene como objetivo que el lector entienda un concepto nuevo.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "¿En qué se diferencia el orden inductivo del deductivo dentro de la modalidad expositiva?",
+      "answerOptions": [
+        {
+          "text": "El inductivo parte de una afirmación general para llegar a casos particulares.",
+          "isCorrect": false,
+          "rationale": "Esta es precisamente la definición del orden deductivo; el distractor invierte los conceptos lógicos."
+        },
+        {
+          "text": "El inductivo parte de ejemplos o datos particulares para conducir a una generalización o conclusión.",
+          "isCorrect": true,
+          "rationale": "La inducción es el movimiento del pensamiento que construye la teoría o la regla a partir de la observación de casos concretos."
+        },
+        {
+          "text": "El deductivo evita el uso de definiciones para centrarse solo en la comparación.",
+          "isCorrect": false,
+          "rationale": "No existe tal restricción; el orden deductivo suele comenzar, de hecho, con una definición general de la que se derivan aplicaciones."
+        },
+        {
+          "text": "Ambos órdenes son exclusivos de la argumentación y no se aplican en la exposición.",
+          "isCorrect": false,
+          "rationale": "Ignora que la organización de la información explicativa también sigue estructuras lógicas de razonamiento."
+        }
+      ],
+      "hint": "Piensa en el camino que va desde los datos de una muestra hacia la teoría general.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "¿Qué función cumple el 'contraargumento' en una estructura argumentativa?",
+      "answerOptions": [
+        {
+          "text": "Invalidar todo el texto mediante la presentación de contradicciones temáticas.",
+          "isCorrect": false,
+          "rationale": "Considera el contraargumento como un error de coherencia en lugar de una estrategia retórica controlada."
+        },
+        {
+          "text": "Anticipar y considerar objeciones posibles para reforzar la tesis principal tras su refutación.",
+          "isCorrect": true,
+          "rationale": "La inclusión de voces contrarias demuestra madurez académica y permite fortalecer la postura propia al demostrar su resistencia ante críticas."
+        },
+        {
+          "text": "Sustituir a la conclusión para dejar el texto con un final abierto.",
+          "isCorrect": false,
+          "rationale": "El contraargumento es una fase del desarrollo argumentativo, no una parte de la estructura de cierre del texto."
+        },
+        {
+          "text": "Servir como un ejemplo descriptivo de las cualidades del objeto.",
+          "isCorrect": false,
+          "rationale": "Confunde una estrategia de debate (contraargumento) con una técnica de apoyo expositivo (ejemplificación)."
+        }
+      ],
+      "hint": "Reflexiona sobre por qué un autor mencionaría algo que parece ir en contra de su propia idea.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "Según la dimensión pragmática, ¿qué determina la elección de una modalidad u otra?",
+      "answerOptions": [
+        {
+          "text": "La intención comunicativa del emisor y los objetivos del texto en su contexto.",
+          "isCorrect": true,
+          "rationale": "La pragmática estudia el lenguaje en uso; por tanto, la modalidad se elige según si se busca contar, describir, explicar o convencer."
+        },
+        {
+          "text": "El número de páginas solicitado en el encargo del trabajo académico.",
+          "isCorrect": false,
+          "rationale": "La extensión es un factor externo que no define la naturaleza organizativa (modalidad) del contenido."
+        },
+        {
+          "text": "La cantidad de conectores discursivos disponibles en el idioma español.",
+          "isCorrect": false,
+          "rationale": "Los conectores son herramientas de cohesión que ayudan a la modalidad, pero no son la causa que determina su elección."
+        },
+        {
+          "text": "La preferencia estética del autor por el uso de adjetivos o verbos.",
+          "isCorrect": false,
+          "rationale": "Aunque el estilo personal influye, la modalidad académica está sujeta a convenciones del género y objetivos comunicativos prefijados."
+        }
+      ],
+      "hint": "Piensa en el 'para qué' se escribe el texto.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "¿Qué distingue a la descripción académica de la descripción literaria o subjetiva?",
+      "answerOptions": [
+        {
+          "text": "El uso exclusivo de la primera persona para dar mayor veracidad a los hechos.",
+          "isCorrect": false,
+          "rationale": "La descripción académica tiende a la neutralidad y a menudo evita la primera persona para priorizar el objeto sobre el sujeto."
+        },
+        {
+          "text": "La ausencia total de sustantivos para evitar la repetición léxica.",
+          "isCorrect": false,
+          "rationale": "Es lingüísticamente imposible realizar una descripción sin sustantivos, ya que estos nombran la realidad que se pretende representar."
+        },
+        {
+          "text": "La priorización de rasgos verificables y el uso de criterios técnicos de análisis.",
+          "isCorrect": true,
+          "rationale": "La descripción universitaria busca la precisión y la objetividad, permitiendo que otros investigadores identifiquen los mismos rasgos."
+        },
+        {
+          "text": "La sustitución de datos reales por metáforas y comparaciones poéticas.",
+          "isCorrect": false,
+          "rationale": "El uso de recursos figurados es propio de la descripción estética o literaria, lo cual restaría claridad a un texto académico."
+        }
+      ],
+      "hint": "Considera qué tipo de información necesita un científico para reconocer un fenómeno descrito por otro.",
+      "tags": [
+        "CT",
+        "T2_7"
+      ]
+    },
+    {
+      "question": "¿A qué se atribuye principalmente el fracaso en la redacción debido a la «sobrecarga cognitiva»?",
+      "answerOptions": [
+        {
+          "text": "Al intento de tomar decisiones simultáneas sobre el contenido, la organización, el léxico y la norma.",
+          "isCorrect": true,
+          "rationale": "Intentar resolver todos los niveles del texto a la vez satura la capacidad de procesamiento del escritor."
+        },
+        {
+          "text": "A la falta de conocimientos lingüísticos previos del autor sobre el tema tratado.",
+          "isCorrect": false,
+          "rationale": "Aunque el conocimiento es necesario, la sobrecarga cognitiva se refiere específicamente a la gestión simultánea de los procesos de escritura."
+        },
+        {
+          "text": "A la extensión excesiva de las fuentes bibliográficas consultadas durante la fase de documentación.",
+          "isCorrect": false,
+          "rationale": "La documentación extensa puede ser un reto, pero no es la causa de la parálisis cognitiva durante el acto de redacción en sí."
+        },
+        {
+          "text": "A la incapacidad de distinguir entre las ideas principales y secundarias de un esquema previo.",
+          "isCorrect": false,
+          "rationale": "Esto se considera un problema de planificación o coherencia, no la causa de la saturación cognitiva del proceso global."
+        }
+      ],
+      "hint": "Considere la dificultad de gestionar múltiples niveles textuales al mismo tiempo.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "En la fase de precomposición, ¿qué proceso implica específicamente la 'toma de conciencia'?",
+      "answerOptions": [
+        {
+          "text": "La búsqueda activa de fuentes de información fiables y su registro en fichas.",
+          "isCorrect": false,
+          "rationale": "Esta actividad corresponde a la subfase de documentación, no a la toma de conciencia inicial."
+        },
+        {
+          "text": "La exploración de la situación comunicativa, el destinatario y la finalidad del encargo.",
+          "isCorrect": true,
+          "rationale": "La toma de conciencia consiste en entender para quién se escribe, con qué propósito y bajo qué condiciones."
+        },
+        {
+          "text": "La jerarquización de ideas mediante el uso de mapas conceptuales y lluvias de ideas.",
+          "isCorrect": false,
+          "rationale": "Estas son técnicas de descubrimiento y planificación, etapas posteriores a la toma de conciencia del encargo."
+        },
+        {
+          "text": "La redacción de las primeras oraciones del borrador para probar el tono académico.",
+          "isCorrect": false,
+          "rationale": "La redacción es una fase posterior; la precomposición se centra en la preparación mental y estructural."
+        }
+      ],
+      "hint": "Se trata de la etapa previa a la generación de ideas y al manejo de datos.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "Durante la fase de redacción, ¿cuál es la recomendación principal respecto al uso de la terminología técnica?",
+      "answerOptions": [
+        {
+          "text": "Variar los términos técnicos mediante sinónimos para evitar la monotonía léxica.",
+          "isCorrect": false,
+          "rationale": "En textos académicos, la precisión es prioritaria; cambiar de término puede confundir al lector sobre el concepto."
+        },
+        {
+          "text": "Mantener la consistencia terminológica si el concepto referido es el mismo.",
+          "isCorrect": true,
+          "rationale": "Conviene no cambiar de término técnico para asegurar que el referente conceptual sea unívoco."
+        },
+        {
+          "text": "Eliminar tecnicismos complejos para favorecer un estilo más natural y conversacional.",
+          "isCorrect": false,
+          "rationale": "La naturalidad no debe implicar la renuncia al rigor conceptual necesario en el ámbito universitario."
+        },
+        {
+          "text": "Sustituir los términos técnicos por proformas léxicas como 'cosa' o 'tema' para agilizar la lectura.",
+          "isCorrect": false,
+          "rationale": "El uso de verbos baúl y sustantivos vagos empobrece el registro académico y reduce la precisión."
+        }
+      ],
+      "hint": "Reflexione sobre la importancia de la precisión conceptual frente a la variedad estilística.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "De acuerdo con el modelo de revisión por 'pasadas', ¿qué se debe evaluar específicamente en la pasada de 'Estilo'?",
+      "answerOptions": [
+        {
+          "text": "La corrección de errores ortográficos, de puntuación y el formato de las citas.",
+          "isCorrect": false,
+          "rationale": "Estos aspectos pertenecen a la pasada de 'Norma', que es de carácter estrictamente formal y gramatical."
+        },
+        {
+          "text": "La detección de vaguedad léxica, repeticiones pobres y rasgos de oralidad infiltrada.",
+          "isCorrect": true,
+          "rationale": "La revisión de estilo busca pulir la precisión de las palabras y la adecuación del registro académico."
+        },
+        {
+          "text": "La jerarquía de las ideas y la organización lógica de los apartados del texto.",
+          "isCorrect": false,
+          "rationale": "La organización estructural se evalúa en las pasadas de 'Estructura' y 'Coherencia'."
+        },
+        {
+          "text": "La veracidad de los datos aportados y la ausencia de contradicciones temáticas.",
+          "isCorrect": false,
+          "rationale": "Esto corresponde a la pasada de 'Contenido', centrada en la calidad y solidez de la información."
+        }
+      ],
+      "hint": "Se trata de mejorar la calidad de la expresión lingüística y el tono del escrito.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "En el contexto de las técnicas de precomposición, ¿cuál es la utilidad específica del 'guion gráfico'?",
+      "answerOptions": [
+        {
+          "text": "Corregir la puntuación de los conectores antes de redactar los párrafos.",
+          "isCorrect": false,
+          "rationale": "La puntuación es una tarea de revisión final, no una técnica de planificación visual."
+        },
+        {
+          "text": "Organizar el avance del texto por bloques, secciones o escenas argumentativas.",
+          "isCorrect": true,
+          "rationale": "El guion gráfico ayuda a visualizar cómo progresa la información a través de las distintas unidades del texto."
+        },
+        {
+          "text": "Anotar referencias bibliográficas en orden alfabético según la norma APA.",
+          "isCorrect": false,
+          "rationale": "El listado de referencias es un producto de la documentación y la edición final, no un guion gráfico."
+        },
+        {
+          "text": "Generar una lista de conceptos sin ninguna jerarquía inicial para superar el bloqueo.",
+          "isCorrect": false,
+          "rationale": "Esa descripción corresponde a la técnica de la lluvia de ideas, no al guion gráfico."
+        }
+      ],
+      "hint": "Piense en una técnica que permita ver el texto como una secuencia de unidades de contenido.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "¿Cuál es la diferencia fundamental entre una cita literal y una paráfrasis?",
+      "answerOptions": [
+        {
+          "text": "La cita literal requiere comillas y referencia, mientras que la paráfrasis no requiere citación.",
+          "isCorrect": false,
+          "rationale": "Ambas requieren citación; la diferencia radica en la forma de reproducción de las palabras, no en la obligación ética."
+        },
+        {
+          "text": "La cita literal reproduce palabras exactas y la paráfrasis reformula la idea ajena.",
+          "isCorrect": true,
+          "rationale": "Esta es la distinción técnica básica: la paráfrasis adapta el contenido al estilo propio sin cambiar el sentido."
+        },
+        {
+          "text": "La paráfrasis es siempre superior en los trabajos académicos para evitar el plagio directo.",
+          "isCorrect": false,
+          "rationale": "Ninguna es intrínsecamente superior; deben usarse con equilibrio y criterio."
+        },
+        {
+          "text": "La cita literal solo se usa para autores clásicos y la paráfrasis para autores contemporáneos.",
+          "isCorrect": false,
+          "rationale": "El uso de una u otra técnica depende de la relevancia de la forma original, no de la antigüedad del autor."
+        }
+      ],
+      "hint": "Se relaciona con el grado de fidelidad a la forma verbal original del autor citado.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "En el proceso de revisión de un texto académico, ¿cuándo es más recomendable realizar la revisión de la 'norma' (ortografía y puntuación)?",
+      "answerOptions": [
+        {
+          "text": "De forma continua durante la redacción del primer borrador para no acumular errores.",
+          "isCorrect": false,
+          "rationale": "Detenerse a corregir la ortografía durante la redacción interrumpe el flujo de ideas y puede causar bloqueo."
+        },
+        {
+          "text": "Inmediatamente después de la fase de precomposición para asegurar que el plan sea correcto.",
+          "isCorrect": false,
+          "rationale": "En la precomposición aún no hay texto redactado, por lo que no es posible aplicar criterios ortográficos."
+        },
+        {
+          "text": "Como una de las últimas pasadas, una vez que el contenido y la estructura son definitivos.",
+          "isCorrect": true,
+          "rationale": "Conviene revisar por pasadas, dejando los aspectos normativos y formales para el final del proceso."
+        },
+        {
+          "text": "Únicamente si el corrector automático del procesador de textos no detecta fallos.",
+          "isCorrect": false,
+          "rationale": "Conviene aplicar una revisión crítica mediante pautas y herramientas, y no depender totalmente de un corrector automático."
+        }
+      ],
+      "hint": "Considere en qué momento del proceso los cambios en el texto son menos probables.",
+      "tags": [
+        "CT",
+        "T2_8"
+      ]
+    },
+    {
+      "question": "Dentro de la pauta de revisión final, ¿qué dimensión evalúa específicamente si el escrito cumple con el propósito y las instrucciones del destinatario?",
+      "answerOptions": [
+        {
+          "text": "El encargo",
+          "isCorrect": true,
+          "rationale": "El criterio del encargo verifica que el texto responda exactamente a lo solicitado y a la situación comunicativa planteada."
+        },
+        {
+          "text": "La adecuación",
+          "isCorrect": false,
+          "rationale": "Aunque están relacionados, la adecuación se centra en el registro y el tono, mientras que el encargo se refiere al cumplimiento de las instrucciones recibidas."
+        },
+        {
+          "text": "La coherencia",
+          "isCorrect": false,
+          "rationale": "La coherencia evalúa la organización del sentido y la ausencia de contradicciones, no necesariamente el cumplimiento de una instrucción externa."
+        },
+        {
+          "text": "La presentación",
+          "isCorrect": false,
+          "rationale": "La presentación se refiere a la consistencia de elementos formales como tablas y títulos, no a la finalidad comunicativa del trabajo."
+        }
+      ],
+      "hint": "Relaciona el texto con la solicitud inicial o la tarea propuesta.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "En el nivel de la adecuación, ¿cuál es el objetivo primordial al revisar un texto según la pauta final?",
+      "answerOptions": [
+        {
+          "text": "Ajustar el registro lingüístico al destinatario y al género solicitado.",
+          "isCorrect": true,
+          "rationale": "La adecuación garantiza que el tono y el nivel de formalidad sean los esperados para el contexto académico o profesional específico."
+        },
+        {
+          "text": "Garantizar que no existan saltos de información entre párrafos.",
+          "isCorrect": false,
+          "rationale": "Esta es una función de la progresión temática y la coherencia, no del ajuste al contexto externo del destinatario."
+        },
+        {
+          "text": "Verificar la correcta citación de todas las fuentes ajenas.",
+          "isCorrect": false,
+          "rationale": "La citación es un criterio ético y formal independiente del ajuste de registro al destinatario."
+        },
+        {
+          "text": "Eliminar el uso de verbos baúl para ganar precisión léxica.",
+          "isCorrect": false,
+          "rationale": "La precisión léxica pertenece al criterio de léxico, mientras que la adecuación mira hacia la situación comunicativa global."
+        }
+      ],
+      "hint": "Considera la relación entre el escritor, el lector y el tipo de documento.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "¿Qué aspecto de la organización textual se evalúa bajo el criterio de 'Estructura' en la pauta de revisión?",
+      "answerOptions": [
+        {
+          "text": "El orden lógico de los apartados que componen el trabajo.",
+          "isCorrect": true,
+          "rationale": "La estructura asegura que la disposición de las partes del texto siga una secuencia racional que guíe al lector."
+        },
+        {
+          "text": "La unidad temática interna de cada párrafo de forma aislada.",
+          "isCorrect": false,
+          "rationale": "La unidad temática del párrafo es un criterio específico de 'Párrafos', mientras que la estructura es global."
+        },
+        {
+          "text": "El uso de conectores para enlazar oraciones subordinadas.",
+          "isCorrect": false,
+          "rationale": "El uso de conectores es una propiedad de la cohesión superficial, no de la arquitectura lógica de los apartados."
+        },
+        {
+          "text": "La consistencia en el formato de las referencias bibliográficas.",
+          "isCorrect": false,
+          "rationale": "La consistencia de referencias pertenece al criterio de presentación o citas, no a la estructura lógica del contenido."
+        }
+      ],
+      "hint": "Piensa en la disposición macrotextual de las secciones del documento.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "Al revisar los 'Párrafos', ¿cuál es la condición necesaria para que funcionen como unidades de organización eficaces?",
+      "answerOptions": [
+        {
+          "text": "Que cada uno desarrolle una unidad temática o idea parcial reconocible.",
+          "isCorrect": true,
+          "rationale": "El párrafo debe actuar como un bloque de contenido coherente que agrupe enunciados en torno a un subtema."
+        },
+        {
+          "text": "Que mantengan siempre una extensión idéntica de seis a ocho líneas.",
+          "isCorrect": false,
+          "rationale": "Aunque es una recomendación práctica, la extensión no es un criterio teórico absoluto frente a la unidad de sentido."
+        },
+        {
+          "text": "Que terminen siempre con un conector de consecuencia.",
+          "isCorrect": false,
+          "rationale": "Los conectores pueden aparecer en cualquier parte del párrafo; su finalización no depende de una categoría gramatical fija."
+        },
+        {
+          "text": "Que incluyan al menos dos citas textuales en formato APA.",
+          "isCorrect": false,
+          "rationale": "La inclusión de citas depende de la documentación, no de la estructura organizativa intrínseca del párrafo."
+        }
+      ],
+      "hint": "Se trata de la función semántica de cada bloque de texto.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "¿Cuál es el riesgo principal que se intenta detectar al revisar los 'Referentes' en un escrito académico?",
+      "answerOptions": [
+        {
+          "text": "La ambigüedad en el uso de pronombres, demostrativos y elipsis.",
+          "isCorrect": true,
+          "rationale": "La revisión de referentes busca que el lector identifique sin errores a qué elementos previos remiten las proformas."
+        },
+        {
+          "text": "La falta de lógica en la relación causa-consecuencia entre ideas.",
+          "isCorrect": false,
+          "rationale": "Esto es un problema de coherencia o de elección de conectores, no necesariamente de referencia gramatical."
+        },
+        {
+          "text": "El uso excesivo de terminología técnica sin definir.",
+          "isCorrect": false,
+          "rationale": "El exceso terminológico afecta a la adecuación o al léxico, pero no a la cadena referencial anafórica."
+        },
+        {
+          "text": "La contradicción entre la introducción y la conclusión del trabajo.",
+          "isCorrect": false,
+          "rationale": "Las contradicciones globales son fallos de coherencia, mientras que los referentes actúan en la superficie de la cohesión."
+        }
+      ],
+      "hint": "Se vincula con la claridad de las palabras que sustituyen a otras ya mencionadas.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "Al revisar los conectores de un texto, ¿cuál debe ser la prioridad?",
+      "answerOptions": [
+        {
+          "text": "Verificar que cada marcador exprese la relación lógica adecuada entre las ideas.",
+          "isCorrect": true,
+          "rationale": "Un conector mal elegido puede alterar el sentido del razonamiento, por lo que su precisión lógica es fundamental."
+        },
+        {
+          "text": "Asegurar que aparezca al menos un marcador discursivo en cada oración.",
+          "isCorrect": false,
+          "rationale": "El abuso de conectores produce un efecto artificial; no son obligatorios en cada enunciado."
+        },
+        {
+          "text": "Sustituir todos los conectores breves por locuciones más extensas.",
+          "isCorrect": false,
+          "rationale": "Sustituir conectores por otros más largos innecesariamente puede oscurecer el estilo y hacerlo artificioso."
+        },
+        {
+          "text": "Comprobar que todos los conectores estén escritos en cursiva.",
+          "isCorrect": false,
+          "rationale": "Los conectores no requieren marcas tipográficas especiales como la cursiva en la normativa estándar."
+        }
+      ],
+      "hint": "El conector debe ser un reflejo fiel del razonamiento intelectual.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "Dentro de la pauta de revisión, ¿qué diferencia el criterio de 'Citas' del criterio de 'Presentación'?",
+      "answerOptions": [
+        {
+          "text": "El criterio de 'Citas' comprueba que todas las ideas ajenas estén correctamente atribuidas y referenciadas, mientras que 'Presentación' revisa el formato, la maquetación y las convenciones tipográficas del documento.",
+          "isCorrect": true,
+          "rationale": "El criterio de citas se enfoca en la atribución de fuentes, y la presentación en la uniformidad de títulos, tablas y formato."
+        },
+        {
+          "text": "El criterio de 'Citas' solo se aplica a las citas directas, mientras que 'Presentación' evalúa exclusivamente las paráfrasis.",
+          "isCorrect": false,
+          "rationale": "La ortografía es un nivel gráfico independiente; la presentación incluye aspectos como títulos y referencias."
+        },
+        {
+          "text": "El criterio de 'Citas' revisa la ortografía y 'Presentación' revisa la coherencia global del argumento.",
+          "isCorrect": false,
+          "rationale": "La pauta las distingue: una se centra en la trazabilidad de ideas y otra en la coherencia visual y paratextual."
+        },
+        {
+          "text": "Ambos criterios evalúan exactamente lo mismo, por lo que revisar uno hace innecesario revisar el otro.",
+          "isCorrect": false,
+          "rationale": "Estos conceptos pertenecen a la coherencia y la adecuación, respectivamente, no a los aspectos formales citados."
+        }
+      ],
+      "hint": "Uno atiende al origen de la información y el otro a la estética y orden visual.",
+      "tags": [
+        "CT",
+        "T2_9"
+      ]
+    },
+    {
+      "question": "Un estudiante reordena estos enunciados agrupando primero las ventajas y después los inconvenientes: «El teletrabajo ahorra tiempo de desplazamiento. Reduce el contacto directo con los compañeros. Permite mayor flexibilidad horaria. Dificulta la supervisión de las tareas». ¿Cuál es el objetivo primordial de reordenar los enunciados de esta manera?",
+      "answerOptions": [
+        {
+          "text": "Establecer una macroestructura semántica basada en la clasificación y el contraste.",
+          "isCorrect": true,
+          "rationale": "El ejercicio busca que el estudiante organice la información en bloques temáticos lógicos para crear una unidad de sentido coherente."
+        },
+        {
+          "text": "Aumentar la extensión del texto mediante la inserción de nuevos adjetivos.",
+          "isCorrect": false,
+          "rationale": "La coherencia no depende de la cantidad de adjetivos, sino de la organización lógica de las ideas ya existentes."
+        },
+        {
+          "text": "Corregir errores de concordancia gramatical entre el sujeto y el predicado.",
+          "isCorrect": false,
+          "rationale": "Aunque es una tarea de revisión, el ejercicio 10.1 se centra específicamente en la propiedad de coherencia, no en la corrección gramatical morfosintáctica."
+        },
+        {
+          "text": "Eliminar la subjetividad del autor mediante el uso de la tercera persona.",
+          "isCorrect": false,
+          "rationale": "El reordenamiento de ideas para crear coherencia es independiente del uso de la persona gramatical, que afecta más a la adecuación."
+        }
+      ],
+      "hint": "Fíjate en cómo la organización por bloques ayuda a que el lector perciba el texto como una unidad lógica.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "¿Qué procedimiento de cohesión se utiliza al emplear la expresión «la capital andaluza» para referirse a «Sevilla»?",
+      "answerOptions": [
+        {
+          "text": "Sustitución por denominación equivalente.",
+          "isCorrect": true,
+          "rationale": "Este mecanismo permite mantener el referente en el texto utilizando una perífrasis o sintagma que designa la misma realidad sin repetir el nombre propio."
+        },
+        {
+          "text": "Marca únicamente el orden temporal de los hechos.",
+          "isCorrect": false,
+          "rationale": "La elipsis consiste en omitir el término, mientras que aquí se está sustituyendo explícitamente por otro grupo de palabras."
+        },
+        {
+          "text": "Aporta un dato ajeno al argumento principal.",
+          "isCorrect": false,
+          "rationale": "La catáfora anticipa algo que se dirá después, mientras que «la capital andaluza» recupera un término ya mencionado anteriormente (anáfora)."
+        },
+        {
+          "text": "Repite literalmente la idea del enunciado anterior.",
+          "isCorrect": false,
+          "rationale": "La repetición exacta exigiría volver a escribir la palabra «Sevilla» sin variaciones."
+        }
+      ],
+      "hint": "Se trata de usar un nombre común o sintagma que describe al nombre propio mencionado previamente.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "¿Qué relación lógica se establece cuando se utiliza el marcador «sin embargo» para conectar dos ideas contrapuestas?",
+      "answerOptions": [
+        {
+          "text": "Oposición o contraargumentación.",
+          "isCorrect": true,
+          "rationale": "Este conector señala que la información que sigue introduce un contraste o una excepción a lo afirmado en el segmento anterior."
+        },
+        {
+          "text": "Consecuencia o derivación lógica.",
+          "isCorrect": false,
+          "rationale": "La consecuencia se marcaría con conectores como «por tanto» o «en consecuencia», no con marcas de oposición."
+        },
+        {
+          "text": "Adición de información compatible.",
+          "isCorrect": false,
+          "rationale": "La adición suma elementos en la misma dirección (ej. «además»), mientras que «sin embargo» rompe la expectativa previa."
+        },
+        {
+          "text": "Reformulación explicativa.",
+          "isCorrect": false,
+          "rationale": "La reformulación aclara lo dicho anteriormente con otras palabras (ej. «es decir»), sin introducir un contraste."
+        }
+      ],
+      "hint": "Piensa en el efecto que tiene este conector cuando se presenta una idea que contradice lo esperado.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "¿Cuál es el conector más preciso para señalar que un hecho es la causa o el motivo de que deba añadirse una fuente a la bibliografía?",
+      "answerOptions": [
+        {
+          "text": "Por tanto.",
+          "isCorrect": true,
+          "rationale": "Este marcador consecutivo introduce la conclusión o acción necesaria derivada de la premisa anterior (la ausencia de la fuente)."
+        },
+        {
+          "text": "No obstante.",
+          "isCorrect": false,
+          "rationale": "Este marcador es concesivo/adversativo e indicaría que, a pesar de no estar la fuente, ocurre algo contrario a lo esperado."
+        },
+        {
+          "text": "A saber.",
+          "isCorrect": false,
+          "rationale": "Este es un conector de detalle o ejemplificación que se usa para enumerar elementos, no para extraer conclusiones lógicas."
+        },
+        {
+          "text": "En cambio.",
+          "isCorrect": false,
+          "rationale": "Se utiliza para contrastar dos realidades diferentes, no para indicar una consecuencia necesaria de un error detectado."
+        }
+      ],
+      "hint": "Busca el marcador que mejor introduzca una consecuencia lógica o una acción derivada.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "Al reformular «La conclusión dice la idea final» como «La conclusión sintetiza la idea final», ¿por qué el verbo «sintetizar» es preferible académicamente?",
+      "answerOptions": [
+        {
+          "text": "Porque define con exactitud la operación de reunir lo esencial de un razonamiento.",
+          "isCorrect": true,
+          "rationale": "«Sintetizar» es un verbo de proceso intelectual que describe mejor la función de una conclusión que el verbo genérico «decir»."
+        },
+        {
+          "text": "Porque es un verbo más largo y eso otorga más prestigio al escrito.",
+          "isCorrect": false,
+          "rationale": "La calidad académica no depende de la longitud de las palabras, sino de su precisión y adecuación al contexto."
+        },
+        {
+          "text": "Porque evita el uso de la voz pasiva en el párrafo final.",
+          "isCorrect": false,
+          "rationale": "Tanto «decir» como «sintetizar» están en voz activa; el cambio no afecta a la estructura de la voz, sino al léxico."
+        },
+        {
+          "text": "Porque los verbos que terminan en «-izar» son obligatorios en los resúmenes.",
+          "isCorrect": false,
+          "rationale": "No existe tal norma lingüística; la elección de «sintetizar» responde a criterios de precisión semántica."
+        }
+      ],
+      "hint": "Considera qué verbo describe mejor el trabajo intelectual de resumir las ideas principales al final de un texto.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "En el análisis de cohesión léxica, ¿qué tipo de relación se establece entre el término «Sevilla» y el término «ciudad»?",
+      "answerOptions": [
+        {
+          "text": "Relación de campo semántico.",
+          "isCorrect": true,
+          "rationale": "Ambos términos pertenecen a un universo conceptual común (lo urbano), lo que ayuda al lector a mantener el hilo temático."
+        },
+        {
+          "text": "Sinonimia total y absoluta.",
+          "isCorrect": false,
+          "rationale": "No son sinónimos totales porque no todas las ciudades son Sevilla, ni Sevilla es la única ciudad existente."
+        },
+        {
+          "text": "Antonimia complementaria.",
+          "isCorrect": false,
+          "rationale": "La antonimia implica oposición de significados (ej. alto/bajo), no inclusión en un mismo ámbito temático."
+        },
+        {
+          "text": "Deixis espacial extratextual.",
+          "isCorrect": false,
+          "rationale": "Se trata de cohesión léxica dentro del texto; la deixis espacial referiría a la ubicación física del emisor (aquí, allí)."
+        }
+      ],
+      "hint": "Piensa en el conjunto de palabras que comparten un universo de significado relacionado.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    },
+    {
+      "question": "Al reordenar un texto para evitar saltos temáticos, ¿qué propiedad textual se ve más afectada negativamente si el texto mezcla ventajas e inconvenientes sin separarlos?",
+      "answerOptions": [
+        {
+          "text": "La coherencia.",
+          "isCorrect": true,
+          "rationale": "La falta de organización lógica y la ausencia de una estructura clara impiden que el texto tenga una unidad de sentido reconocible."
+        },
+        {
+          "text": "La adecuación.",
+          "isCorrect": false,
+          "rationale": "La adecuación se refiere al ajuste al contexto y al registro; un texto puede ser adecuado en tono pero ser internamente desordenado."
+        },
+        {
+          "text": "La ortografía.",
+          "isCorrect": false,
+          "rationale": "El orden de las oraciones no afecta a la escritura correcta de las palabras individuales."
+        },
+        {
+          "text": "La tipografía.",
+          "isCorrect": false,
+          "rationale": "La tipografía es un elemento paratextual (negritas, cursivas) y no se ve alterada por la falta de orden lógico en el contenido."
+        }
+      ],
+      "hint": "Esta propiedad es la que garantiza que el texto se perciba como un todo con sentido y orden global.",
+      "tags": [
+        "CT",
+        "T2_10"
+      ]
+    }
+  ]
+}

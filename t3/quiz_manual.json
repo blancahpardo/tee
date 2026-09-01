@@ -1,0 +1,1712 @@
+{
+  "quiz": [
+    {
+      "question": "¿Cuál es la definición más precisa de lo que significa corregir un texto académico?",
+      "answerOptions": [
+        {
+          "text": "Una lectura técnica e integral que evalúa el texto en múltiples niveles, desde la ortografía hasta la coherencia discursiva.",
+          "isCorrect": true,
+          "rationale": "La corrección se define como una revisión transversal que no se limita a las faltas, sino que integra norma, sentido y adecuación al contexto profesional.",
+          "isCorrectRationale": "Confirma que la corrección es un proceso técnico multinivel que trasciende la simple detección de erratas superficiales."
+        },
+        {
+          "text": "La aplicación de correctores automáticos para garantizar que el escrito no contenga errores gramaticales ni ortográficos.",
+          "isCorrect": false,
+          "rationale": "La corrección no se reduce al uso de herramientas automáticas, sino que requiere un análisis humano basado en el criterio.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Un proceso de ornamentación léxica cuyo objetivo principal es elevar el registro del texto para que suene más solemne.",
+          "isCorrect": false,
+          "rationale": "El texto aclara que la buena prosa académica no busca la solemnidad ni el adorno, sino la exactitud, la naturalidad y la claridad.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Una revisión centrada exclusivamente en la normativa de la Real Academia Española para asegurar la validez social del escrito.",
+          "isCorrect": false,
+          "rationale": "Aunque la norma es un marco común, la corrección también debe atender a la adecuación y la eficacia comunicativa, que no dependen solo de la RAE.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Recuerda que corregir es una «lectura técnica» que va desde la letra hasta el discurso.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función primordial de la gramática normativa en el ámbito de la escritura universitaria?",
+      "answerOptions": [
+        {
+          "text": "Orientar sobre los usos que se consideran correctos o preferibles en la lengua cuidada y contextos formales.",
+          "isCorrect": true,
+          "rationale": "La gramática normativa actúa como una guía de selección entre las posibilidades de uso para asegurar la adecuación en el registro académico.",
+          "isCorrectRationale": "Refleja la definición del manual sobre cómo la norma establece criterios de preferencia en situaciones de comunicación formal."
+        },
+        {
+          "text": "Registrar de manera neutral todas las variantes y estructuras que los hablantes emplean de forma real en la sociedad.",
+          "isCorrect": false,
+          "rationale": "Esta es la función de la gramática descriptiva, que observa el funcionamiento de la lengua sin emitir juicios de corrección.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Establecer reglas inmutables que impidan la evolución natural del idioma a través del tiempo.",
+          "isCorrect": false,
+          "rationale": "La norma no nace al margen del uso, y las recomendaciones pueden cambiar con el tiempo al observar la evolución lingüística.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Sustituir la intuición del hablante por un sistema de leyes ajeno a la práctica real de la comunicación.",
+          "isCorrect": false,
+          "rationale": "La norma se basa en la observación de la lengua y su prestigio en la comunidad, por lo que no es un sistema totalmente ajeno a la realidad comunicativa.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Considera la distinción entre 'observar el uso' y 'prescribir el uso preferible'.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "De los seis planos de corrección de un texto, ¿cuál se encarga específicamente de las convenciones sobre el uso de cursivas, comillas y mayúsculas?",
+      "answerOptions": [
+        {
+          "text": "Plano ortotipográfico.",
+          "isCorrect": true,
+          "rationale": "Este plano revisa la dimensión gráfica y visual del texto, incluyendo el uso de estilos de letra, signos de puntuación especiales y jerarquías tipográficas.",
+          "isCorrectRationale": "Identifica correctamente la categoría que agrupa los elementos gráficos que van más allá de la ortografía de las palabras."
+        },
+        {
+          "text": "Plano ortográfico.",
+          "isCorrect": false,
+          "rationale": "El plano ortográfico se centra en las letras, las tildes y la separación correcta de las palabras según las normas generales.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Plano morfosintáctico.",
+          "isCorrect": false,
+          "rationale": "Este plano se ocupa de la estructura de las oraciones, la concordancia y el régimen de los verbos y preposiciones.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Plano discursivo.",
+          "isCorrect": false,
+          "rationale": "El plano discursivo atiende a la organización global, la coherencia de las ideas y la progresión de la información en el texto.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Este término combina el estudio de las normas de escritura con el de la disposición tipográfica.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Por qué conviene realizar la revisión de un texto «de lo global a lo local»?",
+      "answerOptions": [
+        {
+          "text": "Para evitar el desperdicio de esfuerzo corrigiendo detalles menores en fragmentos que podrían ser eliminados o reestructurados.",
+          "isCorrect": true,
+          "rationale": "Si se corrigen tildes antes de decidir si un párrafo completo debe desaparecer por falta de coherencia, se incurre en una ineficiencia metodológica.",
+          "isCorrectRationale": "Explica la lógica pragmática de la revisión académica: la estructura manda sobre el detalle superficial."
+        },
+        {
+          "text": "Porque el plano ortográfico es el más complejo y requiere que la mente esté descansada al final del proceso.",
+          "isCorrect": false,
+          "rationale": "El plano ortográfico suele ser más mecánico; lo complejo es la estructura discursiva, que por ello se revisa primero.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Debido a que la gramática normativa exige que la sintaxis se resuelva antes de considerar cualquier aspecto ortotipográfico.",
+          "isCorrect": false,
+          "rationale": "No es una exigencia de la gramática, sino una recomendación estratégica de comunicación escrita para optimizar el tiempo de revisión.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Porque los lectores académicos suelen ignorar los errores locales si la estructura global es sólida.",
+          "isCorrect": false,
+          "rationale": "El lector académico es exigente en todos los niveles; la recomendación busca eficacia en la producción, no complacencia en la recepción.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Considera qué pasaría si pasas mucho tiempo puliendo una frase que luego decides borrar porque no encaja en el tema.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es la relación entre la norma lingüística y el uso social en el ámbito de la gramática normativa?",
+      "answerOptions": [
+        {
+          "text": "La norma se basa en la observación de los usos de la lengua, seleccionando aquellos de mayor prestigio y extensión en la comunidad culta.",
+          "isCorrect": true,
+          "rationale": "Las academias no inventan la norma de forma arbitraria, sino que valoran el uso social para formular criterios de corrección.",
+          "isCorrectRationale": "Refuerza la idea de que la norma lingüística es un fenómeno dinámico basado en el consenso social de los hablantes educados."
+        },
+        {
+          "text": "La norma es una estructura estática y ajena al uso que se mantiene invariable para preservar la pureza del idioma.",
+          "isCorrect": false,
+          "rationale": "La norma evoluciona, y algunas recomendaciones cambian con el tiempo a medida que la lengua se transforma.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "El uso social carece de relevancia para la gramática normativa, ya que esta solo atiende a criterios lógicos universales.",
+          "isCorrect": false,
+          "rationale": "La lengua es un hecho social; la gramática normativa se apoya necesariamente en el prestigio y la aceptación social de ciertas formas.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Cualquier uso que sea mayoritario en la sociedad se convierte automáticamente en norma académica de obligado cumplimiento.",
+          "isCorrect": false,
+          "rationale": "No todo uso mayoritario es normativo; la norma selecciona entre los usos aquellos que se consideran preferibles en la comunicación esmerada.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Busca la opción que explique por qué las recomendaciones de las academias pueden actualizarse cada cierto tiempo.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Qué plano de corrección se vería afectado primordialmente si un texto presenta problemas de 'laconismo' o 'paráfrasis excesiva'?",
+      "answerOptions": [
+        {
+          "text": "Plano discursivo.",
+          "isCorrect": true,
+          "rationale": "Estos problemas afectan a la adecuación, coherencia y progresión informativa del texto completo, que son competencias del plano discursivo.",
+          "isCorrectRationale": "Vincula correctamente los defectos de volumen informativo y argumentación con la estructura general del discurso."
+        },
+        {
+          "text": "Plano léxico.",
+          "isCorrect": false,
+          "rationale": "El plano léxico se centra en la precisión de las palabras individuales y la sustitución de términos vagos, no en la extensión del argumento.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Plano de puntuación.",
+          "isCorrect": false,
+          "rationale": "La puntuación organiza el sentido dentro de la oración y entre enunciados, pero no resuelve la falta de desarrollo (laconismo).",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "Plano ortotipográfico.",
+          "isCorrect": false,
+          "rationale": "Este plano se limita a convenciones gráficas y tipográficas, sin intervenir en la carga informativa o argumental del escrito.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Estos términos se refieren a la cantidad y calidad de la información entregada al lector a lo largo del texto.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es la principal diferencia entre el plano ortográfico y el plano de puntuación?",
+      "answerOptions": [
+        {
+          "text": "La ortografía se ocupa de la correcta escritura de las palabras (letras, tildes), mientras que la puntuación delimita las unidades de sentido.",
+          "isCorrect": true,
+          "rationale": "Ambos son planos gráficos, pero tienen funciones distintas: uno a nivel de palabra y otro a nivel de organización sintáctica y textual.",
+          "isCorrectRationale": "Distingue claramente los niveles de aplicación de ambos sistemas gráficos de la lengua escrita."
+        },
+        {
+          "text": "La ortografía es obligatoria y normativa, mientras que la puntuación es subjetiva y depende únicamente del estilo del autor.",
+          "isCorrect": false,
+          "rationale": "La puntuación también sigue normas gramaticales (como la prohibición de la coma entre sujeto y verbo) y no es puramente subjetiva.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "La ortografía transcribe los sonidos del habla y la puntuación transcribe las pausas respiratorias de la oralidad.",
+          "isCorrect": false,
+          "rationale": "La puntuación no transcribe la oralidad; su función es organizar la sintaxis escrita.",
+          "isCorrectRationale": ""
+        },
+        {
+          "text": "No existe una diferencia real, ya que ambos planos se unifican bajo el concepto de 'corrección morfosintáctica'.",
+          "isCorrect": false,
+          "rationale": "Se trata de planos distintos porque la morfosintaxis se ocupa de la estructura de la lengua, no de su representación gráfica.",
+          "isCorrectRationale": ""
+        }
+      ],
+      "hint": "Piensa en qué plano te diría que 'guion' no lleva tilde y cuál te diría que no pongas coma después del sujeto.",
+      "tags": [
+        "CT",
+        "T3_1"
+      ]
+    },
+    {
+      "question": "¿Cuál es el orden básico de los constituyentes oracionales que conviene respetar para garantizar la inteligibilidad en el texto académico?",
+      "answerOptions": [
+        {
+          "text": "Sujeto, verbo, complementos exigidos por el verbo y complementos circunstanciales.",
+          "isCorrect": true,
+          "rationale": "Este orden facilita la lectura al evitar interpolaciones que separen elementos estrechamente unidos de forma innecesaria."
+        },
+        {
+          "text": "Complementos circunstanciales, sujeto, verbo y complementos del verbo.",
+          "isCorrect": false,
+          "rationale": "Colocar los complementos circunstanciales al inicio puede oscurecer la relación directa entre el sujeto y su acción principal."
+        },
+        {
+          "text": "Verbo, sujeto, complementos circunstanciales y complementos exigidos.",
+          "isCorrect": false,
+          "rationale": "Este orden es más común en estructuras enfáticas o interrogativas, pero no es la base recomendada para la claridad académica estándar."
+        },
+        {
+          "text": "Sujeto, complementos circunstanciales, verbo y complementos directos.",
+          "isCorrect": false,
+          "rationale": "Intercalar complementos circunstanciales entre el sujeto y el verbo suele separar núcleos que deben permanecer próximos para facilitar la comprensión."
+        }
+      ],
+      "hint": "Se trata de la estructura lógica más directa de la sintaxis española.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "En relación con la concordancia de sujetos colectivos en singular, ¿cuál es la norma general?",
+      "answerOptions": [
+        {
+          "text": "El verbo debe concordar obligatoriamente en plural si el colectivo implica a muchas personas.",
+          "isCorrect": false,
+          "rationale": "La norma privilegia la concordancia gramatical en singular cuando el sujeto es formalmente singular."
+        },
+        {
+          "text": "Suele concordar en singular cuando el sustantivo colectivo funciona como núcleo del sujeto.",
+          "isCorrect": true,
+          "rationale": "A pesar de la pluralidad semántica, la gramática normativa prefiere mantener la concordancia en singular con el núcleo del sintagma nominal."
+        },
+        {
+          "text": "La concordancia en plural es la única aceptada cuando se trata de sustantivos partitivos con complemento plural.",
+          "isCorrect": false,
+          "rationale": "En los partitivos se admite tanto el singular como el plural dependiendo de si se enfatiza el conjunto o los miembros."
+        },
+        {
+          "text": "El verbo debe concordar con el atributo más cercano si el sujeto colectivo es ambiguo.",
+          "isCorrect": false,
+          "rationale": "La concordancia con el atributo es una posibilidad específica de construcciones con el verbo 'ser', no una regla general para sujetos colectivos."
+        }
+      ],
+      "hint": "Piense en la forma gramatical del sustantivo, no solo en su significado de grupo.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función gramatical exclusiva del pronombre relativo 'cuyo' según las pautas de estilo académico?",
+      "answerOptions": [
+        {
+          "text": "Sustituir a la secuencia 'que su' para expresar posesión o pertenencia.",
+          "isCorrect": true,
+          "rationale": "Es un relativo posesivo que concuerda en género y número con el sustantivo al que acompaña, no con su antecedente."
+        },
+        {
+          "text": "Introducir oraciones interrogativas indirectas sobre la autoría de un texto.",
+          "isCorrect": false,
+          "rationale": "Las interrogativas indirectas utilizan 'quién' o 'de quién', mientras que 'cuyo' es un relativo, no un interrogativo."
+        },
+        {
+          "text": "Actuar como un pronombre de relativo neutro para referirse a ideas abstractas.",
+          "isCorrect": false,
+          "rationale": "El relativo neutro por excelencia es 'lo cual' o 'lo que'; 'cuyo' siempre implica una relación de pertenencia con un sustantivo."
+        },
+        {
+          "text": "Funcionar como nexo coordinante en enumeraciones asimétricas.",
+          "isCorrect": false,
+          "rationale": "No es un nexo coordinante, sino un subordinante relativo con valor adjetivo posesivo."
+        }
+      ],
+      "hint": "Este pronombre siempre vincula a un poseedor con algo poseído.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿En qué consiste el error denominado «queísmo»?",
+      "answerOptions": [
+        {
+          "text": "En el uso indebido de la preposición 'de' delante de la conjunción 'que'.",
+          "isCorrect": false,
+          "rationale": "Esta descripción corresponde al dequeísmo, que es el exceso de la preposición, no su omisión."
+        },
+        {
+          "text": "En la supresión indebida de una preposición, normalmente 'de', exigida por la construcción gramatical.",
+          "isCorrect": true,
+          "rationale": "El queísmo ocurre cuando se elimina una preposición necesaria para el régimen del verbo, sustantivo o adjetivo."
+        },
+        {
+          "text": "En la repetición excesiva de la palabra 'que' como nexo en un mismo párrafo.",
+          "isCorrect": false,
+          "rationale": "Aunque es un problema de estilo, la repetición no define el concepto gramatical de queísmo."
+        },
+        {
+          "text": "En la confusión entre el 'que' relativo y el 'que' conjunción en oraciones subordinadas.",
+          "isCorrect": false,
+          "rationale": "El queísmo se refiere específicamente a la falta de una preposición requerida, no a la confusión de tipos de 'que'."
+        }
+      ],
+      "hint": "Piense en lo que falta en la frase 'Me di cuenta que...'.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿Qué se recomienda respecto al uso del «estilo nominal» en la redacción de informes y trabajos?",
+      "answerOptions": [
+        {
+          "text": "Sustituirlo, siempre que sea posible, por una acción verbal más precisa para evitar la abstracción innecesaria.",
+          "isCorrect": true,
+          "rationale": "El estilo nominal abusa de sustantivos abstractos y verbos vacíos, lo que resta vigor y claridad a la explicación de los procesos."
+        },
+        {
+          "text": "Fomentarlo para aumentar la solemnidad y el prestigio del discurso universitario.",
+          "isCorrect": false,
+          "rationale": "El lenguaje inflado y nominalizado a menudo oscurece el mensaje en lugar de darle rigor."
+        },
+        {
+          "text": "Emplearlo exclusivamente en las conclusiones para resumir los hallazgos de forma estática.",
+          "isCorrect": false,
+          "rationale": "No se recomienda su uso exclusivo en ninguna parte; la vivacidad del texto depende generalmente de buenos verbos."
+        },
+        {
+          "text": "Utilizarlo para evitar la aparición de sujetos personales en oraciones activas.",
+          "isCorrect": false,
+          "rationale": "Aunque puede usarse para la impersonalidad, suele producir frases pesadas y poco naturales."
+        }
+      ],
+      "hint": "Piense en la diferencia entre 'realizar la revisión' y 'revisar'.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "En el contexto de las asimetrías sintácticas, ¿cuál es el beneficio principal de mantener el paralelismo en las enumeraciones?",
+      "answerOptions": [
+        {
+          "text": "Permite al lector comparar elementos equivalentes y mejora la fluidez del texto.",
+          "isCorrect": true,
+          "rationale": "La simetría facilita el procesamiento de la información al mantener una estructura gramatical constante para funciones similares."
+        },
+        {
+          "text": "Reduce el número de palabras necesarias para completar la oración.",
+          "isCorrect": false,
+          "rationale": "El paralelismo busca la consistencia estructural, no necesariamente la brevedad léxica."
+        },
+        {
+          "text": "Permite combinar diferentes registros lingüísticos dentro de una misma lista.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el paralelismo suele exigir que los elementos compartan tanto categoría gramatical como registro."
+        },
+        {
+          "text": "Asegura que todos los complementos del verbo sean de la misma extensión.",
+          "isCorrect": false,
+          "rationale": "El paralelismo se refiere a la identidad de estructura sintáctica (ej. todos infinitivos), no a la longitud exacta de las palabras."
+        }
+      ],
+      "hint": "Considere qué ocurre cuando una lista mezcla un sustantivo, un infinitivo y una oración subordinada.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿Cuál es la prueba práctica para distinguir si una construcción requiere la preposición «de» antes de «que»?",
+      "answerOptions": [
+        {
+          "text": "Sustituir la oración subordinada por el pronombre 'eso' y comprobar si la preposición se mantiene.",
+          "isCorrect": true,
+          "rationale": "Si al sustituir decimos 'estoy seguro de eso', la forma correcta es 'estoy seguro de que'; si decimos 'pienso eso', es 'pienso que'."
+        },
+        {
+          "text": "Contar el número de verbos en la oración para ver si es simple o compuesta.",
+          "isCorrect": false,
+          "rationale": "El número de verbos no ayuda a determinar el régimen preposicional de la construcción."
+        },
+        {
+          "text": "Identificar si el verbo principal es transitivo o intransitivo siguiendo el diccionario.",
+          "isCorrect": false,
+          "rationale": "Aunque útil, no es la prueba de sustitución específica para resolver dudas de queísmo/dequeísmo de forma rápida."
+        },
+        {
+          "text": "Transformar la oración a voz pasiva para observar si el complemento directo desaparece.",
+          "isCorrect": false,
+          "rationale": "La voz pasiva no revela la necesidad de la preposición en las subordinadas completivas."
+        }
+      ],
+      "hint": "Es un método de simplificación semántica muy común en la gramática española.",
+      "tags": [
+        "CT",
+        "T3_2"
+      ]
+    },
+    {
+      "question": "¿Cómo se diferencia el vocabulario activo del vocabulario pasivo dentro de la competencia léxica?",
+      "answerOptions": [
+        {
+          "text": "El vocabulario activo es el que se emplea al escribir o hablar, mientras que el pasivo es el que se comprende pero no se usa con frecuencia.",
+          "isCorrect": true,
+          "rationale": "La competencia léxica distingue entre las palabras que un hablante tiene interiorizadas para su producción propia y aquellas que solo reconoce en la recepción de mensajes ajenos."
+        },
+        {
+          "text": "El vocabulario activo se refiere a términos técnicos y el pasivo a palabras de uso cotidiano o coloquial.",
+          "isCorrect": false,
+          "rationale": "Esta clasificación se basa en la frecuencia de uso personal y no en la naturaleza técnica o común de los términos."
+        },
+        {
+          "text": "El vocabulario pasivo es el que se adquiere en la universidad y el activo es el que se trae de la etapa escolar.",
+          "isCorrect": false,
+          "rationale": "La distinción no depende del nivel educativo en el que se adquieren los términos, sino de la capacidad de uso frente a la de mera comprensión."
+        },
+        {
+          "text": "El vocabulario activo es el que aparece en los diccionarios y el pasivo es el que todavía no ha sido normalizado por las academias.",
+          "isCorrect": false,
+          "rationale": "Ambos tipos de vocabulario pueden estar perfectamente normalizados; la diferencia radica en la disposición del hablante para emplearlos."
+        }
+      ],
+      "hint": "Relaciona el término con la capacidad de producción frente a la de reconocimiento.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "¿En qué consiste el fenómeno del 'redimensionamiento' léxico dentro de la precisión terminológica de un texto académico?",
+      "answerOptions": [
+        {
+          "text": "En la elección de palabras innecesariamente largas o complejas para designar conceptos que tienen términos más sencillos.",
+          "isCorrect": true,
+          "rationale": "El redimensionamiento es una falta de precisión que busca una falsa solemnidad sustituyendo palabras breves por derivados más extensos sin aportar nuevos matices."
+        },
+        {
+          "text": "En la ampliación del vocabulario activo mediante la consulta sistemática de diccionarios de sinónimos.",
+          "isCorrect": false,
+          "rationale": "Ampliar el vocabulario es una estrategia de mejora, mientras que el redimensionamiento se presenta como un vicio que afecta a la claridad."
+        },
+        {
+          "text": "En la adaptación de extranjerismos al sistema fonológico y ortográfico del español actual.",
+          "isCorrect": false,
+          "rationale": "Este proceso es una adaptación morfológica necesaria y no se corresponde con el concepto de hinchar el léxico de forma artificiosa."
+        },
+        {
+          "text": "En la recuperación de arcaísmos para dotar al texto académico de una mayor autoridad histórica.",
+          "isCorrect": false,
+          "rationale": "El uso de arcaísmos es una cuestión de registro o estilo histórico, no del crecimiento desproporcionado de las palabras comunes."
+        }
+      ],
+      "hint": "Se asocia con la tendencia a preferir lo complejo sobre lo sencillo sin justificación semántica.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "¿Qué diferencia a un «parónimo» de un «falso amigo»?",
+      "answerOptions": [
+        {
+          "text": "El parónimo son dos palabras de la misma lengua que se parecen en la forma pero difieren en el significado (como 'infligir' e 'infringir'), mientras que el falso amigo es una palabra de otra lengua con forma similar a una española pero de significado distinto.",
+          "isCorrect": true,
+          "rationale": "La paronimia es una relación formal intrínseca al español, mientras que el falso amigo surge de la interferencia lingüística entre idiomas distintos."
+        },
+        {
+          "text": "El parónimo pertenece siempre a otra lengua y el falso amigo es exclusivo del español.",
+          "isCorrect": false,
+          "rationale": "Ambos fenómenos pertenecen al plano léxico-semántico y no a la ortografía de letras o a la puntuación de enunciados."
+        },
+        {
+          "text": "El parónimo es un error ortográfico y el falso amigo es un error exclusivamente gramatical.",
+          "isCorrect": false,
+          "rationale": "Los parónimos no comparten significado y los falsos amigos no son necesariamente antónimos, sino términos que inducen a error por su semejanza con otra lengua."
+        },
+        {
+          "text": "No existe ninguna diferencia real; ambos términos designan el mismo fenómeno léxico.",
+          "isCorrect": false,
+          "rationale": "Ambas confusiones pueden manifestarse tanto en la oralidad como en la escritura académica, afectando a la comprensión total."
+        }
+      ],
+      "hint": "Considera el origen de la confusión: interna a la lengua o por contacto con otra.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "¿Cuándo se considera que una redundancia es aceptable?",
+      "answerOptions": [
+        {
+          "text": "Cuando funciona como un refuerzo expresivo deliberado o forma parte de una fórmula asentada en la lengua.",
+          "isCorrect": true,
+          "rationale": "Aunque en la prosa académica se busca la economía, ciertas redundancias tienen un valor retórico o están consolidadas por el uso como énfasis justificado."
+        },
+        {
+          "text": "Siempre que el autor necesite alcanzar un número mínimo de palabras en su trabajo universitario.",
+          "isCorrect": false,
+          "rationale": "El relleno léxico mediante repeticiones innecesarias se considera un defecto de estilo y una falta de respeto al lector."
+        },
+        {
+          "text": "Solo cuando se utiliza en las conclusiones para asegurar que el lector ha entendido el mensaje.",
+          "isCorrect": false,
+          "rationale": "La conclusión requiere síntesis, no repetición viciosa de información ya contenida en los términos empleados."
+        },
+        {
+          "text": "Cuando el término redundante se escribe entre paréntesis para indicar que es información secundaria.",
+          "isCorrect": false,
+          "rationale": "El uso de paréntesis no elimina la naturaleza redundante de una expresión si esta no aporta valor informativo real."
+        }
+      ],
+      "hint": "Busca la excepción basada en la intención comunicativa o la tradición del idioma.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "¿Qué efecto produce el \"lenguaje infiltrado\" en la calidad de un texto académico?",
+      "answerOptions": [
+        {
+          "text": "Genera una prosa artificial, impersonal y a menudo oscura al imitar innecesariamente el estilo administrativo o pseudoculto.",
+          "isCorrect": true,
+          "rationale": "Este tipo de lenguaje abusa de la nominalización y de fórmulas fijas que complican la lectura sin añadir precisión real al contenido."
+        },
+        {
+          "text": "Aumenta la credibilidad del autor al demostrar que domina el lenguaje jurídico y oficial.",
+          "isCorrect": false,
+          "rationale": "El lenguaje inflado a menudo resta autoridad porque oculta la falta de claridad en el pensamiento."
+        },
+        {
+          "text": "Permite que el texto sea más breve al utilizar siglas y abreviaturas propias de la administración.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el lenguaje infiltrado suele producir frases más largas y rodeos innecesarios (circunloquios)."
+        },
+        {
+          "text": "Garantiza que el texto sea adecuado para cualquier tipo de público, independientemente de su formación.",
+          "isCorrect": false,
+          "rationale": "Este estilo dificulta la comprensión y se aleja de la naturalidad formal que debe caracterizar a la buena prosa académica."
+        }
+      ],
+      "hint": "Se relaciona con la imitación de registros burocráticos que complican la sintaxis y el léxico.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "Dentro del estudio del léxico, ¿qué se entiende por \"impropiedad léxica\"?",
+      "answerOptions": [
+        {
+          "text": "La asignación de un significado a una palabra que no le corresponde según la norma y el uso culto.",
+          "isCorrect": true,
+          "rationale": "La impropiedad es un error semántico donde se utiliza un término creyendo que significa algo que, en realidad, es ajeno a su definición."
+        },
+        {
+          "text": "El uso de palabras malsonantes o vulgares en un contexto que requiere formalidad.",
+          "isCorrect": false,
+          "rationale": "Eso se clasificaría como un problema de adecuación al registro, no necesariamente como una impropiedad en el significado del término."
+        },
+        {
+          "text": "La escritura de una palabra con letras que no le corresponden, como confundir 'b' con 'v'.",
+          "isCorrect": false,
+          "rationale": "Ese es un error del plano ortográfico, mientras que la impropiedad léxica se sitúa en el plano del significado."
+        },
+        {
+          "text": "El empleo de un término técnico en un párrafo que no trata sobre esa materia específica.",
+          "isCorrect": false,
+          "rationale": "Esto sería un problema de coherencia o de precisión temática, pero no implica que el término se esté usando con un sentido erróneo."
+        }
+      ],
+      "hint": "Es un error de significado, no de grafía ni de registro coloquial.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "En la revisión léxica, ¿qué aspecto de la palabra se evalúa al considerar sus \"connotaciones\"?",
+      "answerOptions": [
+        {
+          "text": "Los valores secundarios o matices subjetivos que la palabra puede sugerir más allá de su significado objetivo.",
+          "isCorrect": true,
+          "rationale": "La competencia léxica implica conocer no solo la definición del diccionario (denotación), sino también la carga cultural o emocional asociada al término."
+        },
+        {
+          "text": "La longitud de la palabra y su número de sílabas para equilibrar la oración.",
+          "isCorrect": false,
+          "rationale": "Eso pertenece a la métrica o al ritmo visual de la frase, no al valor semántico connotativo."
+        },
+        {
+          "text": "La relación de dependencia que tiene la palabra con las preposiciones que la siguen.",
+          "isCorrect": false,
+          "rationale": "Eso se denomina régimen sintáctico y es una propiedad distinta de la carga significativa de la palabra."
+        },
+        {
+          "text": "La posición que ocupa la palabra dentro del diccionario de la Real Academia Española.",
+          "isCorrect": false,
+          "rationale": "El orden alfabético no tiene relación con los matices significativos o las asociaciones conceptuales del término."
+        }
+      ],
+      "hint": "Tiene que ver con lo que la palabra 'evoca' o 'sugiere' adicionalmente.",
+      "tags": [
+        "CT",
+        "T3_3"
+      ]
+    },
+    {
+      "question": "¿Cuál es el criterio actual de la Ortografía académica respecto a la tildación de palabras como «guion», «truhan» o «fie»?",
+      "answerOptions": [
+        {
+          "text": "Se consideran monosílabos a efectos ortográficos y, por tanto, deben escribirse siempre sin tilde.",
+          "isCorrect": true,
+          "rationale": "La norma de 2010 establece que estas palabras son monosílabos ortográficos independientemente de su pronunciación real, siguiendo las reglas generales de acentuación."
+        },
+        {
+          "text": "La tilde es opcional y depende de si el autor percibe un hiato o un diptongo al pronunciarlas.",
+          "isCorrect": false,
+          "rationale": "Esta opción refleja una confusión con la normativa anterior a 2010, que permitía la tilde basándose en la pronunciación individual."
+        },
+        {
+          "text": "Deben tildarse obligatoriamente para evitar la ambigüedad con sus respectivos homófonos.",
+          "isCorrect": false,
+          "rationale": "En estas palabras no existe una función diacrítica que justifique la tilde, ya que no hay parejas de palabras con las que se confundan en su misma categoría."
+        },
+        {
+          "text": "Se tildan solo en contextos académicos formales para preservar la etimología de la palabra.",
+          "isCorrect": false,
+          "rationale": "La ortografía académica no hace distinciones de registro para la aplicación de las reglas de acentuación gráfica."
+        }
+      ],
+      "hint": "Considere la clasificación de estas palabras según la estructura silábica que define la RAE desde 2010.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "De acuerdo con las novedades ortográficas de 2010, ¿cuál es la norma general para la escritura de prefijos en español?",
+      "answerOptions": [
+        {
+          "text": "Deben escribirse siempre unidos a la base, independientemente de si esta es una palabra o varias.",
+          "isCorrect": false,
+          "rationale": "Esta es una simplificación incorrecta, ya que la norma distingue entre bases de una sola palabra y bases compuestas por varias palabras."
+        },
+        {
+          "text": "Se escriben unidos a la base cuando esta es univerbal, pero separados si la base es pluriverbal.",
+          "isCorrect": true,
+          "rationale": "Los prefijos se sueldan a la palabra base (exalumno), pero se mantienen separados si afectan a un grupo de palabras (ex alto cargo)."
+        },
+        {
+          "text": "Se recomienda el uso del guion para unir el prefijo a la base en todos los casos de neologismos.",
+          "isCorrect": false,
+          "rationale": "El guion solo se utiliza en casos muy específicos, como cuando la base comienza por mayúscula o es un número."
+        },
+        {
+          "text": "Los prefijos siempre deben mantener su independencia gráfica para no alterar la morfología de la palabra base.",
+          "isCorrect": false,
+          "rationale": "Tradicionalmente y según la norma vigente, la mayoría de los prefijos son elementos átonos que deben ir soldados a la base."
+        }
+      ],
+      "hint": "Piense en la diferencia entre una base formada por una sola palabra y una base formada por un conjunto de términos.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Desde un punto de vista teórico, ¿cuál es la función primordial de la raya (—) en la redacción de textos académicos?",
+      "answerOptions": [
+        {
+          "text": "Sustituir al guion en la unión de palabras compuestas para dar mayor elegancia al párrafo.",
+          "isCorrect": false,
+          "rationale": "La raya y el guion tienen funciones distintas e irreemplazables; la raya no se utiliza para unir compuestos."
+        },
+        {
+          "text": "Indicar la división silábica de una palabra al final de una línea de texto.",
+          "isCorrect": false,
+          "rationale": "Esa es la función exclusiva del guion corto (-), no de la raya o guion largo."
+        },
+        {
+          "text": "Delimitar incisos o aclaraciones con un grado de aislamiento intermedio entre la coma y el paréntesis.",
+          "isCorrect": true,
+          "rationale": "La raya se utiliza para introducir información secundaria que se quiere destacar sin llegar al aislamiento total que proporciona el paréntesis."
+        },
+        {
+          "text": "Señalar la omisión de una parte de una cita textual dentro de un párrafo.",
+          "isCorrect": false,
+          "rationale": "La omisión de fragmentos en citas se representa mediante puntos suspensivos, habitualmente entre corchetes o paréntesis."
+        }
+      ],
+      "hint": "Diferencie el signo largo del signo corto y piense en la organización de ideas secundarias.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "¿Cuál es la norma académica vigente respecto al uso de la tilde diacrítica en el adverbio «solo» y en los pronombres demostrativos?",
+      "answerOptions": [
+        {
+          "text": "Es obligatorio tildarlos siempre que funcionen como pronombre o adverbio para evitar la anfibología.",
+          "isCorrect": false,
+          "rationale": "Esta regla es obsoleta; la norma actual desaconseja la tilde incluso en esos casos."
+        },
+        {
+          "text": "La tilde se mantiene exclusivamente cuando existe un riesgo real de ambigüedad a juicio del escritor.",
+          "isCorrect": false,
+          "rationale": "Aunque fue una recomendación de transición, la Ortografía de 2010 establece que no deben llevar tilde en ningún caso."
+        },
+        {
+          "text": "Se escribe sin tilde en todos los casos, ya que las reglas generales de acentuación no justifican su uso.",
+          "isCorrect": true,
+          "rationale": "La RAE eliminó la obligatoriedad y la recomendación de la tilde en estos términos, tratándolos como palabras llanas terminadas en vocal o s."
+        },
+        {
+          "text": "Solo se permite la tilde en los demostrativos femeninos y plurales cuando actúan como sujetos de la oración.",
+          "isCorrect": false,
+          "rationale": "La función sintáctica no justifica la tilde diacrítica en los demostrativos según la normativa vigente."
+        }
+      ],
+      "hint": "Piense en la simplificación de las reglas de acentuación que se aplicó en la reforma de 2010.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes afirmaciones describe correctamente el uso de las mayúsculas en la escritura académica según la norma?",
+      "answerOptions": [
+        {
+          "text": "Se deben usar para destacar términos técnicos o conceptos fundamentales del marco teórico.",
+          "isCorrect": false,
+          "rationale": "El uso de mayúsculas por motivos de énfasis conceptual se considera un error y resta precisión al texto."
+        },
+        {
+          "text": "Los nombres de disciplinas científicas y áreas de conocimiento se escriben siempre con mayúscula inicial.",
+          "isCorrect": false,
+          "rationale": "Las disciplinas se escriben en minúscula cuando se mencionan de forma genérica o como materias de estudio comunes."
+        },
+        {
+          "text": "Deben limitarse a los casos normativos (nombres propios, inicio de enunciado) y no emplearse como recurso de realce.",
+          "isCorrect": true,
+          "rationale": "La mayúscula no añade valor jerárquico al concepto y su abuso se considera una falta de naturalidad y corrección."
+        },
+        {
+          "text": "Es obligatorio escribir con mayúscula inicial los cargos institucionales, como «Rector» o «Decana», en cualquier contexto.",
+          "isCorrect": false,
+          "rationale": "Los nombres de cargos son nombres comunes y deben escribirse con minúscula, salvo en documentos protocolarios muy específicos."
+        }
+      ],
+      "hint": "Reflexione sobre si la mayúscula debe usarse para dar importancia a una palabra o solo por reglas gramaticales específicas.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "Gramaticalmente, ¿qué función cumple la forma «porqué» escrita como una sola palabra y con tilde?",
+      "answerOptions": [
+        {
+          "text": "Funciona como una conjunción causal que introduce el motivo de una acción.",
+          "isCorrect": false,
+          "rationale": "Esa descripción corresponde a la forma «porque», que es una conjunción átona."
+        },
+        {
+          "text": "Se trata de un sustantivo masculino que equivale a «causa», «motivo» o «razón».",
+          "isCorrect": true,
+          "rationale": "Al ser un sustantivo, suele ir precedido de artículo u otro determinante y puede usarse en plural (los porqués)."
+        },
+        {
+          "text": "Es una secuencia formada por la preposición 'por' y el relativo 'que' con tilde enfática.",
+          "isCorrect": false,
+          "rationale": "La secuencia de preposición y relativo es «por que» o «por qué» (en interrogativas), pero no se unen en un sustantivo."
+        },
+        {
+          "text": "Actúa como un adverbio interrogativo que encabeza oraciones exclamativas.",
+          "isCorrect": false,
+          "rationale": "La función interrogativa o exclamativa corresponde a la forma tónica en dos palabras: «por qué»."
+        }
+      ],
+      "hint": "Piense en la posibilidad de poner esta palabra en plural o de acompañarla de un artículo como 'el'.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función de la cursiva cuando se aplica a una palabra empleada metalingüísticamente?",
+      "answerOptions": [
+        {
+          "text": "Indicar que la palabra es un neologismo que aún no ha sido aceptado por la RAE.",
+          "isCorrect": false,
+          "rationale": "Esa es una función de los extranjerismos o neologismos crudos, no necesariamente de la función metalingüística."
+        },
+        {
+          "text": "Señalar que la palabra se está usando para referirse a sí misma y no a su concepto.",
+          "isCorrect": true,
+          "rationale": "Esta es la función metalingüística de la cursiva: una palabra como <i>texto</i> se usa para referirse a la palabra misma, no a su significado habitual."
+        },
+        {
+          "text": "Mostrar que el término se utiliza con un sentido irónico o sarcástico en el texto.",
+          "isCorrect": false,
+          "rationale": "Para la ironía o el sentido figurado, la convención suele preferir el uso de las comillas."
+        },
+        {
+          "text": "Destacar que la palabra pertenece a un registro coloquial ajeno al ámbito académico.",
+          "isCorrect": false,
+          "rationale": "Los términos coloquiales suelen marcarse con comillas o simplemente evitarse en lugar de usar cursiva."
+        }
+      ],
+      "hint": "Piense en cuando un autor escribe sobre una palabra como objeto de estudio lingüístico y no para comunicar su significado habitual.",
+      "tags": [
+        "CT",
+        "T3_4"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función primordial de la puntuación en la escritura académica?",
+      "answerOptions": [
+        {
+          "text": "Delimitar las unidades sintácticas y textuales para guiar la interpretación del lector.",
+          "isCorrect": true,
+          "rationale": "La puntuación organiza el sentido del texto mediante la jerarquización de la información y la delimitación de estructuras gramaticales."
+        },
+        {
+          "text": "Transcribir fielmente las pausas y el ritmo de la respiración del autor durante la oralidad.",
+          "isCorrect": false,
+          "rationale": "La puntuación no es una mera transcripción de las pausas orales o de la respiración."
+        },
+        {
+          "text": "Ornamentar el discurso escrito para dotarlo de un estilo más solemne y profesional.",
+          "isCorrect": false,
+          "rationale": "La puntuación no es un recurso estético o de adorno, sino un mecanismo técnico de organización del pensamiento y la sintaxis."
+        },
+        {
+          "text": "Reducir la longitud de las oraciones para evitar que el texto sea excesivamente complejo.",
+          "isCorrect": false,
+          "rationale": "Aunque ayuda a segmentar, su fin no es acortar frases por defecto, sino hacer inteligibles las relaciones entre las ideas, independientemente de su extensión."
+        }
+      ],
+      "hint": "Piense en la puntuación como una herramienta de arquitectura textual más que sonora.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Qué distingue fundamentalmente a los signos de puntuación de primer orden de los de segundo orden?",
+      "answerOptions": [
+        {
+          "text": "Los de primer orden organizan las unidades informativas básicas, mientras que los de segundo introducen información secundaria.",
+          "isCorrect": true,
+          "rationale": "Esta clasificación jerárquica separa los signos esenciales para la estructura (punto, coma, etc.) de los que gestionan incisos o modalidades (paréntesis, comillas, etc.)."
+        },
+        {
+          "text": "Los de primer orden son obligatorios en toda oración, mientras que los de segundo son de uso opcional según el autor.",
+          "isCorrect": false,
+          "rationale": "La obligatoriedad no define esta jerarquía; ambos tipos de signos siguen normas gramaticales y contextuales precisas según la información que se quiera transmitir."
+        },
+        {
+          "text": "Los de primer orden se utilizan al inicio de los párrafos y los de segundo solo en el interior de los mismos.",
+          "isCorrect": false,
+          "rationale": "La distinción no es por ubicación física en el párrafo, sino por la función estructural o modal que desempeñan en la jerarquía del sentido."
+        },
+        {
+          "text": "Los de primer orden afectan a la gramática y los de segundo orden afectan únicamente a la tipografía y el estilo.",
+          "isCorrect": false,
+          "rationale": "Ambos tipos de signos tienen implicaciones gramaticales y de sentido, no se limitan exclusivamente a cuestiones visuales o estilísticas."
+        }
+      ],
+      "hint": "Considere la relevancia de la información que cada grupo de signos ayuda a presentar.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Por qué se considera un error técnico grave colocar una coma entre el sujeto y el verbo (la llamada 'coma criminal')?",
+      "answerOptions": [
+        {
+          "text": "Porque rompe la unidad sintáctica básica que existe entre el núcleo del sujeto y el núcleo del predicado.",
+          "isCorrect": true,
+          "rationale": "La sintaxis une estrechamente al sujeto y su acción; introducir una coma innecesaria fragmenta esta relación esencial para la comprensión."
+        },
+        {
+          "text": "Porque obliga al lector a realizar una pausa respiratoria que fatiga la lectura del texto académico.",
+          "isCorrect": false,
+          "rationale": "El error no es fisiológico (respiración), sino estructural; el problema reside en la fragmentación de la lógica gramatical."
+        },
+        {
+          "text": "Porque las comas solo están permitidas después de los verbos, nunca antes de los mismos.",
+          "isCorrect": false,
+          "rationale": "Las comas pueden aparecer antes de un verbo si forman parte de un inciso o una estructura antepuesta, pero no para separar directamente al sujeto de su verbo."
+        },
+        {
+          "text": "Porque la norma académica reserva el uso de la coma exclusivamente para las enumeraciones de tres o más elementos.",
+          "isCorrect": false,
+          "rationale": "La coma tiene múltiples funciones (vocativos, incisos, conectores); la restricción entre sujeto y verbo es por cohesión sintáctica, no por limitación de funciones."
+        }
+      ],
+      "hint": "Piense en la relación de dependencia directa que hay entre quien realiza la acción y la acción misma.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Qué relación lógica anuncian predominantemente los dos puntos en el discurso académico?",
+      "answerOptions": [
+        {
+          "text": "Una explicación, consecuencia, enumeración, cita o reformulación de lo dicho anteriormente.",
+          "isCorrect": true,
+          "rationale": "Los dos puntos crean una expectativa de completitud o aclaración sobre la unidad informativa que los precede."
+        },
+        {
+          "text": "Una interrupción abrupta del pensamiento que el autor decide no terminar de desarrollar.",
+          "isCorrect": false,
+          "rationale": "Esa función de suspensión o interrupción corresponde a los puntos suspensivos, no a los dos puntos, que tienen un carácter anunciativo."
+        },
+        {
+          "text": "La separación definitiva de dos ideas que no guardan ninguna relación semántica entre sí.",
+          "isCorrect": false,
+          "rationale": "Si no hay relación, se usaría el punto; los dos puntos requieren precisamente un vínculo estrecho de causa, explicación o detalle."
+        },
+        {
+          "text": "El inicio de una digresión o idea secundaria que se aleja del tema principal del párrafo.",
+          "isCorrect": false,
+          "rationale": "Para las digresiones o ideas laterales se suelen emplear paréntesis o rayas; los dos puntos suelen profundizar o concretar el tema que se está tratando."
+        }
+      ],
+      "hint": "Este signo actúa como un puente que presenta algo estrechamente vinculado a lo anterior.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Cómo se gradúa la integración de un inciso según el signo de puntuación utilizado?",
+      "answerOptions": [
+        {
+          "text": "Las comas ofrecen mayor integración, las rayas destacan el inciso y los paréntesis lo aíslan más.",
+          "isCorrect": true,
+          "rationale": "Existe una escala de 'distancia' discursiva: la coma es la más cercana al hilo principal y el paréntesis es el que más distancia la información."
+        },
+        {
+          "text": "Los paréntesis son para información importante, mientras que las comas son para datos irrelevantes.",
+          "isCorrect": false,
+          "rationale": "La importancia no decide el signo, sino el grado de autonomía o lateralidad que se le quiera dar a la información respecto a la oración principal."
+        },
+        {
+          "text": "El uso de uno u otro depende únicamente de la extensión en palabras del inciso introducido.",
+          "isCorrect": false,
+          "rationale": "La extensión puede influir en la legibilidad, pero el criterio fundamental es el grado de relación jerárquica con el enunciado principal."
+        },
+        {
+          "text": "Las rayas se utilizan para incisos científicos y los paréntesis para incisos de opinión personal.",
+          "isCorrect": false,
+          "rationale": "No se establece una distinción por tipo de contenido (científico vs. opinión), sino por la función de relieve o aislamiento textual."
+        }
+      ],
+      "hint": "Piense en términos de 'distancia' o 'relieve' de la información respecto a la frase central.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Cuál es la norma teórica respecto a la puntuación final de un enunciado que contiene un paréntesis?",
+      "answerOptions": [
+        {
+          "text": "El punto se escribe fuera si el paréntesis está integrado en una oración mayor, pero dentro si todo el enunciado es parenthético.",
+          "isCorrect": true,
+          "rationale": "La puntuación del enunciado principal debe cerrarse siempre, y el lugar del punto depende de si el paréntesis es una parte de este o es independiente."
+        },
+        {
+          "text": "El punto siempre debe ir dentro del paréntesis para asegurar que la información secundaria quede cerrada.",
+          "isCorrect": false,
+          "rationale": "Esto solo ocurre si el enunciado completo está entre paréntesis; si el paréntesis es solo una parte de la frase, el punto debe cerrar la frase total desde fuera."
+        },
+        {
+          "text": "No se debe poner punto final si la oración termina en paréntesis para evitar la duplicidad de signos.",
+          "isCorrect": false,
+          "rationale": "El punto final es obligatorio para cerrar cualquier enunciado; omitirlo dejaría el texto gramaticalmente incompleto."
+        },
+        {
+          "text": "Se debe colocar un punto antes de abrir el paréntesis y otro después de cerrarlo.",
+          "isCorrect": false,
+          "rationale": "Colocar un punto antes de un paréntesis integrado cortaría la relación sintáctica de forma incorrecta; la puntuación debe seguir la lógica del enunciado principal."
+        }
+      ],
+      "hint": "La clave está en determinar si el paréntesis es un 'invitado' en la frase o si es el 'dueño' de todo el mensaje.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Qué función cumplen signos como las comillas o los puntos suspensivos frente a los signos de primer orden (punto, coma)?",
+      "answerOptions": [
+        {
+          "text": "Son signos de segundo orden que introducen matices modales, citas o voces ajenas al autor.",
+          "isCorrect": true,
+          "rationale": "Estos signos no organizan la estructura básica (sujeto-predicado), sino que añaden información sobre la procedencia o la actitud ante las palabras."
+        },
+        {
+          "text": "Son signos de primer orden necesarios para cerrar cualquier tipo de párrafo académico.",
+          "isCorrect": false,
+          "rationale": "Los signos de primer orden son los delimitadores básicos (punto, coma, etc.); las comillas son complementarias para funciones específicas como la cita."
+        },
+        {
+          "text": "Son herramientas para corregir errores morfosintácticos durante la fase de revisión final.",
+          "isCorrect": false,
+          "rationale": "La puntuación no corrige la morfología o la sintaxis errónea; organiza la comunicación de ideas que ya deben estar bien construidas."
+        },
+        {
+          "text": "Se utilizan para sustituir a los conectores discursivos cuando el texto es demasiado largo.",
+          "isCorrect": false,
+          "rationale": "Los signos de puntuación y los conectores son recursos complementarios, no sustitutos; de hecho, los conectores suelen ir acompañados de signos de primer orden."
+        }
+      ],
+      "hint": "Piense en qué tipo de información aportan estos signos respecto a quién 'habla' o cómo se dice algo.",
+      "tags": [
+        "CT",
+        "T3_5"
+      ]
+    },
+    {
+      "question": "¿Qué dimensión de la corrección de estilo se encarga específicamente de revisar el enlace de las ideas, la estructuración en párrafos y la progresión informativa?",
+      "answerOptions": [
+        {
+          "text": "Corrección discursiva",
+          "isCorrect": true,
+          "rationale": "Esta dimensión atiende a la adecuación, coherencia y cohesión, superando el nivel puramente gramatical u ortográfico."
+        },
+        {
+          "text": "Corrección morfosintáctica",
+          "isCorrect": false,
+          "rationale": "Esta se centra en la estructura interna de las oraciones, como la concordancia o el régimen preposicional, no en la organización global del discurso."
+        },
+        {
+          "text": "Corrección léxica",
+          "isCorrect": false,
+          "rationale": "Su objetivo es la precisión y riqueza de las palabras individuales, evitando términos comodín o impropiedades, pero no organiza la estructura del texto."
+        },
+        {
+          "text": "Corrección ortotipográfica",
+          "isCorrect": false,
+          "rationale": "Se ocupa de las convenciones gráficas como mayúsculas, cursivas o comillas, que son aspectos formales externos a la progresión de ideas."
+        }
+      ],
+      "hint": "Se trata de la propiedad transversal que garantiza que el lector entienda hacia dónde avanza el razonamiento del autor.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "¿En qué consiste exactamente el fenómeno de la «paráfrasis excesiva» como problema discursivo?",
+      "answerOptions": [
+        {
+          "text": "En repetir información con otras palabras sin que el texto avance realmente.",
+          "isCorrect": true,
+          "rationale": "Este problema consiste en una reiteración que no aporta ideas nuevas; conviene sintetizar para favorecer el progreso informativo."
+        },
+        {
+          "text": "En introducir una idea ajena al hilo argumental que distrae al lector.",
+          "isCorrect": false,
+          "rationale": "Esta descripción corresponde a la digresión, que consiste en desviarse del tema principal, no en repetir lo ya dicho."
+        },
+        {
+          "text": "En afirmar un concepto de forma lánguida sin llegar a desarrollarlo nunca.",
+          "isCorrect": false,
+          "rationale": "Esto define el laconismo, donde el autor peca de brevedad extrema al no aportar explicaciones o evidencias necesarias."
+        },
+        {
+          "text": "En extraer una conclusión precipitada sin haber aportado razones suficientes.",
+          "isCorrect": false,
+          "rationale": "Este error se denomina precipitación y se diferencia de la paráfrasis en que el problema es la falta de fundamentación, no la repetición."
+        }
+      ],
+      "hint": "Este problema implica que el texto se detiene a decir lo mismo de otra forma, en lugar de evolucionar.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Según las estrategias de revisión de la idea principal, ¿qué ocurre normalmente si se elimina la oración que contiene dicha idea de un párrafo?",
+      "answerOptions": [
+        {
+          "text": "El párrafo pierde su sentido completo y el hilo argumental se rompe.",
+          "isCorrect": true,
+          "rationale": "Esta prueba permite distinguir la idea nuclear de las secundarias, que sí podrían eliminarse sin destruir la esencia del bloque."
+        },
+        {
+          "text": "La progresión informativa mejora al eliminarse la carga de contenido denso.",
+          "isCorrect": false,
+          "rationale": "Al contrario, la progresión se detiene o se vuelve ininteligible si se quita el núcleo que sostiene la información."
+        },
+        {
+          "text": "El párrafo se convierte automáticamente en un párrafo de tipo introductorio.",
+          "isCorrect": false,
+          "rationale": "La función de un párrafo depende de su contenido y posición, no de la ausencia de una idea principal clara."
+        },
+        {
+          "text": "El lector puede inferir el significado gracias únicamente a los conectores.",
+          "isCorrect": false,
+          "rationale": "Los conectores orientan la relación entre ideas, pero no pueden sustituir el vacío informativo que deja la pérdida del mensaje central."
+        }
+      ],
+      "hint": "Esta es una prueba de 'resistencia' para comprobar la jerarquía informativa de las oraciones.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "¿Qué tipo de párrafo tiene como objetivo específico delimitar un concepto fundamental para el desarrollo del texto?",
+      "answerOptions": [
+        {
+          "text": "Párrafo definitorio",
+          "isCorrect": true,
+          "rationale": "Este tipo de párrafo se centra en establecer los límites y significados de un término o noción."
+        },
+        {
+          "text": "Párrafo introductorio",
+          "isCorrect": false,
+          "rationale": "Este se encarga de presentar el tema general, el objetivo del trabajo o la estructura que se va a seguir, no un concepto aislado."
+        },
+        {
+          "text": "Párrafo explicativo",
+          "isCorrect": false,
+          "rationale": "Su función es desarrollar una idea ya presentada aportando detalles, no necesariamente establecer una definición técnica inicial."
+        },
+        {
+          "text": "Párrafo comparativo",
+          "isCorrect": false,
+          "rationale": "Este tipo de párrafo se utiliza para contrastar dos o más perspectivas, objetos o teorías, no para delimitar una sola."
+        }
+      ],
+      "hint": "Es el párrafo que suele responder a la pregunta '¿Qué se entiende por...?'.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "Ante el problema discursivo de la «precipitación», ¿cuál es la acción de revisión recomendada?",
+      "answerOptions": [
+        {
+          "text": "Incorporar argumentos, explicaciones y evidencias que sustenten la conclusión.",
+          "isCorrect": true,
+          "rationale": "La precipitación ocurre cuando se concluye sin razones suficientes, por lo que requiere reforzar el cuerpo argumental."
+        },
+        {
+          "text": "Eliminar el párrafo completo por considerarse una digresión innecesaria.",
+          "isCorrect": false,
+          "rationale": "La precipitación no implica que la idea sea ajena al tema, sino que está mal fundamentada; por tanto, debe mejorarse, no borrarse."
+        },
+        {
+          "text": "Sustituir los verbos baúl por verbos de acción mucho más precisos.",
+          "isCorrect": false,
+          "rationale": "Aunque es una buena práctica léxica, no resuelve el problema estructural de la falta de pruebas para una conclusión."
+        },
+        {
+          "text": "Reducir la extensión de las oraciones para que el cierre sea más directo.",
+          "isCorrect": false,
+          "rationale": "Acortar oraciones mejora la claridad sintáctica, pero no aporta la solidez lógica necesaria para evitar una conclusión apresurada."
+        }
+      ],
+      "hint": "Este problema tiene que ver con la falta de base para lo que se afirma al final.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "¿Qué efecto negativo puede tener en el lector un texto compuesto por párrafos demasiado largos y compactos?",
+      "answerOptions": [
+        {
+          "text": "Dificultar la visualización de la estructura y la jerarquía de las ideas.",
+          "isCorrect": true,
+          "rationale": "Los bloques sin pausas visuales ocultan la organización del razonamiento y fatigan el procesamiento de la información."
+        },
+        {
+          "text": "Inducir al lector a pensar que el autor padece de laconismo expresivo.",
+          "isCorrect": false,
+          "rationale": "El laconismo se asocia a la brevedad excesiva y falta de desarrollo, justo lo contrario de un párrafo largo y denso."
+        },
+        {
+          "text": "Obligar al uso constante de comillas angulares para marcar incisos.",
+          "isCorrect": false,
+          "rationale": "La longitud del párrafo no dicta el uso de comillas; estas dependen de si hay citas o términos metalingüísticos, no de la extensión del bloque."
+        },
+        {
+          "text": "Aumentar automáticamente la precisión léxica y la riqueza del vocabulario.",
+          "isCorrect": false,
+          "rationale": "Un párrafo largo no garantiza calidad léxica; a menudo, la acumulación de palabras oscurece el significado en lugar de enriquecerlo."
+        }
+      ],
+      "hint": "Piense en la 'arquitectura' del texto y en cómo el blanco del papel ayuda a distinguir las partes del argumento.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "En el contexto de la organización textual, ¿qué se entiende por «progresión informativa»?",
+      "answerOptions": [
+        {
+          "text": "La capacidad del texto para avanzar aportando datos nuevos sobre la base de lo ya expuesto.",
+          "isCorrect": true,
+          "rationale": "Esta es la base de la corrección discursiva: asegurar que el texto no se estanque y que cada parte sume al conocimiento del lector."
+        },
+        {
+          "text": "El aumento progresivo del número de palabras por párrafo conforme avanza el texto.",
+          "isCorrect": false,
+          "rationale": "La progresión informativa es cualitativa (de ideas), no cuantitativa (de número de palabras o extensión física)."
+        },
+        {
+          "text": "La inserción de referencias bibliográficas cada vez más recientes según el año de publicación.",
+          "isCorrect": false,
+          "rationale": "La progresión informativa se refiere al desarrollo lógico del tema tratado, independientemente de la fecha de las fuentes citadas."
+        },
+        {
+          "text": "El cambio de un registro formal a uno coloquial para mantener el interés del destinatario.",
+          "isCorrect": false,
+          "rationale": "El registro debe mantenerse constante y adecuado; cambiar a un tono coloquial rompería la adecuación exigida en el ámbito académico."
+        }
+      ],
+      "hint": "Se trata del mecanismo que evita que el texto sea una simple repetición de la misma idea inicial.",
+      "tags": [
+        "CT",
+        "T3_6"
+      ]
+    },
+    {
+      "question": "¿Cuál es el principio fundamental que rige el orden recomendado de las \"pasadas\" en la corrección de un texto académico?",
+      "answerOptions": [
+        {
+          "text": "Proceder desde los aspectos globales y estructurales hacia los detalles locales y normativos.",
+          "isCorrect": true,
+          "rationale": "Este enfoque garantiza que se resuelvan problemas de contenido y organización antes de invertir tiempo en pulir la microestética de fragmentos que podrían ser eliminados."
+        },
+        {
+          "text": "Priorizar la ortografía y la puntuación para asegurar la legibilidad inmediata del borrador.",
+          "isCorrect": false,
+          "rationale": "Aunque la legibilidad es importante, corregir la superficie antes que la estructura puede generar un trabajo doble si se terminan suprimiendo párrafos enteros."
+        },
+        {
+          "text": "Seguir un orden alfabético de los planos de corrección para evitar sesgos subjetivos.",
+          "isCorrect": false,
+          "rationale": "El orden alfabético no responde a una lógica de eficiencia comunicativa ni jerarquiza las necesidades del discurso académico."
+        },
+        {
+          "text": "Corregir todos los niveles de forma simultánea para mantener una visión integrada del texto.",
+          "isCorrect": false,
+          "rationale": "La revisión simultánea aumenta significativamente el riesgo de pasar por alto errores debido a la sobrecarga cognitiva del corrector."
+        }
+      ],
+      "hint": "Considera qué niveles de revisión podrían invalidar el trabajo realizado en otros si se aplican primero.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Según la pauta de revisión, ¿qué riesgo específico se intenta mitigar al organizar la corrección en fases sucesivas?",
+      "answerOptions": [
+        {
+          "text": "La posibilidad de omitir errores debido a la dispersión de la atención.",
+          "isCorrect": true,
+          "rationale": "Dividir la revisión por planos permite al autor concentrarse en criterios específicos, reduciendo la probabilidad de fatiga o distracción."
+        },
+        {
+          "text": "El incumplimiento de los plazos de entrega por exceso de perfeccionismo.",
+          "isCorrect": false,
+          "rationale": "Aunque el método es eficiente, su objetivo principal no es la gestión del tiempo, sino la exhaustividad y calidad del resultado final."
+        },
+        {
+          "text": "La dependencia excesiva de los correctores automáticos de los procesadores de texto.",
+          "isCorrect": false,
+          "rationale": "La pauta es una técnica humana de lectura técnica; el uso de herramientas automáticas es un tema distinto a la jerarquía de las fases de revisión."
+        },
+        {
+          "text": "La alteración involuntaria del estilo personal del autor durante la edición.",
+          "isCorrect": false,
+          "rationale": "La revisión busca ajustar el texto a la norma y la claridad académica, independientemente de si el proceso es por fases o continuo."
+        }
+      ],
+      "hint": "Piensa en cómo afecta al cerebro tratar de vigilar la coherencia y las tildes al mismo tiempo.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "De acuerdo con el orden recomendado, ¿qué plano de corrección debe revisarse inmediatamente después de la estructura y los párrafos, pero antes de la morfosintaxis?",
+      "answerOptions": [
+        {
+          "text": "La coherencia, para detectar saltos, contradicciones o digresiones.",
+          "isCorrect": true,
+          "rationale": "Una vez que los bloques de texto están organizados, es necesario asegurar que el hilo argumental sea lógico antes de bajar al nivel de la oración."
+        },
+        {
+          "text": "La ortotipografía, para normalizar el uso de cursivas y comillas.",
+          "isCorrect": false,
+          "rationale": "La ortotipografía es uno de los últimos pasos, ya que es una corrección de superficie que no afecta a la lógica del razonamiento."
+        },
+        {
+          "text": "Las fuentes, para completar las citas y la bibliografía.",
+          "isCorrect": false,
+          "rationale": "La revisión de fuentes es el paso final de la lista, asegurando que todo el material referenciado esté correctamente acreditado."
+        },
+        {
+          "text": "La puntuación, para delimitar las unidades de sentido.",
+          "isCorrect": false,
+          "rationale": "La puntuación suele revisarse después de la morfosintaxis y el léxico, pues depende directamente de la estructura final de las oraciones."
+        }
+      ],
+      "hint": "Este plano evalúa la conexión lógica y la ausencia de elementos irrelevantes en el discurso.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "En la 'Lista de comprobación antes de entregar', ¿qué característica se exige a los párrafos para asegurar una correcta organización?",
+      "answerOptions": [
+        {
+          "text": "Que posean una idea dominante y una progresión informativa clara.",
+          "isCorrect": true,
+          "rationale": "Cada párrafo debe funcionar como una unidad de sentido que aporta algo nuevo y se conecta con el conjunto del texto."
+        },
+        {
+          "text": "Que mantengan una extensión uniforme a lo largo de todo el documento.",
+          "isCorrect": false,
+          "rationale": "La uniformidad estética no es un requisito académico; la extensión debe depender de la complejidad de la idea desarrollada."
+        },
+        {
+          "text": "Que comiencen obligatoriamente con un conector de orden.",
+          "isCorrect": false,
+          "rationale": "El uso de conectores es útil pero no obligatorio para todos los párrafos; un exceso puede resultar en una prosa mecánica."
+        },
+        {
+          "text": "Que contengan al menos una cita textual para apoyar la idea principal.",
+          "isCorrect": false,
+          "rationale": "La inclusión de citas depende de la naturaleza del argumento, no es una regla estructural fija para cada párrafo."
+        }
+      ],
+      "hint": "Reflexiona sobre la función del párrafo como unidad temática y su relación con el flujo de información.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "En la revisión final de un texto académico, ¿qué acción se recomienda respecto al uso de 'verbos baúl' como <i>hacer</i>, <i>tener</i> o <i>decir</i>?",
+      "answerOptions": [
+        {
+          "text": "Sustituirlos por términos más precisos cuando su uso empobrezca el contenido.",
+          "isCorrect": true,
+          "rationale": "La precisión léxica requiere verbos que nombren exactamente la acción (ej. <i>analizar</i> en lugar de <i>hacer</i> un análisis) para ganar rigor."
+        },
+        {
+          "text": "Eliminarlos por completo de cualquier texto que aspire a ser académico.",
+          "isCorrect": false,
+          "rationale": "No se trata de una prohibición absoluta, ya que en ocasiones son útiles por su sencillez; el problema es su abuso o sustitución de términos exactos."
+        },
+        {
+          "text": "Alternarlos con sinónimos literarios para dotar al texto de mayor elegancia.",
+          "isCorrect": false,
+          "rationale": "La escritura académica busca la precisión y la claridad, no la ornamentación literaria mediante el uso de sinónimos rebuscados."
+        },
+        {
+          "text": "Mantenerlos siempre que sea posible para asegurar la naturalidad del registro.",
+          "isCorrect": false,
+          "rationale": "Si bien la naturalidad es deseable, el uso excesivo de verbos genéricos denota falta de competencia léxica y oscurece el significado técnico."
+        }
+      ],
+      "hint": "Se busca mejorar la exactitud del lenguaje sin caer en la afectación.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "Al revisar la ortotipografía según la lista de comprobación, ¿cuál es el criterio establecido para el uso de comillas?",
+      "answerOptions": [
+        {
+          "text": "Dar preferencia al uso de comillas angulares ($\\ll \\gg$).",
+          "isCorrect": true,
+          "rationale": "En la lengua española, las comillas angulares son las recomendadas para textos impresos y académicos de alta calidad."
+        },
+        {
+          "text": "Emplear comillas inglesas ($“ ”$) como opción principal por su difusión internacional.",
+          "isCorrect": false,
+          "rationale": "Las comillas inglesas son secundarias en la jerarquía del español y suelen reservarse para entrecomillar dentro de un texto ya entrecomillado."
+        },
+        {
+          "text": "Usar comillas simples para destacar conceptos importantes o términos técnicos.",
+          "isCorrect": false,
+          "rationale": "Las mayúsculas y comillas no deben usarse para dar énfasis conceptual; las comillas simples tienen funciones muy específicas de significado o jerarquía interna."
+        },
+        {
+          "text": "Utilizar comillas siempre que se introduzca un extranjerismo adaptado.",
+          "isCorrect": false,
+          "rationale": "Los extranjerismos adaptados siguen las reglas generales de ortografía; son los no adaptados (crudos) los que requieren cursiva, no comillas."
+        }
+      ],
+      "hint": "Existe una forma de comillas que la normativa académica prefiere para el español.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "De acuerdo con la pauta de revisión, ¿cuál es el último paso que debe realizarse antes de considerar el texto listo para entregar?",
+      "answerOptions": [
+        {
+          "text": "Validar que todas las fuentes estén citadas y la bibliografía siga la norma APA 7.ª edición.",
+          "isCorrect": true,
+          "rationale": "La integridad académica y el formato de las referencias es el cierre técnico necesario para garantizar la validez del trabajo."
+        },
+        {
+          "text": "Realizar una lectura en voz alta para comprobar la musicalidad del texto.",
+          "isCorrect": false,
+          "rationale": "Aunque útil, no es el paso técnico final definido en la jerarquía de revisión."
+        },
+        {
+          "text": "Revisar nuevamente la ortografía mediante el corrector automático.",
+          "isCorrect": false,
+          "rationale": "La revisión ortográfica es un paso previo (ortotipografía); el paso final se centra en la acreditación de la autoría y fuentes."
+        },
+        {
+          "text": "Asegurar que el título sea lo suficientemente llamativo para el lector.",
+          "isCorrect": false,
+          "rationale": "El título se comprueba al inicio para ver si refleja el contenido; la estética del título no es la fase de cierre del proceso técnico."
+        }
+      ],
+      "hint": "Este paso garantiza que no haya plagio involuntario y que el formato sea profesional.",
+      "tags": [
+        "CT",
+        "T3_7"
+      ]
+    },
+    {
+      "question": "¿Cuál es el objetivo principal al reformular el registro en una actividad de corrección morfosintáctica?",
+      "answerOptions": [
+        {
+          "text": "Sustituir el lenguaje coloquial y la vaguedad por una naturalidad formal y precisa.",
+          "isCorrect": true,
+          "rationale": "La corrección académica busca eliminar expresiones imprecisas o informales para lograr un tono profesional que mantenga la claridad sin caer en el artificio."
+        },
+        {
+          "text": "Aumentar la complejidad de la oración mediante el uso de términos técnicos poco frecuentes.",
+          "isCorrect": false,
+          "rationale": "La buena prosa académica no debe ser solemne o artificial, sino exacta y comprensible."
+        },
+        {
+          "text": "Eliminar por completo la subjetividad del autor para lograr un texto puramente descriptivo.",
+          "isCorrect": false,
+          "rationale": "Aunque se busca formalidad, el objetivo de la sección es la adecuación del registro y la precisión, no necesariamente la supresión de la voz del autor."
+        },
+        {
+          "text": "Transformar oraciones simples en estructuras coordinadas y subordinadas complejas.",
+          "isCorrect": false,
+          "rationale": "La corrección de estilo prioriza la claridad; añadir complejidad estructural innecesaria contradice el principio de legibilidad académica."
+        }
+      ],
+      "hint": "Busca el equilibrio entre la precisión terminológica y la fluidez del discurso.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "En el contexto de la detección del queísmo y el dequeísmo, ¿en qué consiste la base teórica de la 'prueba de sustitución'?",
+      "answerOptions": [
+        {
+          "text": "Sustituir la oración subordinada por el pronombre 'eso' para verificar si la preposición es necesaria.",
+          "isCorrect": true,
+          "rationale": "Esta prueba permite identificar si el verbo, sustantivo o adjetivo rige una preposición específica de forma natural en la lengua."
+        },
+        {
+          "text": "Cambiar el verbo principal por un sinónimo para observar si el sentido de la frase se mantiene.",
+          "isCorrect": false,
+          "rationale": "Cambiar el verbo no ayuda a identificar errores de régimen preposicional, ya que cada verbo tiene sus propias exigencias gramaticales."
+        },
+        {
+          "text": "Reemplazar la conjunción 'que' por 'cual' para comprobar la concordancia de género y número.",
+          "isCorrect": false,
+          "rationale": "Esta sustitución es útil para revisar relativos, pero no es el mecanismo para detectar el uso incorrecto de la preposición 'de'."
+        },
+        {
+          "text": "Transformar la oración activa en pasiva para comprobar la función del complemento directo.",
+          "isCorrect": false,
+          "rationale": "La voz pasiva no revela si una estructura completiva requiere o no la preposición 'de' antes del nexo."
+        }
+      ],
+      "hint": "Se trata de simplificar la estructura para que el oído gramatical detecte la necesidad de la preposición.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "¿Cuál es la regla fundamental de puntuación que se evalúa en la revisión de la relación entre sujeto y predicado?",
+      "answerOptions": [
+        {
+          "text": "La prohibición de colocar una coma entre el núcleo del sujeto y el verbo, salvo que medie un inciso.",
+          "isCorrect": true,
+          "rationale": "La llamada «coma criminal» rompe la unidad sintáctica básica de la oración y es uno de los errores más señalados en la corrección de estilo."
+        },
+        {
+          "text": "La obligación de separar siempre el sujeto del verbo mediante un punto y coma en oraciones largas.",
+          "isCorrect": false,
+          "rationale": "La longitud de la frase no justifica separar los constituyentes básicos del enunciado con signos de puntuación de primer orden."
+        },
+        {
+          "text": "El uso de la coma para marcar la pausa respiratoria del lector tras un sujeto complejo.",
+          "isCorrect": false,
+          "rationale": "La puntuación no transcribe la oralidad ni las pausas respiratorias, sino la estructura sintáctica."
+        },
+        {
+          "text": "La necesidad de emplear dos puntos después del sujeto cuando este incluye una enumeración.",
+          "isCorrect": false,
+          "rationale": "Los dos puntos se utilizan para anunciar una explicación o cierre, pero no deben fragmentar la conexión sujeto-verbo."
+        }
+      ],
+      "hint": "Esta interrupción se conoce comúnmente con un adjetivo negativo por el error que supone.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "¿Qué fenómeno lingüístico se produce cuando se utiliza la preposición 'de' delante de 'que' sin que el régimen verbal lo exija?",
+      "answerOptions": [
+        {
+          "text": "Dequeísmo.",
+          "isCorrect": true,
+          "rationale": "El dequeísmo es la inserción indebida de la preposición en estructuras donde el verbo o sustantivo no la requiere."
+        },
+        {
+          "text": "Queísmo.",
+          "isCorrect": false,
+          "rationale": "El queísmo es el error opuesto: la supresión de una preposición que sí es exigida por la estructura."
+        },
+        {
+          "text": "Leísmo.",
+          "isCorrect": false,
+          "rationale": "El leísmo se refiere al uso impropio de pronombres átonos de tercera persona, no al uso de preposiciones en subordinadas."
+        },
+        {
+          "text": "Anacoluto.",
+          "isCorrect": false,
+          "rationale": "Un anacoluto es una ruptura general de la construcción sintáctica, mientras que el dequeísmo es un error específico de régimen preposicional."
+        }
+      ],
+      "hint": "Su nombre proviene de la combinación innecesaria de los dos términos que causan el error.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "¿Cuál es la función teórica de sustituir una 'palabra comodín' por un término específico en un texto académico?",
+      "answerOptions": [
+        {
+          "text": "Dotar al texto de precisión léxica y reducir la ambigüedad informativa.",
+          "isCorrect": true,
+          "rationale": "La sustitución permite que el lector comprenda exactamente qué proceso o concepto se está tratando, aumentando la credibilidad del escrito."
+        },
+        {
+          "text": "Demostrar que el autor posee un vocabulario pasivo superior al del lector medio.",
+          "isCorrect": false,
+          "rationale": "El objetivo de la escritura académica no es el lucimiento personal, sino la comunicación eficaz y rigurosa de las ideas."
+        },
+        {
+          "text": "Hacer que el texto sea más largo para cumplir con los requisitos de extensión de los trabajos.",
+          "isCorrect": false,
+          "rationale": "A menudo, la precisión léxica permite decir más con menos palabras, eliminando perífrasis innecesarias."
+        },
+        {
+          "text": "Facilitar la traducción automática del documento a otros idiomas.",
+          "isCorrect": false,
+          "rationale": "Aunque es un beneficio secundario, la corrección de estilo se centra en la calidad y adecuación dentro del propio idioma de redacción."
+        }
+      ],
+      "hint": "Se busca que cada palabra tenga un significado único y ajustado al contexto.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "¿Qué error se está corrigiendo cuando se añade la preposición 'de' en una frase como 'me alegro que hayas venido'?",
+      "answerOptions": [
+        {
+          "text": "Queísmo.",
+          "isCorrect": true,
+          "rationale": "Omitir la preposición exigida por el verbo (alegrarse de algo) es el rasgo definitorio del queísmo."
+        },
+        {
+          "text": "Dequeísmo.",
+          "isCorrect": false,
+          "rationale": "El dequeísmo añadiría una preposición innecesaria, mientras que aquí el error es precisamente su ausencia."
+        },
+        {
+          "text": "Impropiedad léxica.",
+          "isCorrect": false,
+          "rationale": "No es un problema de significado de las palabras, sino de la estructura gramatical requerida por el verbo."
+        },
+        {
+          "text": "Asimetría sintáctica.",
+          "isCorrect": false,
+          "rationale": "La asimetría se refiere a la falta de paralelismo en enumeraciones, no al régimen de las preposiciones."
+        }
+      ],
+      "hint": "Es el defecto de 'de' donde la norma exige su presencia.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    },
+    {
+      "question": "En la revisión de un fragmento académico, ¿cuál es el diagnóstico teórico de la expresión 'vuelve a repetir'?",
+      "answerOptions": [
+        {
+          "text": "Redundancia pleonástica.",
+          "isCorrect": true,
+          "rationale": "El verbo 'repetir' ya contiene en su semántica la idea de iteración o volver a hacer algo, por lo que el adverbio resulta innecesario."
+        },
+        {
+          "text": "Verbo baúl.",
+          "isCorrect": false,
+          "rationale": "'Repetir' es un verbo con un significado preciso; el problema no es su vaguedad, sino la duplicidad de la información."
+        },
+        {
+          "text": "Arcaismo estilístico.",
+          "isCorrect": false,
+          "rationale": "Es una expresión muy común en el habla actual, por lo que no puede considerarse una forma antigua en desuso."
+        },
+        {
+          "text": "Error de concordancia temporal.",
+          "isCorrect": false,
+          "rationale": "La expresión no presenta problemas de tiempo verbal, sino de acumulación lógica de significados idénticos."
+        }
+      ],
+      "hint": "Es un caso de 'decir dos veces lo mismo' en una sola estructura.",
+      "tags": [
+        "CT",
+        "T3_8"
+      ]
+    }
+  ]
+}

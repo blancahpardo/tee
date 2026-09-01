@@ -1,0 +1,2314 @@
+{
+  "quiz": [
+    {
+      "question": "Un estudiante redacta un breve ensayo sobre la economía circular. Tras leer tres artículos científicos, decide comparar sus puntos de vista para llegar a una conclusión propia. ¿Qué rasgo del texto académico está aplicando principalmente?",
+      "answerOptions": [
+        {
+          "text": "Sistematización",
+          "isCorrect": true,
+          "rationale": "La sistematización implica un trabajo intelectual previo de lectura, comprobación y comparación de fuentes antes de redactar."
+        },
+        {
+          "text": "Formalidad",
+          "isCorrect": false,
+          "rationale": "La formalidad se refiere al registro y léxico precisos, no al proceso de investigación y contraste de información."
+        },
+        {
+          "text": "Trazabilidad",
+          "isCorrect": false,
+          "rationale": "Aunque se usen fuentes, la trazabilidad se centra específicamente en la correspondencia técnica entre citas y referencias finales."
+        },
+        {
+          "text": "Originalidad responsable",
+          "isCorrect": false,
+          "rationale": "Este rasgo se enfoca en no ocultar las fuentes al aportar ideas propias, más que en el método de planificación y estudio."
+        }
+      ],
+      "hint": "Observa que el énfasis está en el proceso de preparación y orden intelectual previo a la escritura.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "En el borrador de un trabajo se lee: «El autor del artículo dice cosas un poco raras sobre el tema». ¿Por qué esta frase incumple los rasgos de la escritura académica?",
+      "answerOptions": [
+        {
+          "text": "Carece de la formalidad y precisión léxica requeridas en el contexto universitario.",
+          "isCorrect": true,
+          "rationale": "El registro académico exige distancia expresiva y evitar términos coloquiales o vagos como 'cosas raras'."
+        },
+        {
+          "text": "No presenta una estructura de introducción, desarrollo y conclusión.",
+          "isCorrect": false,
+          "rationale": "La crítica se dirige a la calidad del registro en una frase concreta, no a la organización global del documento."
+        },
+        {
+          "text": "Es un fragmento que incurre en plagio al no citar al autor mencionado.",
+          "isCorrect": false,
+          "rationale": "Mencionar a un autor sin cita es un error, pero el problema principal aquí es la inadecuación del registro lingüístico."
+        },
+        {
+          "text": "Falla en la trazabilidad al no incluir el año de publicación entre paréntesis.",
+          "isCorrect": false,
+          "rationale": "La falta del año es un error de formato, pero la deficiencia más grave es el uso de un lenguaje subjetivo y coloquial."
+        }
+      ],
+      "hint": "Analiza si el tono utilizado es el adecuado para una comunicación profesional y rigurosa.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Un autor incluye en su bibliografía final un libro que menciona en el texto, pero no facilita los datos necesarios para que el lector encuentre la página exacta de la cita. ¿Qué rasgo se está viendo comprometido?",
+      "answerOptions": [
+        {
+          "text": "Trazabilidad",
+          "isCorrect": true,
+          "rationale": "La trazabilidad asegura que el lector pueda rastrear y verificar el origen exacto de cada afirmación relevante."
+        },
+        {
+          "text": "Argumentación",
+          "isCorrect": false,
+          "rationale": "La argumentación se refiere a la lógica del razonamiento, no a la gestión documental de las fuentes."
+        },
+        {
+          "text": "Formalidad",
+          "isCorrect": false,
+          "rationale": "Aunque citar mal es poco profesional, el concepto específico para el rastreo de fuentes es la trazabilidad."
+        },
+        {
+          "text": "Sistematización",
+          "isCorrect": false,
+          "rationale": "La sistematización se refiere a la planificación y revisión del proceso, no específicamente al enlace entre cita y referencia."
+        }
+      ],
+      "hint": "El concepto clave es la capacidad del lector para 'seguir el rastro' de la información.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Si un fragmento de un informe universitario dice: «La cita narrativa integra al autor en la frase, mientras que la parentética lo coloca al final entre paréntesis», ¿qué función está cumpliendo?",
+      "answerOptions": [
+        {
+          "text": "Explicación",
+          "isCorrect": true,
+          "rationale": "La explicación muestra relaciones de contraste o finalidad entre elementos para que el lector comprenda cómo funcionan."
+        },
+        {
+          "text": "Argumentación",
+          "isCorrect": false,
+          "rationale": "No se está defendiendo una tesis ni intentando convencer de nada, solo se aclara el funcionamiento de dos opciones."
+        },
+        {
+          "text": "Opinión personal",
+          "isCorrect": false,
+          "rationale": "El texto es objetivo y se basa en convenciones técnicas, no en valoraciones subjetivas del autor."
+        },
+        {
+          "text": "Originalidad responsable",
+          "isCorrect": false,
+          "rationale": "Este término se refiere al equilibrio entre fuentes y voz propia, no a la operación de aclarar conceptos."
+        }
+      ],
+      "hint": "Identifica si el autor está estableciendo una relación de contraste para facilitar la comprensión.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Un texto académico comienza así: «Este trabajo analiza las diferencias entre el resumen y la reseña». ¿A qué tipo de operación corresponde esta frase inicial?",
+      "answerOptions": [
+        {
+          "text": "Exposición",
+          "isCorrect": true,
+          "rationale": "La exposición presenta la información, conceptos o, en este caso, el objeto de estudio que el lector debe conocer."
+        },
+        {
+          "text": "Argumentación",
+          "isCorrect": false,
+          "rationale": "Anunciar el tema no es lo mismo que defender una postura o dar razones para validar una tesis."
+        },
+        {
+          "text": "Justificación",
+          "isCorrect": false,
+          "rationale": "La frase solo enuncia qué se va a hacer, no explica el porqué del interés o la relevancia del problema."
+        },
+        {
+          "text": "Sistematización",
+          "isCorrect": false,
+          "rationale": "La sistematización es el proceso interno de trabajo, no una operación textual visible de presentación de datos."
+        }
+      ],
+      "hint": "Es la operación más básica para situar al lector sobre 'qué' trata el texto.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Un estudiante utiliza un artículo de una revista científica para fundamentar su trabajo, asegurándose de que la fuente es fiable y actual. ¿Qué rasgo está cumpliendo?",
+      "answerOptions": [
+        {
+          "text": "Documentación",
+          "isCorrect": true,
+          "rationale": "El texto académico es documentado porque se apoya en fuentes fiables, institucionales o académicas verificables."
+        },
+        {
+          "text": "Argumentación",
+          "isCorrect": false,
+          "rationale": "Tener buenas fuentes es la base, pero la argumentación es el proceso posterior de relacionarlas para defender una idea."
+        },
+        {
+          "text": "Formalidad",
+          "isCorrect": false,
+          "rationale": "La formalidad se asocia al estilo y al léxico, no directamente a la selección de la bibliografía de apoyo."
+        },
+        {
+          "text": "Originalidad",
+          "isCorrect": false,
+          "rationale": "La originalidad reside en el aporte propio; la documentación es el uso correcto de lo que otros ya han dicho."
+        }
+      ],
+      "hint": "Se trata del apoyo en materiales externos de autoridad reconocida.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Un trabajo presenta un léxico preciso y evita las impresiones personales del tipo «a mí me parece». ¿Con qué característica se corresponde esto?",
+      "answerOptions": [
+        {
+          "text": "Formalidad (distancia expresiva).",
+          "isCorrect": true,
+          "rationale": "La formalidad académica exige un registro cuidado, léxico preciso y evitar el subjetivismo coloquial."
+        },
+        {
+          "text": "Argumentación (evidencia sólida).",
+          "isCorrect": false,
+          "rationale": "Aunque ayuda a argumentar, la eliminación de marcas subjetivas es fundamentalmente una cuestión de registro formal."
+        },
+        {
+          "text": "Trazabilidad (atribución correcta).",
+          "isCorrect": false,
+          "rationale": "La trazabilidad depende de las citas y referencias, no de si el lenguaje es subjetivo o técnico."
+        },
+        {
+          "text": "Sistematización (planificación previa).",
+          "isCorrect": false,
+          "rationale": "La sistematización es el orden del proceso de trabajo, no el estilo final de la prosa escrita."
+        }
+      ],
+      "hint": "Recuerda qué rasgo se asocia con el 'registro cuidado' y la 'precisión' del lenguaje.",
+      "tags": [
+        "CP",
+        "T4_1"
+      ]
+    },
+    {
+      "question": "Un estudiante está escribiendo un trabajo sobre el impacto de la lectura digital y encuentra un hilo de comentarios en una red social con opiniones muy variadas. ¿Cómo debería tratar esta fuente?",
+      "answerOptions": [
+        {
+          "text": "Debe usarla como fuente principal para fundamentar su marco teórico.",
+          "isCorrect": false,
+          "rationale": "El marco teórico requiere fuentes académicas o libros de referencia para tener rigor científico."
+        },
+        {
+          "text": "Debe evaluarla críticamente por su autoría y finalidad antes de decidir su uso.",
+          "isCorrect": true,
+          "rationale": "Las fuentes no académicas, como páginas web o redes, deben evaluarse según su estabilidad, propósito y autoridad del autor."
+        },
+        {
+          "text": "Debe descartarla inmediatamente por no ser un libro de una editorial prestigiosa.",
+          "isCorrect": false,
+          "rationale": "Aunque no sea una fuente académica primaria, puede usarse si se evalúa correctamente su utilidad y contexto."
+        },
+        {
+          "text": "Debe citarla como si fuera una obra normativa de la lengua española.",
+          "isCorrect": false,
+          "rationale": "Las obras normativas son diccionarios o gramáticas oficiales, no opiniones en redes sociales."
+        }
+      ],
+      "hint": "Considera los criterios de fiabilidad y los tipos de fuentes mencionados en la tabla de documentación.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Observa el siguiente esquema para un trabajo: «1. Introducción, 2. Normas APA, 3. La Inteligencia Artificial, 4. Conclusión». ¿Qué problema presenta esta planificación?",
+      "answerOptions": [
+        {
+          "text": "Es un esquema fuerte porque enumera los temas principales de forma clara.",
+          "isCorrect": false,
+          "rationale": "Enumerar temas no es suficiente; un esquema fuerte debe mostrar funciones textuales y relaciones lógicas."
+        },
+        {
+          "text": "Carece de una estructura de temas, ya que solo presenta funciones genéricas.",
+          "isCorrect": false,
+          "rationale": "El esquema sí presenta temas, pero lo hace de forma aislada sin una dirección clara."
+        },
+        {
+          "text": "Es una lista de temas sueltos que no muestra una progresión ni funciones textuales.",
+          "isCorrect": true,
+          "rationale": "Un esquema débil solo enumera temas, mientras que uno fuerte define funciones como «problema» o «propuesta»."
+        },
+        {
+          "text": "Es incorrecto porque los trabajos académicos no deben llevar apartados numerados.",
+          "isCorrect": false,
+          "rationale": "La numeración no es el problema, sino la falta de conexión y propósito entre los epígrafes seleccionados."
+        }
+      ],
+      "hint": "Revisa la diferencia entre un 'planteamiento débil' y una 'mejora' en la planificación de estructuras.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Al redactar un párrafo, un estudiante escribe una frase inicial potente y luego aporta dos citas de autores que la respaldan. Sin embargo, pasa al siguiente párrafo sin añadir nada más. ¿Qué elemento de la 'pauta para cada párrafo' ha omitido?",
+      "answerOptions": [
+        {
+          "text": "La idea rectora, ya que el párrafo debe empezar siempre con una cita directa.",
+          "isCorrect": false,
+          "rationale": "La idea rectora es lo que el párrafo afirma y suele ir al principio; las citas son el desarrollo."
+        },
+        {
+          "text": "El desarrollo, porque las citas no se consideran parte de la explicación de una idea.",
+          "isCorrect": false,
+          "rationale": "Las citas y datos forman parte del desarrollo que sostiene la idea rectora del párrafo."
+        },
+        {
+          "text": "El cierre o relación, que explique la relevancia de esos autores para el objetivo del trabajo.",
+          "isCorrect": true,
+          "rationale": "Cada párrafo debe cerrar conectando la información con el objetivo general antes de pasar al siguiente tema."
+        },
+        {
+          "text": "La bibliografía, que debe aparecer inmediatamente después de cada punto y aparte.",
+          "isCorrect": false,
+          "rationale": "La bibliografía (referencias) va al final del trabajo, no dentro de cada párrafo después del punto."
+        }
+      ],
+      "hint": "Revisa los cuatro pasos sugeridos para dar sentido a la secuencia del discurso en un párrafo.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Durante la fase de revisión, un estudiante se da cuenta de que ha incluido un libro en la lista final de referencias, pero tras leer su texto nota que no lo ha citado en ningún párrafo. ¿Qué debe hacer?",
+      "answerOptions": [
+        {
+          "text": "Mantenerlo en las referencias para demostrar que ha leído mucho sobre el tema.",
+          "isCorrect": false,
+          "rationale": "La lista de referencias solo debe contener obras citadas para garantizar la trazabilidad."
+        },
+        {
+          "text": "Eliminar la referencia o buscar el lugar adecuado en el texto para citar su aportación.",
+          "isCorrect": true,
+          "rationale": "Existe una regla de correspondencia exacta: toda referencia debe estar citada y toda cita debe tener su referencia."
+        },
+        {
+          "text": "Mover ese libro a un apéndice de 'lecturas recomendadas' al principio del trabajo.",
+          "isCorrect": false,
+          "rationale": "No existe la opción de mover obras no citadas a un apéndice de lecturas recomendadas como solución a errores de citación."
+        },
+        {
+          "text": "Inventar una cita en cualquier párrafo para que la lista de referencias sea válida.",
+          "isCorrect": false,
+          "rationale": "Inventar citas es una falta grave de integridad académica y falsea la investigación."
+        }
+      ],
+      "hint": "La correspondencia entre citas y referencias es una condición esencial de la trazabilidad.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Se compara un «ejemplo débil» con uno «revisado» sobre el sistema APA. ¿Cuál es la principal diferencia técnica entre ambos?",
+      "answerOptions": [
+        {
+          "text": "El ejemplo revisado es más largo y usa palabras más difíciles.",
+          "isCorrect": false,
+          "rationale": "La calidad académica no depende de la longitud o de usar palabras oscuras, sino de la claridad y conexión de ideas."
+        },
+        {
+          "text": "El ejemplo revisado integra las ideas en una secuencia de sentido en lugar de frases sueltas.",
+          "isCorrect": true,
+          "rationale": "Escribir académicamente consiste en convertir apuntes o datos aislados en un discurso razonado y conectado."
+        },
+        {
+          "text": "El ejemplo débil no tiene faltas de ortografía, por lo que ambos son igual de válidos.",
+          "isCorrect": false,
+          "rationale": "Escribir bien en la universidad va más allá de la gramática; implica construir conocimiento documentado."
+        },
+        {
+          "text": "El ejemplo revisado devuelve todas las citas para que se escuche mejor la voz del autor.",
+          "isCorrect": false,
+          "rationale": "La voz propia no desaparece al citar; al contrario, se fortalece al dialogar con las fuentes."
+        }
+      ],
+      "hint": "Observa cómo se transforman los «apuntes» en «discurso» en este ejemplo.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Estás revisando tu borrador y te aseguras de que el registro sea cuidado, preciso y no coloquial. ¿En qué capa de revisión te encuentras?",
+      "answerOptions": [
+        {
+          "text": "Capa de contenido.",
+          "isCorrect": false,
+          "rationale": "El contenido se refiere a la validez de las ideas y argumentos, no al estilo del lenguaje."
+        },
+        {
+          "text": "Capa de estructura.",
+          "isCorrect": false,
+          "rationale": "La estructura se ocupa de la organización de los apartados y la progresión temática."
+        },
+        {
+          "text": "Capa de lengua.",
+          "isCorrect": true,
+          "rationale": "La capa de lengua revisa que la redacción sea clara, formal, natural y con léxico preciso."
+        },
+        {
+          "text": "Capa de fuentes.",
+          "isCorrect": false,
+          "rationale": "La revisión de fuentes se centra en las citas, paráfrasis y su correspondencia bibliográfica."
+        }
+      ],
+      "hint": "Esta capa se centra en la forma en que se expresan las ideas para ajustarse a la situación universitaria.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Antes de empezar a escribir, un autor dedica tiempo a 'saber qué se ha dicho sobre un tema y qué posiciones existen'. ¿En qué fase del proceso de escritura académica se encuentra?",
+      "answerOptions": [
+        {
+          "text": "Planificación.",
+          "isCorrect": false,
+          "rationale": "La planificación se centra en organizar el esquema y la tesis una vez que ya se tiene la información."
+        },
+        {
+          "text": "Redacción.",
+          "isCorrect": false,
+          "rationale": "La redacción es el momento de convertir los apuntes y el esquema en un texto fluido."
+        },
+        {
+          "text": "Documentación.",
+          "isCorrect": true,
+          "rationale": "La documentación permite conocer el estado de la cuestión, los conceptos clave y la autoridad de las fuentes."
+        },
+        {
+          "text": "Revisión.",
+          "isCorrect": false,
+          "rationale": "La revisión es la fase final de mejora del texto ya escrito."
+        }
+      ],
+      "hint": "Esta fase es descrita como una 'operación sistemática' que aporta el material necesario para el trabajo.",
+      "tags": [
+        "CP",
+        "T4_2"
+      ]
+    },
+    {
+      "question": "Un estudiante comienza su trabajo con este párrafo: «Desde el inicio de los tiempos, el ser humano ha necesitado comunicarse. En este trabajo voy a hablar sobre la escritura académica porque es muy importante para todos». ¿Cuál es el principal problema de esta introducción?",
+      "answerOptions": [
+        {
+          "text": "Comienza con generalidades vacías en lugar de situar el tema en un contexto específico.",
+          "isCorrect": true,
+          "rationale": "Una introducción no debe empezar con generalidades: debe situar el asunto en un campo concreto para orientar al lector."
+        },
+        {
+          "text": "El registro es demasiado formal para un trabajo de primer curso de universidad.",
+          "isCorrect": false,
+          "rationale": "El fragmento usa un registro coloquial y vago («cosas muy importantes»), por lo que el problema es la falta de formalidad, no el exceso."
+        },
+        {
+          "text": "Falta la mención obligatoria a las herramientas de inteligencia artificial generativa.",
+          "isCorrect": false,
+          "rationale": "Aunque la IA es un tema tratado en la asignatura, su mención en la introducción solo es necesaria si el trabajo trata específicamente sobre ello."
+        },
+        {
+          "text": "El párrafo es demasiado corto para cumplir con la función de presentar el tema.",
+          "isCorrect": false,
+          "rationale": "La longitud no es el problema principal, sino el contenido irrelevante y la falta de un enfoque o problema delimitado."
+        }
+      ],
+      "hint": "Observa si la frase inicial ayuda realmente a entender el problema específico que el trabajo va a resolver.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "Lee el siguiente fragmento de una introducción: «Este trabajo analiza los errores de citación en estudiantes de Grado. Para ello, se comparan diez trabajos reales con la normativa APA 7.ª edición». ¿Qué movimiento de la estructura de la introducción falta según el modelo de Swales y Feak?",
+      "answerOptions": [
+        {
+          "text": "La anticipación de la estructura o recorrido del trabajo.",
+          "isCorrect": true,
+          "rationale": "El fragmento presenta el objetivo y el método, pero no explica al lector qué apartados encontrará a continuación (por ejemplo, 'primero se define...')."
+        },
+        {
+          "text": "La formulación del objetivo principal de la investigación.",
+          "isCorrect": false,
+          "rationale": "El objetivo está presente: 'Este trabajo analiza los errores de citación en estudiantes de Grado'."
+        },
+        {
+          "text": "La mención a la bibliografía completa utilizada en el desarrollo.",
+          "isCorrect": false,
+          "rationale": "La bibliografía completa va al final del trabajo en el apartado de Referencias, no se detalla dentro de la introducción."
+        },
+        {
+          "text": "La justificación personal de por qué el autor eligió este tema.",
+          "isCorrect": false,
+          "rationale": "La escritura académica prefiere la justificación del interés disciplinar o un vacío de conocimiento antes que razones personales subjetivas."
+        }
+      ],
+      "hint": "Piensa en el elemento que sirve de 'hoja de ruta' para que el lector sepa qué esperar en las siguientes páginas.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "En el desarrollo de tu trabajo, incluyes el siguiente párrafo: «APA 7 distingue entre cita narrativa y parentética (APA, 2020). Es importante saber esto para escribir bien». ¿Qué recomendación sobre la integración de fuentes se está ignorando?",
+      "answerOptions": [
+        {
+          "text": "La fuente debe ser comentada y relacionada con el argumento propio, no solo quedar expuesta.",
+          "isCorrect": true,
+          "rationale": "Las fuentes no deben quedar «sueltas»: hay que explicar qué aportan al argumento o por qué esa distinción es relevante."
+        },
+        {
+          "text": "Las citas de manuales de estilo no deben aparecer nunca en el desarrollo.",
+          "isCorrect": false,
+          "rationale": "Las fuentes normativas como APA son perfectamente válidas en el desarrollo si el tema del trabajo lo requiere."
+        },
+        {
+          "text": "Falta incluir el nombre completo del autor y el título del libro dentro del párrafo.",
+          "isCorrect": false,
+          "rationale": "En el estilo APA, la cita en el texto suele incluir solo autor y año; los datos completos van en la lista de referencias."
+        },
+        {
+          "text": "Se ha usado una cita narrativa cuando la norma exige obligatoriamente una parentética.",
+          "isCorrect": false,
+          "rationale": "Ambos tipos de cita son válidos según APA; el error aquí es la falta de análisis o comentario sobre la información citada."
+        }
+      ],
+      "hint": "Citar no es solo 'pegar' información ajena, sino dialogar con ella para construir tu propio texto.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "Al redactar la conclusión de un informe, un estudiante escribe: «En definitiva, la citación es clave. Además, acabo de encontrar un nuevo software de detección que revolucionará la universidad». ¿Cuál es el error técnico aquí?",
+      "answerOptions": [
+        {
+          "text": "Introducir información esencial nueva o fuentes decisivas que no se han trabajado en el desarrollo.",
+          "isCorrect": true,
+          "rationale": "La conclusión debe sintetizar lo ya expuesto y responder al objetivo, no añadir datos o herramientas que no fueron analizados previamente."
+        },
+        {
+          "text": "Utilizar un conector de cierre como 'En definitiva' al principio del párrafo.",
+          "isCorrect": false,
+          "rationale": "El uso de conectores conclusivos es correcto y necesario para señalar al lector que se ha llegado a la fase de cierre."
+        },
+        {
+          "text": "No haber incluido una tabla comparativa sobre ese nuevo software dentro de la conclusión.",
+          "isCorrect": false,
+          "rationale": "Las tablas y datos extensos pertenecen al desarrollo o anexos, nunca deben aparecer por primera vez en la conclusión."
+        },
+        {
+          "text": "La conclusión es demasiado breve para un trabajo académico de nivel universitario.",
+          "isCorrect": false,
+          "rationale": "La brevedad no es el fallo, sino la ruptura de la lógica del texto al introducir un tema nuevo al final."
+        }
+      ],
+      "hint": "La conclusión es el momento de cerrar el razonamiento, no de abrir nuevos debates o presentar hallazgos inéditos.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "Un estudiante tiene una lista de «Referencias» al final de su trabajo con 15 libros, pero en el texto solo ha citado 10 de ellos. ¿Cómo debe corregir esto según la regla de trazabilidad?",
+      "answerOptions": [
+        {
+          "text": "Debe eliminar de la lista de referencias las 5 obras que no han sido citadas en el texto.",
+          "isCorrect": true,
+          "rationale": "La lista de referencias debe coincidir exactamente con las citas del cuerpo; si una obra no se cita, el lector no sabe para qué se usó."
+        },
+        {
+          "text": "Debe cambiar el título del apartado de 'Referencias' por 'Bibliografía consultada'.",
+          "isCorrect": false,
+          "rationale": "Aunque 'Bibliografía' permite lecturas no citadas, la norma general académica y de APA exige que solo figure lo que realmente sustenta el texto."
+        },
+        {
+          "text": "Debe inventar citas en el desarrollo para que los 15 libros aparezcan reflejados.",
+          "isCorrect": false,
+          "rationale": "Esta práctica es deshonesta y vulnera la integridad académica, simulando una investigación que no se ha realizado de forma real."
+        },
+        {
+          "text": "Puede dejar la lista igual, ya que cuantos más libros aparezcan, más culto parecerá el autor.",
+          "isCorrect": false,
+          "rationale": "La bibliografía no es una 'vitrina de lecturas', sino una herramienta de trazabilidad técnica para el lector."
+        }
+      ],
+      "hint": "Recuerda la regla de oro: lo que se cita se referencia, y lo que se referencia debe haberse citado.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "En la introducción de un trabajo sobre lectura digital lees: «Sin embargo, a pesar del aumento de dispositivos, no está claro si la comprensión lectora se mantiene igual que en papel». ¿A qué movimiento de la introducción corresponde esta frase?",
+      "answerOptions": [
+        {
+          "text": "Problema o vacío.",
+          "isCorrect": true,
+          "rationale": "Esta frase señala una dificultad, duda o falta de claridad que justifica por qué es necesario realizar el trabajo."
+        },
+        {
+          "text": "Tema y contexto.",
+          "isCorrect": false,
+          "rationale": "El contexto presentaría el campo general (la lectura digital), mientras que aquí ya se está señalando una contradicción específica."
+        },
+        {
+          "text": "Anticipación de la estructura.",
+          "isCorrect": false,
+          "rationale": "La estructura diría 'Primero analizaremos... luego compararemos...', no plantea la duda central de la investigación."
+        },
+        {
+          "text": "Objetivo del trabajo.",
+          "isCorrect": false,
+          "rationale": "El objetivo sería la acción ('Este trabajo analiza...'), mientras que esta frase plantea la situación problemática previa a esa acción."
+        }
+      ],
+      "hint": "Busca la palabra clave que indica un contraste o una falta de conocimiento sobre el asunto.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "Al revisar la conclusión de su ensayo, una estudiante comprueba que ha respondido a la pregunta inicial y ha sintetizado los hallazgos. ¿Qué tercer movimiento podría añadir para un cierre completo?",
+      "answerOptions": [
+        {
+          "text": "Una proyección sobre líneas futuras, límites o aplicaciones del trabajo.",
+          "isCorrect": true,
+          "rationale": "Una buena conclusión suele incluir recapitulación, respuesta al objetivo y una proyección de futuro o consecuencia razonable."
+        },
+        {
+          "text": "Un resumen literal de la introducción para asegurar la coherencia.",
+          "isCorrect": false,
+          "rationale": "La conclusión no debe ser un resumen mecánico; debe aportar la síntesis final de lo demostrado, no repetir lo que se iba a hacer."
+        },
+        {
+          "text": "Una lista de agradecimientos a los autores citados en el desarrollo.",
+          "isCorrect": false,
+          "rationale": "Los agradecimientos son una parte opcional de otros géneros (como artículos) y no forman parte del razonamiento lógico de la conclusión."
+        },
+        {
+          "text": "Una nueva cita de autoridad que refuerce la importancia del tema.",
+          "isCorrect": false,
+          "rationale": "No se deben introducir fuentes decisivas en la conclusión que no hayan sido analizadas previamente."
+        }
+      ],
+      "hint": "Se trata de mirar hacia adelante una vez que el problema ha sido resuelto en el texto.",
+      "tags": [
+        "CP",
+        "T4_3"
+      ]
+    },
+    {
+      "question": "En un trabajo sobre integridad, un estudiante escribe: «Si la autoría intelectual no depende de copiar las palabras exactas, el cambio de redacción no elimina la obligación de citar». Según el modelo de Toulmin, ¿qué función cumple este fragmento?",
+      "answerOptions": [
+        {
+          "text": "Garantía",
+          "isCorrect": true,
+          "rationale": "Actúa como el puente lógico que conecta la premisa sobre la naturaleza de la autoría con la necesidad de citar."
+        },
+        {
+          "text": "Evidencia",
+          "isCorrect": false,
+          "rationale": "No aporta un dato empírico o una fuente externa, sino que establece una relación de razonamiento entre conceptos."
+        },
+        {
+          "text": "Tesis",
+          "isCorrect": false,
+          "rationale": "Aunque es una afirmación fuerte, funciona más como un refuerzo lógico para sostener una postura que como la idea central del trabajo."
+        },
+        {
+          "text": "Respaldo",
+          "isCorrect": false,
+          "rationale": "El respaldo suele ser una referencia normativa o estadística, mientras que aquí se presenta un razonamiento inferencial."
+        }
+      ],
+      "hint": "Identifica si el fragmento sirve como un 'puente' lógico entre un dato y una conclusión.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Un autor afirma: «La referencia bibliográfica funciona como la dirección postal completa de una fuente, permitiendo al lector llegar al domicilio del dato». ¿Qué estrategia argumentativa está empleando?",
+      "answerOptions": [
+        {
+          "text": "Analogía",
+          "isCorrect": true,
+          "rationale": "Utiliza una semejanza con un concepto cotidiano (dirección postal) para aclarar el funcionamiento técnico de la referencia."
+        },
+        {
+          "text": "Definición",
+          "isCorrect": false,
+          "rationale": "No está fijando el significado terminológico estricto de 'referencia', sino comparando su utilidad con otro elemento."
+        },
+        {
+          "text": "Causalidad",
+          "isCorrect": false,
+          "rationale": "No establece una relación de causa-efecto, sino de semejanza funcional entre dos sistemas de localización."
+        },
+        {
+          "text": "Ejemplificación",
+          "isCorrect": false,
+          "rationale": "No presenta un caso concreto de referencia, sino que explica el concepto general a través de una comparación externa."
+        }
+      ],
+      "hint": "Fíjate en si se está comparando el objeto de estudio con algo ajeno para facilitar su comprensión.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Un estudiante concluye su párrafo diciendo: «Por tanto, una paráfrasis sin cita sigue siendo plagio, porque la idea procede de una fuente externa». ¿Qué elemento del argumento representa esta frase?",
+      "answerOptions": [
+        {
+          "text": "Conclusión",
+          "isCorrect": true,
+          "rationale": "Representa el resultado final del razonamiento tras haber relacionado la premisa con la garantía."
+        },
+        {
+          "text": "Evidencia",
+          "isCorrect": false,
+          "rationale": "La evidencia sería la norma citada, mientras que esta frase es la deducción derivada de dicha norma."
+        },
+        {
+          "text": "Tesis",
+          "isCorrect": false,
+          "rationale": "Podría ser una tesis, pero en la estructura del párrafo analizado funciona como el cierre lógico de un argumento previo."
+        },
+        {
+          "text": "Razón",
+          "isCorrect": false,
+          "rationale": "La razón es el motivo que sostiene la idea (procedencia externa), no la afirmación final derivada de ella."
+        }
+      ],
+      "hint": "Busca el resultado lógico que se deriva de las premisas presentadas anteriormente.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Analiza este uso de la autoridad: «Como señala el experto Juan Pérez, la inteligencia artificial es un riesgo para la humanidad, por lo que su uso debe prohibirse en la universidad». ¿Por qué podría considerarse un uso pobre de la autoridad?",
+      "answerOptions": [
+        {
+          "text": "Porque sustituye el razonamiento propio por la opinión del experto",
+          "isCorrect": true,
+          "rationale": "No explica la relación lógica entre el riesgo mencionado y la medida propuesta, limitándose a citar la autoridad como prueba absoluta."
+        },
+        {
+          "text": "Porque la inteligencia artificial no es un tema académico válido.",
+          "isCorrect": false,
+          "rationale": "El tema es perfectamente válido en el ámbito académico; el problema reside en cómo se construye el argumento."
+        },
+        {
+          "text": "Porque no se incluye el año de publicación del experto citado.",
+          "isCorrect": false,
+          "rationale": "Aunque es un error de formato, el defecto argumentativo principal es la falta de fundamentación y explicación de la cita."
+        },
+        {
+          "text": "Porque usa el nombre propio del experto en vez de citar una institución.",
+          "isCorrect": false,
+          "rationale": "Citar expertos individuales es correcto, siempre que su autoridad sea pertinente y el argumento no sea abusivo."
+        }
+      ],
+      "hint": "Piensa si el autor está explicando el 'porqué' o simplemente delegando la verdad en una persona.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Un trabajo presenta la siguiente afirmación: «El abstract es un resumen breve, generalmente de un solo párrafo, que presenta tema, objetivo, metodología y resultados sin valoración crítica». ¿Cuál es la función primordial de este fragmento?",
+      "answerOptions": [
+        {
+          "text": "Descripción técnica",
+          "isCorrect": true,
+          "rationale": "Presenta de forma objetiva, clara y denotativa los rasgos que definen un objeto o fenómeno (el abstract)."
+        },
+        {
+          "text": "Narración académica",
+          "isCorrect": false,
+          "rationale": "No describe una secuencia de acciones en el tiempo, sino las características estables de un formato textual."
+        },
+        {
+          "text": "Argumentación",
+          "isCorrect": false,
+          "rationale": "Se limita a informar sobre qué es algo, sin intentar persuadir al lector de una postura o tesis específica."
+        },
+        {
+          "text": "Cita de autoridad",
+          "isCorrect": false,
+          "rationale": "Aunque es una definición precisa, no se atribuye en el fragmento a un autor externo para reforzar una tesis."
+        }
+      ],
+      "hint": "Determina si el texto describe rasgos objetivos de un objeto o relata una historia de pasos seguidos.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Al planificar un ensayo, un estudiante propone: «La prevención del plagio en primer curso debe centrarse menos en sanciones y más en enseñar la trazabilidad de fuentes». ¿Qué parte del esquema representa?",
+      "answerOptions": [
+        {
+          "text": "Tesis",
+          "isCorrect": true,
+          "rationale": "Es la idea central que el autor pretende defender y que resulta discutible dentro de la comunidad académica."
+        },
+        {
+          "text": "Premisa",
+          "isCorrect": false,
+          "rationale": "Las premisas serían los motivos individuales (como estadísticas de plagio) que llevarían a proponer esta idea central."
+        },
+        {
+          "text": "Garantía",
+          "isCorrect": false,
+          "rationale": "La garantía sería la justificación de por qué la enseñanza de la trazabilidad reduce efectivamente el plagio."
+        },
+        {
+          "text": "Evidencia",
+          "isCorrect": false,
+          "rationale": "La evidencia consistiría en datos o casos de universidades que ya aplican este enfoque, no en la propuesta misma."
+        }
+      ],
+      "hint": "Identifica si es la propuesta principal y debatible que articula todo el discurso del autor.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "¿Cuál de estos ejemplos representa un uso académicamente correcto de la cita de autoridad?",
+      "answerOptions": [
+        {
+          "text": "«APA 7 exige citas vinculadas a referencias para asegurar la trazabilidad; esto permite al lector verificar el origen de cada dato (APA, 2020)».",
+          "isCorrect": true,
+          "rationale": "Integra la norma en un razonamiento que explica su función y relevancia para el problema analizado."
+        },
+        {
+          "text": "«Según el manual APA, hay que poner el año entre paréntesis porque es la norma establecida».",
+          "isCorrect": false,
+          "rationale": "Es una justificación circular que no aporta un razonamiento sobre por qué esa norma es necesaria o útil."
+        },
+        {
+          "text": "«Como dice el profesor en clase, citar es muy importante para no suspender el trabajo académico».",
+          "isCorrect": false,
+          "rationale": "Se basa en una autoridad jerárquica y una consecuencia punitiva en lugar de en una razón disciplinar o intelectual."
+        },
+        {
+          "text": "«Es obvio que hay que citar porque todos los autores que hemos leído en esta asignatura lo hacen siempre».",
+          "isCorrect": false,
+          "rationale": "Se apoya en una generalización ('todos lo hacen') y en la obviedad, lo cual debilita la calidad de la argumentación."
+        }
+      ],
+      "hint": "Elige la opción donde la fuente se usa para explicar un 'porqué' funcional y no solo para obedecer una regla.",
+      "tags": [
+        "CP",
+        "T4_4"
+      ]
+    },
+    {
+      "question": "Un estudiante redacta el resumen de un artículo científico y decide incluir un párrafo final donde critica la metodología del autor original por considerarla poco ética. ¿Es esta una práctica adecuada para este género?",
+      "answerOptions": [
+        {
+          "text": "No, porque el resumen debe limitarse a las ideas del original sin añadir opiniones personales ni datos externos.",
+          "isCorrect": true,
+          "rationale": "El resumen debe demostrar comprensión del texto fuente sin incorporar valoraciones críticas del autor que lo realiza."
+        },
+        {
+          "text": "Sí, siempre que la crítica esté fundamentada y ayude a otros investigadores a entender los límites del estudio.",
+          "isCorrect": false,
+          "rationale": "Esta función es propia de una reseña crítica o un ensayo, pero el resumen requiere fidelidad estricta al contenido original."
+        },
+        {
+          "text": "No, ya que un resumen solo puede incluir citas directas y no permite la reformulación de las ideas del autor.",
+          "isCorrect": false,
+          "rationale": "Al contrario, conviene reformular con palabras propias para demostrar comprensión, evitando el «cortar y pegar»."
+        },
+        {
+          "text": "Sí, porque el género académico siempre exige que el estudiante aporte su propia perspectiva sobre el tema tratado.",
+          "isCorrect": false,
+          "rationale": "Aunque otros géneros exigen voz propia, el resumen es una síntesis objetiva que excluye la interpretación subjetiva."
+        }
+      ],
+      "hint": "Revisa los límites del resumen frente a géneros valorativos como la reseña.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Al redactar un informe sobre la frecuencia de errores ortográficos en trabajos de primer curso, el autor incluye la siguiente frase: «Este documento presenta los datos recogidos en tres asignaturas y propone una pauta de mejora». ¿A qué parte de la estructura del informe corresponde?",
+      "answerOptions": [
+        {
+          "text": "Introducción",
+          "isCorrect": true,
+          "rationale": "En la introducción del informe se deben indicar claramente el tema y los objetivos que persigue el documento."
+        },
+        {
+          "text": "Cuerpo o desarrollo",
+          "isCorrect": false,
+          "rationale": "El desarrollo se ocupa del análisis detallado de los hechos o ideas, no de anunciar el propósito del texto."
+        },
+        {
+          "text": "Cierre o conclusión",
+          "isCorrect": false,
+          "rationale": "La conclusión recapitula resultados o presenta recomendaciones finales, mientras que esta frase anuncia lo que se va a hacer."
+        },
+        {
+          "text": "Marco conceptual",
+          "isCorrect": false,
+          "rationale": "El marco conceptual define teorías o términos básicos, no describe la finalidad operativa de un informe técnico."
+        }
+      ],
+      "hint": "Identifica qué sección sirve para orientar al lector sobre la finalidad del trabajo.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Un estudiante quiere escribir un ensayo sobre el uso de la inteligencia artificial. ¿Cuál de las siguientes propuestas de tesis es la más adecuada según los criterios del género?",
+      "answerOptions": [
+        {
+          "text": "«La enseñanza de la ética en el uso de IA debe ser prioritaria frente a las medidas punitivas de detección».",
+          "isCorrect": true,
+          "rationale": "Una tesis de ensayo debe ser una idea discutible y defendible mediante argumentación, no un hecho obvio."
+        },
+        {
+          "text": "«En este trabajo voy a hablar sobre qué es la inteligencia artificial y para qué sirve en la universidad».",
+          "isCorrect": false,
+          "rationale": "Esta frase es una declaración de intenciones u objetivo expositivo, pero carece de una postura que defender."
+        },
+        {
+          "text": "«La inteligencia artificial generativa es una tecnología que ha avanzado mucho en los últimos años».",
+          "isCorrect": false,
+          "rationale": "Se trata de un hecho general y descriptivo que no genera debate ni requiere una defensa argumentativa personal."
+        },
+        {
+          "text": "«Existen diversas herramientas de IA como ChatGPT, Claude o Gemini que los estudiantes utilizan hoy».",
+          "isCorrect": false,
+          "rationale": "Esta es una afirmación factual de conocimiento general, inapropiada para constituir el núcleo de un ensayo."
+        }
+      ],
+      "hint": "Recuerda que una tesis debe invitar al debate y ser defendida con razones.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Un equipo de investigación está preparando un manuscrito para una revista científica. Han organizado el texto siguiendo el esquema: Introducción, Método, Resultados y Discusión. ¿Qué género están produciendo?",
+      "answerOptions": [
+        {
+          "text": "Artículo de investigación",
+          "isCorrect": true,
+          "rationale": "El modelo IMRyD es la estructura estándar utilizada en muchas disciplinas para comunicar resultados originales de investigación."
+        },
+        {
+          "text": "Monografía especializada",
+          "isCorrect": false,
+          "rationale": "La monografía suele organizarse en capítulos y tratar un tema con profundidad, pero no suele usar rígidamente el esquema IMRyD."
+        },
+        {
+          "text": "Reseña descriptiva",
+          "isCorrect": false,
+          "rationale": "La reseña se centra en analizar una obra ajena, no en presentar un método y resultados de una investigación propia."
+        },
+        {
+          "text": "Informe técnico",
+          "isCorrect": false,
+          "rationale": "Aunque el informe es expositivo, el esquema IMRyD es específico de la comunicación de hallazgos científicos en revistas."
+        }
+      ],
+      "hint": "Piensa en el formato típico de las revistas científicas que presentan nuevos descubrimientos.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Durante un examen de desarrollo, un alumno tiene poco tiempo para responder. Decide escribir una lista de puntos clave sin conectores ni estructura de párrafos para poder incluir más datos. ¿Es esta una estrategia correcta?",
+      "answerOptions": [
+        {
+          "text": "No, porque el examen debe mantener una estructura de introducción, desarrollo y conclusión a pesar del límite de tiempo.",
+          "isCorrect": true,
+          "rationale": "El examen de desarrollo es un texto académico que requiere jerarquizar la información y organizar la respuesta lógicamente."
+        },
+        {
+          "text": "Sí, ya que en un examen lo más importante es demostrar la cantidad de datos que se han memorizado.",
+          "isCorrect": false,
+          "rationale": "La memoria es solo una base; la organización de la información es fundamental para que el examinador valore la comprensión."
+        },
+        {
+          "text": "No, debería centrarse únicamente en la conclusión, ya que es la parte donde se demuestra el aprendizaje real.",
+          "isCorrect": false,
+          "rationale": "Un cierre sin un desarrollo previo carece de base argumentativa; todas las partes son necesarias para una respuesta completa."
+        },
+        {
+          "text": "Sí, siempre que al final añada una nota aclarando que la falta de cohesión se debe a las limitaciones temporales.",
+          "isCorrect": false,
+          "rationale": "Las advertencias no sustituyen la calidad textual esperada; se debe priorizar la claridad y el orden desde el inicio."
+        }
+      ],
+      "hint": "El examen de desarrollo sigue siendo un texto académico formal a pesar de la presión del reloj.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Al realizar un resumen, un estudiante detecta que el texto original contiene muchas anécdotas y ejemplos para ilustrar la tesis principal. ¿Cómo debe tratar estos elementos en su versión resumida?",
+      "answerOptions": [
+        {
+          "text": "Debe eliminarlos, conservando solo los que sean estrictamente imprescindibles para entender la idea troncal.",
+          "isCorrect": true,
+          "rationale": "El resumen debe suprimir digresiones y ejemplos secundarios para reducir el texto a lo esencial."
+        },
+        {
+          "text": "Debe mantenerlos todos para asegurar que el lector del resumen entienda el texto igual que el original.",
+          "isCorrect": false,
+          "rationale": "Mantener todos los ejemplos impediría la reducción significativa del texto, que es el objetivo primordial del resumen."
+        },
+        {
+          "text": "Debe sustituirlos por anécdotas propias que sean más fáciles de entender para su audiencia actual.",
+          "isCorrect": false,
+          "rationale": "Incluir material nuevo u opiniones propias desvirtúa la función de síntesis objetiva que tiene el resumen."
+        },
+        {
+          "text": "Debe moverlos a un anexo al final del resumen para que no interrumpan la lectura de las ideas principales.",
+          "isCorrect": false,
+          "rationale": "Un resumen no suele llevar anexos; los ejemplos no esenciales simplemente deben descartarse en el proceso de reducción."
+        }
+      ],
+      "hint": "Piensa en el proceso de 'reducción' y qué información es accesoria.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "En una reseña académica, tras presentar la referencia de la obra, el autor escribe un párrafo analizando por qué el libro es relevante para los estudiantes de Derecho en la actualidad. ¿A qué parte de la reseña corresponde este fragmento?",
+      "answerOptions": [
+        {
+          "text": "Valoración crítica",
+          "isCorrect": true,
+          "rationale": "Evaluar la aportación, el interés y la utilidad de la obra para un campo de estudio es la esencia de la valoración en una reseña."
+        },
+        {
+          "text": "Síntesis de contenidos",
+          "isCorrect": false,
+          "rationale": "La síntesis se limita a presentar las ideas principales de la obra, no a juzgar su importancia para un público específico."
+        },
+        {
+          "text": "Contexto y autoría",
+          "isCorrect": false,
+          "rationale": "Esta parte sitúa la autoridad del autor y la disciplina, pero no entra todavía en la evaluación de la obra en sí."
+        },
+        {
+          "text": "Cierre",
+          "isCorrect": false,
+          "rationale": "Aunque puede aparecer cerca del final, el análisis de relevancia es una función evaluativa que sustenta la recomendación de la obra."
+        }
+      ],
+      "hint": "Distingue entre describir lo que dice el libro y opinar sobre su valor o utilidad.",
+      "tags": [
+        "CP",
+        "T4_5"
+      ]
+    },
+    {
+      "question": "Un estudiante explica con sus propias palabras la teoría de la «alfabetización académica» basándose en un libro de Paula Carlino, pero decide no incluir la cita porque no ha copiado ninguna frase literal. ¿Es correcta esta decisión?",
+      "answerOptions": [
+        {
+          "text": "No, porque la paráfrasis de una idea ajena también requiere citar la fuente original para garantizar la honestidad intelectual.",
+          "isCorrect": true,
+          "rationale": "La paráfrasis reformula el contenido, pero la autoría de la idea sigue perteneciendo al autor original y debe reconocerse para evitar el plagio."
+        },
+        {
+          "text": "Sí, ya que al usar palabras propias la idea pasa a ser de elaboración propia y no necesita atribución.",
+          "isCorrect": false,
+          "rationale": "Este es un error común; la autoría intelectual no depende de la literalidad de las palabras, sino del origen de la idea o concepto."
+        },
+        {
+          "text": "Sí, siempre que el autor citado aparezca en la lista de referencias final del trabajo aunque no esté en el texto.",
+          "isCorrect": false,
+          "rationale": "La lista de referencias no sustituye a la cita en el texto; ambas deben estar vinculadas para permitir la trazabilidad de la idea."
+        },
+        {
+          "text": "No, pero solo si la idea es considerada conocimiento general dentro de la disciplina académica.",
+          "isCorrect": false,
+          "rationale": "El conocimiento general es precisamente la única excepción que no requiere cita; las teorías específicas siempre deben atribuirse."
+        }
+      ],
+      "hint": "Recuerda que la honestidad intelectual se aplica tanto a la forma como al fondo de la información consultada.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "En la lista final de un trabajo aparece la referencia completa de una obra de Montolío (2000), pero tras revisar el cuerpo del texto se observa que no hay ninguna cita que remita a ella. ¿Qué regla se está incumpliendo?",
+      "answerOptions": [
+        {
+          "text": "La regla de correspondencia, que exige que toda referencia final deba haber sido citada previamente en el texto.",
+          "isCorrect": true,
+          "rationale": "La lista de referencias no es un escaparate de lecturas realizadas, sino una herramienta de trazabilidad de las fuentes efectivamente usadas."
+        },
+        {
+          "text": "La regla de exhaustividad, que obliga a incluir en la bibliografía todos los libros que traten sobre el tema aunque no se lean.",
+          "isCorrect": false,
+          "rationale": "La exhaustividad en APA no se refiere a acumular títulos no usados, sino a documentar con rigor lo que realmente sostiene el trabajo."
+        },
+        {
+          "text": "La regla de economía procesal, que sugiere omitir citas en el texto si la fuente es muy conocida en la universidad.",
+          "isCorrect": false,
+          "rationale": "Independientemente de la fama de la fuente, la omisión de la cita impide al lector saber qué parte del texto se apoya en dicho autor."
+        },
+        {
+          "text": "La regla de jerarquía, que da prioridad a las referencias finales sobre las citas parentéticas del discurso.",
+          "isCorrect": false,
+          "rationale": "No existe una jerarquía de importancia; ambos elementos son interdependientes para cumplir la función de documentación académica."
+        }
+      ],
+      "hint": "Considera la relación necesaria entre lo que el lector encuentra en los párrafos y lo que encuentra al final del documento.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "Deseas citar por primera vez en tu trabajo el libro «Academic writing for graduate students», escrito por John Swales y Christine Feak. ¿Cuál es la forma correcta de la cita parentética?",
+      "answerOptions": [
+        {
+          "text": "(Swales y Feak, 2012)",
+          "isCorrect": true,
+          "rationale": "Para obras de dos autores, APA 7 exige incluir siempre los apellidos de ambos en cada una de las citas que se realicen en el texto."
+        },
+        {
+          "text": "(Swales et al., 2012)",
+          "isCorrect": false,
+          "rationale": "La abreviatura 'et al.' se utiliza desde la primera cita únicamente cuando la obra tiene tres o más autores."
+        },
+        {
+          "text": "(Swales, 2012)",
+          "isCorrect": false,
+          "rationale": "Omitir al segundo autor es incorrecto en APA, ya que se debe dar crédito a ambos responsables de la obra en todas las menciones."
+        },
+        {
+          "text": "(John Swales & Christine Feak, 2012)",
+          "isCorrect": false,
+          "rationale": "En las citas dentro del texto no se incluyen los nombres de pila, solo los apellidos, y en español se prefiere la conjunción 'y' sobre el ampersand."
+        }
+      ],
+      "hint": "Fíjate en el número exacto de autores y en las reglas de simplificación que aplica APA 7 para diferentes casos.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "En el primer párrafo de tu trabajo citas a la Real Academia Española. Quieres usar sus siglas (RAE) en el resto del texto para agilizar la lectura. ¿Cómo debes introducirla la primera vez según el subepígrafe 6.5?",
+      "answerOptions": [
+        {
+          "text": "(Real Academia Española [RAE], 2010)",
+          "isCorrect": true,
+          "rationale": "La primera vez se indica el nombre completo seguido de la sigla entre corchetes dentro del paréntesis; así se autoriza el uso de la sigla en adelante."
+        },
+        {
+          "text": "(RAE [Real Academia Española], 2010)",
+          "isCorrect": false,
+          "rationale": "El orden es inverso: primero debe aparecer el nombre institucional completo y después la sigla que se utilizará como referencia abreviada."
+        },
+        {
+          "text": "(Real Academia Española (RAE), 2010)",
+          "isCorrect": false,
+          "rationale": "No se deben usar paréntesis anidados; para incluir la sigla dentro de una cita parentética es necesario utilizar los corchetes."
+        },
+        {
+          "text": "(RAE, 2010)",
+          "isCorrect": false,
+          "rationale": "Utilizar la sigla directamente sin haber presentado el nombre completo previamente puede generar confusión sobre la identidad de la fuente."
+        }
+      ],
+      "hint": "Para introducir una abreviatura dentro de un paréntesis, necesitas un signo de puntuación que actúe como segundo nivel de agrupación.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "Estás leyendo un artículo de Rodríguez (2015) donde se cita una idea muy interesante de un autor llamado Portillo. No has podido localizar el texto original de Portillo. ¿Cómo debes citarlo en tu trabajo?",
+      "answerOptions": [
+        {
+          "text": "Portillo (como se cita en Rodríguez, 2015) sostiene que...",
+          "isCorrect": true,
+          "rationale": "Esta es la fórmula de la 'cita secundaria', que permite atribuir la idea al autor original reconociendo que se ha leído a través de una fuente distinta."
+        },
+        {
+          "text": "(Portillo, 2015)",
+          "isCorrect": false,
+          "rationale": "Es incorrecto atribuir la fecha de la fuente secundaria al autor original, ya que Portillo escribió su obra en un momento distinto al de Rodríguez."
+        },
+        {
+          "text": "Rodríguez (2015) dice que Portillo es un gran autor...",
+          "isCorrect": false,
+          "rationale": "Esta opción no cita la idea técnica o conceptual de Portillo, sino que hace un comentario biográfico o de opinión que no cumple la función de la cita."
+        },
+        {
+          "text": "Portillo (2010) y Rodríguez (2015) afirman que...",
+          "isCorrect": false,
+          "rationale": "No puedes citar a Portillo directamente si no has leído su obra original; simular que se han consultado ambas fuentes es una falta de integridad."
+        }
+      ],
+      "hint": "Debes ser honesto con el lector y mostrar que conoces la idea solo a través del filtro de otro investigador.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "Has incluido una gráfica (Figura 2) que muestra la evolución del plagio en la universidad. Al redactar el párrafo de análisis, ¿cuál es la forma correcta de remitir al lector a dicha imagen?",
+      "answerOptions": [
+        {
+          "text": "Como se observa en la Figura 2, el porcentaje ha disminuido...",
+          "isCorrect": true,
+          "rationale": "APA exige que todas las figuras y tablas se numeren y se mencionen explícitamente en el texto por su número para guiar la lectura."
+        },
+        {
+          "text": "En el gráfico que aparece más abajo se puede ver que...",
+          "isCorrect": false,
+          "rationale": "Las referencias espaciales como 'arriba' o 'abajo' no son precisas en maquetación académica, ya que la posición del objeto puede cambiar."
+        },
+        {
+          "text": "Véase la ilustración de la página siguiente para comprobar los datos.",
+          "isCorrect": false,
+          "rationale": "Remitir al número de página es poco eficiente; lo correcto es usar la etiqueta y el número asignado a la figura (Figura X)."
+        },
+        {
+          "text": "Consulte el Apéndice A para ver la gráfica de resultados.",
+          "isCorrect": false,
+          "rationale": "Si la gráfica es esencial para el análisis del desarrollo, debe estar en el cuerpo del texto como Figura, no relegada a los apéndices."
+        }
+      ],
+      "hint": "Piensa en la etiqueta estandarizada que identifica a los elementos visuales de forma única en el trabajo.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "Has utilizado una inteligencia artificial para generar una tabla comparativa y quieres que el profesor pueda verificar el proceso completo de generación en un anexo. ¿Cómo debes organizar este material?",
+      "answerOptions": [
+        {
+          "text": "Incluirlo al final del trabajo bajo el epígrafe 'Apéndice' y mencionarlo en el cuerpo del texto (véase Apéndice A).",
+          "isCorrect": true,
+          "rationale": "Los apéndices sirven precisamente para recoger materiales complementarios como transcripciones de chats o datos brutos que sustentan el trabajo principal."
+        },
+        {
+          "text": "Pegar las capturas de pantalla directamente en el medio del capítulo de desarrollo.",
+          "isCorrect": false,
+          "rationale": "Insertar materiales extensos o procedimentales en el desarrollo puede interrumpir la lógica argumentativa y dificultar la lectura."
+        },
+        {
+          "text": "Añadirlo como una referencia bibliográfica más en la lista final de autores.",
+          "isCorrect": false,
+          "rationale": "Una conversación privada con una IA no es una fuente recuperable por terceros, por lo que no cumple los requisitos para ser una referencia estándar."
+        },
+        {
+          "text": "No es necesario incluirlo si ya se ha explicado en la introducción del trabajo.",
+          "isCorrect": false,
+          "rationale": "La transparencia académica exige que el material que ha servido para construir el contenido sea accesible para su verificación si el lector lo desea."
+        }
+      ],
+      "hint": "Identifica la sección del trabajo destinada a guardar el 'equipaje' extra que no cabe en los párrafos de análisis pero que es valioso.",
+      "tags": [
+        "CP",
+        "T4_6"
+      ]
+    },
+    {
+      "question": "Durante la redacción de un ensayo, un estudiante traduce íntegramente un párrafo de un autor francés y lo incluye en su texto en español sin añadir una cita, bajo la premisa de que la traducción es una creación propia. ¿Qué diagnóstico recibe esta acción?",
+      "answerOptions": [
+        {
+          "text": "Es una práctica de mediación lingüística correcta.",
+          "isCorrect": false,
+          "rationale": "Considera erróneamente que el proceso de traducción transforma la autoría de la idea original en una producción propia."
+        },
+        {
+          "text": "Se clasifica como una forma de plagio.",
+          "isCorrect": true,
+          "rationale": "Traducir una fuente extranjera y presentarla como propia es una conducta de plagio al disfrazar la autoría ajena."
+        },
+        {
+          "text": "Se considera conocimiento general por ser una traducción.",
+          "isCorrect": false,
+          "rationale": "Confunde la naturaleza del contenido con el idioma, ya que el conocimiento general no depende de la traducción de fuentes específicas."
+        },
+        {
+          "text": "Es un error de estilo, pero no afecta a la integridad académica.",
+          "isCorrect": false,
+          "rationale": "Minimiza la gravedad de ocultar una fuente externa, lo cual es una falta de honestidad intelectual según los estándares universitarios."
+        }
+      ],
+      "hint": "Considera si la autoría intelectual de la idea cambia simplemente por expresarse en otro idioma.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Un alumno presenta un párrafo donde ha cambiado únicamente tres palabras de una definición técnica de un manual sin incluir la referencia. ¿Cuál es el error principal en este fragmento?",
+      "answerOptions": [
+        {
+          "text": "Falta de precisión léxica en la reformulación.",
+          "isCorrect": false,
+          "rationale": "Se centra en la calidad de la escritura en lugar de abordar el problema ético de la falta de atribución de la fuente."
+        },
+        {
+          "text": "Uso excesivo de tecnicismos sin explicación.",
+          "isCorrect": false,
+          "rationale": "Desvía la atención hacia el vocabulario utilizado en lugar de identificar la ausencia de la cita obligatoria."
+        },
+        {
+          "text": "Realización de una paráfrasis sin cita.",
+          "isCorrect": true,
+          "rationale": "Cambiar unas pocas palabras no convierte la idea en propia; toda paráfrasis de una fuente externa requiere siempre su correspondiente atribución."
+        },
+        {
+          "text": "Incumplimiento de la extensión mínima del párrafo.",
+          "isCorrect": false,
+          "rationale": "Plantea una cuestión de formato estructural que no tiene relación con el problema de la integridad académica descrito."
+        }
+      ],
+      "hint": "Recuerda que la propiedad de una idea no depende de cuántas palabras se modifiquen respecto al original.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "En un trabajo sobre Geografía, un estudiante escribe: «Madrid es la capital de España». No incluye ninguna cita para esta afirmación. Analice la corrección de esta decisión.",
+      "answerOptions": [
+        {
+          "text": "Es incorrecto, debe citar a la Constitución Española.",
+          "isCorrect": false,
+          "rationale": "Propone una cita innecesaria para un dato que forma parte del saber compartido por la comunidad sin necesidad de verificación especializada."
+        },
+        {
+          "text": "Es correcto, ya que se trata de conocimiento general.",
+          "isCorrect": true,
+          "rationale": "Los datos de conocimiento general, como hechos históricos básicos o verdades geográficas evidentes, no requieren referencia bibliográfica."
+        },
+        {
+          "text": "Es incorrecto, toda afirmación en un trabajo académico debe llevar fuente.",
+          "isCorrect": false,
+          "rationale": "Aplica una regla de citación absoluta que se matiza al excluir explícitamente el conocimiento general."
+        },
+        {
+          "text": "Es correcto solo si la frase aparece en el diccionario de la RAE.",
+          "isCorrect": false,
+          "rationale": "Condiciona la falta de cita a la presencia en una obra específica, cuando la exención depende de la naturaleza común del dato."
+        }
+      ],
+      "hint": "Diferencia entre la información que requiere una investigación específica y los datos que forman parte de la cultura general.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Al revisar un borrador, el profesor observa que el texto es una sucesión de párrafos que comienzan con «Según X...», «Como dice Y...» y «Z afirma que...», sin comentarios intermedios. ¿Qué problema de integridad o calidad se identifica aquí?",
+      "answerOptions": [
+        {
+          "text": "Falta de fuentes de autoridad.",
+          "isCorrect": false,
+          "rationale": "El fragmento sí tiene fuentes; el problema es precisamente la forma en que se acumulan sin una estructura coherente propia."
+        },
+        {
+          "text": "Ausencia de voz propia del autor.",
+          "isCorrect": true,
+          "rationale": "El exceso de citas sin comentario propio («mosaico de citas») borra la voz del autor, quien debe dialogar con las fuentes en lugar de esconderse tras ellas."
+        },
+        {
+          "text": "Error en el formato de cita narrativa.",
+          "isCorrect": false,
+          "rationale": "Se enfoca en la sintaxis de las atribuciones en lugar de señalar la falta de análisis e interpretación personal."
+        },
+        {
+          "text": "Uso de fuentes no académicas.",
+          "isCorrect": false,
+          "rationale": "No hay evidencia en la situación de que las fuentes sean inadecuadas; el fallo reside en la falta de integración argumentativa."
+        }
+      ],
+      "hint": "Piensa en qué papel desempeña el autor del trabajo más allá de ser un recolector de frases ajenas.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Un grupo de estudiantes entrega un trabajo donde uno de los miembros incluyó imágenes descargadas de internet sin atribución. ¿Qué principio de integridad se está vulnerando?",
+      "answerOptions": [
+        {
+          "text": "El respeto a los derechos de autoría en materiales no textuales.",
+          "isCorrect": true,
+          "rationale": "El plagio incluye la incorporación de imágenes, tablas o vídeos sin el reconocimiento de su procedencia original."
+        },
+        {
+          "text": "La jerarquización de la información visual.",
+          "isCorrect": false,
+          "rationale": "Trata un problema de diseño gráfico en lugar de la cuestión ética de la propiedad intelectual y la citación."
+        },
+        {
+          "text": "La libertad de uso de contenidos públicos en la web.",
+          "isCorrect": false,
+          "rationale": "Supone erróneamente que estar en internet equivale a no tener autoría o a no requerir mención académica."
+        },
+        {
+          "text": "El equilibrio entre texto e imagen en la monografía.",
+          "isCorrect": false,
+          "rationale": "Se refiere a una cuestión de formato estético que es ajena a las normas de integridad académica."
+        }
+      ],
+      "hint": "Extiende el concepto de plagio más allá de las palabras escritas para incluir otros formatos de información.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Para evitar el plagio al tomar notas, conviene aplicar una técnica específica durante la lectura de fuentes. ¿Cuál es?",
+      "answerOptions": [
+        {
+          "text": "Copiar todo literalmente y decidir después qué es propio.",
+          "isCorrect": false,
+          "rationale": "Este hábito aumenta el riesgo de mezclar frases ajenas con propias, provocando plagio no intencional."
+        },
+        {
+          "text": "Separar en las notas lo copiado literalmente de lo parafraseado usando comillas.",
+          "isCorrect": true,
+          "rationale": "Registrar desde el inicio autor, año y página, y usar comillas en las fichas, es la prevención clave contra el descuido."
+        },
+        {
+          "text": "Escribir solo resúmenes sin mirar el texto original.",
+          "isCorrect": false,
+          "rationale": "Aunque ayuda a la comprensión, no garantiza que no se copien estructuras sintácticas del autor si no hay un registro claro."
+        },
+        {
+          "text": "Confiar en la memoria para distinguir las ideas tras la lectura.",
+          "isCorrect": false,
+          "rationale": "La memoria es poco fiable en el contexto académico y suele derivar en la confusión de fuentes."
+        }
+      ],
+      "hint": "Busca la estrategia que permite mantener la trazabilidad de la información desde el primer contacto con el material.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Analice el siguiente fragmento de un trabajo: «La relación entre proceso de escritura y citación muestra que las fuentes deben gestionarse desde la planificación (APA, 2020; Cassany, 1995)». ¿Qué rasgo positivo de la escritura académica se destaca aquí?",
+      "answerOptions": [
+        {
+          "text": "La desaparición del autor tras las autoridades citadas.",
+          "isCorrect": false,
+          "rationale": "Confunde la integración de fuentes con la anulación de la voz propia, cuando en el ejemplo el autor está afirmando algo basado en ellas."
+        },
+        {
+          "text": "La integración de la voz propia que dialoga con las fuentes.",
+          "isCorrect": true,
+          "rationale": "El autor utiliza las fuentes para sostener una afirmación propia, demostrando que citar no significa esconderse sino fundamentar."
+        },
+        {
+          "text": "El uso de la cita secundaria para ahorrar espacio.",
+          "isCorrect": false,
+          "rationale": "El fragmento no muestra una cita de una fuente dentro de otra, sino una citación múltiple directa de dos autores distintos."
+        },
+        {
+          "text": "La preferencia por la cita directa sobre la paráfrasis.",
+          "isCorrect": false,
+          "rationale": "El ejemplo es precisamente una paráfrasis o síntesis de ideas, no una reproducción literal de los autores mencionados."
+        }
+      ],
+      "hint": "Observa cómo el autor del fragmento propone una conclusión original apoyándose en el respaldo de otros expertos.",
+      "tags": [
+        "CP",
+        "T4_7"
+      ]
+    },
+    {
+      "question": "Un estudiante de primer curso utiliza una herramienta de IA generativa para obtener una lista de preguntas iniciales que le ayuden a delimitar el tema de su trabajo. ¿Cómo se clasifica esta acción?",
+      "answerOptions": [
+        {
+          "text": "Es un uso razonable como apoyo para explorar enfoques y buscar ideas iniciales.",
+          "isCorrect": true,
+          "rationale": "Se permite el uso de la IA para tareas auxiliares como la lluvia de ideas o la exploración de enfoques, siempre que no sustituya el razonamiento propio."
+        },
+        {
+          "text": "Es una práctica problemática porque delega la fase de planificación en una herramienta externa.",
+          "isCorrect": false,
+          "rationale": "Confunde el apoyo en la generación de ideas con la delegación total de la planificación, la cual es válida si el estudiante selecciona críticamente el resultado."
+        },
+        {
+          "text": "Se considera plagio no intencional si no se incluye la lista completa de preguntas en el cuerpo del texto.",
+          "isCorrect": false,
+          "rationale": "El plagio implica presentar ideas ajenas como propias, pero el uso de la IA para ideas preliminares no incorporadas textualmente suele considerarse apoyo menor."
+        },
+        {
+          "text": "Es aceptable únicamente si el estudiante cita la conversación como una fuente primaria en la bibliografía final.",
+          "isCorrect": false,
+          "rationale": "Las ideas preliminares que no se incorporan como texto final no suelen requerir una cita bibliográfica formal, sino, en su caso, una declaración metodológica."
+        }
+      ],
+      "hint": "Revisa la diferencia entre «uso razonable» y «uso problemático» de la IA.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Durante la redacción de un informe, un alumno solicita a una IA que genere una bibliografía sobre lectura digital y la copia directamente en su trabajo. ¿Qué riesgo principal presenta este procedimiento?",
+      "answerOptions": [
+        {
+          "text": "La herramienta puede inventar las fuentes o presentar datos erróneos que el alumno debe verificar.",
+          "isCorrect": true,
+          "rationale": "Las guías advierten de que la IA puede 'alucinar' referencias, por lo que la verificación en fuentes reales es una responsabilidad humana ineludible."
+        },
+        {
+          "text": "El sistema APA 7.ª edición prohíbe explícitamente incluir referencias generadas por inteligencia artificial.",
+          "isCorrect": false,
+          "rationale": "El problema no es la prohibición de las referencias en sí, sino la falta de veracidad y la ausencia de verificación por parte del autor."
+        },
+        {
+          "text": "La bibliografía generada por IA solo es válida si se presenta en un apéndice separado del resto de fuentes.",
+          "isCorrect": false,
+          "rationale": "No es necesario separar las bibliografías: lo importante es asegurar que todas las fuentes citadas sean reales y hayan sido consultadas."
+        },
+        {
+          "text": "El riesgo es que la IA use un formato de citación distinto al de la Universidad Pontificia Comillas.",
+          "isCorrect": false,
+          "rationale": "Aunque el formato es importante, el riesgo académico fundamental mencionado es la invención de información y la falta de trazabilidad."
+        }
+      ],
+      "hint": "Considera la fiabilidad de los datos proporcionados por las herramientas de IA generativa.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Una estudiante utiliza una IA para mejorar la fluidez de un párrafo que ella misma ha escrito. ¿Cómo debe proceder según las recomendaciones de transparencia?",
+      "answerOptions": [
+        {
+          "text": "Debe seguir la política de la asignatura, ya que para usos de corrección lingüística menor puede bastar con ello.",
+          "isCorrect": true,
+          "rationale": "Se distingue entre el uso que afecta al contenido o análisis y el apoyo menor en la expresión o corrección lingüística."
+        },
+        {
+          "text": "Debe incluir una cita parentética al final del párrafo corregido indicando la versión de la IA.",
+          "isCorrect": false,
+          "rationale": "La corrección de estilo de un texto propio no suele requerir una cita en cada párrafo, a diferencia de la incorporación de contenido generado."
+        },
+        {
+          "text": "Es obligatorio incluir el texto original y el corregido en un apéndice para comparar los cambios.",
+          "isCorrect": false,
+          "rationale": "Aunque los apéndices son útiles para textos generados íntegramente, no se exige esta duplicidad para simples revisiones de fluidez."
+        },
+        {
+          "text": "Debe declarar el uso de la herramienta solo si el programa de detección de plagio marca el párrafo.",
+          "isCorrect": false,
+          "rationale": "La honestidad académica y la transparencia no dependen de los detectores, sino de la responsabilidad del autor al declarar sus recursos."
+        }
+      ],
+      "hint": "Distingue entre el uso de la IA como generadora de contenido y su uso como herramienta de apoyo lingüístico.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Si un trabajo universitario contiene un error fáctico grave o una fuente inventada por una IA, ¿quién es el responsable institucional y moral?",
+      "answerOptions": [
+        {
+          "text": "El autor que firma el trabajo, pues la IA no puede asumir autoría ni responsabilidad.",
+          "isCorrect": true,
+          "rationale": "La responsabilidad final es siempre humana; el autor debe verificar cada dato y asegurar que el texto cumple con el encargo de forma ética."
+        },
+        {
+          "text": "La empresa desarrolladora de la herramienta por proporcionar información no verídica.",
+          "isCorrect": false,
+          "rationale": "En el ámbito académico, el compromiso de veracidad recae sobre el investigador o estudiante que utiliza los recursos, no sobre los proveedores de software."
+        },
+        {
+          "text": "El docente, por permitir el uso de herramientas generativas en la realización del encargo.",
+          "isCorrect": false,
+          "rationale": "El docente establece las pautas, pero la ejecución y la verificación del contenido son tareas propias de la responsabilidad del estudiante."
+        },
+        {
+          "text": "La responsabilidad se divide al $50\\%$ entre la herramienta y el estudiante al ser un trabajo colaborativo.",
+          "isCorrect": false,
+          "rationale": "La IA se considera un apoyo o instrumento, no un sujeto con capacidad moral o responsabilidad institucional compartida."
+        }
+      ],
+      "hint": "Busca el concepto de «responsabilidad humana» aplicado al uso de la IA.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "A la hora de citar una conversación específica con una IA que no es recuperable mediante un enlace público, ¿cómo conviene proceder siguiendo una lógica similar a la de APA 7?",
+      "answerOptions": [
+        {
+          "text": "Tratarla como una comunicación personal en el texto y documentarla en un apéndice.",
+          "isCorrect": true,
+          "rationale": "Al no ser recuperable por el lector, se asimila a las comunicaciones personales, reforzando la transparencia mediante un anexo con la transcripción."
+        },
+        {
+          "text": "Omitir la cita en el texto y poner solo el enlace a la página principal de la herramienta en referencias.",
+          "isCorrect": false,
+          "rationale": "Omitir la cita impide la trazabilidad de las ideas, y un enlace general no permite al lector ver la conversación específica utilizada."
+        },
+        {
+          "text": "Inventar un DOI para la conversación para que parezca un artículo de investigación.",
+          "isCorrect": false,
+          "rationale": "Inventar datos de identificación es una falta grave contra la integridad académica y la veracidad del trabajo."
+        },
+        {
+          "text": "Usar únicamente una cita parentética del tipo (ChatGPT, 2024) sin necesidad de aportar el texto generado.",
+          "isCorrect": false,
+          "rationale": "Si la conversación no es recuperable, la simple cita es insuficiente para la verificación; se recomienda aportar el contenido en un apéndice."
+        }
+      ],
+      "hint": "Revisa el tratamiento de las conversaciones con IA que no son recuperables por el lector.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Un alumno utiliza la IA para que le sugiera una estructura de epígrafes. Tras recibir la propuesta, selecciona algunos, los reordena y redacta el contenido por su cuenta. ¿Qué debe hacer respecto a la autoría?",
+      "answerOptions": [
+        {
+          "text": "Declarar el apoyo en una nota metodológica, especificando que él seleccionó y redactó el esquema final.",
+          "isCorrect": true,
+          "rationale": "La transparencia consiste en documentar cómo influyó la herramienta en el proceso de toma de decisiones del autor humano."
+        },
+        {
+          "text": "Atribuir la autoría del esquema a la IA mediante una cita directa en el índice del trabajo.",
+          "isCorrect": false,
+          "rationale": "El esquema no es una 'cita directa' si el alumno lo ha modificado y redactado; se trata de una asistencia en el diseño que requiere declaración, no cita textual."
+        },
+        {
+          "text": "No es necesario declarar nada porque el resultado final es fruto de su redacción propia.",
+          "isCorrect": false,
+          "rationale": "Aunque la redacción sea propia, si la IA influyó significativamente en la estructura (el método), debe transparentarse según las pautas de integridad."
+        },
+        {
+          "text": "Debe citar la herramienta en la bibliografía como coautor del trabajo.",
+          "isCorrect": false,
+          "rationale": "La IA no puede ser coautora porque no tiene responsabilidad moral ni jurídica sobre el contenido."
+        }
+      ],
+      "hint": "Fíjate en cómo se redacta una declaración metodológica sobre el uso de la IA.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Al declarar de forma transparente el uso de inteligencia artificial en un trabajo académico, ¿qué importancia tiene registrar la 'revisión humana' realizada?",
+      "answerOptions": [
+        {
+          "text": "Asegura que el autor ha verificado, corregido o descartado las salidas de la IA antes de integrarlas.",
+          "isCorrect": true,
+          "rationale": "La revisión humana es el paso crítico que valida la información y garantiza que el autor asume el control sobre el contenido final."
+        },
+        {
+          "text": "Es un trámite administrativo para que el profesor sepa que el alumno ha leído el texto generado.",
+          "isCorrect": false,
+          "rationale": "Es más que un trámite; es un componente esencial de la integridad académica y la responsabilidad del autor sobre lo que firma."
+        },
+        {
+          "text": "Sirve para justificar por qué no se incluyeron citas de fuentes académicas reales.",
+          "isCorrect": false,
+          "rationale": "La revisión humana no sustituye a las fuentes académicas; al contrario, debe confirmar que las referencias usadas son reales y pertinentes."
+        },
+        {
+          "text": "Permite que la IA aprenda de los errores cometidos por el estudiante durante la conversación.",
+          "isCorrect": false,
+          "rationale": "La transparencia académica se centra en el rigor del trabajo actual, no en el entrenamiento o mejora del modelo de lenguaje externo."
+        }
+      ],
+      "hint": "Piensa en el papel del estudiante como filtro crítico de la tecnología.",
+      "tags": [
+        "CP",
+        "T4_8"
+      ]
+    },
+    {
+      "question": "Un estudiante presenta un trabajo titulado «El impacto de la tecnología en la sociedad actual», pero el contenido se limita exclusivamente al uso de una aplicación de mensajería específica en una universidad. ¿Cuál es el problema principal?",
+      "answerOptions": [
+        {
+          "text": "El título es demasiado extenso para un trabajo académico de primer curso.",
+          "isCorrect": false,
+          "rationale": "No existen límites de extensión para los títulos académicos, sino criterios de precisión y delimitación del contenido."
+        },
+        {
+          "text": "El título promete más de lo que el trabajo ofrece realmente al no delimitar el tema.",
+          "isCorrect": true,
+          "rationale": "La pauta 9.1 exige que el título delimite el tema y sea coherente con el alcance real de la investigación presentada."
+        },
+        {
+          "text": "Falta incluir el nombre de la aplicación específica dentro del título principal.",
+          "isCorrect": false,
+          "rationale": "Aunque añadir el nombre ayudaría a delimitar, el error fundamental es la falta de correspondencia entre la promesa del título y el contenido."
+        },
+        {
+          "text": "Los títulos académicos deben ser siempre creativos y no necesariamente descriptivos.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el texto indica que el título debe delimitar el tema, priorizando la claridad informativa sobre la creatividad vaga."
+        }
+      ],
+      "hint": "Observa la relación entre la generalidad del título y la especificidad del contenido descrito.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "La introducción de un trabajo comienza así: «Desde siempre, el ser humano ha sentido la necesidad de aprender y comunicarse de forma efectiva». ¿Cómo debería corregirse este error?",
+      "answerOptions": [
+        {
+          "text": "Añadiendo una cita de autoridad que respalde esa afirmación histórica general.",
+          "isCorrect": false,
+          "rationale": "Citar una generalidad vacía no soluciona el problema de la falta de enfoque y relevancia del inicio del trabajo."
+        },
+        {
+          "text": "Cambiando el tiempo verbal al presente para dar mayor actualidad al texto.",
+          "isCorrect": false,
+          "rationale": "El problema no es gramatical, sino retórico, ya que el texto no sitúa al lector ante el problema específico que se va a abordar."
+        },
+        {
+          "text": "Delimitando el tema, el objetivo y la estructura desde el inicio en lugar de usar generalidades.",
+          "isCorrect": true,
+          "rationale": "El error de 'introducción demasiado general' se soluciona orientando al lector hacia el problema concreto y el recorrido del texto."
+        },
+        {
+          "text": "Eliminando la introducción y pasando directamente al marco conceptual para ahorrar espacio.",
+          "isCorrect": false,
+          "rationale": "La introducción es una sección obligatoria según el modelo 9.3; lo que debe corregirse es su contenido, no su existencia."
+        }
+      ],
+      "hint": "Identifica qué elementos de orientación al lector faltan en esa frase tan amplia.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "Tras terminar la redacción, un estudiante nota que ha explicado una teoría compleja con sus propias palabras, pero no ha incluido la cita parentética porque considera que 'la redacción es original'. ¿Debe citar la fuente de esa teoría aunque la haya expresado con sus propias palabras?",
+      "answerOptions": [
+        {
+          "text": "Si las palabras son originales del estudiante, no es necesario citar la fuente de la idea.",
+          "isCorrect": false,
+          "rationale": "Toda idea ajena debe citarse obligatoriamente, aunque se haya reformulado (paráfrasis)."
+        },
+        {
+          "text": "Solo debe citar si utiliza comillas para indicar una reproducción literal de la teoría.",
+          "isCorrect": false,
+          "rationale": "Las comillas son para citas directas, pero la paráfrasis también requiere la atribución de autoría mediante una cita."
+        },
+        {
+          "text": "Toda paráfrasis de una idea ajena debe estar citada para evitar el plagio no intencional.",
+          "isCorrect": true,
+          "rationale": "La trazabilidad académica exige reconocer el origen de las ideas, no solo de las palabras exactas."
+        },
+        {
+          "text": "Debe incluir la obra en la bibliografía final, pero no es necesario citarla dentro del párrafo.",
+          "isCorrect": false,
+          "rationale": "Las referencias sin cita previa generan confusión y no cumplen la función de atribución en el texto."
+        }
+      ],
+      "hint": "Recuerda la distinción entre «voz propia» y «atribución de ideas externas».",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "Un trabajo académico incluye una lista de 15 libros en el apartado de Referencias, pero al revisar el cuerpo del texto solo aparecen citas de 8 de ellos. ¿Cuál es la solución correcta?",
+      "answerOptions": [
+        {
+          "text": "Añadir citas ficticias en el texto para que la bibliografía parezca más completa.",
+          "isCorrect": false,
+          "rationale": "Esto constituye una falta de integridad académica y no soluciona el error de trazabilidad de las fuentes reales."
+        },
+        {
+          "text": "Eliminar de la lista de referencias aquellas obras que no han sido citadas en el texto.",
+          "isCorrect": true,
+          "rationale": "En el sistema APA 7, la lista de referencias solo debe contener las fuentes que han sido efectivamente mencionadas en el trabajo."
+        },
+        {
+          "text": "Cambiar el título del apartado de «Referencias» a «Bibliografía consultada».",
+          "isCorrect": false,
+          "rationale": "Aunque el cambio de nombre es posible si se solicita, el error de fondo es la «bibliografía inflada» que no corresponde con el texto."
+        },
+        {
+          "text": "Dejar la lista igual, ya que cuantas más fuentes aparezcan, más rigor académico demuestra el alumno.",
+          "isCorrect": false,
+          "rationale": "Incluir referencias no citadas se considera un error que dificulta la localización de las fuentes realmente utilizadas por el lector."
+        }
+      ],
+      "hint": "Piensa en la regla de correspondencia exacta entre el cuerpo del texto y la lista final.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "Un estudiante utilizó una herramienta de inteligencia artificial para generar una tabla comparativa y la incluyó en su trabajo. ¿Qué acción debe realizar según la pauta mínima de transparencia sobre el uso de la IA?",
+      "answerOptions": [
+        {
+          "text": "No es necesario declarar nada si los datos de la tabla son correctos y han sido verificados.",
+          "isCorrect": false,
+          "rationale": "El uso de IA en la creación de elementos del trabajo (como tablas o figuras) debe declararse para mantener la honestidad procesal."
+        },
+        {
+          "text": "Declarar el uso de la IA de forma transparente, indicando la herramienta y la revisión humana realizada.",
+          "isCorrect": true,
+          "rationale": "La pauta 9.1 exige transparentar el uso de IA generativa, especificando qué parte del trabajo influyó y cómo se verificó."
+        },
+        {
+          "text": "Atribuir la autoría de la tabla exclusivamente a la IA en la lista de referencias final.",
+          "isCorrect": false,
+          "rationale": "La IA no puede ser autora; el estudiante es el responsable y debe declarar la herramienta como un apoyo en una nota o apéndice."
+        },
+        {
+          "text": "Eliminar la tabla para evitar cualquier sospecha de falta de integridad académica.",
+          "isCorrect": false,
+          "rationale": "No es necesario eliminarla; el uso de IA es aceptable como apoyo siempre que se declare de forma verificable y honesta."
+        }
+      ],
+      "hint": "Busca el concepto de 'responsabilidad humana' y 'transparencia' en el proceso de creación.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "¿Cuál es el orden lógico que debe seguir el desarrollo de un trabajo académico tras la introducción?",
+      "answerOptions": [
+        {
+          "text": "Desarrollo analítico $\\rightarrow$ Marco o conceptos $\\rightarrow$ Referencias $\\rightarrow$ Conclusión.",
+          "isCorrect": false,
+          "rationale": "La conclusión debe ir siempre antes de las referencias y después del análisis."
+        },
+        {
+          "text": "Marco o conceptos $\\rightarrow$ Desarrollo analítico $\\rightarrow$ Discusión o valoración $\\rightarrow$ Conclusión.",
+          "isCorrect": true,
+          "rationale": "Este orden permite asentar primero las bases teóricas, realizar el análisis, valorarlo y finalmente cerrar con los resultados."
+        },
+        {
+          "text": "Discusión $\\rightarrow$ Conclusión $\\rightarrow$ Desarrollo analítico $\\rightarrow$ Marco o conceptos.",
+          "isCorrect": false,
+          "rationale": "Este orden carece de lógica progresiva, ya que discute resultados antes de presentar los datos y el marco teórico."
+        },
+        {
+          "text": "Referencias $\\rightarrow$ Marco o conceptos $\\rightarrow$ Desarrollo analítico $\\rightarrow$ Conclusión.",
+          "isCorrect": false,
+          "rationale": "Las referencias se sitúan siempre al final del trabajo, no al principio."
+        }
+      ],
+      "hint": "Piensa en una secuencia que vaya de la fundamentación teórica al cierre de los hallazgos.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "Al revisar la redacción final, el estudiante encuentra la frase: «Me parece que la norma APA es un lío total y no sirve para nada». ¿Qué corrección debería aplicarse en cuanto a la lengua empleada?",
+      "answerOptions": [
+        {
+          "text": "Es correcta porque el ensayo académico debe expresar las emociones del autor con total libertad.",
+          "isCorrect": false,
+          "rationale": "El tono académico exige formalidad y distancia expresiva, evitando juicios de valor puramente emocionales o coloquiales."
+        },
+        {
+          "text": "Debe sustituirse por un registro formal, preciso y con una valoración fundamentada, no subjetiva.",
+          "isCorrect": true,
+          "rationale": "La pauta 9.1 y 9.2 insisten en mantener una formalidad natural y evitar conclusiones o juicios puramente subjetivos."
+        },
+        {
+          "text": "Basta con poner la frase entre comillas para que se considere una opinión personal válida.",
+          "isCorrect": false,
+          "rationale": "Las comillas no corrigen la falta de adecuación al registro académico ni la falta de rigor en la crítica."
+        },
+        {
+          "text": "La frase es aceptable si se añade una cita que diga que a otro autor también le parece difícil.",
+          "isCorrect": false,
+          "rationale": "Incluso con una cita, el lenguaje debe ser preciso y técnico («complejidad procedimental») en lugar de coloquial («lío total»)."
+        }
+      ],
+      "hint": "Compara el uso de expresiones coloquiales frente a la «precisión léxica» exigida en un registro académico.",
+      "tags": [
+        "CP",
+        "T4_9"
+      ]
+    },
+    {
+      "question": "Fuente: Ruiz Bermejo, A. (2019). <i>La comunicación en la era digital</i>. Cátedra, p. 87. Texto original: «la escritura ya no es un proceso lineal, sino una negociación constante entre el autor y las herramientas digitales que median su producción». ¿Cuál es la cita directa integrada correctamente elaborada en APA 7.ª edición?",
+      "answerOptions": [
+        {
+          "text": "Ruiz Bermejo (2019) sostiene que «la escritura ya no es un proceso lineal, sino una negociación constante entre el autor y las herramientas digitales que median su producción» (p. 87).",
+          "isCorrect": true,
+          "rationale": "Cita narrativa correcta: año junto al apellido, comillas angulares, y página entre paréntesis al final."
+        },
+        {
+          "text": "Ruiz Bermejo (2019) sostiene que «la escritura ya no es un proceso lineal, sino una negociación constante entre el autor y las herramientas digitales que median su producción».",
+          "isCorrect": false,
+          "rationale": "Falta el número de página: toda cita directa debe indicar dónde se localiza el fragmento exacto."
+        },
+        {
+          "text": "Ruiz Bermejo (2019) sostiene que la escritura ya no es un proceso lineal, sino una negociación constante entre el autor y las herramientas digitales que median su producción (p. 87).",
+          "isCorrect": false,
+          "rationale": "Falta marcar el fragmento con comillas: al ser una cita directa de menos de 40 palabras, debe integrarse entre comillas angulares."
+        },
+        {
+          "text": "Ruiz Bermejo sostiene que «la escritura ya no es un proceso lineal, sino una negociación constante entre el autor y las herramientas digitales que median su producción» (2019, p. 87).",
+          "isCorrect": false,
+          "rationale": "En la cita narrativa, el año debe ir entre paréntesis inmediatamente después del apellido del autor, no pospuesto al final junto con la página."
+        }
+      ],
+      "hint": "En una cita narrativa, el año va justo después del apellido; la página cierra la cita al final.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "Fuente: Torres Ledesma, P. (2021). <i>Estrategias de comprensión lectora</i>. Síntesis, p. 112. Texto original (43 palabras): «La comprensión lectora no depende únicamente del reconocimiento de palabras, sino de la capacidad del lector para construir una representación coherente del texto, integrando lo que ya conoce con la información nueva que se le presenta a lo largo de la lectura». ¿Cuál de estas opciones aplica correctamente el formato de cita directa destacada (en bloque)?",
+      "answerOptions": [
+        {
+          "text": "Torres Ledesma (2021) explica lo siguiente: La comprensión lectora no depende únicamente del reconocimiento de palabras, sino de la capacidad del lector para construir una representación coherente del texto, integrando lo que ya conoce con la información nueva que se le presenta a lo largo de la lectura. (p. 112)",
+          "isCorrect": true,
+          "rationale": "Al superar las 40 palabras, la cita se presenta en bloque, sin comillas, con la referencia de página tras el punto final."
+        },
+        {
+          "text": "Torres Ledesma (2021) explica lo siguiente: «La comprensión lectora no depende únicamente del reconocimiento de palabras, sino de la capacidad del lector para construir una representación coherente del texto, integrando lo que ya conoce con la información nueva que se le presenta a lo largo de la lectura» (p. 112).",
+          "isCorrect": false,
+          "rationale": "Una cita de 40 palabras o más no lleva comillas: se presenta como bloque destacado, y las comillas son innecesarias."
+        },
+        {
+          "text": "Torres Ledesma (2021) explica lo siguiente: La comprensión lectora no depende únicamente del reconocimiento de palabras, sino de la capacidad del lector para construir una representación coherente del texto, integrando lo que ya conoce con la información nueva que se le presenta a lo largo de la lectura.",
+          "isCorrect": false,
+          "rationale": "Falta el número de página: toda cita directa, integrada o en bloque, debe indicar la página exacta."
+        },
+        {
+          "text": "Torres Ledesma (2021) explica que comprender un texto exige integrar los conocimientos previos con la información nueva (p. 112).",
+          "isCorrect": false,
+          "rationale": "Esto no es una cita directa, sino una paráfrasis: reformula la idea en palabras propias en lugar de reproducir el fragmento literal de 40 o más palabras."
+        }
+      ],
+      "hint": "Recuerda el umbral de las 40 palabras: por debajo, comillas integradas; por encima, bloque sin comillas.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "Vas a citar por primera vez la obra de dos autores Blanco Aguilar, M., y Prieto Casas, J. (2020). <i>Fundamentos de redacción académica</i>. Alianza. ¿Cuál es la cita parentética correcta en APA 7.ª edición?",
+      "answerOptions": [
+        {
+          "text": "(Blanco Aguilar y Prieto Casas, 2020)",
+          "isCorrect": true,
+          "rationale": "Con dos autores, APA exige citar siempre ambos apellidos unidos por «y» (en textos en español), en todas las menciones."
+        },
+        {
+          "text": "(Blanco Aguilar & Prieto Casas, 2020)",
+          "isCorrect": false,
+          "rationale": "El símbolo «&» se reserva para el inglés; en un texto en español se usa la conjunción «y»."
+        },
+        {
+          "text": "(Blanco Aguilar et al., 2020)",
+          "isCorrect": false,
+          "rationale": "«Et al.» solo se emplea desde tres autores en adelante; con dos autores deben citarse siempre ambos."
+        },
+        {
+          "text": "(Blanco Aguilar, 2020)",
+          "isCorrect": false,
+          "rationale": "Omite al segundo autor: con dos autores, ambos apellidos son obligatorios en cada cita."
+        }
+      ],
+      "hint": "Dos autores: siempre los dos apellidos con «y». Tres o más: «et al.» desde la primera cita.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "Vas a citar por primera vez la obra de tres autores Delgado Ferreira, R., Muñoz Salinas, T., y Castro Lima, V. (2022). <i>Escritura y pensamiento crítico</i>. Morata. ¿Cuál es la cita parentética correcta en APA 7.ª edición?",
+      "answerOptions": [
+        {
+          "text": "(Delgado Ferreira et al., 2022)",
+          "isCorrect": true,
+          "rationale": "Con tres autores o más, APA 7 exige usar «et al.» tras el primer apellido desde la primera cita, sin listar a todos."
+        },
+        {
+          "text": "(Delgado Ferreira, Muñoz Salinas y Castro Lima, 2022)",
+          "isCorrect": false,
+          "rationale": "Esta era la regla de ediciones anteriores; APA 7 simplifica y exige «et al.» ya desde la primera cita con tres autores o más."
+        },
+        {
+          "text": "(Castro Lima et al., 2022)",
+          "isCorrect": false,
+          "rationale": "Debe usarse el apellido del primer autor tal como figura en la obra original, no otro autor ni un orden alfabético distinto."
+        },
+        {
+          "text": "(Delgado Ferreira et al.)",
+          "isCorrect": false,
+          "rationale": "Falta el año, un elemento obligatorio en toda cita parentética."
+        }
+      ],
+      "hint": "A partir de tres autores, «et al.» se usa ya desde la primera cita, no solo en las siguientes.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "No has podido acceder al texto original de Herrero Campos; solo conoces su idea porque aparece mencionada dentro de Salgado Nieves, F. (2021). ¿Cómo debe citarse correctamente esta situación (cita secundaria)?",
+      "answerOptions": [
+        {
+          "text": "Herrero Campos (como se cita en Salgado Nieves, 2021) sostiene que...",
+          "isCorrect": true,
+          "rationale": "La fórmula de cita secundaria atribuye la idea al autor original y reconoce, a la vez, que se ha accedido a ella a través de otra fuente."
+        },
+        {
+          "text": "Herrero Campos (2021) sostiene que...",
+          "isCorrect": false,
+          "rationale": "Atribuye a Herrero Campos un año que no es el de su obra original, y oculta que no se ha consultado la fuente directamente."
+        },
+        {
+          "text": "Salgado Nieves (2021) sostiene que...",
+          "isCorrect": false,
+          "rationale": "Atribuye a Salgado Nieves una idea que en realidad pertenece a Herrero Campos; la fuente secundaria no debe presentarse como autora de la idea."
+        },
+        {
+          "text": "Salgado Nieves (como se cita en Herrero Campos) sostiene que...",
+          "isCorrect": false,
+          "rationale": "Invierte la relación real entre las fuentes: es Herrero Campos quien se conoce a través de Salgado Nieves, no al revés."
+        }
+      ],
+      "hint": "La cita secundaria debe usarse con moderación: siempre que sea posible, consulta la fuente original.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "Vas a citar por primera vez en tu trabajo la Asociación Iberoamericana de Lingüística Aplicada [AILA]. (2020). <i>Guía de estilo académico</i>. AILA, y quieres poder usar la sigla en citas posteriores. ¿Cuál es la forma correcta de la primera mención?",
+      "answerOptions": [
+        {
+          "text": "(Asociación Iberoamericana de Lingüística Aplicada [AILA], 2020)",
+          "isCorrect": true,
+          "rationale": "En la primera cita de un autor institucional se escribe el nombre completo seguido de la sigla entre corchetes; en citas posteriores basta con la sigla."
+        },
+        {
+          "text": "(AILA, 2020)",
+          "isCorrect": false,
+          "rationale": "No puede usarse la sigla en la primera mención si antes no se ha presentado el nombre completo de la institución."
+        },
+        {
+          "text": "([AILA] Asociación Iberoamericana de Lingüística Aplicada, 2020)",
+          "isCorrect": false,
+          "rationale": "El orden es incorrecto: primero va el nombre completo y después la sigla entre corchetes, no al revés."
+        },
+        {
+          "text": "(Asociación Iberoamericana de Lingüística Aplicada (AILA), 2020)",
+          "isCorrect": false,
+          "rationale": "La sigla debe ir entre corchetes, no entre paréntesis, para no confundirse con el paréntesis que encierra toda la cita."
+        }
+      ],
+      "hint": "Autor institucional: nombre completo + [SIGLA] en la primera cita; solo la sigla en las siguientes.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "Fuente: Moya Alcántara, C. (2023). <i>Textos y contextos digitales</i>. UOC. Dato original (p. 29): «el 68 % de los estudiantes universitarios revisa el móvil mientras redacta un trabajo académico». Quieres parafrasear este dato estadístico concreto. ¿Cuál de las siguientes versiones es la más adecuada?",
+      "answerOptions": [
+        {
+          "text": "Según Moya Alcántara (2023), casi siete de cada diez estudiantes universitarios consultan el móvil mientras están redactando un trabajo académico (p. 29).",
+          "isCorrect": true,
+          "rationale": "Reformula el dato con palabras propias y, al tratarse de una cifra concreta y localizable, mantiene la referencia de página como buena práctica."
+        },
+        {
+          "text": "Según Moya Alcántara (2023), casi siete de cada diez estudiantes universitarios consultan el móvil mientras están redactando un trabajo académico.",
+          "isCorrect": false,
+          "rationale": "Al parafrasear un dato estadístico muy concreto, conviene mantener la página para que el lector pueda localizarlo con precisión."
+        },
+        {
+          "text": "Casi siete de cada diez estudiantes universitarios consultan el móvil mientras redactan un trabajo académico.",
+          "isCorrect": false,
+          "rationale": "Presenta como conocimiento general propio un dato de investigación concreto, sin atribuir la fuente."
+        },
+        {
+          "text": "Según Moya Alcántara (2023), el 68 % de los estudiantes universitarios revisa el móvil mientras redacta un trabajo académico (p. 29).",
+          "isCorrect": false,
+          "rationale": "Reproduce el dato casi con las mismas palabras del original sin comillas ni marca de cita literal: es una paráfrasis insuficiente, muy próxima al plagio."
+        }
+      ],
+      "hint": "Al parafrasear datos o cifras muy concretas, es buena práctica mantener la página, aunque no sea obligatorio como en la cita directa.",
+      "tags": [
+        "CP",
+        "T4_10"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de un libro está correctamente elaborada en APA 7.ª edición?",
+      "answerOptions": [
+        {
+          "text": "Ruiz Bermejo, A. (2019). <i>La comunicación en la era digital</i>. Cátedra.",
+          "isCorrect": true,
+          "rationale": "Estructura correcta: Apellido, Inicial. (Año). Título en cursiva. Editorial."
+        },
+        {
+          "text": "Ruiz Bermejo, A. (2019). <i>La comunicación en la era digital</i>. Madrid: Cátedra.",
+          "isCorrect": false,
+          "rationale": "APA 7 ya no exige indicar la ciudad de publicación de los libros; basta con el nombre de la editorial."
+        },
+        {
+          "text": "Ruiz Bermejo, Alberto. (2019). <i>La comunicación en la era digital</i>. Cátedra.",
+          "isCorrect": false,
+          "rationale": "El nombre de pila debe reducirse a su inicial (A.), no escribirse completo."
+        },
+        {
+          "text": "Ruiz Bermejo, A. (2019). «La comunicación en la era digital». Cátedra.",
+          "isCorrect": false,
+          "rationale": "El título de un libro va en cursiva, no entre comillas."
+        }
+      ],
+      "hint": "Libro: Apellido, Inicial. (Año). Título en cursiva. Editorial. Sin ciudad.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de un capítulo dentro de un libro editado está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Prieto Casas, J. (2020). La revisión como proceso cognitivo. En M. Blanco Aguilar (Ed.), <i>Fundamentos de redacción académica</i> (pp. 55-78). Alianza.",
+          "isCorrect": true,
+          "rationale": "Estructura correcta: autor del capítulo, año, título del capítulo, «En» + editor(a) + título del libro en cursiva y páginas, editorial."
+        },
+        {
+          "text": "Prieto Casas, J. (2020). En M. Blanco Aguilar (Ed.), La revisión como proceso cognitivo (pp. 55-78). <i>Fundamentos de redacción académica</i>.",
+          "isCorrect": false,
+          "rationale": "Intercambia el título del capítulo con el del libro: el título del capítulo debe ir primero, sin cursiva, y el del libro después, en cursiva."
+        },
+        {
+          "text": "Prieto Casas, J. (2020). La revisión como proceso cognitivo. <i>Fundamentos de redacción académica</i> (pp. 55-78). Alianza.",
+          "isCorrect": false,
+          "rationale": "Falta indicar «En M. Blanco Aguilar (Ed.),» antes del título del libro, elemento imprescindible en una referencia de capítulo."
+        },
+        {
+          "text": "Prieto Casas, J. La revisión como proceso cognitivo. En M. Blanco Aguilar (Ed.), <i>Fundamentos de redacción académica</i> (2020, pp. 55-78). Alianza.",
+          "isCorrect": false,
+          "rationale": "El año debe ir entre paréntesis justo después del autor del capítulo, no desplazado junto a las páginas."
+        }
+      ],
+      "hint": "Capítulo: Autor. (Año). Título del capítulo. En Editor (Ed.), Título del libro (pp. X-X). Editorial.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de una página web con autor y fecha específicos está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Salgado Nieves, F. (2021, 14 de marzo). <i>Cómo citar fuentes digitales en trabajos académicos</i>. Centro de Escritura Académica. https://www.ejemplo.edu/citar-fuentes-digitales",
+          "isCorrect": true,
+          "rationale": "Incluye autor, fecha completa entre paréntesis, título, nombre del sitio y URL directa, sin «Recuperado de»."
+        },
+        {
+          "text": "Salgado Nieves, F. (2021). <i>Cómo citar fuentes digitales en trabajos académicos</i>. Centro de Escritura Académica. https://www.ejemplo.edu/citar-fuentes-digitales",
+          "isCorrect": false,
+          "rationale": "Al tratar de un contenido con fecha de publicación conocida, debe indicarse el día y el mes exactos, no solo el año."
+        },
+        {
+          "text": "Centro de Escritura Académica. (2021, 14 de marzo). <i>Cómo citar fuentes digitales en trabajos académicos</i>. https://www.ejemplo.edu/citar-fuentes-digitales",
+          "isCorrect": false,
+          "rationale": "Atribuye la autoría a la institución cuando existe un autor personal identificado, que debe figurar en primer lugar."
+        },
+        {
+          "text": "Salgado Nieves, F. (2021, 14 de marzo). <i>Cómo citar fuentes digitales en trabajos académicos</i>. Recuperado de https://www.ejemplo.edu/citar-fuentes-digitales",
+          "isCorrect": false,
+          "rationale": "APA 7 ya no exige «Recuperado de» salvo que el contenido pueda cambiar con el tiempo; para una página estable basta con la URL directa."
+        }
+      ],
+      "hint": "Página web con autor: Autor. (Año, día de mes). Título. Nombre del sitio. URL directa.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de un informe institucional está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Organización Mundial de la Salud. (2022). <i>Informe sobre el bienestar digital juvenil</i>. OMS. https://www.who-ejemplo.org/informe-bienestar-2022",
+          "isCorrect": true,
+          "rationale": "El nombre completo de la institución encabeza la referencia como autora; la sigla puede repetirse como editorial."
+        },
+        {
+          "text": "OMS. (2022). <i>Informe sobre el bienestar digital juvenil</i>. Organización Mundial de la Salud. https://www.who-ejemplo.org/informe-bienestar-2022",
+          "isCorrect": false,
+          "rationale": "En la lista de referencias debe figurar el nombre completo de la institución como autora, no la sigla."
+        },
+        {
+          "text": "<i>Informe sobre el bienestar digital juvenil</i>. (2022). Organización Mundial de la Salud. https://www.who-ejemplo.org/informe-bienestar-2022",
+          "isCorrect": false,
+          "rationale": "Antepone el título a la autoría institucional; el autor (aunque sea una institución) siempre encabeza la referencia."
+        },
+        {
+          "text": "Organización Mundial de la Salud (2022) <i>Informe sobre el bienestar digital juvenil</i>. OMS. https://www.who-ejemplo.org/informe-bienestar-2022",
+          "isCorrect": false,
+          "rationale": "Falta el punto tras el año entre paréntesis, un elemento de puntuación obligatorio en toda referencia APA."
+        }
+      ],
+      "hint": "Informe institucional: Nombre completo de la institución. (Año). Título. URL.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de un artículo de periódico digital está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Casals Ferrer, N. (2023, 8 de octubre). El auge de la lectura en pantallas entre los universitarios. <i>El Periódico Académico</i>. https://www.periodicoacademico-ejemplo.com/lectura-pantallas",
+          "isCorrect": true,
+          "rationale": "Fecha completa entre paréntesis junto al autor, título sin comillas, nombre del periódico y URL directa."
+        },
+        {
+          "text": "Casals Ferrer, N. (2023). El auge de la lectura en pantallas entre los universitarios. <i>El Periódico Académico</i>, 8 de octubre. https://www.periodicoacademico-ejemplo.com/lectura-pantallas",
+          "isCorrect": false,
+          "rationale": "La fecha completa (día y mes) debe ir junto al año, entre paréntesis después del autor, no como un elemento suelto tras el nombre del periódico."
+        },
+        {
+          "text": "El auge de la lectura en pantallas entre los universitarios. (2023, 8 de octubre). Casals Ferrer, N. <i>El Periódico Académico</i>. https://www.periodicoacademico-ejemplo.com/lectura-pantallas",
+          "isCorrect": false,
+          "rationale": "El orden de los elementos está alterado: el título no puede preceder al autor."
+        },
+        {
+          "text": "Casals Ferrer, N. (2023, 8 de octubre). «El auge de la lectura en pantallas entre los universitarios». <i>El Periódico Académico</i>. https://www.periodicoacademico-ejemplo.com/lectura-pantallas",
+          "isCorrect": false,
+          "rationale": "El título del artículo periodístico no debe ir entre comillas en la referencia final."
+        }
+      ],
+      "hint": "Prensa digital: Autor. (Año, día de mes). Título del artículo. Nombre del periódico. URL.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de una obra completa dirigida por una persona coordinadora está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Blanco Aguilar, M. (Coord.). (2020). <i>Fundamentos de redacción académica</i>. Alianza.",
+          "isCorrect": true,
+          "rationale": "La abreviatura «(Coord.)» se coloca junto al nombre del responsable de la obra, antes del año."
+        },
+        {
+          "text": "Blanco Aguilar, M. (2020). <i>Fundamentos de redacción académica</i> (M. Blanco Aguilar, Coord.). Alianza.",
+          "isCorrect": false,
+          "rationale": "Repite de forma redundante e incorrecta el nombre de la coordinadora junto al título."
+        },
+        {
+          "text": "Blanco Aguilar, M. (Coordinadora). (2020). <i>Fundamentos de redacción académica</i>. Alianza.",
+          "isCorrect": false,
+          "rationale": "APA utiliza la abreviatura «Coord.», no la palabra completa «Coordinadora»."
+        },
+        {
+          "text": "Blanco Aguilar, M. (2020) (Coord.). <i>Fundamentos de redacción académica</i>. Alianza.",
+          "isCorrect": false,
+          "rationale": "La indicación «(Coord.)» debe ir junto al nombre del autor, antes del año, no después de él."
+        }
+      ],
+      "hint": "Obra dirigida: Apellido, Inicial. (Coord./Ed.). (Año). Título. Editorial.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    },
+    {
+      "question": "¿Cuál de las siguientes referencias de un vídeo publicado en línea está correctamente elaborada?",
+      "answerOptions": [
+        {
+          "text": "Centro de Escritura Académica. (2022, 3 de mayo). <i>Cómo estructurar la introducción de un TFG</i> [Vídeo]. YouTube. https://www.youtube-ejemplo.com/watch?v=abc123",
+          "isCorrect": true,
+          "rationale": "Incluye autor/canal, fecha completa, título, el formato entre corchetes, la plataforma y la URL."
+        },
+        {
+          "text": "Cómo estructurar la introducción de un TFG. (2022, 3 de mayo). Centro de Escritura Académica [Vídeo]. YouTube. https://www.youtube-ejemplo.com/watch?v=abc123",
+          "isCorrect": false,
+          "rationale": "Antepone el título a la autoría del canal, cuando el autor siempre debe encabezar la referencia."
+        },
+        {
+          "text": "Centro de Escritura Académica. (2022, 3 de mayo). <i>Cómo estructurar la introducción de un TFG</i>. YouTube. https://www.youtube-ejemplo.com/watch?v=abc123",
+          "isCorrect": false,
+          "rationale": "Falta indicar el formato del recurso entre corchetes, [Vídeo], justo después del título."
+        },
+        {
+          "text": "Centro de Escritura Académica. (2022, 3 de mayo). <i>Cómo estructurar la introducción de un TFG</i> [Vídeo]. https://www.youtube-ejemplo.com/watch?v=abc123",
+          "isCorrect": false,
+          "rationale": "Falta indicar la plataforma (YouTube) que aloja el vídeo antes de la URL."
+        }
+      ],
+      "hint": "Vídeo en línea: Autor/canal. (Año, día de mes). Título [Vídeo]. Plataforma. URL.",
+      "tags": [
+        "CP",
+        "T4_11"
+      ]
+    }
+  ]
+}

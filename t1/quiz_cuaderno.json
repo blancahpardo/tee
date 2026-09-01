@@ -1,0 +1,244 @@
+{
+  "quiz": [
+    {
+      "question": "En una entrevista de trabajo, un reclutador pregunta: «¿Qué tal su anterior empleo?», a lo que el candidato responde: «La oficina tenía una cafetera excelente». ¿Qué máxima de Grice se está vulnerando en esta situación?",
+      "answerOptions": [
+        {
+          "text": "Máxima de calidad, porque el candidato está afirmando algo que es probablemente falso.",
+          "rationale": "No hay pruebas de que la afirmación sobre la cafetera sea falsa; el problema es que la respuesta no es relevante para la pregunta.",
+          "isCorrect": false
+        },
+        {
+          "text": "Máxima de relación (o relevancia), al no proporcionar una respuesta pertinente al tema de la pregunta.",
+          "rationale": "Responder sobre la cafetera cuando se pregunta por la experiencia laboral rompe la pertinencia esperada en la cooperación comunicativa.",
+          "isCorrect": true
+        },
+        {
+          "text": "Máxima de modo, ya que la respuesta es demasiado breve y carece de la cortesía necesaria.",
+          "rationale": "La brevedad no es el problema principal, sino el hecho de que el contenido no tiene relación directa con lo consultado.",
+          "isCorrect": false
+        },
+        {
+          "text": "Máxima de cantidad, porque se está dando mucha más información de la que el reclutador necesita.",
+          "rationale": "El candidato está dando información insuficiente o nula sobre el tema principal, más que un exceso de datos sobre el empleo.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Observa si la respuesta del candidato tiene que ver directamente con lo que se le ha preguntado.",
+      "tags": [
+        "CP",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "Un médico le dice a un colega en un congreso: «El paciente presenta una cefalea intensa con resistencia a la analgesia convencional». Sin embargo, al paciente le dice: «Le duele la cabeza porque las pastillas no le hacen efecto». ¿Qué factor del registro justifica este cambio?",
+      "answerOptions": [
+        {
+          "text": "El modo, ya que en un caso usa el canal oral y en otro el canal escrito.",
+          "rationale": "Ambas situaciones son probablemente orales; la diferencia real radica en el tipo de interlocutor y la especialización.",
+          "isCorrect": false
+        },
+        {
+          "text": "El campo, ya que el grado de especialización del léxico se adapta al conocimiento del receptor.",
+          "rationale": "El campo técnico médico requiere precisión entre especialistas, pero debe divulgarse para ser adecuado ante un paciente.",
+          "isCorrect": true
+        },
+        {
+          "text": "El idiolecto, porque el médico tiene una forma particular de hablar según su estado de ánimo.",
+          "rationale": "El idiolecto son rasgos personales constantes, mientras que este cambio es una adaptación consciente a la situación comunicativa.",
+          "isCorrect": false
+        },
+        {
+          "text": "La variedad diatópica, pues emplea términos de distintas zonas geográficas.",
+          "rationale": "La diferencia entre 'cefalea' y 'dolor de cabeza' no es geográfica, sino de nivel de especialización técnica.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Considera cómo varía el vocabulario según si el interlocutor es un experto o un profano en la materia.",
+      "tags": [
+        "CP",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "Se lee en un informe administrativo: «Se procederá a llevar a cabo la cumplimentación de los protocolos pertinentes con anterioridad al inicio de la sesión». ¿Qué diagnóstico le darías a este fragmento?",
+      "answerOptions": [
+        {
+          "text": "Es un texto de norma culta excelente, ya que evita palabras comunes y usa fórmulas complejas.",
+          "rationale": "La norma culta no es sinónimo de complicación; la claridad es preferible a la hinchazón verbal innecesaria.",
+          "isCorrect": false
+        },
+        {
+          "text": "Presenta un desajuste por falsa elevación o solemnidad vacía.",
+          "rationale": "El uso de perífrasis como 'procederá a llevar a cabo' en lugar de 'rellenar' oscurece el mensaje sin aportar precisión técnica real.",
+          "isCorrect": true
+        },
+        {
+          "text": "Es un ejemplo de español estándar funcional para cualquier tipo de comunicación.",
+          "rationale": "El estándar busca la intercomprensión y la sencillez; este texto es innecesariamente oscuro para un receptor medio.",
+          "isCorrect": false
+        },
+        {
+          "text": "Es un texto agramatical porque mezcla tiempos verbales de forma incorrecta.",
+          "rationale": "El texto es gramaticalmente correcto; su problema es de estilo y adecuación (exceso de retórica administrativa).",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Piensa si el mensaje podría decirse de forma más sencilla sin perder rigor.",
+      "tags": [
+        "CP",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "Si un hablante dice: «Me se ha caído el amoto», estamos ante un fenómeno que se clasifica como:",
+      "answerOptions": [
+        {
+          "text": "Una agramaticalidad absoluta que impide totalmente la comunicación.",
+          "rationale": "El mensaje se entiende perfectamente a pesar de no seguir la norma; por tanto, no hay una ruptura total del sistema.",
+          "isCorrect": false
+        },
+        {
+          "text": "Una variedad diastrática que incluye rasgos tradicionalmente considerados vulgarismos.",
+          "rationale": "Tanto el orden de los pronombres como la adición del sonido 'a-' son rasgos asociados a niveles socioculturales bajos o poca escolarización.",
+          "isCorrect": true
+        },
+        {
+          "text": "Un rasgo de la norma culta en determinadas zonas geográficas.",
+          "rationale": "La norma culta rechaza sistemáticamente estas formas en todos los países hispanohablantes.",
+          "isCorrect": false
+        },
+        {
+          "text": "Un ejemplo de español estándar coloquial aceptable en un examen.",
+          "rationale": "El estándar coloquial evita estos rasgos vulgarizantes, que son inaceptables en cualquier contexto académico formal.",
+          "isCorrect": false
+        }
+      ],
+      "hint": "Relaciona estos errores de pronunciación y gramática con los niveles socioculturales de la lengua.",
+      "tags": [
+        "CP",
+        "T1_1"
+      ]
+    },
+    {
+      "question": "Analiza la siguiente frase de un informe: «En el seno del presente documento se procederá a llevar a cabo una explicación pormenorizada». ¿Cuál de las siguientes reformulaciones corrige mejor el problema de estilo?",
+      "answerOptions": [
+        {
+          "text": "«Este documento explica detalladamente las circunstancias».",
+          "isCorrect": true,
+          "rationale": "La eliminación de perífrasis e hinchazón verbal como «procederá a llevar a cabo» favorece la claridad y la precisión académica sin perder formalidad."
+        },
+        {
+          "text": "«Se va a realizar una aclaración de todo lo que ha pasado».",
+          "isCorrect": false,
+          "rationale": "Esta versión cae en un registro demasiado informal y vago («todo lo que ha pasado»), alejándose del estándar académico requerido para un informe."
+        },
+        {
+          "text": "«Dada la relevancia del asunto, se analizará el transcurso de la sesión».",
+          "isCorrect": false,
+          "rationale": "Aunque es formal, introduce conectores de relevancia que no estaban en el original, manteniendo cierta complejidad estructural innecesaria."
+        },
+        {
+          "text": "«Procedemos a explicar lo ocurrido durante la presente sesión».",
+          "isCorrect": false,
+          "rationale": "Mantiene el verbo «proceder», que forma parte de una fórmula inflada y no aporta precisión real al mensaje."
+        }
+      ],
+      "hint": "Busca la opción que sustituya los rodeos verbales por verbos directos y claros.",
+      "tags": [
+        "CP",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Se presentan dos enunciados: «El texto tiene buenos ejemplos» y «La explicación es confusa». ¿Cuál es la mejor forma de cohesionarlos para mostrar un contraste?",
+      "answerOptions": [
+        {
+          "text": "«El texto contiene buenos ejemplos; sin embargo, la explicación resulta confusa».",
+          "isCorrect": true,
+          "rationale": "El marcador «sin embargo» explicita correctamente la relación de contraste entre la parte positiva (ejemplos) y la negativa (explicación)."
+        },
+        {
+          "text": "«El texto contiene buenos ejemplos porque la explicación resulta confusa».",
+          "isCorrect": false,
+          "rationale": "Este conector establece una relación de causa que resulta ilógica, sugiriendo que la confusión es el motivo de que los ejemplos sean buenos."
+        },
+        {
+          "text": "«El texto contiene buenos ejemplos, por tanto, la explicación resulta confusa».",
+          "isCorrect": false,
+          "rationale": "Indica una consecuencia que no se deduce del contenido, ya que tener buenos ejemplos no debería derivar necesariamente en una explicación confusa."
+        },
+        {
+          "text": "«El texto contiene buenos ejemplos y además la explicación resulta confusa».",
+          "isCorrect": false,
+          "rationale": "Este marcador es puramente aditivo y no resalta el contraste o la oposición entre la calidad de los ejemplos y la claridad del texto."
+        }
+      ],
+      "hint": "Elige el conector que señale una oposición o salvedad entre dos ideas.",
+      "tags": [
+        "CP",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Al aplicar la planificación mínima antes de redactar para solicitar la revisión de una nota, ¿qué información debería incluirse en el campo 'Por qué'?",
+      "answerOptions": [
+        {
+          "text": "La justificación o causa de la petición, como un error en la valoración de un apartado.",
+          "isCorrect": true,
+          "rationale": "El 'por qué' define la finalidad o justificación que hace que la solicitud sea legítima y comprensible para el receptor."
+        },
+        {
+          "text": "El nombre del estudiante, su grupo y la asignatura correspondiente.",
+          "isCorrect": false,
+          "rationale": "Esta información pertenece al campo 'Quién', encargado de identificar al emisor para que el receptor sepa con quién trata."
+        },
+        {
+          "text": "La mención de que el archivo fue subido a la plataforma Moodle.",
+          "isCorrect": false,
+          "rationale": "Indicar la ubicación del envío corresponde al campo 'Dónde', que sitúa la acción en un espacio virtual o físico concreto."
+        },
+        {
+          "text": "La fecha exacta en la que se publicaron las calificaciones en el tablón.",
+          "isCorrect": false,
+          "rationale": "Los datos temporales deben situarse en el campo 'Cuándo', que sirve para contextualizar cronológicamente los hechos."
+        }
+      ],
+      "hint": "Piensa en qué parte del esquema sirve para aclarar la finalidad o el motivo del texto.",
+      "tags": [
+        "CP",
+        "T1_2"
+      ]
+    },
+    {
+      "question": "Si un texto universitario repite constantemente la palabra 'tema' para referirse a diferentes conceptos, ¿qué principio de revisión léxica está incumpliendo?",
+      "answerOptions": [
+        {
+          "text": "La necesidad de revisar las repeticiones y eliminar rodeos que no aporten precisión.",
+          "isCorrect": true,
+          "rationale": "El uso excesivo de palabras comodín o la repetición sin control dificulta la precisión léxica y la calidad de la cohesión textual."
+        },
+        {
+          "text": "La obligación de incluir siempre citas bibliográficas para evitar el plagio.",
+          "isCorrect": false,
+          "rationale": "Aunque es importante en otros contextos, la repetición de palabras es un problema de estilo y cohesión, no de honestidad académica."
+        },
+        {
+          "text": "Evitar la solemnidad vacía, ya que la claridad es preferible a la hinchazón verbal.",
+          "isCorrect": false,
+          "rationale": "Esa es otra recomendación válida de la pauta breve, pero no es la que se infringe en este caso: aquí el problema es la repetición léxica, no el tono solemne."
+        },
+        {
+          "text": "La regla de no usar nunca sinónimos para no confundir al lector sobre el referente.",
+          "isCorrect": false,
+          "rationale": "Al contrario, el uso de sinónimos es un mecanismo de cohesión recomendado para evitar la monotonía y la imprecisión del léxico repetitivo."
+        }
+      ],
+      "hint": "Fíjate en cómo afecta la insistencia en una misma palabra 'baúl' a la calidad del escrito.",
+      "tags": [
+        "CP",
+        "T1_2"
+      ]
+    }
+  ]
+}
