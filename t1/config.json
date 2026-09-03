@@ -1,6 +1,6 @@
 {
   "manual": true,
-  "videos": false,
+  "videos": true,
   "comic": false,
   "quiz": false
 }
