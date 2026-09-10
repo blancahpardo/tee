@@ -3,5 +3,5 @@
   "videos": true,
   "comic": true,
   "practica": false,
-  "quiz": false
+  "quiz": true
 }
