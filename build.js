@@ -386,26 +386,30 @@ function buildViewerGroupView(viewKey, tema) {
   const extraLink = cfg.extraDownload
     ? `<a class="dl-big" href="${cfg.extraDownload.file}" download>⬇ ${esc(cfg.extraDownload.label)}</a>`
     : '';
+  const itemFrame = it => it.kind === 'interactive'
+    ? `<iframe class="interactive-frame" src="${it.file}" title="${esc(it.label)}"></iframe>`
+    : `<iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(it.label)}"></iframe>`;
+  const itemNote = it => it.kind === 'interactive' ? 'Actividad interactiva.' : 'Documento de solo lectura, sin descarga.';
   if (cfg.items.length === 1) {
     const it = cfg.items[0];
     return `<div id="view-${viewKey}" class="view sub-view" hidden>
   <button class="back-btn" data-back="hub">← Volver</button>
   <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
-  <p class="section-note">Documento de solo lectura, sin descarga.${cfg.extraDownload ? ' Los materiales que necesitas para trabajarla se descargan aparte, más abajo.' : ''}</p>
+  <p class="section-note">${itemNote(it)}${cfg.extraDownload ? ' Los materiales que necesitas para trabajarla se descargan aparte, más abajo.' : ''}</p>
   ${extraLink}
-  <iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(label)}"></iframe>
+  ${itemFrame(it)}
 </div>`;
   }
   const subButtons = cfg.items.map(it => `<button class="hub-btn" data-view="${viewKey}-${it.id}">
-      <span class="hub-icon">🧪</span>
+      <span class="hub-icon">${it.kind === 'interactive' ? '🕹️' : '🧪'}</span>
       <span class="hub-label">${esc(it.label)}</span>
-      <span class="hub-desc">Documento (solo lectura)</span>
+      <span class="hub-desc">${it.kind === 'interactive' ? 'Actividad interactiva' : 'Documento (solo lectura)'}</span>
     </button>`).join('\n    ');
   const leaves = cfg.items.map(it => `<div id="view-${viewKey}-${it.id}" class="view sub-view" hidden>
   <button class="back-btn" data-back="${viewKey}">← Volver</button>
   <h2>${esc(it.label)} · ${esc(tema.titleShort)}</h2>
-  <p class="section-note">Documento de solo lectura, sin descarga.</p>
-  <iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(it.label)}"></iframe>
+  <p class="section-note">${itemNote(it)}</p>
+  ${itemFrame(it)}
 </div>`).join('\n');
   return `<div id="view-${viewKey}" class="view sub-view" hidden>
   <button class="back-btn" data-back="hub">← Volver</button>
@@ -1035,8 +1039,8 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La adecuación, al estilo One Piece', desc2: 'La adecuación, al estilo One Piece.', file: 'comic_t1.ppsx' },
-      practica: { exists: true, items: [
-        { id: 'p1', label: 'Perfiladores de registro', file: 'practica_t1_p1.pdf' }
+      practica: { exists: true, label: 'Actividad en el aula', items: [
+        { id: 'p1', label: 'Perfiladores de registro', kind: 'interactive', file: 'actividad_t1.html' }
       ] },
       quiz: { exists: true }
     } },
@@ -1064,7 +1068,7 @@ const TEMAS = [
       recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
         desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' },
       practica: { exists: true, items: [
-        { id: 'p1', label: 'Detectives de la coherencia', file: 'practica_t2_p1.pdf' },
+        { id: 'p1', label: 'Actividad 1 en el aula', kind: 'interactive', file: 'actividad_t2_p1.html' },
         { id: 'p2', label: 'El taller de cohesión', file: 'practica_t2_p2.pdf' }
       ] },
       quiz: { exists: true }
