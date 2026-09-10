@@ -1020,7 +1020,7 @@ function buildIndexHtml(temas) {
 // La visibilidad real para el alumnado vive en tX/config.json (editable en vivo desde el modo profesora).
 const TEMAS = [
   { dir: 't1', numLabel: 'TEMA 1', titleShort: 'La comunicación', titleFull: 'Tema 1 · La comunicación', kicker: 'Tema 1 · La comunicación',
-    viewOrder: ['manual','videos','comic','quiz'],
+    viewOrder: ['manual','videos','comic','practica','quiz'],
     views: {
       manual: { exists: true, file: 'manual_t1.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1035,10 +1035,13 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La adecuación, al estilo One Piece', desc2: 'La adecuación, al estilo One Piece.', file: 'comic_t1.ppsx' },
+      practica: { exists: true, items: [
+        { id: 'p1', label: 'Perfiladores de registro', file: 'practica_t1_p1.pdf' }
+      ] },
       quiz: { exists: true }
     } },
   { dir: 't2', numLabel: 'TEMA 2', titleShort: 'El discurso escrito', titleFull: 'Tema 2 · El discurso escrito', kicker: 'Tema 2 · El discurso escrito',
-    viewOrder: ['manual','videos','comic','recurso1','recurso2','quiz'],
+    viewOrder: ['manual','videos','comic','recurso1','recurso2','practica','quiz'],
     views: {
       manual: { exists: true, file: 'manual_t2.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1060,10 +1063,14 @@ const TEMAS = [
         desc: 'Actividad de la práctica de coherencia', desc2: 'Actividad de la práctica de coherencia.', file: 'reconstruccion_interactiva.html' },
       recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
         desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' },
+      practica: { exists: true, items: [
+        { id: 'p1', label: 'Detectives de la coherencia', file: 'practica_t2_p1.pdf' },
+        { id: 'p2', label: 'El taller de cohesión', file: 'practica_t2_p2.pdf' }
+      ] },
       quiz: { exists: true }
     } },
   { dir: 't3', numLabel: 'TEMA 3', titleShort: 'La corrección de estilo', titleFull: 'Tema 3 · La corrección de estilo', kicker: 'Tema 3 · La corrección de estilo',
-    viewOrder: ['manual','videos','comic','recurso1','quiz'],
+    viewOrder: ['manual','videos','comic','recurso1','practica','quiz'],
     views: {
       manual: { exists: true, file: 'manual_t3.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1083,10 +1090,14 @@ const TEMAS = [
         desc: 'La corrección de estilo, al estilo Barbie', desc2: 'La corrección de estilo, al estilo Barbie.', file: 'comic_t3.ppsx' },
       recurso1: { exists: true, kind: 'interactive', label: 'Panel de triaje', icon: '🩺',
         desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' },
+      practica: { exists: true, items: [
+        { id: 'p2', label: 'Clínica de estilo', file: 'practica_t3_p2.pdf' },
+        { id: 'p3', label: 'Notas de la comunidad', file: 'practica_t3_p3.pdf' }
+      ] },
       quiz: { exists: true }
     } },
   { dir: 't4', numLabel: 'TEMA 4', titleShort: 'La escritura académica', titleFull: 'Tema 4 · La escritura académica', kicker: 'Tema 4 · La escritura académica',
-    viewOrder: ['manual','videos','comics','avf','quiz'],
+    viewOrder: ['manual','videos','comics','avf','practica','quiz'],
     views: {
       manual: { exists: true, file: 'manual_t4.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1112,6 +1123,9 @@ const TEMAS = [
         desc2: 'Práctica en casa de citación y referenciación APA 7, en una web aparte.',
         linkLabel: 'la Agencia de Verificación de Fuentes',
         url: 'https://blancahpardo.github.io/detective-de-fuentes-apa7/' },
+      practica: { exists: true, items: [
+        { id: 'p1', label: 'Citación y referenciación (APA 7)', file: 'practica_t4_p1.pdf' }
+      ] },
       quiz: { exists: true }
     } }
 ];

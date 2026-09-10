@@ -2,5 +2,6 @@
   "manual": true,
   "videos": true,
   "comic": true,
+  "practica": false,
   "quiz": false
 }
