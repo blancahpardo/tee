@@ -92,6 +92,8 @@ ${CSS_BASE}
 #gate .error { color:#FFB3B3; font-size:13px; margin-top:12px; min-height:18px; }
 #page { display:none; }
 main { max-width:980px; margin:0 auto; padding:48px 6vw 60px; }
+.sub-view--full { position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw; max-width:100vw; padding:0 1.2vw; box-sizing:border-box; }
+.sub-view--full h2, .sub-view--full .section-note, .sub-view--full .back-btn { margin-left:1.2vw; }
 .kicker { color:var(--amar); font-size:12px; font-weight:bold; letter-spacing:2.5px; text-transform:uppercase; margin-bottom:8px; }
 .view > h1 { color:var(--azul); font-size:32px; margin:0 0 34px; }
 .hub-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; margin-bottom:30px; }
@@ -111,6 +113,7 @@ main { max-width:980px; margin:0 auto; padding:48px 6vw 60px; }
 .img-frame { display:block; width:100%; height:auto; border-radius:8px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
 .video-frame { display:block; width:100%; max-height:62vh; border-radius:6px; background:#000; }
 .office-frame, .interactive-frame { width:100%; height:78vh; border:none; border-radius:8px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+.classroom-frame { width:100%; height:96vh; border:none; display:block; }
 .video-card { background:var(--claro); border-radius:10px; padding:20px; margin-bottom:22px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
 .video-card-meta { display:flex; align-items:baseline; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:6px; }
 .video-card-meta h3 { margin:0; color:var(--azul); font-size:17px; }
@@ -386,13 +389,17 @@ function buildViewerGroupView(viewKey, tema) {
   const extraLink = cfg.extraDownload
     ? `<a class="dl-big" href="${cfg.extraDownload.file}" download>⬇ ${esc(cfg.extraDownload.label)}</a>`
     : '';
-  const itemFrame = it => it.kind === 'interactive'
+  const itemFrame = it => it.kind === 'classroom'
+    ? `<iframe class="classroom-frame" src="${it.file}" title="${esc(it.label)}"></iframe>`
+    : it.kind === 'interactive'
     ? `<iframe class="interactive-frame" src="${it.file}" title="${esc(it.label)}"></iframe>`
     : `<iframe class="pdf-frame" src="${it.file}#toolbar=0&navpanes=0" title="${esc(it.label)}"></iframe>`;
-  const itemNote = it => it.kind === 'interactive' ? 'Actividad interactiva.' : 'Documento de solo lectura, sin descarga.';
+  const itemNote = it => it.kind === 'classroom' ? 'Actividad interactiva de aula: usa el cronómetro para guiar cada fase de la sesión.'
+    : it.kind === 'interactive' ? 'Actividad interactiva.' : 'Documento de solo lectura, sin descarga.';
+  const itemViewClass = it => it.kind === 'classroom' ? 'view sub-view sub-view--full' : 'view sub-view';
   if (cfg.items.length === 1) {
     const it = cfg.items[0];
-    return `<div id="view-${viewKey}" class="view sub-view" hidden>
+    return `<div id="view-${viewKey}" class="${itemViewClass(it)}" hidden>
   <button class="back-btn" data-back="hub">← Volver</button>
   <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
   <p class="section-note">${itemNote(it)}${cfg.extraDownload ? ' Los materiales que necesitas para trabajarla se descargan aparte, más abajo.' : ''}</p>
@@ -401,11 +408,11 @@ function buildViewerGroupView(viewKey, tema) {
 </div>`;
   }
   const subButtons = cfg.items.map(it => `<button class="hub-btn" data-view="${viewKey}-${it.id}">
-      <span class="hub-icon">${it.kind === 'interactive' ? '🕹️' : '🧪'}</span>
+      <span class="hub-icon">${it.kind === 'classroom' || it.kind === 'interactive' ? '🕹️' : '🧪'}</span>
       <span class="hub-label">${esc(it.label)}</span>
-      <span class="hub-desc">${it.kind === 'interactive' ? 'Actividad interactiva' : 'Documento (solo lectura)'}</span>
+      <span class="hub-desc">${it.kind === 'classroom' || it.kind === 'interactive' ? 'Actividad interactiva' : 'Documento (solo lectura)'}</span>
     </button>`).join('\n    ');
-  const leaves = cfg.items.map(it => `<div id="view-${viewKey}-${it.id}" class="view sub-view" hidden>
+  const leaves = cfg.items.map(it => `<div id="view-${viewKey}-${it.id}" class="${itemViewClass(it)}" hidden>
   <button class="back-btn" data-back="${viewKey}">← Volver</button>
   <h2>${esc(it.label)} · ${esc(tema.titleShort)}</h2>
   <p class="section-note">${itemNote(it)}</p>
@@ -1040,7 +1047,7 @@ const TEMAS = [
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La adecuación, al estilo One Piece', desc2: 'La adecuación, al estilo One Piece.', file: 'comic_t1.ppsx' },
       practica: { exists: true, label: 'Actividad en el aula', items: [
-        { id: 'p1', label: 'Perfiladores de registro', kind: 'interactive', file: 'actividad_t1.html' }
+        { id: 'p1', label: 'Perfiladores de registro', kind: 'classroom', file: 'actividad_t1.html' }
       ] },
       quiz: { exists: true }
     } },
@@ -1068,8 +1075,8 @@ const TEMAS = [
       recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
         desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' },
       practica: { exists: true, items: [
-        { id: 'p1', label: 'Actividad 1 en el aula', kind: 'interactive', file: 'actividad_t2_p1.html' },
-        { id: 'p2', label: 'El taller de cohesión', file: 'practica_t2_p2.pdf' }
+        { id: 'p1', label: 'Actividad 1 en el aula', kind: 'classroom', file: 'actividad_t2_p1.html' },
+        { id: 'p2', label: 'Actividad 2 en el aula', kind: 'classroom', file: 'actividad_t2_p2.html' }
       ] },
       quiz: { exists: true }
     } },

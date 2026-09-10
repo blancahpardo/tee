@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>El taller de cohesión · Centro de mando</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --azul-osc:#00283F; --amarillo:#F4C542; --gris:#34484F;
+    --gris-claro:#F3F3F4; --blanco:#FFFFFF; --rojo:#C0392B; --verde:#2E7D5B;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--azul-osc); color:var(--blanco);
+    min-height:100vh; overflow-x:hidden;
+  }
+  .screen{ display:none; min-height:100vh; padding:5vh 6vw; }
+  .screen.active{ display:flex; flex-direction:column; }
+  /* ---- Briefing screen ---- */
+  #briefing{ justify-content:center; align-items:flex-start; gap:1.4rem; position:relative; }
+  .dots{ position:absolute; bottom:2.5vh; left:6vw; display:flex; gap:.5rem; }
+  .dots span{ width:.7rem; height:.7rem; border-radius:50%; background:var(--amarillo); display:inline-block; }
+  .kicker{ color:var(--amarillo); font-weight:700; letter-spacing:.08em; font-size:1rem; }
+  h1{ font-size:clamp(2rem, 5vw, 3.4rem); margin:.2rem 0 0; }
+  .lead{ max-width:760px; font-size:1.25rem; line-height:1.55; color:#E7EDF0; }
+  .lead b{ color:var(--amarillo); }
+  .urgent{ max-width:760px; font-size:1.25rem; line-height:1.5; color:var(--amarillo); font-weight:700; }
+  .btn{
+    margin-top:1.2rem; background:var(--amarillo); color:var(--azul-osc); border:none; border-radius:999px;
+    padding:1rem 2.2rem; font-size:1.15rem; font-weight:700; cursor:pointer; font-family:inherit;
+    box-shadow:0 8px 24px rgba(0,0,0,.35); transition:transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn.secondary{ background:transparent; border:2px solid rgba(255,255,255,.5); color:var(--blanco); box-shadow:none;}
+  /* ---- Dashboard screen ---- */
+  #dashboard{ background:var(--gris-claro); color:var(--gris); }
+  .topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:1.4rem; }
+  .topbar h2{ color:var(--azul); margin:0; font-size:1.6rem; }
+  .backlink{ color:var(--azul); background:none; border:none; font-family:inherit; font-size:1rem; cursor:pointer; text-decoration:underline; }
+  .layout{ display:grid; grid-template-columns:1.1fr 1.4fr; gap:1.6rem; flex:1; }
+  .phases{ display:flex; flex-direction:column; gap:.7rem; }
+  .phase-btn{
+    text-align:left; border:none; border-radius:14px; padding:.9rem 1.1rem; cursor:pointer; font-family:inherit;
+    background:var(--blanco); box-shadow:0 2px 10px rgba(0,0,0,.06); display:flex; justify-content:space-between; align-items:center;
+  }
+  .phase-btn.active{ background:var(--azul); color:var(--blanco); }
+  .phase-btn .n{ font-weight:700; }
+  .phase-btn .t{ font-size:.9rem; opacity:.75; }
+  .timer-card{
+    background:var(--blanco); border-radius:20px; padding:2rem; box-shadow:0 4px 24px rgba(0,0,0,.08);
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem;
+  }
+  #phaseTitle{ color:var(--azul); font-size:1.4rem; font-weight:700; margin:0; text-align:center; }
+  #phaseDesc{ text-align:center; color:var(--gris); max-width:560px; line-height:1.5; }
+  .clock-wrap{ position:relative; width:280px; height:280px; }
+  svg{ transform:rotate(-90deg); }
+  circle{ fill:none; stroke-width:14; }
+  .bg-ring{ stroke:var(--gris-claro); }
+  .fg-ring{ stroke:var(--amarillo); stroke-linecap:round; transition:stroke-dashoffset 1s linear, stroke .3s; }
+  .fg-ring.warn{ stroke: var(--rojo); }
+  #clockText{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-size:3.2rem; font-weight:700; color:var(--azul); font-variant-numeric:tabular-nums;
+  }
+  .controls{ display:flex; gap:.8rem; }
+  .ctrl-btn{
+    border:none; border-radius:999px; padding:.7rem 1.5rem; font-family:inherit; font-size:1rem; font-weight:700;
+    cursor:pointer; background:var(--azul); color:var(--blanco);
+  }
+  .ctrl-btn.alt{ background:var(--gris-claro); color:var(--azul); }
+  .flash{ animation:flash 1s infinite; }
+  @keyframes flash{ 0%,100%{ background:var(--blanco);} 50%{ background:#FBEAEA; } }
+  /* ---- Debate final ---- */
+  .debate-final{ margin-top:1.6rem; background:var(--blanco); border-radius:20px; padding:1.6rem 1.8rem; box-shadow:0 4px 24px rgba(0,0,0,.08); }
+  .debate-final h3{ color:var(--azul); margin:0 0 .3rem; font-size:1.2rem; }
+  .debate-final .sub{ color:var(--gris); opacity:.8; margin:0 0 1rem; font-size:.92rem; }
+  .text-btns{ display:flex; flex-wrap:wrap; gap:.7rem; }
+  .text-btn{
+    border:none; border-radius:12px; padding:.75rem 1.2rem; font-family:inherit; font-size:.98rem; font-weight:700;
+    cursor:pointer; background:var(--gris-claro); color:var(--azul);
+  }
+  .text-btn:hover{ background:var(--azul); color:var(--blanco); }
+  .text-modal{ position:fixed; inset:0; background:rgba(0,40,63,.92); display:flex; align-items:center; justify-content:center; padding:5vh 5vw; z-index:50; }
+  .text-modal[hidden]{ display:none; }
+  .text-modal-inner{ background:var(--blanco); color:var(--gris); border-radius:20px; padding:3rem 3.4rem; max-width:900px; width:100%; max-height:86vh; overflow:auto; position:relative; }
+  .text-modal-inner h2{ color:var(--azul); margin:0 0 1.4rem; font-size:1.8rem; }
+  .text-modal-inner p{ font-size:1.5rem; line-height:1.6; white-space:pre-wrap; margin:0 0 1.2rem; }
+  .text-modal-inner .hint{ font-size:1.05rem; color:var(--gris); opacity:.8; font-style:italic; }
+  .modal-close{
+    position:absolute; top:1.2rem; right:1.4rem; border:none; background:var(--gris-claro); color:var(--azul);
+    border-radius:999px; padding:.5rem 1.1rem; font-family:inherit; font-weight:700; cursor:pointer; font-size:.95rem;
+  }
+  .modal-close:hover{ background:var(--azul); color:var(--blanco); }
+  /* ---- Pie de autoría y referencias ---- */
+  .tee-footer{ background:var(--azul-osc); color:#C9D6DD; padding:2.2rem 6vw 2.4rem; font-size:.82rem; line-height:1.55; border-top:1px solid rgba(255,255,255,.15); }
+  .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
+  .tee-footer ul{ margin:0 0 1.5rem; padding-left:1.1rem; max-width:760px; }
+  .tee-footer li{ margin-bottom:.5rem; }
+  .tee-footer .tee-copy{ margin:0; max-width:760px; opacity:.9; }
+</style>
+</head>
+<body>
+
+<div id="briefing" class="screen active">
+  <div class="kicker">EL TALLER DE COHESIÓN</div>
+  <h1>Motores averiados</h1>
+  <p class="lead">Hoy sois mecánicos de texto: os llegan tres motores averiados por el mismo fallo de fábrica —<b>la falta de cohesión</b>— y tenéis que dejarlos listos para la ITV editorial antes del cierre del taller.</p>
+  <p class="urgent">Cada motor tiene una avería distinta. Diagnosticadla y reparadla sin cambiar el sentido original del texto. Tenéis sesenta minutos.</p>
+  <button class="btn" onclick="goTo('dashboard')">Abrir el centro de mando →</button>
+  <div class="dots"><span></span><span></span><span></span></div>
+</div>
+
+<div id="dashboard" class="screen">
+  <div class="topbar">
+    <h2>Centro de mando · Cronómetro de sesión</h2>
+    <button class="backlink" onclick="goTo('briefing')">← Volver al briefing</button>
+  </div>
+  <div class="layout">
+    <div class="phases" id="phaseList"></div>
+    <div class="timer-card" id="timerCard">
+      <p id="phaseTitle"></p>
+      <p id="phaseDesc"></p>
+      <div class="clock-wrap">
+        <svg width="280" height="280">
+          <circle class="bg-ring" cx="140" cy="140" r="120"></circle>
+          <circle class="fg-ring" id="ring" cx="140" cy="140" r="120"></circle>
+        </svg>
+        <div id="clockText">00:00</div>
+      </div>
+      <div class="controls">
+        <button class="ctrl-btn" id="startBtn" onclick="toggleTimer()">Iniciar</button>
+        <button class="ctrl-btn alt" onclick="resetTimer()">Reiniciar</button>
+      </div>
+    </div>
+  </div>
+  <div class="debate-final" id="debateFinal" hidden>
+    <h3>Puesta en común · Las tres estaciones</h3>
+    <p class="sub">Abre cada texto en pantalla completa para comentar la reparación con el grupo.</p>
+    <div class="text-btns" id="textBtns"></div>
+  </div>
+</div>
+
+<div class="text-modal" id="textModal" hidden>
+  <div class="text-modal-inner">
+    <button class="modal-close" onclick="closeText()">✕ Cerrar</button>
+    <h2 id="modalTitle"></h2>
+    <p id="modalBody"></p>
+    <p class="hint" id="modalHint"></p>
+  </div>
+</div>
+
+<footer class="tee-footer">
+  <h3>Referencias</h3>
+  <ul>
+    <li>Cassany, D. (1995). <em>La cocina de la escritura</em>. Anagrama.</li>
+    <li>Bernárdez, E. (1982). <em>Introducción a la lingüística del texto</em>. Espasa-Calpe.</li>
+    <li>Halliday, M. A. K., y Hasan, R. (1976). <em>Cohesion in English</em>. Longman.</li>
+  </ul>
+  <p class="tee-copy">© Dr.ª Blanca Hernández Pardo · Técnicas y Estrategias de Expresión Escrita (TEE) · Tema 2: El taller de cohesión<br>
+  Queda prohibida la difusión, distribución o reproducción total o parcial de este material sin autorización expresa de la autora.</p>
+</footer>
+
+<script>
+const phases = [
+  {n:"Fase 0", t:"Aterrizaje", min:5, desc:"Lee la situación en voz alta (pantalla anterior). Reparte o proyecta las fichas de diagnóstico y de las tres estaciones."},
+  {n:"Fase 1", t:"Diagnóstico rápido", min:7, desc:"Cada estudiante recibe 3 frases sueltas, una por avería. Identifica individualmente qué tipo de fallo de cohesión tiene cada una: verbo baúl, repetición evitable o conector inadecuado. Todavía no las repara."},
+  {n:"Fase 2", t:"Las tres estaciones", min:24, desc:"En parejas, ~8 min por estación. Estación 1: sustituir los verbos baúl por verbos precisos. Estación 2: eliminar la repetición con elipsis, pronombres, sinónimos o hiperónimos. Estación 3: completar los huecos con el conector adecuado del banco (¡hay distractores!)."},
+  {n:"Fase 3", t:"Inspección de calidad cruzada", min:16, desc:"En grupos de 4: intercambiad vuestras tres reparaciones con otra pareja. Actuad de inspectores: aplicad la checklist y proponed mejoras. Acordad la versión definitiva de cada estación."},
+  {n:"Fase 4", t:"Puesta en común", min:8, desc:"Compartid la mejor reparación de cada estación. Comentad el desacuerdo más interesante que hayáis resuelto. La cohesión no es decoración: es la mecánica interna del texto."},
+];
+const TEXTS = [
+  {id:'1', title:'Estación 1 · Verbos baúl',
+   body:'El club de debate hizo una actividad muy especial la semana pasada. Los organizadores pusieron carteles por toda la facultad y dieron entradas gratuitas a los primeros veinte inscritos. El acto tuvo lugar en el salón de actos, donde se hicieron varias intervenciones muy aplaudidas. Al final, el club dio las gracias a los ponentes y puso un pequeño vino español para cerrar la tarde. Todos los asistentes tuvieron una experiencia muy positiva.',
+   hint:'Los verbos dar, hacer, poner, tener y haber son «baúles»: sirven para casi todo, pero dicen poco. Sustituidlos por verbos más precisos sin cambiar el sentido.'},
+  {id:'2', title:'Estación 2 · Mecanismos de referencia',
+   body:'La biblioteca de la universidad ha ampliado su horario. La biblioteca abrirá también los sábados por la mañana. La biblioteca ha incorporado, además, nuevas salas de estudio silencioso. Los estudiantes llevaban tiempo pidiendo que la biblioteca ofreciera más espacio en época de exámenes. La dirección de la biblioteca ha confirmado que la medida se mantendrá, al menos, durante todo el curso.',
+   hint:'Este texto repite el mismo sustantivo demasiadas veces. Reescribidlo usando pronombres, elipsis, sinónimos o hiperónimos para mantener la referencia sin repetir.'},
+  {id:'3', title:'Estación 3 · Conectores',
+   body:'El aumento de las prácticas en empresa durante el grado ha generado opiniones encontradas. ___(1)___, muchos estudiantes valoran la experiencia profesional que aportan. ___(2)___, otros consideran que reducen el tiempo disponible para el estudio. ___(3)___, algunas facultades han decidido limitar su duración máxima. ___(4)___, el debate sobre su peso en el plan de estudios sigue abierto.\n\nBanco de conectores: por un lado · por otro lado · por ello · con todo · por ejemplo · es decir · además (ojo: sobran conectores que no encajan en ningún hueco).',
+   hint:'Completad los huecos con el conector más adecuado del banco. Justificad después la relación lógica que habéis identificado en cada hueco.'},
+];
+function renderTextButtons(){
+  const wrap = document.getElementById('textBtns');
+  wrap.innerHTML = '';
+  TEXTS.forEach(t=>{
+    const b = document.createElement('button');
+    b.className = 'text-btn';
+    b.textContent = 'Estación ' + t.id;
+    b.onclick = ()=> openText(t.id);
+    wrap.appendChild(b);
+  });
+}
+function openText(id){
+  const t = TEXTS.find(x=>x.id===id);
+  document.getElementById('modalTitle').textContent = t.title;
+  document.getElementById('modalBody').textContent = t.body;
+  document.getElementById('modalHint').textContent = t.hint;
+  document.getElementById('textModal').hidden = false;
+}
+function closeText(){ document.getElementById('textModal').hidden = true; }
+let current = 0, remaining = phases[0].min*60, total = phases[0].min*60, running=false, timerId=null;
+const R = 120, C = 2*Math.PI*R;
+const ring = document.getElementById('ring');
+ring.style.strokeDasharray = C;
+
+function goTo(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  if(id==='dashboard') renderPhaseList();
+}
+function renderPhaseList(){
+  const list = document.getElementById('phaseList');
+  list.innerHTML = '';
+  phases.forEach((p,i)=>{
+    const b = document.createElement('button');
+    b.className = 'phase-btn' + (i===current ? ' active' : '');
+    b.innerHTML = `<span class="n">${p.n} · ${p.t}</span><span class="t">${p.min} min</span>`;
+    b.onclick = ()=> selectPhase(i);
+    list.appendChild(b);
+  });
+  updateTimerCard();
+}
+function selectPhase(i){
+  current = i; remaining = phases[i].min*60; total = remaining; running=false;
+  clearInterval(timerId);
+  document.getElementById('startBtn').textContent = 'Iniciar';
+  document.getElementById('timerCard').classList.remove('flash');
+  ring.classList.remove('warn');
+  renderPhaseList();
+}
+function updateTimerCard(){
+  const p = phases[current];
+  document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
+  document.getElementById('phaseDesc').textContent = p.desc;
+  document.getElementById('debateFinal').hidden = (current !== phases.length - 1);
+  drawClock();
+}
+renderTextButtons();
+function drawClock(){
+  const m = String(Math.floor(remaining/60)).padStart(2,'0');
+  const s = String(remaining%60).padStart(2,'0');
+  document.getElementById('clockText').textContent = `${m}:${s}`;
+  const frac = total>0 ? remaining/total : 0;
+  ring.style.strokeDashoffset = C*(1-frac);
+  if(remaining <= 30){ ring.classList.add('warn'); } else { ring.classList.remove('warn'); }
+}
+function toggleTimer(){
+  running = !running;
+  document.getElementById('startBtn').textContent = running ? 'Pausar' : 'Reanudar';
+  if(running){
+    timerId = setInterval(()=>{
+      remaining--;
+      if(remaining <= 0){
+        remaining = 0; drawClock(); clearInterval(timerId); running=false;
+        document.getElementById('startBtn').textContent = 'Iniciar';
+        document.getElementById('timerCard').classList.add('flash');
+      } else { drawClock(); }
+    },1000);
+  } else {
+    clearInterval(timerId);
+  }
+}
+function resetTimer(){
+  running=false; clearInterval(timerId);
+  remaining = phases[current].min*60; total = remaining;
+  document.getElementById('startBtn').textContent = 'Iniciar';
+  document.getElementById('timerCard').classList.remove('flash');
+  drawClock();
+}
+</script>
+</body>
+</html>
