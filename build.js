@@ -1094,7 +1094,7 @@ const TEMAS = [
       quiz: { exists: true }
     } },
   { dir: 't3', numLabel: 'TEMA 3', titleShort: 'La corrección de estilo', titleFull: 'Tema 3 · La corrección de estilo', kicker: 'Tema 3 · La corrección de estilo',
-    viewOrder: ['manual','videos','comic','quiz','asincronaClinica','practica','recurso1'],
+    viewOrder: ['manual','videos','comic','quiz','asincronaClinica','asincronaMaster','practica','recurso1'],
     views: {
       manual: { exists: true, file: 'manual_t3.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1116,6 +1116,8 @@ const TEMAS = [
         desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' },
       asincronaClinica: { exists: true, kind: 'classroom', label: 'Actividad asíncrona "Clínica de estilo"', icon: '🩹',
         desc: 'Actividad individual y asíncrona: complétala a tu ritmo', desc2: 'Actividad individual y asíncrona: complétala a tu ritmo, paso a paso.', file: 'actividad_t3_p2_asincrona.html' },
+      asincronaMaster: { exists: true, kind: 'classroom', label: 'Actividad asíncrona "Estudio de máster"', icon: '🎧',
+        desc: 'Actividad individual y asíncrona: complétala a tu ritmo', desc2: 'Actividad individual y asíncrona: complétala a tu ritmo, paso a paso.', file: 'actividad_t3_master_asincrona.html' },
       practica: { exists: true, items: [
         { id: 'p3', label: 'Actividad "Notas de la comunidad"', kind: 'classroom', file: 'actividad_t3_p3.html' },
         { id: 'p2', label: 'Actividad "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2.html' }
