@@ -345,6 +345,18 @@ function buildInteractiveView(viewKey, tema) {
 </div>`;
 }
 
+function buildClassroomView(viewKey, tema) {
+  const cfg = tema.views[viewKey];
+  if (!cfg || !cfg.exists) return '';
+  const label = viewLabel(viewKey, tema);
+  return `<div id="view-${viewKey}" class="view sub-view sub-view--full" hidden>
+  <button class="back-btn" data-back="hub">← Volver</button>
+  <h2>${esc(label)} · ${esc(tema.titleShort)}</h2>
+  <p class="section-note">${cfg.desc2 || 'Actividad interactiva.'}</p>
+  <iframe class="classroom-frame" src="${cfg.file}" title="${esc(label)}"></iframe>
+</div>`;
+}
+
 function buildExternalView(viewKey, tema) {
   const cfg = tema.views[viewKey];
   if (!cfg || !cfg.exists) return '';
@@ -454,6 +466,7 @@ function buildTopicHtml(tema) {
     if (cfg.kind === 'office') return buildOfficeView(v, tema);
     if (cfg.kind === 'officegroup') return buildOfficeGroupView(v, tema);
     if (cfg.kind === 'interactive') return buildInteractiveView(v, tema);
+    if (cfg.kind === 'classroom') return buildClassroomView(v, tema);
     if (cfg.kind === 'external') return buildExternalView(v, tema);
     if (cfg.kind === 'reflist') return buildReflistView(v, tema);
     return buildDownloadView(v, tema);
@@ -1081,7 +1094,7 @@ const TEMAS = [
       quiz: { exists: true }
     } },
   { dir: 't3', numLabel: 'TEMA 3', titleShort: 'La corrección de estilo', titleFull: 'Tema 3 · La corrección de estilo', kicker: 'Tema 3 · La corrección de estilo',
-    viewOrder: ['manual','videos','comic','recurso1','practica','quiz'],
+    viewOrder: ['manual','videos','comic','quiz','asincronaClinica','practica','recurso1'],
     views: {
       manual: { exists: true, file: 'manual_t3.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1101,10 +1114,11 @@ const TEMAS = [
         desc: 'La corrección de estilo, al estilo Barbie', desc2: 'La corrección de estilo, al estilo Barbie.', file: 'comic_t3.ppsx' },
       recurso1: { exists: true, kind: 'interactive', label: 'NV. Panel de triaje (posclínica de estilo)', icon: '🩺',
         desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' },
+      asincronaClinica: { exists: true, kind: 'classroom', label: 'Actividad asíncrona "Clínica de estilo"', icon: '🩹',
+        desc: 'Actividad individual y asíncrona: complétala a tu ritmo', desc2: 'Actividad individual y asíncrona: complétala a tu ritmo, paso a paso.', file: 'actividad_t3_p2_asincrona.html' },
       practica: { exists: true, items: [
         { id: 'p3', label: 'Actividad "Notas de la comunidad"', kind: 'classroom', file: 'actividad_t3_p3.html' },
-        { id: 'p2', label: 'Actividad "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2.html' },
-        { id: 'p2async', label: 'Actividad asíncrona "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2_asincrona.html' }
+        { id: 'p2', label: 'Actividad "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2.html' }
       ] },
       quiz: { exists: true }
     } },
