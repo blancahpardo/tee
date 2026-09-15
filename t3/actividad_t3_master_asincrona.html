@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Estudio VOLTIO 787 · Máster de estilo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#0B0B14; --bg2:#15121F; --rosa:#FF2E9A; --lima:#D4FF00; --cian:#00E5C0; --texto:#F1EFFB; --gris:#B7B2CE; --rojo:#FF5C5C; --verde:#3DDC97;
+  }
+  *{box-sizing:border-box;}
+  html,body{ height:100%; margin:0; }
+  body{ font-family:'Arial Black', Arial, Helvetica, sans-serif; background:var(--bg); color:var(--texto); overflow:hidden; }
+  #app{ height:100vh; display:flex; flex-direction:column; background:radial-gradient(circle at 20% 0%, #241a33 0%, var(--bg) 55%); }
+
+  .topbar{ background:var(--bg2); border-bottom:2px solid var(--rosa); padding:.6rem 1.6rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.4rem; flex:0 0 auto; font-family:Arial,Helvetica,sans-serif; }
+  .topbar .tt{ font-weight:900; font-size:.92rem; color:var(--lima); }
+  .topbar .tt small{ display:block; font-weight:400; color:var(--gris); font-size:.7rem; }
+  .topbar .progress{ font-family:"Courier New", monospace; background:#000; color:var(--cian); padding:.35rem .8rem; border-radius:8px; font-size:.82rem; font-weight:700; border:1px solid var(--cian); }
+
+  .stage{ flex:1 1 auto; display:flex; align-items:stretch; justify-content:center; padding:1rem 1.6rem; min-height:0; }
+  .card{ background:var(--bg2); border:2px solid #2C2440; border-radius:18px; box-shadow:0 0 30px rgba(255,46,154,.12); max-width:960px; width:100%; padding:1.2rem 1.8rem; display:flex; flex-direction:column; min-height:0; overflow:auto; font-family:Arial,Helvetica,sans-serif; }
+  .kicker{ color:var(--rosa); font-weight:900; font-size:.7rem; text-transform:uppercase; letter-spacing:.08em; margin:0 0 .2rem; }
+  h1.scr{ margin:.1rem 0 .5rem; font-size:1.25rem; color:var(--lima); font-family:'Arial Black',Arial,sans-serif; }
+  .lead{ font-size:.87rem; line-height:1.45; margin:0 0 .6rem; color:var(--texto); }
+  .instr{ background:#1E1830; border-left:4px solid var(--cian); border-radius:8px; padding:.6rem .9rem; font-size:.82rem; line-height:1.4; margin:0 0 .7rem; color:var(--gris); }
+  .clip{ background:#100D1A; border:1px dashed #3A3154; border-radius:10px; padding:.75rem 1rem; font-style:italic; margin:0 0 .7rem; font-size:.92rem; color:var(--texto); }
+  .field{ margin-bottom:.6rem; }
+  .field label{ display:block; font-size:.75rem; font-weight:700; color:var(--cian); text-transform:uppercase; letter-spacing:.03em; margin-bottom:.3rem; }
+  select, textarea, input[type=text]{ font-family:Arial,Helvetica,sans-serif; }
+  .track-row{ display:flex; align-items:center; gap:.6rem; background:#100D1A; border:1px solid #2C2440; border-radius:8px; padding:.4rem .7rem; margin-bottom:.4rem; font-size:.85rem; }
+  .track-row select{ background:#000; color:var(--lima); border:1px solid var(--lima); border-radius:6px; padding:.2rem .4rem; font-weight:700; }
+  .btn{ font-family:Arial,Helvetica,sans-serif; border:none; border-radius:999px; padding:.5rem 1.2rem; font-weight:900; font-size:.82rem; cursor:pointer; }
+  .btn.primary{ background:var(--rosa); color:#fff; }
+  .btn.primary:disabled{ background:#4A4260; color:#8A8299; cursor:not-allowed; }
+  .btn.ghost{ background:none; color:var(--cian); border:2px solid var(--cian); }
+  .btn.lima{ background:var(--lima); color:#141014; }
+  .btn.small{ padding:.3rem .8rem; font-size:.72rem; }
+  .navbar{ flex:0 0 auto; display:flex; justify-content:space-between; align-items:center; padding:.6rem 1.6rem .8rem; gap:.6rem; font-family:Arial,Helvetica,sans-serif; }
+  .navbar .save-note{ font-size:.7rem; color:#7A7392; }
+
+  .word{ cursor:pointer; padding:.05rem .15rem; border-radius:4px; }
+  .word:hover{ background:#2C2440; }
+  .word.flagged{ background:var(--rosa); color:#fff; }
+  .word.correct-flag{ background:var(--verde); color:#08120D; }
+  .word.wrong-flag{ background:var(--rojo); color:#fff; }
+
+  .opt{ display:block; width:100%; text-align:left; background:#100D1A; border:2px solid #2C2440; color:var(--texto); border-radius:10px; padding:.55rem .8rem; margin-bottom:.4rem; font-size:.85rem; cursor:pointer; font-family:Arial,Helvetica,sans-serif; }
+  .opt:hover{ border-color:var(--cian); }
+  .opt.sel{ border-color:var(--rosa); }
+  .opt.right{ border-color:var(--verde); background:#0F241B; }
+  .opt.wrong{ border-color:var(--rojo); background:#2B1417; }
+
+  .badge{ display:inline-block; font-size:.68rem; font-weight:900; padding:.15rem .5rem; border-radius:999px; margin-left:.4rem; }
+  .badge.ok{ background:#0F241B; color:var(--verde); border:1px solid var(--verde); }
+  .badge.no{ background:#2B1417; color:var(--rojo); border:1px solid var(--rojo); }
+  .feedback{ margin-top:.5rem; font-size:.8rem; line-height:1.4; background:#100D1A; border-radius:8px; padding:.6rem .8rem; }
+
+  .summary-box{ background:#100D1A; border-radius:10px; padding:.7rem .9rem; font-size:.75rem; line-height:1.5; white-space:pre-wrap; max-height:100%; overflow:auto; flex:1; min-height:0; font-family:'Courier New',monospace; color:var(--gris); }
+
+  .cover{ flex:1; display:flex; align-items:center; justify-content:center; padding:1.2rem; font-family:Arial,Helvetica,sans-serif; }
+  .cover .box{ max-width:660px; width:100%; text-align:center; }
+  .cover .brand{ font-family:'Arial Black',Arial,sans-serif; color:var(--lima); font-size:1.1rem; letter-spacing:.08em; }
+  .cover h1{ color:var(--rosa); font-size:1.7rem; margin:.3rem 0 .6rem; font-family:'Arial Black',Arial,sans-serif; text-shadow:0 0 18px rgba(255,46,154,.5); }
+  .cover p{ font-size:.9rem; line-height:1.5; color:var(--texto); }
+  .cover .pills{ display:flex; justify-content:center; gap:.5rem; margin:.9rem 0; flex-wrap:wrap; }
+  .pill{ background:#1E1830; border:1px solid var(--cian); color:var(--cian); font-size:.74rem; font-weight:700; padding:.3rem .7rem; border-radius:999px; }
+  .cover input[type=text]{ width:100%; max-width:320px; font-size:1rem; padding:.55rem .8rem; border:2px solid var(--rosa); border-radius:10px; text-align:center; margin:.4rem 0 .8rem; background:#100D1A; color:var(--texto); }
+  .err{ color:var(--rojo); font-size:.78rem; min-height:1.1em; }
+  .evidence{ background:#2B1417; border-left:4px solid var(--rojo); border-radius:8px; padding:.55rem .85rem; font-size:.82rem; text-align:left; color:var(--texto); margin:.6rem 0; }
+
+  [hidden]{ display:none !important; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+// ===== Contenido ficticio del "lanzamiento" (ningún texto real del artista) =====
+
+// Estación 1 · Sala de mezcla — orden de pistas (organización/coherencia)
+const ordenCorrecto = [
+  "El disco arranca con una intro grabada en una guagua pública de camino a Isla Verde, entre bocinas y conversaciones de fondo.",
+  "Después llega un bloque de tres canciones más bailables, pensadas para sonar primero en la pista de baile.",
+  "A mitad de tracklist el tono cambia hacia letras más introspectivas, grabadas casi todas de madrugada.",
+  "El single principal se coloca justo después de ese giro, como puente entre lo íntimo y lo festivo otra vez.",
+  "Los dos últimos temas cierran con una colaboración sorpresa y un outro instrumental sin voz.",
+];
+const shuffled1 = [ordenCorrecto[3], ordenCorrecto[0], ordenCorrecto[4], ordenCorrecto[1], ordenCorrecto[2]];
+
+// Estación 2 · Cabina de edición — conectores (cloze, 4 huecos)
+const clozeItems = [
+  { before:"El single se grabó en dos semanas;", options:["sin embargo","por eso","es decir"], correct:"sin embargo", after:"la mezcla final tardó casi dos meses.", explain:"Hace falta un conector de contraste: la rapidez de la grabación choca con la lentitud de la mezcla." },
+  { before:"El productor cambió el tempo de la canción;", options:["en consecuencia","aunque","o sea"], correct:"en consecuencia", after:"todo el equipo de baile tuvo que rehacer la coreografía.", explain:"El cambio de tempo provoca el rehacer la coreografía: es una relación causa-efecto." },
+  { before:"No se grabaron voces adicionales;", options:["es decir","por el contrario","de hecho"], correct:"de hecho", after:"esta es la mezcla más minimalista del disco.", explain:"«De hecho» refuerza la idea anterior añadiendo un dato que la confirma." },
+  { before:"Al principio la letra hablaba de una ruptura;", options:["sin embargo","es decir","por consiguiente"], correct:"sin embargo", after:"en la versión final el tono es de reconciliación.", explain:"Hay un contraste entre la idea inicial y el resultado final del texto." },
+];
+
+// Estación 3 · Reducción de ruido — léxico impreciso / redundancia (click para marcar)
+const tomas = [
+  { texto: "El mánager dijo que el disco va a subir arriba en las listas la primera semana.", flag:"subir arriba", options:["subir mucho","subir","escalar arriba"], correct:"subir", explain:"«Subir arriba» es redundante: «subir» ya implica ir hacia arriba." },
+  { texto: "La canción pone un mensaje bien claro sobre la isla.", flag:"pone", options:["transmite","tiene","tira"], correct:"transmite", explain:"«Poner» es un verbo comodín; «transmite» precisa mejor la idea de comunicar un mensaje." },
+  { texto: "Volvieron a repetir el estribillo otra vez al final del concierto.", flag:"volvieron a repetir... otra vez", options:["repitieron el estribillo","volvieron a cantar el estribillo","repitieron otra vez el estribillo"], correct:"repitieron el estribillo", explain:"«Volver a repetir» y «otra vez» duplican la misma idea de repetición." },
+  { texto: "El ingeniero de sonido hizo un trabajo bien bueno con la mezcla.", flag:"bien bueno", options:["muy bueno","bien hecho","súper bien"], correct:"muy bueno", explain:"«Bien bueno» es un calco coloquial; en un texto de prensa se prefiere «muy bueno»." },
+  { texto: "La disquera decidió infringir el lanzamiento a una fecha distinta.", flag:"infringir", options:["adelantar","infligir","imponer"], correct:"adelantar", explain:"Aquí el verbo está simplemente mal elegido: se refiere a mover la fecha, no a «infringir» (quebrantar una norma)." },
+];
+
+// Estación 4 · Ecualización del tono — naturalidad y registro (opción múltiple)
+const tonoItems = [
+  { texto:"La entidad discográfica procederá a efectuar el lanzamiento del fonograma en la fecha estipulada.", options:["El sello sacará el disco en la fecha prevista.","La compañía discográfica hará el lanzamiento del disco cuando toque.","Bad Bunny lanza disco, dice la disquera."], correct:0, explain:"El original suena excesivamente burocrático para una nota de prensa musical; la opción 1 mantiene la formalidad justa sin sonar a informe legal." },
+  { texto:"Ese temita está tremendo, de verdad de verdad.", options:["Esa canción destaca especialmente dentro del disco.","Se trata de una pieza que presenta un nivel de calidad notable.","La pieza referida exhibe cualidades sobresalientes."], correct:0, explain:"El original es demasiado coloquial para una nota de prensa; la opción 1 sube el registro sin volverse rígida." },
+  { texto:"Se informa que el artista manifestó su satisfacción con el producto discográfico resultante.", options:["El artista dijo que le gustó cómo quedó el disco.","Bad Bunny está happy con el disco, o eso dice.",'El artista está "on point" con el resultado.'], correct:0, explain:"El original suena a informe administrativo; la opción 1 es natural sin caer en el registro oral." },
+  { texto:"La grabación se llevó a cabo en un estudio, el cual se ubica en San Juan.", options:["La grabación se hizo en un estudio de San Juan.","Este estudio, en el cual se grabó, se encuentra en San Juan.","La grabación tuvo lugar en un estudio, el cual, situado en San Juan, se usó para ello."], correct:0, explain:"El original abusa de «el cual»; la opción 1 es más ágil y natural." },
+  { texto:"Las canciones del disco tratan temáticas relacionadas con el amor.", options:["Las canciones del disco hablan de amor.","El disco versa sobre temáticas amorosas diversas.","Las canciones, en relación con el amor, tratan sobre ello."], correct:0, explain:"«Temáticas relacionadas con» es un rodeo innecesario; «hablan de» es más directo y natural." },
+];
+
+// Estación 5 · Sala de créditos — citas y referencias (elegir la versión correcta)
+const creditos = [
+  { a:"Producido por J. Rivera para Estudios VOLTIO 787, 2026.", b:"producido por j rivera, estudios voltio 787 2026", correctIsA:true, explain:"Los nombres propios y el año van con mayúscula inicial y puntuación correcta; la versión B pierde las mayúsculas." },
+  { a:"«Marea Nocturna» (feat. La Insular), pista 7.", b:"Marea Nocturna (feat La Insular) pista 7", correctIsA:true, explain:"El título de la canción debe ir entre comillas (o en cursiva) y «feat.» lleva punto por ser abreviatura." },
+  { a:"Sample de «Callejón 787» (2019), usado con autorización.", b:"Sample de Callejón 787 2019 usado con autorización", correctIsA:true, explain:"Falta marcar el título de la canción de origen y separar correctamente la fecha entre paréntesis." },
+  { a:"Grabado en Estudios VOLTIO 787, San Juan, Puerto Rico.", b:"grabado en estudios voltio 787 san juan puerto rico", correctIsA:true, explain:"Los topónimos y nombres propios exigen mayúscula inicial." },
+  { a:"Masterizado por A. Colón (2026). Estudios VOLTIO 787.", b:"Masterizado por A Colón 2026, Estudios VOLTIO 787", correctIsA:true, explain:"Las iniciales abreviadas llevan punto («A.») y la fecha entre paréntesis se separa con su propia puntuación." },
+];
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+const screens = [
+  {type:'instrucciones'},
+  {type:'reorder'},
+  ...clozeItems.map((_,i)=>({type:'cloze', i})),
+  ...tomas.map((_,i)=>({type:'ruido', i})),
+  ...tonoItems.map((_,i)=>({type:'tono', i})),
+  ...creditos.map((_,i)=>({type:'creditos', i})),
+  {type:'reflexion1'},
+  {type:'reflexion2'},
+];
+
+let clave = '';
+let idx = 0;
+let started = false;
+let data = { reorder:[], cloze:{}, ruido:{}, tono:{}, creditos:{}, reflexion1:'', reflexion2:'' };
+
+function storageKey(k){ return 'tee_t3_master__' + k.trim().toLowerCase(); }
+function loadProgress(k){ try{ const raw = localStorage.getItem(storageKey(k)); if(raw) return JSON.parse(raw); }catch(e){} return null; }
+function saveProgress(){ try{ localStorage.setItem(storageKey(clave), JSON.stringify({ idx, data })); }catch(e){} }
+
+function render(){
+  const app = document.getElementById('app');
+  if(!started){ app.innerHTML = renderCover(); attachCover(); return; }
+  const scr = screens[idx];
+  app.innerHTML = renderTopbar() + renderStage(scr) + renderNavbar(scr);
+  attachStage(scr);
+  attachNav(scr);
+  saveProgress();
+}
+
+function renderCover(){
+  return `
+  <div class="cover">
+    <div class="box">
+      <div class="brand">🎧 ESTUDIOS VOLTIO 787 · MASTERIZACIÓN</div>
+      <h1>El nuevo disco de Bad Bunny necesita un máster de estilo</h1>
+      <p>El sello ha contratado tu estudio para revisar, antes de la prensa del vinilo, todos los textos que acompañan el disco: contraportada, notas de prensa, transcripciones de estudio y créditos. Trabajarás como auditor/a de estilo junior, estación por estación.</p>
+      <div class="pills">
+        <span class="pill">🎚️ 5 salas del estudio</span>
+        <span class="pill">🐰 Contenidos de Tema 3</span>
+        <span class="pill">💾 Progreso autoguardado</span>
+      </div>
+      <p class="evidence">⚠️ <b>Esta actividad la recogerá tu profesora como evidencia de tu trabajo.</b> Tus respuestas quedan asociadas a tu clave académica.</p>
+      <p>Puedes hacerla de una vez o en varias sesiones: si cierras la pestaña, al volver a entrar con tu misma clave académica seguirás donde lo dejaste.</p>
+      <label style="display:block;font-weight:900;color:var(--lima);font-size:.85rem;margin-top:.5rem;">Clave académica (nada de nombres y apellidos)</label>
+      <input type="text" id="claveInput" placeholder="Ej.: 202312345" autocomplete="off">
+      <div class="err" id="claveErr"></div>
+      <button class="btn primary" id="startBtn" style="padding:.65rem 1.8rem;font-size:.9rem;">Entrar al estudio</button>
+    </div>
+  </div>`;
+}
+
+function attachCover(){
+  const input = document.getElementById('claveInput');
+  const err = document.getElementById('claveErr');
+  const start = ()=>{
+    const v = input.value.trim();
+    if(!v){ err.textContent = 'Escribe tu clave académica para continuar.'; return; }
+    clave = v;
+    const prev = loadProgress(clave);
+    if(prev && typeof prev.idx === 'number'){ idx = prev.idx; data = prev.data; }
+    else { idx = 0; data = { reorder:[], cloze:{}, ruido:{}, tono:{}, creditos:{}, reflexion1:'', reflexion2:'' }; }
+    started = true;
+    render();
+  };
+  document.getElementById('startBtn').onclick = start;
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter') start(); });
+  input.focus();
+}
+
+function stepLabel(scr){
+  const names = { instrucciones:'Instrucciones', reorder:'Sala de mezcla', cloze:'Cabina de edición', ruido:'Reducción de ruido', tono:'Ecualización del tono', creditos:'Sala de créditos', reflexion1:'Cierre (1/2)', reflexion2:'Cierre (2/2)' };
+  const base = names[scr.type] || scr.type;
+  if(scr.type==='cloze') return `${base} · empalme ${scr.i+1}/${clozeItems.length}`;
+  if(scr.type==='ruido') return `${base} · toma ${scr.i+1}/${tomas.length}`;
+  if(scr.type==='tono') return `${base} · frase ${scr.i+1}/${tonoItems.length}`;
+  if(scr.type==='creditos') return `${base} · crédito ${scr.i+1}/${creditos.length}`;
+  return base;
+}
+
+function renderTopbar(){
+  return `<div class="topbar">
+    <div class="tt">🎧 Estudios VOLTIO 787<small>Clave académica: ${esc(clave)}</small></div>
+    <div class="progress">${stepLabel(screens[idx])} — ${idx+1}/${screens.length}</div>
+  </div>`;
+}
+function renderNavbar(scr){
+  const isFirst = idx===0, isLast = idx===screens.length-1;
+  return `<div class="navbar">
+    <button class="btn ghost" id="backBtn" ${isFirst?'disabled':''}>← Atrás</button>
+    <span class="save-note">💾 Guardado automáticamente en este dispositivo</span>
+    ${isLast ? '' : `<button class="btn primary" id="nextBtn">Siguiente →</button>`}
+  </div>`;
+}
+
+function renderStage(scr){
+  if(scr.type==='instrucciones') return renderInstrucciones();
+  if(scr.type==='reorder') return renderReorder();
+  if(scr.type==='cloze') return renderCloze(scr.i);
+  if(scr.type==='ruido') return renderRuido(scr.i);
+  if(scr.type==='tono') return renderTono(scr.i);
+  if(scr.type==='creditos') return renderCreditos(scr.i);
+  if(scr.type==='reflexion1') return renderReflexion1();
+  if(scr.type==='reflexion2') return renderReflexion2();
+  return '';
+}
+
+function renderInstrucciones(){
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Bienvenida al estudio</div>
+    <h1 class="scr">Cómo funciona tu turno en VOLTIO 787</h1>
+    <div class="instr">Vas a pasar por 5 salas del estudio, cada una centrada en un tipo de corrección distinto. En cada sala verás primero las instrucciones de esa dinámica concreta.</div>
+    <p class="lead">🎚️ <b>Sala de mezcla:</b> ordena las frases de la contraportada para que cuenten el recorrido del disco con sentido.</p>
+    <p class="lead">🔌 <b>Cabina de edición:</b> elige el conector correcto para empalmar bien las ideas de la nota de prensa.</p>
+    <p class="lead">🔇 <b>Reducción de ruido:</b> localiza la palabra imprecisa o redundante en transcripciones de estudio.</p>
+    <p class="lead">🎛️ <b>Ecualización del tono:</b> elige la reformulación con el registro más natural y adecuado.</p>
+    <p class="lead">💿 <b>Sala de créditos:</b> detecta cuál de las dos versiones de cada crédito está bien escrita.</p>
+    <p class="lead">Al final habrá un cierre con una breve reflexión y el resumen de tu paso por el estudio.</p>
+  </div></div>`;
+}
+
+function renderReorder(){
+  const chosen = data.reorder.length ? data.reorder : shuffled1.map(()=>'');
+  const rows = shuffled1.map((s,i)=>{
+    const val = chosen[i] || '';
+    const opts = [1,2,3,4,5].map(n=>`<option value="${n}" ${String(n)===String(val)?'selected':''}>${n}</option>`).join('');
+    return `<div class="track-row"><select data-i="${i}" class="ordSel"><option value="">–</option>${opts}</select><span>${esc(s)}</span></div>`;
+  }).join('');
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Sala de mezcla · Orden de pistas</div>
+    <h1 class="scr">Reordena la contraportada del disco</h1>
+    <div class="instr">Estas 5 frases describen el recorrido del disco pero están desordenadas. Asigna a cada una el número de posición (1 = primera, 5 = última) que le corresponde para que el texto tenga sentido y avance con coherencia.</div>
+    ${rows}
+    <div id="reorderFeedback" class="feedback" hidden></div>
+    <button class="btn lima small" id="checkReorder" style="align-self:flex-start;margin-top:.4rem;">Comprobar mezcla</button>
+  </div></div>`;
+}
+
+function renderCloze(i){
+  const it = clozeItems[i];
+  const chosen = data.cloze[i] || '';
+  const opts = it.options.map(o=>`<button type="button" class="opt clozeOpt ${chosen===o?'sel':''}" data-val="${esc(o)}">${esc(o)}</button>`).join('');
+  const fb = chosen ? `<div class="feedback">${chosen===it.correct ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cabina de edición · Empalme de pistas</div>
+    <h1 class="scr">Elige el conector que empalma bien las ideas</h1>
+    <div class="instr">Selecciona, de las tres opciones, el conector que une mejor ambas frases según su relación de sentido (causa, contraste, consecuencia...).</div>
+    <div class="clip">«${esc(it.before)} <b style="color:var(--lima)">___</b> ${esc(it.after)}»</div>
+    ${opts}
+    ${fb}
+  </div></div>`;
+}
+
+function renderRuido(i){
+  const it = tomas[i];
+  const state = data.ruido[i] || { flagged:false, choice:'' };
+  const parts = it.texto.split(it.flag);
+  const tokenHtml = `<span class="word ${state.flagged?'flagged':''}" id="flagWord">${esc(it.flag)}</span>`;
+  const textHtml = `${esc(parts[0])}${tokenHtml}${esc(parts[1]||'')}`;
+  const showOptions = state.flagged;
+  const opts = showOptions ? it.options.map(o=>`<button type="button" class="opt ruidoOpt ${state.choice===o?'sel':''} ${state.choice? (o===it.correct?'right':(o===state.choice?'wrong':'')):''}" data-val="${esc(o)}">${esc(o)}</button>`).join('') : '';
+  const fb = state.choice ? `<div class="feedback">${state.choice===it.correct?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Reducción de ruido · Transcripción de estudio</div>
+    <h1 class="scr">Toca la palabra o expresión con «ruido»</h1>
+    <div class="instr">Esta frase viene de una transcripción real de estudio. Haz clic sobre la palabra o expresión imprecisa o redundante y después elige su mejor sustituto.</div>
+    <div class="clip">${textHtml}</div>
+    <div id="ruidoOpts">${opts}</div>
+    ${fb}
+  </div></div>`;
+}
+
+function renderTono(i){
+  const it = tonoItems[i];
+  const chosen = data.tono[i];
+  const opts = it.options.map((o,oi)=>{
+    let cls = 'opt tonoOpt';
+    if(chosen!==undefined){ if(oi===it.correct) cls+=' right'; else if(oi===chosen) cls+=' wrong'; }
+    else if(chosen===oi) cls+=' sel';
+    return `<button type="button" class="${cls}" data-i="${oi}">${esc(o)}</button>`;
+  }).join('');
+  const fb = chosen!==undefined ? `<div class="feedback">${chosen===it.correct?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Ecualización del tono · Nota de prensa</div>
+    <h1 class="scr">¿Cuál suena natural y con el registro adecuado?</h1>
+    <div class="instr">La frase original está mal calibrada de tono (demasiado rígida o demasiado coloquial para una nota de prensa). Elige la reformulación con el registro más adecuado.</div>
+    <div class="clip">«${esc(it.texto)}»</div>
+    ${opts}
+    ${fb}
+  </div></div>`;
+}
+
+function renderCreditos(i){
+  const it = creditos[i];
+  const chosen = data.creditos[i];
+  const mk = (label, isA)=>{
+    let cls = 'opt credOpt';
+    if(chosen!==undefined){
+      const thisIsRight = isA === it.correctIsA;
+      if(thisIsRight) cls+=' right'; else if(chosen===isA) cls+=' wrong';
+    }
+    return `<button type="button" class="${cls}" data-a="${isA}">${esc(label)}</button>`;
+  };
+  const fb = chosen!==undefined ? `<div class="feedback">${(chosen===it.correctIsA)?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Sala de créditos · Ficha del vinilo</div>
+    <h1 class="scr">¿Qué versión del crédito está bien escrita?</h1>
+    <div class="instr">Antes de imprimir el vinilo hay que revisar mayúsculas, comillas/cursiva y puntuación de cada línea de créditos. Elige la versión correcta.</div>
+    ${mk('A — ' + it.a, true)}
+    ${mk('B — ' + it.b, false)}
+    ${fb}
+  </div></div>`;
+}
+
+function renderReflexion1(){
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cierre de sesión · Reflexión (1/2)</div>
+    <h1 class="scr">Lo que más te ha costado del máster</h1>
+    <div class="instr">Piensa en las 5 salas del estudio. ¿Cuál te ha resultado más difícil y por qué? ¿Qué tipo de error cometes tú con más frecuencia al escribir?</div>
+    <div class="field"><label>Tu reflexión</label>
+      <textarea id="ref1Input" rows="7" placeholder="Escribe aquí tu reflexión...">${esc(data.reflexion1)}</textarea>
+    </div>
+  </div></div>`;
+}
+
+function renderReflexion2(){
+  const resumen = buildResumen();
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cierre de sesión · Reflexión (2/2)</div>
+    <h1 class="scr">Firma de máster y resumen final</h1>
+    <div class="instr">Escribe un compromiso concreto de mejora. Después, copia el resumen de tu paso por el estudio — tu profesora te indicará cómo y cuándo entregarlo.</div>
+    <div class="field"><label>Mi compromiso de mejora</label>
+      <textarea id="ref2Input" rows="3" placeholder="Escribe aquí tu compromiso...">${esc(data.reflexion2)}</textarea>
+    </div>
+    <div class="field" style="flex:1;min-height:0;display:flex;flex-direction:column;">
+      <label>Resumen de tu turno en el estudio</label>
+      <div class="summary-box" id="resumenBox">${esc(resumen)}</div>
+    </div>
+  </div></div>`;
+}
+
+function buildResumen(){
+  let out = `ESTUDIOS VOLTIO 787 · MÁSTER DE ESTILO · TEMA 3 · TEE\nClave académica: ${clave}\n\n`;
+  out += `SALA DE MEZCLA (orden de pistas): ${data.reorder.join(',')||'—'}  (orden correcto: 4,1,5,2,3)\n\n`;
+  clozeItems.forEach((it,i)=>{ out += `EMPALME ${i+1}: elegido="${data.cloze[i]||'—'}" | correcto="${it.correct}"\n`; });
+  out += '\n';
+  tomas.forEach((it,i)=>{ const r = data.ruido[i]||{}; out += `RUIDO ${i+1}: marcado=${r.flagged?'sí':'no'} | sustituto elegido="${r.choice||'—'}" | correcto="${it.correct}"\n`; });
+  out += '\n';
+  tonoItems.forEach((it,i)=>{ const c = data.tono[i]; out += `TONO ${i+1}: elegido="${c!==undefined?it.options[c]:'—'}" | correcto="${it.options[it.correct]}"\n`; });
+  out += '\n';
+  creditos.forEach((it,i)=>{ const c = data.creditos[i]; out += `CRÉDITO ${i+1}: elegido="${c===undefined?'—':(c?'A':'B')}" | correcto="${it.correctIsA?'A':'B'}"\n`; });
+  out += `\nREFLEXIÓN:\n${data.reflexion1||'—'}\n\nCOMPROMISO DE MEJORA:\n${data.reflexion2||'—'}\n`;
+  return out;
+}
+
+function canAdvance(scr){
+  if(scr.type==='reorder'){
+    if(data.reorder.length!==5) return false;
+    const vals = data.reorder.map(String);
+    return ['1','2','3','4','5'].every(n=>vals.includes(n));
+  }
+  if(scr.type==='cloze') return !!data.cloze[scr.i];
+  if(scr.type==='ruido'){ const r = data.ruido[scr.i]; return !!(r && r.flagged && r.choice); }
+  if(scr.type==='tono') return data.tono[scr.i]!==undefined;
+  if(scr.type==='creditos') return data.creditos[scr.i]!==undefined;
+  if(scr.type==='reflexion1') return !!data.reflexion1.trim();
+  return true;
+}
+
+function attachStage(scr){
+  if(scr.type==='reorder'){
+    document.querySelectorAll('.ordSel').forEach(sel=>{
+      sel.onchange = ()=>{
+        const arr = data.reorder.length ? data.reorder.slice() : ['','','','',''];
+        arr[+sel.dataset.i] = sel.value;
+        data.reorder = arr;
+        refreshNextState(scr);
+        saveProgress();
+      };
+    });
+    document.getElementById('checkReorder').onclick = ()=>{
+      const fb = document.getElementById('reorderFeedback');
+      const posByIdx = data.reorder.map(Number);
+      let ok = true;
+      shuffled1.forEach((s,i)=>{ const correctPos = ordenCorrecto.indexOf(s)+1; if(posByIdx[i]!==correctPos) ok=false; });
+      fb.hidden = false;
+      fb.innerHTML = (ok? '<span class="badge ok">¡Mezcla correcta!</span>' : '<span class="badge no">Todavía no cuadra</span>') + ' El orden correcto es: ' + ordenCorrecto.map((s,i)=> (i+1)).join(', ') + ' (frase 1 → posición ' + (ordenCorrecto.indexOf(shuffled1[0])+1) + ', etc.). Sigue cuando quieras.';
+    };
+  }
+  if(scr.type==='cloze'){
+    document.querySelectorAll('.clozeOpt').forEach(btn=>{
+      btn.onclick = ()=>{ data.cloze[scr.i] = btn.dataset.val; refreshNextState(scr); saveProgress(); render(); };
+    });
+  }
+  if(scr.type==='ruido'){
+    const it = tomas[scr.i];
+    const word = document.getElementById('flagWord');
+    if(word) word.onclick = ()=>{
+      const r = data.ruido[scr.i] || { flagged:false, choice:'' };
+      r.flagged = true;
+      data.ruido[scr.i] = r;
+      saveProgress();
+      render();
+    };
+    document.querySelectorAll('.ruidoOpt').forEach(btn=>{
+      btn.onclick = ()=>{
+        const r = data.ruido[scr.i] || { flagged:true, choice:'' };
+        r.choice = btn.dataset.val;
+        data.ruido[scr.i] = r;
+        refreshNextState(scr);
+        saveProgress();
+        render();
+      };
+    });
+  }
+  if(scr.type==='tono'){
+    document.querySelectorAll('.tonoOpt').forEach(btn=>{
+      btn.onclick = ()=>{ data.tono[scr.i] = +btn.dataset.i; refreshNextState(scr); saveProgress(); render(); };
+    });
+  }
+  if(scr.type==='creditos'){
+    document.querySelectorAll('.credOpt').forEach(btn=>{
+      btn.onclick = ()=>{ data.creditos[scr.i] = btn.dataset.a==='true'; refreshNextState(scr); saveProgress(); render(); };
+    });
+  }
+  if(scr.type==='reflexion1'){
+    document.getElementById('ref1Input').addEventListener('input', e=>{ data.reflexion1 = e.target.value; refreshNextState(scr); saveProgress(); });
+  }
+  if(scr.type==='reflexion2'){
+    document.getElementById('ref2Input').addEventListener('input', e=>{ data.reflexion2 = e.target.value; document.getElementById('resumenBox').textContent = buildResumen(); saveProgress(); });
+  }
+}
+
+function refreshNextState(scr){
+  const nextBtn = document.getElementById('nextBtn');
+  if(nextBtn) nextBtn.disabled = !canAdvance(scr);
+}
+
+function attachNav(scr){
+  const backBtn = document.getElementById('backBtn');
+  if(backBtn) backBtn.onclick = ()=>{ if(idx>0){ idx--; render(); } };
+  const nextBtn = document.getElementById('nextBtn');
+  if(nextBtn){
+    nextBtn.disabled = !canAdvance(scr);
+    nextBtn.onclick = ()=>{ if(canAdvance(scr) && idx<screens.length-1){ idx++; render(); } };
+  }
+  if(scr.type==='reflexion2'){
+    const box = document.getElementById('resumenBox');
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'btn lima';
+    copyBtn.textContent = '📋 Copiar resumen completo';
+    copyBtn.style.marginTop = '.6rem';
+    copyBtn.onclick = ()=>{
+      const text = buildResumen();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(()=>{ copyBtn.textContent = '✅ Copiado'; setTimeout(()=>copyBtn.textContent='📋 Copiar resumen completo', 1800); });
+      } else {
+        const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+        copyBtn.textContent = '✅ Copiado';
+      }
+    };
+    box.insertAdjacentElement('afterend', copyBtn);
+  }
+}
+
+render();
+</script>
+</body>
+</html>
