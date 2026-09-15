@@ -125,6 +125,19 @@ const creditos = [
 
 function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 
+const MAX_ATTEMPTS = 3;
+function freshData(){
+  return {
+    reorder: [], reorderMeta: { attempts:0, locked:false },
+    cloze: {}, ruido: {}, tono: {}, creditos: {},
+    reflexion1:'', reflexion2:''
+  };
+}
+function clozeState(i){ if(!data.cloze[i]) data.cloze[i] = { chosen:undefined, attempts:0, locked:false }; return data.cloze[i]; }
+function ruidoState(i){ if(!data.ruido[i]) data.ruido[i] = { flagged:false, chosen:undefined, attempts:0, locked:false }; return data.ruido[i]; }
+function tonoState(i){ if(!data.tono[i]) data.tono[i] = { chosen:undefined, attempts:0, locked:false }; return data.tono[i]; }
+function credState(i){ if(!data.creditos[i]) data.creditos[i] = { chosen:undefined, attempts:0, locked:false }; return data.creditos[i]; }
+
 const screens = [
   {type:'instrucciones'},
   {type:'reorder'},
@@ -139,7 +152,7 @@ const screens = [
 let clave = '';
 let idx = 0;
 let started = false;
-let data = { reorder:[], cloze:{}, ruido:{}, tono:{}, creditos:{}, reflexion1:'', reflexion2:'' };
+let data = freshData();
 
 function storageKey(k){ return 'tee_t3_master__' + k.trim().toLowerCase(); }
 function loadProgress(k){ try{ const raw = localStorage.getItem(storageKey(k)); if(raw) return JSON.parse(raw); }catch(e){} return null; }
@@ -185,8 +198,8 @@ function attachCover(){
     if(!v){ err.textContent = 'Escribe tu clave académica para continuar.'; return; }
     clave = v;
     const prev = loadProgress(clave);
-    if(prev && typeof prev.idx === 'number'){ idx = prev.idx; data = prev.data; }
-    else { idx = 0; data = { reorder:[], cloze:{}, ruido:{}, tono:{}, creditos:{}, reflexion1:'', reflexion2:'' }; }
+    if(prev && typeof prev.idx === 'number'){ idx = prev.idx; data = prev.data; if(!data.reorderMeta) data.reorderMeta = { attempts:0, locked:false }; }
+    else { idx = 0; data = freshData(); }
     started = true;
     render();
   };
@@ -247,31 +260,46 @@ function renderInstrucciones(){
 }
 
 function renderReorder(){
+  const meta = data.reorderMeta || (data.reorderMeta = { attempts:0, locked:false });
   const chosen = data.reorder.length ? data.reorder : shuffled1.map(()=>'');
   const rows = shuffled1.map((s,i)=>{
     const val = chosen[i] || '';
     const opts = [1,2,3,4,5].map(n=>`<option value="${n}" ${String(n)===String(val)?'selected':''}>${n}</option>`).join('');
-    return `<div class="track-row"><select data-i="${i}" class="ordSel"><option value="">–</option>${opts}</select><span>${esc(s)}</span></div>`;
+    return `<div class="track-row"><select data-i="${i}" class="ordSel" ${meta.locked?'disabled':''}><option value="">–</option>${opts}</select><span>${esc(s)}</span></div>`;
   }).join('');
+  const remaining = MAX_ATTEMPTS - meta.attempts;
+  const fb = meta.locked
+    ? `<div class="feedback">${meta.success ? '<span class="badge ok">¡Mezcla correcta!</span>' : '<span class="badge no">Se acabaron los intentos</span>'} El orden correcto es (de la frase 1.ª a la 5.ª de la lista de arriba): ${shuffled1.map(s=>ordenCorrecto.indexOf(s)+1).join(', ')}.</div>`
+    : (meta.attempts>0 ? `<div class="feedback"><span class="badge no">Todavía no cuadra</span> Te quedan ${remaining} intento${remaining===1?'':'s'}. Vuelve a comprobar el orden.</div>` : '');
   return `<div class="stage"><div class="card">
     <div class="kicker">Sala de mezcla · Orden de pistas</div>
     <h1 class="scr">Reordena la contraportada del disco</h1>
-    <div class="instr">Estas 5 frases describen el recorrido del disco pero están desordenadas. Asigna a cada una el número de posición (1 = primera, 5 = última) que le corresponde para que el texto tenga sentido y avance con coherencia.</div>
+    <div class="instr">Estas 5 frases describen el recorrido del disco pero están desordenadas. Asigna a cada una el número de posición (1 = primera, 5 = última) que le corresponde para que el texto tenga sentido y avance con coherencia. Tienes ${MAX_ATTEMPTS} intentos antes de que se revele la solución.</div>
     ${rows}
-    <div id="reorderFeedback" class="feedback" hidden></div>
-    <button class="btn lima small" id="checkReorder" style="align-self:flex-start;margin-top:.4rem;">Comprobar mezcla</button>
+    ${fb}
+    ${meta.locked ? '' : `<button class="btn lima small" id="checkReorder" style="align-self:flex-start;margin-top:.4rem;">Comprobar mezcla (intento ${meta.attempts+1}/${MAX_ATTEMPTS})</button>`}
   </div></div>`;
 }
 
 function renderCloze(i){
   const it = clozeItems[i];
-  const chosen = data.cloze[i] || '';
-  const opts = it.options.map(o=>`<button type="button" class="opt clozeOpt ${chosen===o?'sel':''}" data-val="${esc(o)}">${esc(o)}</button>`).join('');
-  const fb = chosen ? `<div class="feedback">${chosen===it.correct ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  const st = clozeState(i);
+  const opts = it.options.map(o=>{
+    let cls = 'opt clozeOpt';
+    if(st.locked){ if(o===it.correct) cls+=' right'; else if(o===st.chosen) cls+=' wrong'; }
+    return `<button type="button" class="${cls}" data-val="${esc(o)}" ${st.locked?'disabled':''}>${esc(o)}</button>`;
+  }).join('');
+  const remaining = MAX_ATTEMPTS - st.attempts;
+  let fb = '';
+  if(st.locked){
+    fb = `<div class="feedback">${st.success ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Se acabaron los intentos</span>'} ${esc(it.explain)}</div>`;
+  } else if(st.attempts>0){
+    fb = `<div class="feedback"><span class="badge no">Todavía no</span> Te quedan ${remaining} intento${remaining===1?'':'s'}. Prueba con otra opción.</div>`;
+  }
   return `<div class="stage"><div class="card">
     <div class="kicker">Cabina de edición · Empalme de pistas</div>
     <h1 class="scr">Elige el conector que empalma bien las ideas</h1>
-    <div class="instr">Selecciona, de las tres opciones, el conector que une mejor ambas frases según su relación de sentido (causa, contraste, consecuencia...).</div>
+    <div class="instr">Selecciona, de las tres opciones, el conector que une mejor ambas frases según su relación de sentido (causa, contraste, consecuencia...). Tienes ${MAX_ATTEMPTS} intentos antes de que se revele la solución.</div>
     <div class="clip">«${esc(it.before)} <b style="color:var(--lima)">___</b> ${esc(it.after)}»</div>
     ${opts}
     ${fb}
@@ -280,17 +308,27 @@ function renderCloze(i){
 
 function renderRuido(i){
   const it = tomas[i];
-  const state = data.ruido[i] || { flagged:false, choice:'' };
+  const st = ruidoState(i);
   const parts = it.texto.split(it.flag);
-  const tokenHtml = `<span class="word ${state.flagged?'flagged':''}" id="flagWord">${esc(it.flag)}</span>`;
+  const tokenHtml = `<span class="word ${st.flagged?'flagged':''}" id="flagWord">${esc(it.flag)}</span>`;
   const textHtml = `${esc(parts[0])}${tokenHtml}${esc(parts[1]||'')}`;
-  const showOptions = state.flagged;
-  const opts = showOptions ? it.options.map(o=>`<button type="button" class="opt ruidoOpt ${state.choice===o?'sel':''} ${state.choice? (o===it.correct?'right':(o===state.choice?'wrong':'')):''}" data-val="${esc(o)}">${esc(o)}</button>`).join('') : '';
-  const fb = state.choice ? `<div class="feedback">${state.choice===it.correct?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  const showOptions = st.flagged;
+  const opts = showOptions ? it.options.map(o=>{
+    let cls = 'opt ruidoOpt';
+    if(st.locked){ if(o===it.correct) cls+=' right'; else if(o===st.chosen) cls+=' wrong'; }
+    return `<button type="button" class="${cls}" data-val="${esc(o)}" ${st.locked?'disabled':''}>${esc(o)}</button>`;
+  }).join('') : '';
+  const remaining = MAX_ATTEMPTS - st.attempts;
+  let fb = '';
+  if(st.locked){
+    fb = `<div class="feedback">${st.success ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Se acabaron los intentos</span>'} ${esc(it.explain)}</div>`;
+  } else if(st.attempts>0){
+    fb = `<div class="feedback"><span class="badge no">Todavía no</span> Te quedan ${remaining} intento${remaining===1?'':'s'}. Prueba con otro sustituto.</div>`;
+  }
   return `<div class="stage"><div class="card">
     <div class="kicker">Reducción de ruido · Transcripción de estudio</div>
     <h1 class="scr">Toca la palabra o expresión con «ruido»</h1>
-    <div class="instr">Esta frase viene de una transcripción real de estudio. Haz clic sobre la palabra o expresión imprecisa o redundante y después elige su mejor sustituto.</div>
+    <div class="instr">Esta frase viene de una transcripción real de estudio. Haz clic sobre la palabra o expresión imprecisa o redundante y después elige su mejor sustituto. Tienes ${MAX_ATTEMPTS} intentos en el sustituto antes de que se revele la solución.</div>
     <div class="clip">${textHtml}</div>
     <div id="ruidoOpts">${opts}</div>
     ${fb}
@@ -299,18 +337,23 @@ function renderRuido(i){
 
 function renderTono(i){
   const it = tonoItems[i];
-  const chosen = data.tono[i];
+  const st = tonoState(i);
   const opts = it.options.map((o,oi)=>{
     let cls = 'opt tonoOpt';
-    if(chosen!==undefined){ if(oi===it.correct) cls+=' right'; else if(oi===chosen) cls+=' wrong'; }
-    else if(chosen===oi) cls+=' sel';
-    return `<button type="button" class="${cls}" data-i="${oi}">${esc(o)}</button>`;
+    if(st.locked){ if(oi===it.correct) cls+=' right'; else if(oi===st.chosen) cls+=' wrong'; }
+    return `<button type="button" class="${cls}" data-i="${oi}" ${st.locked?'disabled':''}>${esc(o)}</button>`;
   }).join('');
-  const fb = chosen!==undefined ? `<div class="feedback">${chosen===it.correct?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  const remaining = MAX_ATTEMPTS - st.attempts;
+  let fb = '';
+  if(st.locked){
+    fb = `<div class="feedback">${st.success ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Se acabaron los intentos</span>'} ${esc(it.explain)}</div>`;
+  } else if(st.attempts>0){
+    fb = `<div class="feedback"><span class="badge no">Todavía no</span> Te quedan ${remaining} intento${remaining===1?'':'s'}. Prueba con otra opción.</div>`;
+  }
   return `<div class="stage"><div class="card">
     <div class="kicker">Ecualización del tono · Nota de prensa</div>
     <h1 class="scr">¿Cuál suena natural y con el registro adecuado?</h1>
-    <div class="instr">La frase original está mal calibrada de tono (demasiado rígida o demasiado coloquial para una nota de prensa). Elige la reformulación con el registro más adecuado.</div>
+    <div class="instr">La frase original está mal calibrada de tono (demasiado rígida o demasiado coloquial para una nota de prensa). Elige la reformulación con el registro más adecuado. Tienes ${MAX_ATTEMPTS} intentos antes de que se revele la solución.</div>
     <div class="clip">«${esc(it.texto)}»</div>
     ${opts}
     ${fb}
@@ -319,20 +362,26 @@ function renderTono(i){
 
 function renderCreditos(i){
   const it = creditos[i];
-  const chosen = data.creditos[i];
+  const st = credState(i);
   const mk = (label, isA)=>{
     let cls = 'opt credOpt';
-    if(chosen!==undefined){
+    if(st.locked){
       const thisIsRight = isA === it.correctIsA;
-      if(thisIsRight) cls+=' right'; else if(chosen===isA) cls+=' wrong';
+      if(thisIsRight) cls+=' right'; else if(st.chosen===isA) cls+=' wrong';
     }
-    return `<button type="button" class="${cls}" data-a="${isA}">${esc(label)}</button>`;
+    return `<button type="button" class="${cls}" data-a="${isA}" ${st.locked?'disabled':''}>${esc(label)}</button>`;
   };
-  const fb = chosen!==undefined ? `<div class="feedback">${(chosen===it.correctIsA)?'<span class="badge ok">Correcto</span>':'<span class="badge no">Revisa</span>'} ${esc(it.explain)}</div>` : '';
+  const remaining = MAX_ATTEMPTS - st.attempts;
+  let fb = '';
+  if(st.locked){
+    fb = `<div class="feedback">${st.success ? '<span class="badge ok">Correcto</span>' : '<span class="badge no">Se acabaron los intentos</span>'} ${esc(it.explain)}</div>`;
+  } else if(st.attempts>0){
+    fb = `<div class="feedback"><span class="badge no">Todavía no</span> Te quedan ${remaining} intento${remaining===1?'':'s'}. Prueba con la otra versión.</div>`;
+  }
   return `<div class="stage"><div class="card">
     <div class="kicker">Sala de créditos · Ficha del vinilo</div>
     <h1 class="scr">¿Qué versión del crédito está bien escrita?</h1>
-    <div class="instr">Antes de imprimir el vinilo hay que revisar mayúsculas, comillas/cursiva y puntuación de cada línea de créditos. Elige la versión correcta.</div>
+    <div class="instr">Antes de imprimir el vinilo hay que revisar mayúsculas, comillas/cursiva y puntuación de cada línea de créditos. Elige la versión correcta. Tienes ${MAX_ATTEMPTS} intentos antes de que se revele la solución.</div>
     ${mk('A — ' + it.a, true)}
     ${mk('B — ' + it.b, false)}
     ${fb}
@@ -367,87 +416,115 @@ function renderReflexion2(){
 }
 
 function buildResumen(){
+  const meta = data.reorderMeta || { attempts:0, locked:false };
   let out = `ESTUDIOS VOLTIO 787 · MÁSTER DE ESTILO · TEMA 3 · TEE\nClave académica: ${clave}\n\n`;
-  out += `SALA DE MEZCLA (orden de pistas): ${data.reorder.join(',')||'—'}  (orden correcto: 4,1,5,2,3)\n\n`;
-  clozeItems.forEach((it,i)=>{ out += `EMPALME ${i+1}: elegido="${data.cloze[i]||'—'}" | correcto="${it.correct}"\n`; });
+  out += `SALA DE MEZCLA (orden de pistas): ${meta.locked ? (data.reorder.join(',')+' | intentos='+meta.attempts+' | '+(meta.success?'acertó':'no acertó')) : 'sin terminar'}\n\n`;
+  clozeItems.forEach((it,i)=>{ const st = clozeState(i); out += `EMPALME ${i+1}: elegido="${st.chosen||'—'}" | correcto="${it.correct}" | intentos=${st.attempts} | ${st.success?'acertó':'no acertó'}\n`; });
   out += '\n';
-  tomas.forEach((it,i)=>{ const r = data.ruido[i]||{}; out += `RUIDO ${i+1}: marcado=${r.flagged?'sí':'no'} | sustituto elegido="${r.choice||'—'}" | correcto="${it.correct}"\n`; });
+  tomas.forEach((it,i)=>{ const st = ruidoState(i); out += `RUIDO ${i+1}: marcado=${st.flagged?'sí':'no'} | sustituto elegido="${st.chosen||'—'}" | correcto="${it.correct}" | intentos=${st.attempts} | ${st.success?'acertó':'no acertó'}\n`; });
   out += '\n';
-  tonoItems.forEach((it,i)=>{ const c = data.tono[i]; out += `TONO ${i+1}: elegido="${c!==undefined?it.options[c]:'—'}" | correcto="${it.options[it.correct]}"\n`; });
+  tonoItems.forEach((it,i)=>{ const st = tonoState(i); out += `TONO ${i+1}: elegido="${st.chosen!==undefined?it.options[st.chosen]:'—'}" | correcto="${it.options[it.correct]}" | intentos=${st.attempts} | ${st.success?'acertó':'no acertó'}\n`; });
   out += '\n';
-  creditos.forEach((it,i)=>{ const c = data.creditos[i]; out += `CRÉDITO ${i+1}: elegido="${c===undefined?'—':(c?'A':'B')}" | correcto="${it.correctIsA?'A':'B'}"\n`; });
+  creditos.forEach((it,i)=>{ const st = credState(i); out += `CRÉDITO ${i+1}: elegido="${st.chosen===undefined?'—':(st.chosen?'A':'B')}" | correcto="${it.correctIsA?'A':'B'}" | intentos=${st.attempts} | ${st.success?'acertó':'no acertó'}\n`; });
   out += `\nREFLEXIÓN:\n${data.reflexion1||'—'}\n\nCOMPROMISO DE MEJORA:\n${data.reflexion2||'—'}\n`;
   return out;
 }
 
 function canAdvance(scr){
-  if(scr.type==='reorder'){
-    if(data.reorder.length!==5) return false;
-    const vals = data.reorder.map(String);
-    return ['1','2','3','4','5'].every(n=>vals.includes(n));
-  }
-  if(scr.type==='cloze') return !!data.cloze[scr.i];
-  if(scr.type==='ruido'){ const r = data.ruido[scr.i]; return !!(r && r.flagged && r.choice); }
-  if(scr.type==='tono') return data.tono[scr.i]!==undefined;
-  if(scr.type==='creditos') return data.creditos[scr.i]!==undefined;
+  if(scr.type==='reorder') return !!(data.reorderMeta && data.reorderMeta.locked);
+  if(scr.type==='cloze') return !!clozeState(scr.i).locked;
+  if(scr.type==='ruido') return !!ruidoState(scr.i).locked;
+  if(scr.type==='tono') return !!tonoState(scr.i).locked;
+  if(scr.type==='creditos') return !!credState(scr.i).locked;
   if(scr.type==='reflexion1') return !!data.reflexion1.trim();
   return true;
 }
 
 function attachStage(scr){
   if(scr.type==='reorder'){
+    const meta = data.reorderMeta;
     document.querySelectorAll('.ordSel').forEach(sel=>{
       sel.onchange = ()=>{
         const arr = data.reorder.length ? data.reorder.slice() : ['','','','',''];
         arr[+sel.dataset.i] = sel.value;
         data.reorder = arr;
-        refreshNextState(scr);
         saveProgress();
       };
     });
-    document.getElementById('checkReorder').onclick = ()=>{
-      const fb = document.getElementById('reorderFeedback');
+    const checkBtn = document.getElementById('checkReorder');
+    if(checkBtn) checkBtn.onclick = ()=>{
+      if(data.reorder.length!==5 || !['1','2','3','4','5'].every(n=>data.reorder.map(String).includes(n))){
+        alert('Completa las 5 posiciones (1 a 5) antes de comprobar la mezcla.');
+        return;
+      }
       const posByIdx = data.reorder.map(Number);
       let ok = true;
       shuffled1.forEach((s,i)=>{ const correctPos = ordenCorrecto.indexOf(s)+1; if(posByIdx[i]!==correctPos) ok=false; });
-      fb.hidden = false;
-      fb.innerHTML = (ok? '<span class="badge ok">¡Mezcla correcta!</span>' : '<span class="badge no">Todavía no cuadra</span>') + ' El orden correcto es: ' + ordenCorrecto.map((s,i)=> (i+1)).join(', ') + ' (frase 1 → posición ' + (ordenCorrecto.indexOf(shuffled1[0])+1) + ', etc.). Sigue cuando quieras.';
+      meta.attempts++;
+      if(ok){ meta.locked = true; meta.success = true; }
+      else if(meta.attempts>=MAX_ATTEMPTS){ meta.locked = true; meta.success = false; }
+      refreshNextState(scr);
+      saveProgress();
+      render();
     };
   }
   if(scr.type==='cloze'){
+    const st = clozeState(scr.i);
     document.querySelectorAll('.clozeOpt').forEach(btn=>{
-      btn.onclick = ()=>{ data.cloze[scr.i] = btn.dataset.val; refreshNextState(scr); saveProgress(); render(); };
+      btn.onclick = ()=>{
+        if(st.locked) return;
+        st.chosen = btn.dataset.val;
+        st.attempts++;
+        if(st.chosen===clozeItems[scr.i].correct){ st.locked = true; st.success = true; }
+        else if(st.attempts>=MAX_ATTEMPTS){ st.locked = true; st.success = false; }
+        refreshNextState(scr); saveProgress(); render();
+      };
     });
   }
   if(scr.type==='ruido'){
-    const it = tomas[scr.i];
+    const st = ruidoState(scr.i);
     const word = document.getElementById('flagWord');
     if(word) word.onclick = ()=>{
-      const r = data.ruido[scr.i] || { flagged:false, choice:'' };
-      r.flagged = true;
-      data.ruido[scr.i] = r;
+      if(st.locked) return;
+      st.flagged = true;
       saveProgress();
       render();
     };
     document.querySelectorAll('.ruidoOpt').forEach(btn=>{
       btn.onclick = ()=>{
-        const r = data.ruido[scr.i] || { flagged:true, choice:'' };
-        r.choice = btn.dataset.val;
-        data.ruido[scr.i] = r;
-        refreshNextState(scr);
-        saveProgress();
-        render();
+        if(st.locked) return;
+        st.chosen = btn.dataset.val;
+        st.attempts++;
+        if(st.chosen===tomas[scr.i].correct){ st.locked = true; st.success = true; }
+        else if(st.attempts>=MAX_ATTEMPTS){ st.locked = true; st.success = false; }
+        refreshNextState(scr); saveProgress(); render();
       };
     });
   }
   if(scr.type==='tono'){
+    const st = tonoState(scr.i);
     document.querySelectorAll('.tonoOpt').forEach(btn=>{
-      btn.onclick = ()=>{ data.tono[scr.i] = +btn.dataset.i; refreshNextState(scr); saveProgress(); render(); };
+      btn.onclick = ()=>{
+        if(st.locked) return;
+        st.chosen = +btn.dataset.i;
+        st.attempts++;
+        if(st.chosen===tonoItems[scr.i].correct){ st.locked = true; st.success = true; }
+        else if(st.attempts>=MAX_ATTEMPTS){ st.locked = true; st.success = false; }
+        refreshNextState(scr); saveProgress(); render();
+      };
     });
   }
   if(scr.type==='creditos'){
+    const st = credState(scr.i);
     document.querySelectorAll('.credOpt').forEach(btn=>{
-      btn.onclick = ()=>{ data.creditos[scr.i] = btn.dataset.a==='true'; refreshNextState(scr); saveProgress(); render(); };
+      btn.onclick = ()=>{
+        if(st.locked) return;
+        st.chosen = btn.dataset.a==='true';
+        st.attempts++;
+        if(st.chosen===creditos[scr.i].correctIsA){ st.locked = true; st.success = true; }
+        else if(st.attempts>=MAX_ATTEMPTS){ st.locked = true; st.success = false; }
+        refreshNextState(scr); saveProgress(); render();
+      };
     });
   }
   if(scr.type==='reflexion1'){
