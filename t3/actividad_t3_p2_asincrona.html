@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Clínica de estilo (asíncrona) · Urgencias del texto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --azul:#003B5C; --amarillo:#F4C542; --gris:#34484F; --gris-claro:#F3F3F4; --blanco:#FFFFFF;
+    --verde:#2E7D5B; --rojo:#B3261E; --monitor:#0B2E22;
+  }
+  *{box-sizing:border-box;}
+  html,body{ height:100%; margin:0; }
+  body{ font-family:Arial, Helvetica, sans-serif; background:var(--gris-claro); color:var(--gris); overflow:hidden; }
+  #app{ height:100vh; display:flex; flex-direction:column; }
+
+  /* ---- barra superior ---- */
+  .topbar{ background:#00283F; color:var(--blanco); padding:.7rem 1.6rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:.4rem; flex:0 0 auto; }
+  .topbar .tt{ font-weight:700; font-size:.95rem; }
+  .topbar .tt small{ display:block; font-weight:400; color:#C9D6DD; font-size:.72rem; }
+  .topbar .progress{ font-family:"Courier New", monospace; background:var(--monitor); color:#7CFFB2; padding:.35rem .8rem; border-radius:8px; font-size:.85rem; font-weight:700; }
+
+  /* ---- contenido central: una sola pantalla, sin scroll ---- */
+  .stage{ flex:1 1 auto; display:flex; align-items:stretch; justify-content:center; padding:1.1rem 1.6rem; min-height:0; }
+  .card{ background:var(--blanco); border-radius:16px; box-shadow:0 2px 14px rgba(0,0,0,.08); max-width:920px; width:100%; padding:1.3rem 1.8rem; display:flex; flex-direction:column; min-height:0; overflow:auto; }
+  .kicker{ color:var(--azul); font-weight:700; font-size:.72rem; text-transform:uppercase; letter-spacing:.06em; margin:0 0 .2rem; }
+  h1.scr{ margin:.1rem 0 .5rem; font-size:1.3rem; color:var(--azul); }
+  .lead{ font-size:.88rem; line-height:1.45; margin:0 0 .7rem; }
+  .instr{ background:#EAF1F5; border-left:4px solid var(--azul); border-radius:8px; padding:.6rem .9rem; font-size:.82rem; line-height:1.4; margin:0 0 .8rem; }
+  .orig{ background:var(--gris-claro); border-radius:10px; padding:.8rem 1rem; font-style:italic; margin:0 0 .8rem; font-size:.95rem; }
+  .field{ margin-bottom:.7rem; }
+  .field label{ display:block; font-size:.78rem; font-weight:700; color:var(--azul); text-transform:uppercase; letter-spacing:.03em; margin-bottom:.3rem; }
+  .field textarea, .field input[type=text]{ width:100%; font-family:inherit; font-size:.88rem; border:1.5px solid #D7DEE2; border-radius:8px; padding:.5rem .6rem; resize:none; }
+  .catbtns{ display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; margin-bottom:.8rem; }
+  .catbtns button{ font-family:inherit; border:2px solid #D7DEE2; background:var(--blanco); border-radius:9px; padding:.5rem .3rem; font-size:.8rem; font-weight:700; color:var(--gris); cursor:pointer; }
+  .catbtns button.sel{ border-color:var(--azul); background:#EAF1F5; color:var(--azul); }
+  .catbtns button.right{ border-color:var(--verde); background:#E8F3EC; color:var(--verde); }
+  .catbtns button.wrong{ border-color:var(--rojo); background:#FBEAEA; color:var(--rojo); }
+  .compare{ display:grid; grid-template-columns:1fr 1fr; gap:.9rem; margin-bottom:.6rem; }
+  .compare .box{ border-radius:10px; padding:.7rem .8rem; font-size:.82rem; line-height:1.4; }
+  .compare .mine{ background:#EFEFEF; }
+  .compare .oficial{ background:#E8F3EC; }
+  .compare b.tag{ display:block; font-size:.7rem; text-transform:uppercase; letter-spacing:.04em; margin-bottom:.35rem; color:var(--azul); }
+  .badge{ display:inline-block; font-size:.72rem; font-weight:700; padding:.15rem .55rem; border-radius:999px; margin-left:.4rem; }
+  .badge.ok{ background:#E8F3EC; color:var(--verde); }
+  .badge.no{ background:#FBEAEA; color:var(--rojo); }
+  .summary-box{ background:var(--gris-claro); border-radius:10px; padding:.8rem 1rem; font-size:.78rem; line-height:1.5; white-space:pre-wrap; max-height:100%; overflow:auto; flex:1; min-height:0; }
+
+  /* ---- barra inferior de navegación ---- */
+  .navbar{ flex:0 0 auto; display:flex; justify-content:space-between; align-items:center; padding:.6rem 1.6rem .8rem; gap:.6rem; }
+  .navbar .save-note{ font-size:.72rem; color:#8A97A0; }
+  .btn{ font-family:inherit; border:none; border-radius:999px; padding:.55rem 1.3rem; font-weight:700; font-size:.85rem; cursor:pointer; }
+  .btn.primary{ background:var(--azul); color:var(--blanco); }
+  .btn.primary:disabled{ background:#B9C2C6; cursor:not-allowed; }
+  .btn.ghost{ background:none; color:var(--azul); border:2px solid var(--azul); }
+  .btn.amarillo{ background:var(--amarillo); color:#4A3B00; }
+
+  /* ---- portada ---- */
+  .cover{ flex:1; display:flex; align-items:center; justify-content:center; padding:1.4rem; }
+  .cover .box{ max-width:640px; width:100%; text-align:center; }
+  .cover h1{ color:var(--azul); font-size:1.7rem; margin:.2rem 0 .6rem; }
+  .cover p{ font-size:.92rem; line-height:1.5; }
+  .cover .pills{ display:flex; justify-content:center; gap:.6rem; margin:1rem 0; flex-wrap:wrap; }
+  .pill{ background:#EAF1F5; color:var(--azul); font-size:.78rem; font-weight:700; padding:.35rem .8rem; border-radius:999px; }
+  .cover input[type=text]{ width:100%; max-width:320px; font-size:1rem; padding:.6rem .8rem; border:2px solid #D7DEE2; border-radius:10px; text-align:center; margin:.4rem 0 .9rem; }
+  .err{ color:var(--rojo); font-size:.8rem; min-height:1.1em; }
+
+  [hidden]{ display:none !important; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+const cats = ["Morfosintaxis","Léxico","Ortotipografía","Puntuación"];
+const pacientes = [
+  {n:1, texto:"Estoy segura que ha llegado tarde.", cat:"Morfosintaxis", dolencia:"Queísmo", diag:"Falta la preposición «de» exigida por «estar seguro de que».", trat:"Estoy segura de que ha llegado tarde."},
+  {n:2, texto:"Pienso de que deberíamos revisar el informe.", cat:"Morfosintaxis", dolencia:"Dequeísmo", diag:"Se añade una «de» que «pensar» no exige en esta construcción.", trat:"Pienso que deberíamos revisar el informe."},
+  {n:3, texto:"A la directora la comunicaron la noticia esta mañana.", cat:"Morfosintaxis", dolencia:"Laísmo", diag:"«Comunicar algo a alguien» exige complemento indirecto («le»), no directo («la»).", trat:"A la directora le comunicaron la noticia esta mañana."},
+  {n:4, texto:"Compré un libro y le dejé en el tren.", cat:"Morfosintaxis", dolencia:"Leísmo de cosa", diag:"«Libro» es complemento directo de cosa: corresponde «lo», no «le».", trat:"Compré un libro y lo dejé en el tren."},
+  {n:5, texto:"Habían muchos motivos para sospechar.", cat:"Morfosintaxis", dolencia:"Concordancia indebida con «haber» impersonal", diag:"El «haber» impersonal es invariable: no concuerda en plural.", trat:"Había muchos motivos para sospechar."},
+  {n:6, texto:"El informe pone que las cifras han bajado.", cat:"Léxico", dolencia:"Verbo baúl", diag:"«Poner» es un verbo comodín que sustituye a uno más preciso.", trat:"El informe indica (o refleja) que las cifras han bajado."},
+  {n:7, texto:"Subió arriba a por el informe y volvió a repetir la misma explicación otra vez.", cat:"Léxico", dolencia:"Redundancia / pleonasmo", diag:"«Subir arriba», «volver a repetir» y «otra vez» duplican información.", trat:"Subió a por el informe y repitió la misma explicación."},
+  {n:8, texto:"El árbitro decidió infringir una sanción al jugador.", cat:"Léxico", dolencia:"Parónimo (infringir / infligir)", diag:"«Infringir» es quebrantar una norma; «imponer un castigo» es «infligir».", trat:"El árbitro decidió infligir una sanción al jugador."},
+  {n:9, texto:"El Rector inauguró el Congreso de Lingüística el próximo Lunes.", cat:"Ortotipografía", dolencia:"Mayúsculas indebidas", diag:"Los cargos y los días de la semana se escriben en minúscula.", trat:"El rector inauguró el Congreso de Lingüística el próximo lunes."},
+  {n:10, texto:"El informe utiliza el término stakeholders sin explicarlo.", cat:"Ortotipografía", dolencia:"Extranjerismo crudo sin marcar", diag:"Los extranjerismos no adaptados deben escribirse en cursiva.", trat:"El informe utiliza el término stakeholders (en cursiva) sin explicarlo."},
+  {n:11, texto:"Los estudiantes que llegaron tarde, no pudieron entrar al examen.", cat:"Puntuación", dolencia:"Coma indebida entre sujeto y predicado", diag:"No debe separarse con coma el sujeto de su predicado.", trat:"Los estudiantes que llegaron tarde no pudieron entrar al examen."},
+  {n:12, texto:"Había tres razones para no ir; llovía mucho, hacía frío y estaba cansada.", cat:"Puntuación", dolencia:"Punto y coma en lugar de dos puntos", diag:"Ante una enumeración explicativa corresponden dos puntos.", trat:"Había tres razones para no ir: llovía mucho, hacía frío y estaba cansada."},
+];
+
+// ---- construcción de la lista de pantallas ----
+// tipos: 'instrucciones', 'triaje' (por paciente), 'alta' (por paciente), 'reflexion1', 'reflexion2'
+const screens = [{type:'instrucciones'}];
+pacientes.forEach(p=>{
+  screens.push({type:'triaje', n:p.n});
+  screens.push({type:'alta', n:p.n});
+});
+screens.push({type:'reflexion1'});
+screens.push({type:'reflexion2'});
+
+let clave = '';
+let idx = 0; // índice dentro de screens
+let started = false;
+let data = { responses:{}, reflexion1:'', reflexion2:'' };
+
+function storageKey(k){ return 'tee_t3p2_async__' + k.trim().toLowerCase(); }
+
+function loadProgress(k){
+  try{
+    const raw = localStorage.getItem(storageKey(k));
+    if(raw){ const parsed = JSON.parse(raw); return parsed; }
+  }catch(e){}
+  return null;
+}
+function saveProgress(){
+  try{
+    localStorage.setItem(storageKey(clave), JSON.stringify({ idx, data }));
+  }catch(e){}
+}
+
+function resp(n){
+  if(!data.responses[n]) data.responses[n] = { cat:'', diagnostico:'', correccion:'', nota:'' };
+  return data.responses[n];
+}
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function render(){
+  const app = document.getElementById('app');
+  if(!started){ app.innerHTML = renderCover(); attachCover(); return; }
+  const scr = screens[idx];
+  app.innerHTML = renderTopbar() + renderStage(scr) + renderNavbar(scr);
+  attachStage(scr);
+  attachNav(scr);
+  saveProgress();
+}
+
+function renderCover(){
+  return `
+  <div class="cover">
+    <div class="box">
+      <div class="kicker">Tema 3 · Clínica de estilo — actividad asíncrona</div>
+      <h1>Urgencias del texto (versión individual)</h1>
+      <p>Vas a pasar consulta tú solo/a por los 12 pacientes del "Panel de triaje": leerás cada texto, diagnosticarás su dolencia lingüística y propondrás el tratamiento (la corrección). Después de cada caso verás el alta médica oficial para comparar tu diagnóstico.</p>
+      <div class="pills">
+        <span class="pill">⏱ Duración orientativa: 100-120 min</span>
+        <span class="pill">🩺 12 casos clínicos</span>
+        <span class="pill">💾 Se guarda tu progreso automáticamente</span>
+      </div>
+      <p>Puedes hacerla de una vez o en varias sesiones: si cierras la pestaña, al volver a entrar con tu misma clave académica continuarás exactamente donde lo dejaste.</p>
+      <label style="display:block;font-weight:700;color:var(--azul);font-size:.85rem;margin-top:.6rem;">Introduce tu clave académica para empezar (nada de nombres y apellidos)</label>
+      <input type="text" id="claveInput" placeholder="Ej.: 202312345" autocomplete="off">
+      <div class="err" id="claveErr"></div>
+      <button class="btn primary" id="startBtn" style="padding:.7rem 2rem;font-size:.95rem;">Comenzar / continuar</button>
+    </div>
+  </div>`;
+}
+
+function attachCover(){
+  const input = document.getElementById('claveInput');
+  const err = document.getElementById('claveErr');
+  const start = ()=>{
+    const v = input.value.trim();
+    if(!v){ err.textContent = 'Escribe tu clave académica para continuar.'; return; }
+    clave = v;
+    const prev = loadProgress(clave);
+    if(prev && typeof prev.idx === 'number'){
+      idx = prev.idx;
+      data = prev.data;
+      err.textContent = '';
+    } else {
+      idx = 0;
+      data = { responses:{}, reflexion1:'', reflexion2:'' };
+    }
+    started = true;
+    render();
+  };
+  document.getElementById('startBtn').onclick = start;
+  input.addEventListener('keydown', e=>{ if(e.key==='Enter') start(); });
+  input.focus();
+}
+
+function stepLabel(scr){
+  if(scr.type==='instrucciones') return 'Instrucciones';
+  if(scr.type==='reflexion1') return 'Reflexión final (1/2)';
+  if(scr.type==='reflexion2') return 'Reflexión final (2/2)';
+  const fase = scr.type==='triaje' ? 'Triaje' : 'Alta médica';
+  return `Paciente ${scr.n} de 12 · ${fase}`;
+}
+
+function renderTopbar(){
+  return `<div class="topbar">
+    <div class="tt">Urgencias del texto · Clínica de estilo (asíncrona)<small>Clave académica: ${esc(clave)}</small></div>
+    <div class="progress">${stepLabel(screens[idx])} — pantalla ${idx+1}/${screens.length}</div>
+  </div>`;
+}
+
+function renderNavbar(scr){
+  const isFirst = idx===0;
+  const isLast = idx===screens.length-1;
+  return `<div class="navbar">
+    <button class="btn ghost" id="backBtn" ${isFirst?'disabled':''}>← Atrás</button>
+    <span class="save-note">💾 Guardado automáticamente en este dispositivo</span>
+    ${isLast ? '' : `<button class="btn primary" id="nextBtn">Siguiente →</button>`}
+  </div>`;
+}
+
+function renderStage(scr){
+  if(scr.type==='instrucciones') return renderInstrucciones();
+  if(scr.type==='triaje') return renderTriaje(scr.n);
+  if(scr.type==='alta') return renderAlta(scr.n);
+  if(scr.type==='reflexion1') return renderReflexion1();
+  if(scr.type==='reflexion2') return renderReflexion2();
+  return '';
+}
+
+function renderInstrucciones(){
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cómo funciona la dinámica</div>
+    <h1 class="scr">Instrucciones de "Urgencias del texto"</h1>
+    <div class="instr">
+      Vas a atender, uno a uno, a 12 "pacientes": cada paciente es una frase con un problema de corrección (morfosintaxis, léxico, ortotipografía o puntuación).
+    </div>
+    <p class="lead"><b>Por cada paciente pasarás por dos pantallas:</b></p>
+    <p class="lead">1️⃣ <b>Triaje:</b> lees el texto, eliges la categoría de la dolencia, escribes tu diagnóstico (qué norma se incumple) y propones el tratamiento (la frase corregida). No hay límite de tiempo por pantalla, pero tómatelo como una consulta real: no vuelvas atrás a cambiar tu respuesta una vez que hayas visto el alta médica.</p>
+    <p class="lead">2️⃣ <b>Alta médica:</b> se revela el diagnóstico oficial y podrás comparar tu propuesta con la correcta, y anotar qué aprendes del caso.</p>
+    <p class="lead">Al terminar los 12 pacientes, cerrarás la consulta con una breve reflexión final sobre los patrones de error que más se repiten en tu propia escritura.</p>
+    <p class="lead">Tu progreso se guarda automáticamente en este ordenador/navegador: puedes cerrar la pestaña y continuar más tarde con la misma clave académica.</p>
+  </div></div>`;
+}
+
+function renderTriaje(n){
+  const p = pacientes.find(x=>x.n===n);
+  const r = resp(n);
+  const catBtns = cats.map(c=>`<button type="button" class="catbtn ${r.cat===c?'sel':''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Consulta n.º ${p.n} de 12 · Fase 1 — Triaje</div>
+    <h1 class="scr">Paciente n.º ${p.n}</h1>
+    <div class="instr">Lee el texto del paciente. Indica a qué categoría pertenece su dolencia, redacta tu diagnóstico (qué norma se incumple y por qué) y propón el tratamiento (la versión ya corregida del texto).</div>
+    <div class="orig">«${esc(p.texto)}»</div>
+    <div class="field">
+      <label>Categoría de la dolencia</label>
+      <div class="catbtns">${catBtns}</div>
+    </div>
+    <div class="field">
+      <label>Tu diagnóstico</label>
+      <textarea id="diagInput" rows="2" placeholder="¿Qué norma se incumple y por qué?">${esc(r.diagnostico)}</textarea>
+    </div>
+    <div class="field">
+      <label>Tratamiento propuesto (frase corregida)</label>
+      <textarea id="corrInput" rows="2" placeholder="Escribe aquí la versión corregida completa">${esc(r.correccion)}</textarea>
+    </div>
+  </div></div>`;
+}
+
+function renderAlta(n){
+  const p = pacientes.find(x=>x.n===n);
+  const r = resp(n);
+  const ok = r.cat === p.cat;
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Consulta n.º ${p.n} de 12 · Fase 2 — Alta médica</div>
+    <h1 class="scr">Paciente n.º ${p.n} — comparación de diagnósticos ${ok?'<span class="badge ok">Categoría acertada</span>':'<span class="badge no">Categoría distinta</span>'}</h1>
+    <div class="orig">«${esc(p.texto)}»</div>
+    <div class="compare">
+      <div class="box mine"><b class="tag">Tu diagnóstico (${esc(r.cat||'sin elegir')})</b>${esc(r.diagnostico)||'<em>(sin respuesta)</em>'}<br><br><b class="tag">Tu tratamiento</b>${esc(r.correccion)||'<em>(sin respuesta)</em>'}</div>
+      <div class="box oficial"><b class="tag">Dolencia oficial: ${esc(p.dolencia)} (${esc(p.cat)})</b>${esc(p.diag)}<br><br><b class="tag">Tratamiento oficial</b>${esc(p.trat)}</div>
+    </div>
+    <div class="field">
+      <label>¿Qué te llevas de este caso? (una nota breve)</label>
+      <textarea id="notaInput" rows="2" placeholder="Ej.: tiendo a confundir infringir/infligir...">${esc(r.nota)}</textarea>
+    </div>
+  </div></div>`;
+}
+
+function renderReflexion1(){
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cierre de consulta · Reflexión final (1/2)</div>
+    <h1 class="scr">Tus patrones de error</h1>
+    <div class="instr">Repasa mentalmente tus 12 casos. ¿Qué tipo de dolencia se te ha repetido más (morfosintaxis, léxico, ortotipografía o puntuación)? ¿Hay algún error que reconoces que cometes tú mismo/a al escribir?</div>
+    <div class="field">
+      <label>Tu reflexión</label>
+      <textarea id="ref1Input" rows="7" placeholder="Escribe aquí tu reflexión...">${esc(data.reflexion1)}</textarea>
+    </div>
+  </div></div>`;
+}
+
+function renderReflexion2(){
+  const resumen = buildResumen();
+  return `<div class="stage"><div class="card">
+    <div class="kicker">Cierre de consulta · Reflexión final (2/2)</div>
+    <h1 class="scr">Compromiso de mejora y resumen final</h1>
+    <div class="instr">Para terminar: escribe un compromiso concreto de mejora (una acción que vas a aplicar en tus próximos textos). Después, copia el resumen de tu consulta con el botón de abajo — tu profesora te indicará cómo y cuándo entregarlo.</div>
+    <div class="field">
+      <label>Mi compromiso de mejora</label>
+      <textarea id="ref2Input" rows="3" placeholder="Escribe aquí tu compromiso...">${esc(data.reflexion2)}</textarea>
+    </div>
+    <div class="field" style="flex:1;min-height:0;display:flex;flex-direction:column;">
+      <label>Resumen de tu consulta (clave académica + 12 diagnósticos + reflexiones)</label>
+      <div class="summary-box" id="resumenBox">${esc(resumen)}</div>
+    </div>
+  </div></div>`;
+}
+
+function buildResumen(){
+  let out = `CLÍNICA DE ESTILO (ASÍNCRONA) · TEMA 3 · TEE\nClave académica: ${clave}\n\n`;
+  pacientes.forEach(p=>{
+    const r = resp(p.n);
+    out += `PACIENTE ${p.n}: «${p.texto}»\n`;
+    out += `  Mi categoría: ${r.cat||'—'} | Categoría oficial: ${p.cat}\n`;
+    out += `  Mi diagnóstico: ${r.diagnostico||'—'}\n`;
+    out += `  Diagnóstico oficial: ${p.diag}\n`;
+    out += `  Mi tratamiento: ${r.correccion||'—'}\n`;
+    out += `  Tratamiento oficial: ${p.trat}\n`;
+    out += `  Mi nota: ${r.nota||'—'}\n\n`;
+  });
+  out += `REFLEXIÓN — patrones de error:\n${data.reflexion1||'—'}\n\n`;
+  out += `COMPROMISO DE MEJORA:\n${data.reflexion2||'—'}\n`;
+  return out;
+}
+
+function canAdvance(scr){
+  if(scr.type==='triaje'){
+    const r = resp(scr.n);
+    return !!(r.cat && r.diagnostico.trim() && r.correccion.trim());
+  }
+  if(scr.type==='alta'){
+    const r = resp(scr.n);
+    return !!r.nota.trim();
+  }
+  if(scr.type==='reflexion1') return !!data.reflexion1.trim();
+  return true;
+}
+
+function attachStage(scr){
+  if(scr.type==='triaje'){
+    const p = pacientes.find(x=>x.n===scr.n);
+    const r = resp(scr.n);
+    document.querySelectorAll('.catbtn').forEach(b=>{
+      b.onclick = ()=>{
+        r.cat = b.dataset.cat;
+        document.querySelectorAll('.catbtn').forEach(x=>x.classList.remove('sel'));
+        b.classList.add('sel');
+        refreshNextState(scr);
+        saveProgress();
+      };
+    });
+    document.getElementById('diagInput').addEventListener('input', e=>{ r.diagnostico = e.target.value; refreshNextState(scr); saveProgress(); });
+    document.getElementById('corrInput').addEventListener('input', e=>{ r.correccion = e.target.value; refreshNextState(scr); saveProgress(); });
+  }
+  if(scr.type==='alta'){
+    const r = resp(scr.n);
+    document.getElementById('notaInput').addEventListener('input', e=>{ r.nota = e.target.value; refreshNextState(scr); saveProgress(); });
+  }
+  if(scr.type==='reflexion1'){
+    document.getElementById('ref1Input').addEventListener('input', e=>{ data.reflexion1 = e.target.value; refreshNextState(scr); saveProgress(); });
+  }
+  if(scr.type==='reflexion2'){
+    document.getElementById('ref2Input').addEventListener('input', e=>{ data.reflexion2 = e.target.value; document.getElementById('resumenBox').textContent = buildResumen(); saveProgress(); });
+  }
+}
+
+function refreshNextState(scr){
+  const nextBtn = document.getElementById('nextBtn');
+  if(nextBtn) nextBtn.disabled = !canAdvance(scr);
+}
+
+function attachNav(scr){
+  const backBtn = document.getElementById('backBtn');
+  if(backBtn) backBtn.onclick = ()=>{ if(idx>0){ idx--; render(); } };
+  const nextBtn = document.getElementById('nextBtn');
+  if(nextBtn){
+    nextBtn.disabled = !canAdvance(scr);
+    nextBtn.onclick = ()=>{ if(canAdvance(scr) && idx<screens.length-1){ idx++; render(); } };
+  }
+  if(scr.type==='reflexion2'){
+    const box = document.getElementById('resumenBox');
+    const copyBtn = document.createElement('button');
+    copyBtn.className = 'btn amarillo';
+    copyBtn.textContent = '📋 Copiar resumen completo';
+    copyBtn.style.marginTop = '.6rem';
+    copyBtn.onclick = ()=>{
+      const text = buildResumen();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(()=>{ copyBtn.textContent = '✅ Copiado'; setTimeout(()=>copyBtn.textContent='📋 Copiar resumen completo', 1800); });
+      } else {
+        const ta = document.createElement('textarea'); ta.value = text; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+        copyBtn.textContent = '✅ Copiado';
+      }
+    };
+    box.insertAdjacentElement('afterend', copyBtn);
+  }
+}
+
+render();
+</script>
+</body>
+</html>
