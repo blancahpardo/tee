@@ -162,7 +162,7 @@ footer { text-align:center; padding:26px 6vw 40px; font-size:11px; color:var(--h
 const ICONS = { manual: '📘', principal: '📓', evaluable: '📝', practica: '🧪', quiz: '❓' };
 const LABELS = {
   manual: 'Manual teórico', principal: 'Cuaderno principal', evaluable: 'Cuaderno evaluable',
-  practica: 'Prácticas', quiz: 'Cuestionario de práctica'
+  practica: 'Actividades en el aula', quiz: 'Cuestionario de práctica'
 };
 const DESCS = {
   manual: 'Lectura en PDF, descargable',
@@ -1046,7 +1046,7 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La adecuación, al estilo One Piece', desc2: 'La adecuación, al estilo One Piece.', file: 'comic_t1.ppsx' },
-      practica: { exists: true, label: 'Actividad en el aula', items: [
+      practica: { exists: true, items: [
         { id: 'p1', label: 'Perfiladores de registro', kind: 'classroom', file: 'actividad_t1.html' }
       ] },
       quiz: { exists: true }
@@ -1099,11 +1099,12 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'La corrección de estilo, al estilo Barbie', desc2: 'La corrección de estilo, al estilo Barbie.', file: 'comic_t3.ppsx' },
-      recurso1: { exists: true, kind: 'interactive', label: 'Panel de triaje', icon: '🩺',
+      recurso1: { exists: true, kind: 'interactive', label: 'NV. Panel de triaje (posclínica de estilo)', icon: '🩺',
         desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' },
       practica: { exists: true, items: [
-        { id: 'p2', label: 'Actividad 2 en el aula', kind: 'classroom', file: 'actividad_t3_p2.html' },
-        { id: 'p3', label: 'Actividad 3 en el aula', kind: 'classroom', file: 'actividad_t3_p3.html' }
+        { id: 'p3', label: 'Actividad "Notas de la comunidad"', kind: 'classroom', file: 'actividad_t3_p3.html' },
+        { id: 'p2', label: 'Actividad "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2.html' },
+        { id: 'p2async', label: 'Actividad asíncrona "Clínica de estilo"', kind: 'classroom', file: 'actividad_t3_p2_asincrona.html' }
       ] },
       quiz: { exists: true }
     } },
