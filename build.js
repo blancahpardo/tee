@@ -1102,8 +1102,8 @@ const TEMAS = [
       recurso1: { exists: true, kind: 'interactive', label: 'Panel de triaje', icon: '🩺',
         desc: 'Actividad de la práctica de clínica de estilo', desc2: 'Actividad de la práctica de clínica de estilo.', file: 'panel_de_triaje.html' },
       practica: { exists: true, items: [
-        { id: 'p2', label: 'Clínica de estilo', file: 'practica_t3_p2.pdf' },
-        { id: 'p3', label: 'Notas de la comunidad', file: 'practica_t3_p3.pdf' }
+        { id: 'p2', label: 'Actividad 2 en el aula', kind: 'classroom', file: 'actividad_t3_p2.html' },
+        { id: 'p3', label: 'Actividad 3 en el aula', kind: 'classroom', file: 'actividad_t3_p3.html' }
       ] },
       quiz: { exists: true }
     } },
