@@ -1083,7 +1083,7 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'Coherencia y cohesión, al estilo Tintín', desc2: 'Coherencia y cohesión, al estilo Tintín.', file: 'comic_t2.ppsx' },
-      recurso1: { exists: true, kind: 'interactive', label: 'Reconstrucción interactiva', icon: '🧩',
+      recurso1: { exists: true, kind: 'classroom', label: 'Reconstrucción interactiva', icon: '🧩',
         desc: 'Actividad de la práctica de coherencia', desc2: 'Actividad de la práctica de coherencia.', file: 'reconstruccion_interactiva.html' },
       recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
         desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' },
