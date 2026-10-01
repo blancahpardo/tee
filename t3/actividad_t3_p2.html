@@ -70,11 +70,32 @@
   .ctrl-btn.alt{ background:var(--gris-claro); color:var(--azul); }
   .flash{ animation:flash 1s infinite; }
   @keyframes flash{ 0%,100%{ background:var(--blanco);} 50%{ background:#FBEAEA; } }
-  /* ---- Recurso interactivo (fase 4) ---- */
-  .interactive-wrap{ margin-top:1.6rem; background:var(--blanco); border-radius:20px; padding:1.6rem 1.8rem; box-shadow:0 4px 24px rgba(0,0,0,.08); }
-  .interactive-wrap h3{ color:var(--azul); margin:0 0 .3rem; font-size:1.2rem; }
-  .interactive-wrap .sub{ color:var(--gris); opacity:.8; margin:0 0 1rem; font-size:.92rem; }
-  .interactive-embed{ width:100%; height:65vh; border:none; border-radius:12px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+  /* ---- Botones rojos de fase y sus ventanas emergentes ---- */
+  .phases{ display:flex; flex-direction:column; gap:.7rem; }
+  #phaseList{ display:flex; flex-direction:column; gap:.7rem; }
+  .frag-btn{
+    margin-top:auto; align-self:flex-start; background:var(--rojo); color:var(--blanco); border:none; border-radius:999px;
+    padding:.75rem 1.4rem; font-family:inherit; font-size:1rem; font-weight:700; cursor:pointer;
+    box-shadow:0 4px 14px rgba(192,57,43,.4);
+  }
+  .frag-overlay{ position:fixed; inset:0; background:rgba(0,20,30,.72); display:none; align-items:center; justify-content:center; padding:3vh 3vw; z-index:50; }
+  .frag-overlay.active{ display:flex; }
+  .frag-modal{ background:var(--blanco); border-radius:20px; width:100%; max-width:1400px; max-height:94vh; overflow:auto; padding:1.6rem 2rem 2rem; position:relative; color:var(--gris); }
+  .frag-modal h2{ color:var(--azul); margin:0 0 .3rem; }
+  .frag-modal p.sub{ margin:0 0 1.2rem; color:var(--gris); opacity:.8; }
+  .frag-close{ position:absolute; top:1.1rem; right:1.3rem; background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--gris); line-height:1; }
+  .frag-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:1rem; }
+  .frag-card{ background:var(--gris-claro); border-radius:14px; padding:1rem 1.1rem; display:flex; gap:.8rem; align-items:flex-start; font-size:1.1rem; line-height:1.4; }
+  .frag-card .tag{ flex:none; width:2.2rem; height:2.2rem; border-radius:50%; background:var(--azul); color:var(--blanco); display:grid; place-items:center; font-weight:700; font-size:.9rem; }
+  /* ---- Recurso interactivo (fase 4): botón + ventana emergente grande ---- */
+  .interactive-overlay{ position:fixed; inset:0; background:rgba(0,40,63,.92); display:none; align-items:center; justify-content:center; padding:2vh 2vw; z-index:50; }
+  .interactive-overlay.active{ display:flex; }
+  .interactive-modal{ background:var(--blanco); border-radius:20px; width:98vw; height:96vh; max-width:1700px; position:relative; border-top:8px solid var(--rojo); overflow:hidden; display:flex; flex-direction:column; }
+  .interactive-modal .imod-head{ display:flex; justify-content:space-between; align-items:center; padding:1rem 1.6rem; border-bottom:1px solid #E4E8EA; }
+  .interactive-modal .imod-head h3{ color:var(--azul); margin:0; font-size:1.2rem; }
+  .interactive-embed{ flex:1; width:100%; border:none; }
+  .modal-close{ border:none; background:var(--gris-claro); color:var(--azul); border-radius:999px; padding:.5rem 1.1rem; font-family:inherit; font-weight:700; cursor:pointer; font-size:.95rem; }
+  .modal-close:hover{ background:var(--azul); color:var(--blanco); }
   /* ---- Pie de autoría y referencias ---- */
   .tee-footer{ background:var(--azul-osc); color:#C9D6DD; padding:2.2rem 6vw 2.4rem; font-size:.82rem; line-height:1.55; border-top:1px solid rgba(255,255,255,.15); }
   .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
@@ -100,7 +121,11 @@
     <button class="backlink" onclick="goTo('briefing')">← Volver al briefing</button>
   </div>
   <div class="layout">
-    <div class="phases" id="phaseList"></div>
+    <div class="phases">
+      <div id="phaseList"></div>
+      <button class="frag-btn" id="pacientesBtn" hidden onclick="openFragModal()">🩺 Pacientes</button>
+      <button class="frag-btn" id="reconBtn" hidden onclick="openReconModal()">🩺 Abrir panel de triaje</button>
+    </div>
     <div class="timer-card" id="timerCard">
       <p id="phaseTitle"></p>
       <p id="phaseDesc"></p>
@@ -117,10 +142,23 @@
       </div>
     </div>
   </div>
-  <div class="interactive-wrap" id="interactiveWrap" hidden>
-    <h3>Altas médicas · Panel de triaje</h3>
-    <p class="sub">Revisa la clave con el panel de triaje en pantalla mientras comentáis el diagnóstico que más debate haya generado.</p>
-    <iframe class="interactive-embed" id="interactiveFrame" src="" title="Panel de triaje"></iframe>
+  <div class="frag-overlay" id="fragOverlay">
+    <div class="frag-modal">
+      <button class="frag-close" onclick="closeFragModal()">×</button>
+      <h2>🩺 Los doce pacientes</h2>
+      <p class="sub">Proyecta esta pantalla mientras el alumnado hace el triaje individual de la Fase 1.</p>
+      <div class="frag-grid" id="fragGrid"></div>
+    </div>
+  </div>
+
+  <div class="interactive-overlay" id="interactiveOverlay">
+    <div class="interactive-modal">
+      <div class="imod-head">
+        <h3>Altas médicas · Panel de triaje</h3>
+        <button class="modal-close" onclick="closeReconModal()">✕ Cerrar</button>
+      </div>
+      <iframe class="interactive-embed" id="interactiveFrame" src="" title="Panel de triaje"></iframe>
+    </div>
   </div>
 </div>
 
@@ -144,6 +182,37 @@ const phases = [
   {n:"Fase 4", t:"Altas médicas", min:10, desc:"Comparte el diagnóstico que más debate os haya generado. Revisa la clave con el panel de triaje en pantalla. Dequeísmo, leísmo y verbos baúl: los errores más frecuentes también en la vida real."},
 ];
 let current = 0, remaining = phases[0].min*60, total = phases[0].min*60, running=false, timerId=null, interactiveLoaded=false;
+
+// Los mismos 12 textos de paciente del Panel de triaje, sin categoría ni diagnóstico visibles
+const pacientesTextos = [
+  "Estoy segura que ha llegado tarde.",
+  "Pienso de que deberíamos revisar el informe.",
+  "A la directora la comunicaron la noticia esta mañana.",
+  "Compré un libro y le dejé en el tren.",
+  "Habían muchos motivos para sospechar.",
+  "El informe pone que las cifras han bajado.",
+  "Subió arriba a por el informe y volvió a repetir la misma explicación otra vez.",
+  "El árbitro decidió infringir una sanción al jugador.",
+  "El Rector inauguró el Congreso de Lingüística el próximo Lunes.",
+  "El informe utiliza el término stakeholders sin explicarlo.",
+  "Los estudiantes que llegaron tarde, no pudieron entrar al examen.",
+  "Había tres razones para no ir; llovía mucho, hacía frío y estaba cansada.",
+];
+function renderFragGrid(){
+  const grid = document.getElementById('fragGrid');
+  grid.innerHTML = pacientesTextos.map((t,i)=>`<div class="frag-card"><span class="tag">${i+1}</span><span>«${t}»</span></div>`).join('');
+}
+function openFragModal(){ renderFragGrid(); document.getElementById('fragOverlay').classList.add('active'); }
+function closeFragModal(){ document.getElementById('fragOverlay').classList.remove('active'); }
+document.getElementById('fragOverlay').addEventListener('click', e=>{ if(e.target.id==='fragOverlay') closeFragModal(); });
+function openReconModal(){
+  const frame = document.getElementById('interactiveFrame');
+  if(!interactiveLoaded){ frame.src = 'panel_de_triaje.html'; interactiveLoaded = true; }
+  document.getElementById('interactiveOverlay').classList.add('active');
+}
+function closeReconModal(){ document.getElementById('interactiveOverlay').classList.remove('active'); }
+document.getElementById('interactiveOverlay').addEventListener('click', e=>{ if(e.target.id==='interactiveOverlay') closeReconModal(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape'){ closeFragModal(); closeReconModal(); } });
 const R = 120, C = 2*Math.PI*R;
 const ring = document.getElementById('ring');
 ring.style.strokeDasharray = C;
@@ -177,10 +246,9 @@ function updateTimerCard(){
   const p = phases[current];
   document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
   document.getElementById('phaseDesc').textContent = p.desc;
+  document.getElementById('pacientesBtn').hidden = (current !== 1);
   const isLast = (current === phases.length - 1);
-  document.getElementById('interactiveWrap').hidden = !isLast;
-  const frame = document.getElementById('interactiveFrame');
-  if(isLast && !interactiveLoaded){ frame.src = 'panel_de_triaje.html'; interactiveLoaded = true; }
+  document.getElementById('reconBtn').hidden = !isLast;
   drawClock();
 }
 function drawClock(){
