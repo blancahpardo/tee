@@ -70,22 +70,40 @@
   .ctrl-btn.alt{ background:var(--gris-claro); color:var(--azul); }
   .flash{ animation:flash 1s infinite; }
   @keyframes flash{ 0%,100%{ background:var(--blanco);} 50%{ background:#FBEAEA; } }
-  /* ---- Debate final ---- */
-  .debate-final{ margin-top:1.6rem; background:var(--blanco); border-radius:20px; padding:1.6rem 1.8rem; box-shadow:0 4px 24px rgba(0,0,0,.08); }
-  .debate-final h3{ color:var(--azul); margin:0 0 .3rem; font-size:1.2rem; }
-  .debate-final .sub{ color:var(--gris); opacity:.8; margin:0 0 1rem; font-size:.92rem; }
+  /* ---- Herramientas de fase (columna izquierda, bajo los botones de fase) ---- */
+  .left-col{ display:flex; flex-direction:column; gap:1.2rem; }
+  .tools{ background:var(--blanco); border-radius:16px; padding:1.1rem 1.2rem 1.2rem; box-shadow:0 2px 10px rgba(0,0,0,.06); border-top:5px solid var(--rojo); }
+  .tools[hidden]{ display:none; }
+  .tools h3{ color:var(--rojo); margin:0 0 .2rem; font-size:1.05rem; }
+  .tools .sub{ color:var(--gris); opacity:.8; margin:0 0 .8rem; font-size:.88rem; }
+  .tools .group + .group{ margin-top:1rem; padding-top:1rem; border-top:1px solid #E4E8EA; }
   .text-btns{ display:flex; flex-wrap:wrap; gap:.7rem; }
   .text-btn{
-    border:none; border-radius:12px; padding:.75rem 1.2rem; font-family:inherit; font-size:.98rem; font-weight:700;
-    cursor:pointer; background:var(--gris-claro); color:var(--azul);
+    border:none; border-radius:12px; padding:.85rem 1.3rem; font-family:inherit; font-size:1rem; font-weight:700;
+    cursor:pointer; background:var(--rojo); color:var(--blanco); box-shadow:0 4px 12px rgba(192,57,43,.3);
+    transition:transform .12s, background .12s;
   }
-  .text-btn:hover{ background:var(--azul); color:var(--blanco); }
-  .text-modal{ position:fixed; inset:0; background:rgba(0,40,63,.92); display:flex; align-items:center; justify-content:center; padding:5vh 5vw; z-index:50; }
+  .text-btn:hover{ background:#962D22; transform:translateY(-2px); }
+  /* ---- Ventana emergente grande ---- */
+  .text-modal{ position:fixed; inset:0; background:rgba(0,40,63,.92); display:flex; align-items:center; justify-content:center; padding:3vh 3vw; z-index:50; }
   .text-modal[hidden]{ display:none; }
-  .text-modal-inner{ background:var(--blanco); color:var(--gris); border-radius:20px; padding:3rem 3.4rem; max-width:900px; width:100%; max-height:86vh; overflow:auto; position:relative; }
-  .text-modal-inner h2{ color:var(--azul); margin:0 0 1.4rem; font-size:1.8rem; }
-  .text-modal-inner p{ font-size:1.5rem; line-height:1.6; white-space:pre-wrap; margin:0 0 1.2rem; }
-  .text-modal-inner .hint{ font-size:1.05rem; color:var(--gris); opacity:.8; font-style:italic; }
+  .text-modal-inner{ background:var(--blanco); color:var(--gris); border-radius:20px; padding:3rem 3.6rem; max-width:1400px; width:94vw; max-height:92vh; overflow:auto; position:relative; border-top:8px solid var(--rojo); }
+  .text-modal-inner h2{ color:var(--azul); margin:0 0 1.4rem; font-size:2.1rem; padding-right:7rem; }
+  .text-modal-inner p{ font-size:1.6rem; line-height:1.6; white-space:pre-wrap; margin:0 0 1.2rem; }
+  .text-modal-inner .hint{ font-size:1.15rem; color:var(--gris); opacity:.85; font-style:italic; white-space:normal; }
+  .rep{ background:#FDE7E4; color:var(--rojo); font-weight:700; border-radius:6px; padding:0 .25rem; }
+  .rep sup{ font-size:.7em; }
+  .frases{ list-style:none; margin:0 0 1.4rem; padding:0; display:flex; flex-direction:column; gap:1rem; counter-reset:fr; }
+  .frases li{ counter-increment:fr; display:flex; gap:1.1rem; align-items:center; font-size:1.8rem; line-height:1.45; background:var(--gris-claro); border-radius:16px; padding:1.2rem 1.4rem; }
+  .frases li::before{ content:counter(fr); flex:none; width:3rem; height:3rem; border-radius:50%; background:var(--rojo); color:var(--blanco); display:grid; place-items:center; font-weight:700; font-size:1.4rem; }
+  .averias{ display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:.9rem; margin:0 0 1.4rem; }
+  .averia{ background:var(--gris-claro); border-left:6px solid var(--rojo); border-radius:12px; padding:.9rem 1.1rem; }
+  .averia b{ display:block; color:var(--azul); font-size:1.2rem; margin-bottom:.25rem; }
+  .averia span{ font-size:1.02rem; line-height:1.45; }
+  .ficha{ width:100%; border-collapse:collapse; margin:.4rem 0 1.4rem; font-size:1.15rem; }
+  .ficha th{ background:var(--azul); color:var(--blanco); text-align:left; padding:.7rem .9rem; }
+  .ficha td{ border:1px solid #D8DEE1; padding:.9rem; height:3.2rem; }
+  .ficha td:first-child{ font-weight:700; color:var(--rojo); width:8rem; white-space:nowrap; }
   .modal-close{
     position:absolute; top:1.2rem; right:1.4rem; border:none; background:var(--gris-claro); color:var(--azul);
     border-radius:999px; padding:.5rem 1.1rem; font-family:inherit; font-weight:700; cursor:pointer; font-size:.95rem;
@@ -116,7 +134,10 @@
     <button class="backlink" onclick="goTo('briefing')">← Volver al briefing</button>
   </div>
   <div class="layout">
-    <div class="phases" id="phaseList"></div>
+    <div class="left-col">
+      <div class="phases" id="phaseList"></div>
+      <div class="tools" id="toolsPanel" hidden></div>
+    </div>
     <div class="timer-card" id="timerCard">
       <p id="phaseTitle"></p>
       <p id="phaseDesc"></p>
@@ -133,18 +154,13 @@
       </div>
     </div>
   </div>
-  <div class="debate-final" id="debateFinal" hidden>
-    <h3>Puesta en común · Las tres estaciones</h3>
-    <p class="sub">Abre cada texto en pantalla completa para comentar la reparación con el grupo.</p>
-    <div class="text-btns" id="textBtns"></div>
-  </div>
 </div>
 
-<div class="text-modal" id="textModal" hidden>
+<div class="text-modal" id="textModal" hidden onclick="if(event.target===this) closeText()">
   <div class="text-modal-inner">
     <button class="modal-close" onclick="closeText()">✕ Cerrar</button>
     <h2 id="modalTitle"></h2>
-    <p id="modalBody"></p>
+    <div id="modalBody"></div>
     <p class="hint" id="modalHint"></p>
   </div>
 </div>
@@ -163,41 +179,103 @@
 <script>
 const phases = [
   {n:"Fase 0", t:"Aterrizaje", min:5, desc:"Lee la situación en voz alta (pantalla anterior). Reparte o proyecta las fichas de diagnóstico y de las tres estaciones."},
-  {n:"Fase 1", t:"Diagnóstico rápido", min:7, desc:"Cada estudiante recibe 3 frases sueltas, una por avería. Identifica individualmente qué tipo de fallo de cohesión tiene cada una: verbo baúl, repetición evitable o conector inadecuado. Todavía no las repara."},
-  {n:"Fase 2", t:"Las tres estaciones", min:24, desc:"En parejas, ~8 min por estación. Estación 1: sustituir los verbos baúl por verbos precisos. Estación 2: eliminar la repetición con elipsis, pronombres, sinónimos o hiperónimos. Estación 3: completar los huecos con el conector adecuado del banco (¡hay distractores!)."},
+  {n:"Fase 1", t:"Diagnóstico rápido", min:7, desc:"Cada estudiante recibe 3 frases sueltas, una por avería. Identifica individualmente qué tipo de fallo de cohesión tiene cada una. Todavía no las repara."},
+  {n:"Fase 2", t:"Las tres estaciones", min:24, desc:"En parejas, ~8 min por estación. Estación 1: sustituir los verbos baúl por verbos precisos. Estación 2: eliminar la repetición con elipsis, pronombres, sinónimos o hiperónimos e indicar qué mecanismo se ha empleado en cada caso. Estación 3: completar los huecos con el conector adecuado del banco (¡hay distractores!)."},
   {n:"Fase 3", t:"Inspección de calidad cruzada", min:16, desc:"En grupos de 4: intercambiad vuestras tres reparaciones con otra pareja. Actuad de inspectores: aplicad la checklist y proponed mejoras. Acordad la versión definitiva de cada estación."},
   {n:"Fase 4", t:"Puesta en común", min:8, desc:"Compartid la mejor reparación de cada estación. Comentad el desacuerdo más interesante que hayáis resuelto. La cohesión no es decoración: es la mecánica interna del texto."},
 ];
+const rep = n => `<span class="rep">La biblioteca <sup>(${n})</sup></span>`;
+const rep2 = n => `<span class="rep">la biblioteca <sup>(${n})</sup></span>`;
+const tabla = (cols, filas) => `<table class="ficha"><thead><tr>${cols.map(c=>`<th>${c}</th>`).join('')}</tr></thead><tbody>${
+  filas.map(f=>`<tr><td>${f}</td>${cols.slice(1).map(()=>'<td></td>').join('')}</tr>`).join('')}</tbody></table>`;
 const TEXTS = [
   {id:'1', title:'Estación 1 · Verbos baúl',
-   body:'El club de debate hizo una actividad muy especial la semana pasada. Los organizadores pusieron carteles por toda la facultad y dieron entradas gratuitas a los primeros veinte inscritos. El acto tuvo lugar en el salón de actos, donde se hicieron varias intervenciones muy aplaudidas. Al final, el club dio las gracias a los ponentes y puso un pequeño vino español para cerrar la tarde. Todos los asistentes tuvieron una experiencia muy positiva.',
+   body:'<p>El club de debate hizo una actividad muy especial la semana pasada. Los organizadores pusieron carteles por toda la facultad y dieron entradas gratuitas a los primeros veinte inscritos. El acto tuvo lugar en el salón de actos, donde se hicieron varias intervenciones muy aplaudidas. Al final, el club dio las gracias a los ponentes y puso un pequeño vino español para cerrar la tarde. Todos los asistentes tuvieron una experiencia muy positiva.</p>',
    hint:'Los verbos dar, hacer, poner, tener y haber son «baúles»: sirven para casi todo, pero dicen poco. Sustituidlos por verbos más precisos sin cambiar el sentido.'},
   {id:'2', title:'Estación 2 · Mecanismos de referencia',
-   body:'La biblioteca de la universidad ha ampliado su horario. La biblioteca abrirá también los sábados por la mañana. La biblioteca ha incorporado, además, nuevas salas de estudio silencioso. Los estudiantes llevaban tiempo pidiendo que la biblioteca ofreciera más espacio en época de exámenes. La dirección de la biblioteca ha confirmado que la medida se mantendrá, al menos, durante todo el curso.',
-   hint:'Este texto repite el mismo sustantivo demasiadas veces. Reescribidlo usando pronombres, elipsis, sinónimos o hiperónimos para mantener la referencia sin repetir.'},
+   body:`<p>La biblioteca de la universidad ha ampliado su horario. ${rep(1)} abrirá también los sábados por la mañana. ${rep(2)} ha incorporado, además, nuevas salas de estudio silencioso. Los estudiantes llevaban tiempo pidiendo que ${rep2(3)} ofreciera más espacio en época de exámenes. La dirección de ${rep2(4)} ha confirmado que la medida se mantendrá, al menos, durante todo el curso.</p>` +
+     tabla(['Repetición', 'Vuestra solución', 'Mecanismo empleado (pronombre, elipsis, sinónimo, hiperónimo…)'], ['(1)','(2)','(3)','(4)']),
+   hint:'Este texto repite el mismo sustantivo demasiadas veces. Reescribidlo usando pronombres, elipsis, sinónimos o hiperónimos para mantener la referencia sin repetir. Después, completad la tabla: para cada repetición numerada, anotad vuestra solución y qué mecanismo de cohesión habéis empleado.'},
   {id:'3', title:'Estación 3 · Conectores',
-   body:'El aumento de las prácticas en empresa durante el grado ha generado opiniones encontradas. ___(1)___, muchos estudiantes valoran la experiencia profesional que aportan. ___(2)___, otros consideran que reducen el tiempo disponible para el estudio. ___(3)___, algunas facultades han decidido limitar su duración máxima. ___(4)___, el debate sobre su peso en el plan de estudios sigue abierto.\n\nBanco de conectores: por un lado · por otro lado · por ello · con todo · por ejemplo · es decir · además (ojo: sobran conectores que no encajan en ningún hueco).',
+   body:'<p>El aumento de las prácticas en empresa durante el grado ha generado opiniones encontradas. ___(1)___, muchos estudiantes valoran la experiencia profesional que aportan. ___(2)___, otros consideran que reducen el tiempo disponible para el estudio. ___(3)___, algunas facultades han decidido limitar su duración máxima. ___(4)___, el debate sobre su peso en el plan de estudios sigue abierto.\n\nBanco de conectores: por un lado · por otro lado · por ello · con todo · por ejemplo · es decir · además (ojo: sobran conectores que no encajan en ningún hueco).</p>' +
+     tabla(['Hueco', 'Conector elegido', 'Relación lógica (causa, contraste, adición, concesión…)'], ['(1)','(2)','(3)','(4)']),
    hint:'Completad los huecos con el conector más adecuado del banco. Justificad después la relación lógica que habéis identificado en cada hueco.'},
 ];
-function renderTextButtons(){
-  const wrap = document.getElementById('textBtns');
-  wrap.innerHTML = '';
-  TEXTS.forEach(t=>{
-    const b = document.createElement('button');
-    b.className = 'text-btn';
-    b.textContent = 'Estación ' + t.id;
-    b.onclick = ()=> openText(t.id);
-    wrap.appendChild(b);
-  });
+// Fase 1: las tres frases del diagnóstico rápido
+const FRASES = [
+  '«El profesor puso un examen muy difícil.»',
+  '«Mi hermano compró un coche. Mi hermano está encantado con el coche de mi hermano.»',
+  '«Llovía mucho. Por consiguiente, decidimos quedarnos en casa a pesar de todo.»',
+];
+// Catálogo de averías de cohesión según el manual teórico del tema 2 (apdos. 2.2, 5 y 6); se baraja cada vez que se abre
+const AVERIAS = [
+  ['Verbo baúl', 'Un verbo comodín (hacer, tener, poner, dar, haber…) ocupa el lugar de otro más preciso.'],
+  ['Sustantivo comodín', 'Palabras generales («cosa», «tema», «cuestión», «hecho») sustituyen al término exacto.'],
+  ['Repetición evitable', 'El mismo término reaparece de forma innecesaria, pobre o monótona.'],
+  ['Sinónimo impreciso', 'Se sustituye un término técnico por otro que no significa exactamente lo mismo.'],
+  ['Referencia pronominal ambigua', 'Un pronombre o posesivo puede remitir a más de un referente.'],
+  ['Demostrativo sin referente claro', '«Esto», «este argumento», «ese hecho»… no se sabe a qué remiten.'],
+  ['Elipsis irrecuperable', 'Se omite información que el lector no puede reconstruir a partir del contexto.'],
+  ['Deíctico impreciso', '«Aquí», «hoy», «actualmente»… sin precisar el lugar, el momento o el elemento al que apuntan.'],
+  ['Determinación mal empleada', 'El artículo (un / el) no corresponde a si el referente es nuevo o ya conocido.'],
+  ['Concordancia rota en la cadena referencial', 'El género o el número no casan con el referente que se recupera.'],
+  ['Conector inadecuado', 'El conector expresa una relación lógica que no existe entre las ideas que une.'],
+  ['Ausencia de conector necesario', 'Falta la marca explícita y la relación entre las ideas se pierde o resulta ambigua.'],
+  ['Acumulación de conectores', 'Se encadenan marcadores redundantes («por tanto, en consecuencia») o se marca todo.'],
+  ['Conector mal puntuado', 'El marcador no lleva las pausas gráficas (comas, punto y coma) que exige su posición.'],
+];
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j = Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+function openModal(title, html, hint){
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = html;
+  document.getElementById('modalHint').textContent = hint || '';
+  document.getElementById('textModal').hidden = false;
 }
 function openText(id){
   const t = TEXTS.find(x=>x.id===id);
-  document.getElementById('modalTitle').textContent = t.title;
-  document.getElementById('modalBody').textContent = t.body;
-  document.getElementById('modalHint').textContent = t.hint;
-  document.getElementById('textModal').hidden = false;
+  openModal(t.title, t.body, t.hint);
+}
+function openFrases(){
+  openModal('Diagnóstico rápido · Las tres frases',
+    `<ol class="frases">${FRASES.map(f=>`<li>${f}</li>`).join('')}</ol>`,
+    'Anota, para cada frase, qué tipo de avería de cohesión tiene. Todavía no las repares.');
+}
+function openPista(){
+  openModal('Una pista · Catálogo de averías de cohesión',
+    `<div class="averias">${shuffle(AVERIAS).map(([n,d])=>`<div class="averia"><b>${n}</b><span>${d}</span></div>`).join('')}</div>`,
+    'Estas son las averías de cohesión que recoge el manual del tema 2. Elige, para cada una de las tres frases, la que le corresponde.');
 }
 function closeText(){ document.getElementById('textModal').hidden = true; }
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeText(); });
+
+function btn(label, fn){
+  const b = document.createElement('button');
+  b.className = 'text-btn'; b.textContent = label; b.onclick = fn;
+  return b;
+}
+function toolGroup(title, sub, buttons){
+  const g = document.createElement('div'); g.className = 'group';
+  g.innerHTML = `<h3>${title}</h3><p class="sub">${sub}</p>`;
+  const row = document.createElement('div'); row.className = 'text-btns';
+  row.append(...buttons); g.appendChild(row);
+  return g;
+}
+function renderTools(){
+  const panel = document.getElementById('toolsPanel');
+  panel.innerHTML = '';
+  const diag = ()=> toolGroup('Diagnóstico rápido', 'Proyecta las frases y, si hace falta, el catálogo completo de averías.',
+    [btn('Las 3 estaciones', openFrases), btn('Una pista', openPista)]);
+  const estaciones = ()=> toolGroup('Las tres estaciones', 'Abre cada texto en pantalla completa.',
+    TEXTS.map(t=>btn('Estación nº ' + t.id, ()=>openText(t.id))));
+  if(current === 1) panel.append(diag());
+  else if(current === 2) panel.append(estaciones());
+  else if(current === phases.length - 1) panel.append(diag(), estaciones());
+  panel.hidden = !panel.children.length;
+}
 let current = 0, remaining = phases[0].min*60, total = phases[0].min*60, running=false, timerId=null;
 const R = 120, C = 2*Math.PI*R;
 const ring = document.getElementById('ring');
@@ -232,10 +310,9 @@ function updateTimerCard(){
   const p = phases[current];
   document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
   document.getElementById('phaseDesc').textContent = p.desc;
-  document.getElementById('debateFinal').hidden = (current !== phases.length - 1);
+  renderTools();
   drawClock();
 }
-renderTextButtons();
 function drawClock(){
   const m = String(Math.floor(remaining/60)).padStart(2,'0');
   const s = String(remaining%60).padStart(2,'0');
