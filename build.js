@@ -1065,7 +1065,7 @@ const TEMAS = [
       quiz: { exists: true }
     } },
   { dir: 't2', numLabel: 'TEMA 2', titleShort: 'El discurso escrito', titleFull: 'Tema 2 · El discurso escrito', kicker: 'Tema 2 · El discurso escrito',
-    viewOrder: ['manual','videos','comic','recurso1','recurso2','practica','quiz'],
+    viewOrder: ['manual','videos','comic','recurso2','practica','quiz'],
     views: {
       manual: { exists: true, file: 'manual_t2.pdf' },
       videos: { exists: true, kind: 'videogroup', label: 'Vídeos explicativos', icon: '🎬',
@@ -1083,13 +1083,11 @@ const TEMAS = [
         ] },
       comic: { exists: true, kind: 'office', label: 'Cómic didáctico', icon: '📖',
         desc: 'Coherencia y cohesión, al estilo Tintín', desc2: 'Coherencia y cohesión, al estilo Tintín.', file: 'comic_t2.ppsx' },
-      recurso1: { exists: true, kind: 'classroom', label: 'Reconstrucción interactiva', icon: '🧩',
-        desc: 'Actividad de la práctica de coherencia', desc2: 'Actividad de la práctica de coherencia.', file: 'reconstruccion_interactiva.html' },
       recurso2: { exists: true, kind: 'interactive', label: 'Infografía chuleta', icon: '🗒️',
         desc: 'Recurso de la práctica de cohesión', desc2: 'Recurso de la práctica de cohesión.', file: 'infografia_chuleta.html' },
       practica: { exists: true, items: [
-        { id: 'p1', label: 'Actividad 1 en el aula', kind: 'classroom', file: 'actividad_t2_p1.html' },
-        { id: 'p2', label: 'Actividad 2 en el aula', kind: 'classroom', file: 'actividad_t2_p2.html' }
+        { id: 'p1', label: 'Actividad 1 en el aula · Coherencia', kind: 'classroom', file: 'actividad_t2_p1.html' },
+        { id: 'p2', label: 'Actividad 2 en el aula · Cohesión', kind: 'classroom', file: 'actividad_t2_p2.html' }
       ] },
       quiz: { exists: true }
     } },
