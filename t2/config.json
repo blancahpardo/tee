@@ -3,7 +3,7 @@
   "videos": true,
   "comic": true,
   "recurso1": false,
-  "recurso2": false,
+  "recurso2": true,
   "practica": false,
   "quiz": true
 }
