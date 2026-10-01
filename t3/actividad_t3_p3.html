@@ -133,8 +133,8 @@
     </div>
   </div>
   <div class="debate-final" id="debateFinal" hidden>
-    <h3>Publicación y votación · El feed completo</h3>
-    <p class="sub">Abre cada publicación en pantalla completa para leer la nota en voz alta y votar «útil» / «no útil».</p>
+    <h3 id="debateTitle">El feed completo</h3>
+    <p class="sub" id="debateSub">Abre cada publicación en pantalla completa para leer la nota en voz alta y votar «útil» / «no útil».</p>
     <div class="text-btns" id="textBtns"></div>
   </div>
 </div>
@@ -232,7 +232,13 @@ function updateTimerCard(){
   const p = phases[current];
   document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
   document.getElementById('phaseDesc').textContent = p.desc;
-  document.getElementById('debateFinal').hidden = (current !== phases.length - 1);
+  const isVotePhase = (p.t === 'Publicación y votación');
+  const needsTexts = current === 0 || current === 1 || isVotePhase;
+  document.getElementById('debateFinal').hidden = !needsTexts;
+  document.getElementById('debateTitle').textContent = isVotePhase ? 'Publicación y votación · El feed completo' : 'El feed completo';
+  document.getElementById('debateSub').textContent = isVotePhase
+    ? 'Abre cada publicación en pantalla completa para leer la nota en voz alta y votar «útil» / «no útil».'
+    : 'Proyéctalas o ábrelas en pantalla completa mientras reparten y revisan las publicaciones.';
   drawClock();
 }
 renderTextButtons();
