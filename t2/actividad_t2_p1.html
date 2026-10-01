@@ -39,6 +39,7 @@
   .backlink{ color:var(--azul); background:none; border:none; font-family:inherit; font-size:1rem; cursor:pointer; text-decoration:underline; }
   .layout{ display:grid; grid-template-columns:1.1fr 1.4fr; gap:1.6rem; flex:1; }
   .phases{ display:flex; flex-direction:column; gap:.7rem; }
+  #phaseList{ display:flex; flex-direction:column; gap:.7rem; }
   .phase-btn{
     text-align:left; border:none; border-radius:14px; padding:.9rem 1.1rem; cursor:pointer; font-family:inherit;
     background:var(--blanco); box-shadow:0 2px 10px rgba(0,0,0,.06); display:flex; justify-content:space-between; align-items:center;
@@ -70,11 +71,30 @@
   .ctrl-btn.alt{ background:var(--gris-claro); color:var(--azul); }
   .flash{ animation:flash 1s infinite; }
   @keyframes flash{ 0%,100%{ background:var(--blanco);} 50%{ background:#FBEAEA; } }
-  /* ---- Recurso interactivo (fase 4) ---- */
-  .interactive-wrap{ margin-top:1.6rem; background:var(--blanco); border-radius:20px; padding:1.6rem 1.8rem; box-shadow:0 4px 24px rgba(0,0,0,.08); }
-  .interactive-wrap h3{ color:var(--azul); margin:0 0 .3rem; font-size:1.2rem; }
-  .interactive-wrap .sub{ color:var(--gris); opacity:.8; margin:0 0 1rem; font-size:.92rem; }
-  .interactive-embed{ width:100%; height:65vh; border:none; border-radius:12px; box-shadow:0 2px 10px rgba(159,177,186,.28); }
+  /* ---- Botón "Fragmentos" (solo Fase 1) y su ventana emergente ---- */
+  .frag-btn{
+    margin-top:auto; align-self:flex-start; background:var(--rojo); color:var(--blanco); border:none; border-radius:999px;
+    padding:.75rem 1.4rem; font-family:inherit; font-size:1rem; font-weight:700; cursor:pointer;
+    box-shadow:0 4px 14px rgba(192,57,43,.4);
+  }
+  .frag-overlay{ position:fixed; inset:0; background:rgba(0,20,30,.72); display:none; align-items:center; justify-content:center; padding:3vh 3vw; z-index:50; }
+  .frag-overlay.active{ display:flex; }
+  .frag-modal{ background:var(--blanco); border-radius:20px; width:100%; max-width:1400px; max-height:94vh; overflow:auto; padding:1.6rem 2rem 2rem; position:relative; color:var(--gris); }
+  .frag-modal h2{ color:var(--azul); margin:0 0 .3rem; }
+  .frag-modal p.sub{ margin:0 0 1.2rem; color:var(--gris); opacity:.8; }
+  .frag-close{ position:absolute; top:1.1rem; right:1.3rem; background:none; border:none; font-size:1.8rem; cursor:pointer; color:var(--gris); line-height:1; }
+  .frag-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:1rem; }
+  .frag-card{ background:var(--gris-claro); border-radius:14px; padding:1rem 1.1rem; display:flex; gap:.8rem; align-items:flex-start; font-size:1.15rem; line-height:1.4; }
+  .frag-card .tag{ flex:none; width:2.2rem; height:2.2rem; border-radius:50%; background:var(--azul); color:var(--blanco); display:grid; place-items:center; font-weight:700; }
+  /* ---- Recurso interactivo (fase 4): botón + ventana emergente grande ---- */
+  .interactive-overlay{ position:fixed; inset:0; background:rgba(0,40,63,.92); display:none; align-items:center; justify-content:center; padding:2vh 2vw; z-index:50; }
+  .interactive-overlay.active{ display:flex; }
+  .interactive-modal{ background:var(--blanco); border-radius:20px; width:98vw; height:96vh; max-width:1700px; position:relative; border-top:8px solid var(--rojo); overflow:hidden; display:flex; flex-direction:column; }
+  .interactive-modal .imod-head{ display:flex; justify-content:space-between; align-items:center; padding:1rem 1.6rem; border-bottom:1px solid #E4E8EA; }
+  .interactive-modal .imod-head h3{ color:var(--azul); margin:0; font-size:1.2rem; }
+  .interactive-embed{ flex:1; width:100%; border:none; }
+  .modal-close{ border:none; background:var(--gris-claro); color:var(--azul); border-radius:999px; padding:.5rem 1.1rem; font-family:inherit; font-weight:700; cursor:pointer; font-size:.95rem; }
+  .modal-close:hover{ background:var(--azul); color:var(--blanco); }
   /* ---- Pie de autoría y referencias ---- */
   .tee-footer{ background:var(--azul-osc); color:#C9D6DD; padding:2.2rem 6vw 2.4rem; font-size:.82rem; line-height:1.55; border-top:1px solid rgba(255,255,255,.15); }
   .tee-footer h3{ color:var(--amarillo); font-size:.85rem; margin:0 0 .7rem; text-transform:uppercase; letter-spacing:.07em; font-weight:700; }
@@ -100,7 +120,11 @@
     <button class="backlink" onclick="goTo('briefing')">← Volver al briefing</button>
   </div>
   <div class="layout">
-    <div class="phases" id="phaseList"></div>
+    <div class="phases">
+      <div id="phaseList"></div>
+      <button class="frag-btn" id="fragmentsBtn" hidden onclick="openFragModal()">🧩 Fragmentos</button>
+      <button class="frag-btn" id="reconBtn" hidden onclick="openReconModal()">🧩 Abrir reconstrucción</button>
+    </div>
     <div class="timer-card" id="timerCard">
       <p id="phaseTitle"></p>
       <p id="phaseDesc"></p>
@@ -117,10 +141,23 @@
       </div>
     </div>
   </div>
-  <div class="interactive-wrap" id="interactiveWrap" hidden>
-    <h3>Recurso interactivo · Reconstrucción</h3>
-    <p class="sub">Actividad de la práctica de coherencia — proyecta y resolvedla entre todos antes de la puesta en común.</p>
-    <iframe class="interactive-embed" id="interactiveFrame" src="" title="Reconstrucción interactiva"></iframe>
+  <div class="frag-overlay" id="fragOverlay">
+    <div class="frag-modal">
+      <button class="frag-close" onclick="closeFragModal()">×</button>
+      <h2>🧩 Fragmentos desordenados</h2>
+      <p class="sub">Proyecta esta pantalla mientras el alumnado hace el rastreo individual de la Fase 1.</p>
+      <div class="frag-grid" id="fragGrid"></div>
+    </div>
+  </div>
+
+  <div class="interactive-overlay" id="interactiveOverlay">
+    <div class="interactive-modal">
+      <div class="imod-head">
+        <h3>Recurso interactivo · Reconstrucción</h3>
+        <button class="modal-close" onclick="closeReconModal()">✕ Cerrar</button>
+      </div>
+      <iframe class="interactive-embed" id="interactiveFrame" src="" title="Reconstrucción interactiva"></iframe>
+    </div>
   </div>
 </div>
 
@@ -144,6 +181,38 @@ const phases = [
   {n:"Fase 4", t:"Puesta en común", min:10, desc:"Compartid el punto que más debate os haya generado. Revela el orden de referencia y el mecanismo decisivo en cada caso. Progresión temática, conectores y anáforas: las tres herramientas de hoy."},
 ];
 let current = 0, remaining = phases[0].min*60, total = phases[0].min*60, running=false, timerId=null, interactiveLoaded=false;
+
+// Los mismos 12 fragmentos desordenados de reconstruccion_interactiva.html, sin grupo ni posición visibles
+const fragmentos = [
+  "Algunos especialistas aconsejan mantener horarios regulares de sueño y limitar el uso de pantallas antes de acostarse.",
+  "El teletrabajo se popularizó de forma acelerada a partir de 2020 y, desde entonces, se ha convertido en una modalidad habitual en numerosos sectores.",
+  "Por todo ello, resulta necesario que las universidades incorporen programas de acompañamiento que ayuden al alumnado a gestionar mejor el descanso.",
+  "Diversos estudios recomiendan establecer pausas activas cada cierto tiempo para reducir sus efectos.",
+  "Numerosos estudiantes universitarios experimentan dificultades para conciliar el sueño durante los periodos de exámenes.",
+  "La fatiga digital se define como el agotamiento físico y mental derivado de un uso prolongado de pantallas y videollamadas.",
+  "Entre sus consecuencias más habituales se encuentran la pérdida de concentración, el bajo rendimiento y el aumento del estrés.",
+  "En definitiva, el teletrabajo exige nuevas estrategias de organización que protejan la salud digital de quienes lo practican.",
+  "Este fenómeno, conocido como insomnio situacional, suele estar asociado a la ansiedad y a la sobrecarga de tareas académicas.",
+  "Entre sus síntomas más frecuentes se encuentran la dificultad para concentrarse, la irritabilidad y las molestias oculares.",
+  "No obstante, muchos estudiantes desconocen estas recomendaciones o no encuentran el tiempo necesario para aplicarlas.",
+  "Sin embargo, esta forma de trabajo trae consigo un fenómeno cada vez más estudiado: la fatiga digital.",
+];
+function renderFragGrid(){
+  const grid = document.getElementById('fragGrid');
+  grid.innerHTML = fragmentos.map((t,i)=>`<div class="frag-card"><span class="tag">${i+1}</span><span>${t}</span></div>`).join('');
+}
+function openFragModal(){ renderFragGrid(); document.getElementById('fragOverlay').classList.add('active'); }
+function closeFragModal(){ document.getElementById('fragOverlay').classList.remove('active'); }
+document.getElementById('fragOverlay').addEventListener('click', e=>{ if(e.target.id==='fragOverlay') closeFragModal(); });
+
+function openReconModal(){
+  const frame = document.getElementById('interactiveFrame');
+  if(!interactiveLoaded){ frame.src = 'reconstruccion_interactiva.html'; interactiveLoaded = true; }
+  document.getElementById('interactiveOverlay').classList.add('active');
+}
+function closeReconModal(){ document.getElementById('interactiveOverlay').classList.remove('active'); }
+document.getElementById('interactiveOverlay').addEventListener('click', e=>{ if(e.target.id==='interactiveOverlay') closeReconModal(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape'){ closeFragModal(); closeReconModal(); } });
 const R = 120, C = 2*Math.PI*R;
 const ring = document.getElementById('ring');
 ring.style.strokeDasharray = C;
@@ -177,10 +246,9 @@ function updateTimerCard(){
   const p = phases[current];
   document.getElementById('phaseTitle').textContent = `${p.n} · ${p.t}`;
   document.getElementById('phaseDesc').textContent = p.desc;
+  document.getElementById('fragmentsBtn').hidden = (current !== 1);
   const isLast = (current === phases.length - 1);
-  document.getElementById('interactiveWrap').hidden = !isLast;
-  const frame = document.getElementById('interactiveFrame');
-  if(isLast && !interactiveLoaded){ frame.src = 'reconstruccion_interactiva.html'; interactiveLoaded = true; }
+  document.getElementById('reconBtn').hidden = !isLast;
   drawClock();
 }
 function drawClock(){
