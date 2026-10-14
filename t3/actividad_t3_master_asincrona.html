@@ -180,7 +180,7 @@ function renderCover(){
         <span class="pill">🐰 Contenidos de Tema 3</span>
         <span class="pill">💾 Progreso autoguardado</span>
       </div>
-      <p class="evidence">⚠️ <b>Esta actividad la recogerá tu profesora como evidencia de tu trabajo.</b> Tus respuestas quedan asociadas a tu clave académica.</p>
+      <p class="evidence">⚠️ <b>ENTREGA OBLIGATORIA EN MOODLE.</b> Al terminar, pulsa «Copiar resumen completo» y pégalo en <b>Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 2 Estudio de máster</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> Esta entrega es la evidencia con la que se dejará constancia de tu <b>asistencia y participación</b> en la sesión: si no la envías, constará como ausencia.</p>
       <p>Puedes hacerla de una vez o en varias sesiones: si cierras la pestaña, al volver a entrar con tu misma clave académica seguirás donde lo dejaste.</p>
       <label style="display:block;font-weight:900;color:var(--lima);font-size:.85rem;margin-top:.5rem;">Clave académica (nada de nombres y apellidos)</label>
       <input type="text" id="claveInput" placeholder="Ej.: 202312345" autocomplete="off">
@@ -256,6 +256,7 @@ function renderInstrucciones(){
     <p class="lead">🎛️ <b>Ecualización del tono:</b> elige la reformulación con el registro más natural y adecuado.</p>
     <p class="lead">💿 <b>Sala de créditos:</b> detecta cuál de las dos versiones de cada crédito está bien escrita.</p>
     <p class="lead">Al final habrá un cierre con una breve reflexión y el resumen de tu paso por el estudio.</p>
+    <p class="lead" style="background:#2B1417;border-left:4px solid var(--rojo);border-radius:8px;padding:.6rem .9rem;">⚠️ <b>ENTREGA OBLIGATORIA EN MOODLE.</b> Al terminar, pulsa «Copiar resumen completo» y pégalo en <b>Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 2 Estudio de máster</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> Esta entrega es la evidencia con la que se dejará constancia de tu <b>asistencia y participación</b> en la sesión: si no la envías, constará como ausencia.</p>
   </div></div>`;
 }
 
@@ -404,7 +405,7 @@ function renderReflexion2(){
   return `<div class="stage"><div class="card">
     <div class="kicker">Cierre de sesión · Reflexión (2/2)</div>
     <h1 class="scr">Firma de máster y resumen final</h1>
-    <div class="instr">Escribe un compromiso concreto de mejora. Después, copia el resumen de tu paso por el estudio — tu profesora te indicará cómo y cuándo entregarlo.</div>
+    <div class="instr" style="border-left-color:var(--rojo);color:var(--texto);">Escribe un compromiso concreto de mejora. Después pulsa «Copiar resumen completo» y <b>pégalo en Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 2 Estudio de máster</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> <b>No olvides enviarlo:</b> es la evidencia de tu asistencia y participación en la sesión.</div>
     <div class="field"><label>Mi compromiso de mejora</label>
       <textarea id="ref2Input" rows="3" placeholder="Escribe aquí tu compromiso...">${esc(data.reflexion2)}</textarea>
     </div>
@@ -417,7 +418,7 @@ function renderReflexion2(){
 
 function buildResumen(){
   const meta = data.reorderMeta || { attempts:0, locked:false };
-  let out = `ESTUDIOS VOLTIO 787 · MÁSTER DE ESTILO · TEMA 3 · TEE\nClave académica: ${clave}\n\n`;
+  let out = `ESTUDIOS VOLTIO 787 · MÁSTER DE ESTILO · TEMA 3 · TEE\nClave académica: ${clave}\nGenerado el: ${new Date().toLocaleString('es-ES')}\n\n`;
   out += `SALA DE MEZCLA (orden de pistas): ${meta.locked ? (data.reorder.join(',')+' | intentos='+meta.attempts+' | '+(meta.success?'acertó':'no acertó')) : 'sin terminar'}\n\n`;
   clozeItems.forEach((it,i)=>{ const st = clozeState(i); out += `EMPALME ${i+1}: elegido="${st.chosen||'—'}" | correcto="${it.correct}" | intentos=${st.attempts} | ${st.success?'acertó':'no acertó'}\n`; });
   out += '\n';
