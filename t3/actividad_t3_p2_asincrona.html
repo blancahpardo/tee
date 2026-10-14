@@ -147,7 +147,7 @@ function renderCover(){
         <span class="pill">🩺 12 casos clínicos</span>
         <span class="pill">💾 Se guarda tu progreso automáticamente</span>
       </div>
-      <p style="background:#FBEAEA;border-left:4px solid var(--rojo);border-radius:8px;padding:.6rem .9rem;font-size:.85rem;text-align:left;">⚠️ <b>Esta actividad la recogerá tu profesora como evidencia de tu trabajo.</b> Tus respuestas quedan asociadas a tu clave académica, así que complétala con la misma seriedad que una práctica de clase.</p>
+      <p style="background:#FBEAEA;border-left:4px solid var(--rojo);border-radius:8px;padding:.6rem .9rem;font-size:.85rem;text-align:left;">⚠️ <b>ENTREGA OBLIGATORIA EN MOODLE.</b> Al terminar, pulsa «Copiar resumen completo» y pégalo en <b>Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 1 Clínica de estilo</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> Esta entrega es la evidencia con la que se dejará constancia de tu <b>asistencia y participación</b> en la sesión: si no la envías, constará como ausencia.</p>
       <p>Puedes hacerla de una vez o en varias sesiones: si cierras la pestaña, al volver a entrar con tu misma clave académica continuarás exactamente donde lo dejaste.</p>
       <label style="display:block;font-weight:700;color:var(--azul);font-size:.85rem;margin-top:.6rem;">Introduce tu clave académica para empezar (nada de nombres y apellidos)</label>
       <input type="text" id="claveInput" placeholder="Ej.: 202312345" autocomplete="off">
@@ -227,6 +227,7 @@ function renderInstrucciones(){
     <p class="lead">2️⃣ <b>Alta médica:</b> se revela el diagnóstico oficial y podrás comparar tu propuesta con la correcta, y anotar qué aprendes del caso.</p>
     <p class="lead">Al terminar los 12 pacientes, cerrarás la consulta con una breve reflexión final sobre los patrones de error que más se repiten en tu propia escritura.</p>
     <p class="lead">Tu progreso se guarda automáticamente en este ordenador/navegador: puedes cerrar la pestaña y continuar más tarde con la misma clave académica.</p>
+    <p class="lead" style="background:#FBEAEA;border-left:4px solid var(--rojo);border-radius:8px;padding:.6rem .9rem;">⚠️ <b>ENTREGA OBLIGATORIA EN MOODLE.</b> Al terminar, pulsa «Copiar resumen completo» y pégalo en <b>Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 1 Clínica de estilo</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> Esta entrega es la evidencia con la que se dejará constancia de tu <b>asistencia y participación</b> en la sesión: si no la envías, constará como ausencia.</p>
   </div></div>`;
 }
 
@@ -290,7 +291,7 @@ function renderReflexion2(){
   return `<div class="stage"><div class="card">
     <div class="kicker">Cierre de consulta · Reflexión final (2/2)</div>
     <h1 class="scr">Compromiso de mejora y resumen final</h1>
-    <div class="instr">Para terminar: escribe un compromiso concreto de mejora (una acción que vas a aplicar en tus próximos textos). Después, copia el resumen de tu consulta con el botón de abajo — tu profesora te indicará cómo y cuándo entregarlo.</div>
+    <div class="instr" style="background:#FBEAEA;border-left-color:var(--rojo);">Escribe un compromiso concreto de mejora. Después pulsa «Copiar resumen completo» y <b>pégalo en Moodle (Moodlerooms) › Actividades asíncronas T3 › Actividad 1 Clínica de estilo</b>. <b>Fecha límite: 4 de noviembre de 2026.</b> <b>No olvides enviarlo:</b> es la evidencia de tu asistencia y participación en la sesión.</div>
     <div class="field">
       <label>Mi compromiso de mejora</label>
       <textarea id="ref2Input" rows="3" placeholder="Escribe aquí tu compromiso...">${esc(data.reflexion2)}</textarea>
@@ -303,7 +304,7 @@ function renderReflexion2(){
 }
 
 function buildResumen(){
-  let out = `CLÍNICA DE ESTILO (ASÍNCRONA) · TEMA 3 · TEE\nClave académica: ${clave}\n\n`;
+  let out = `CLÍNICA DE ESTILO (ASÍNCRONA) · TEMA 3 · TEE\nClave académica: ${clave}\nGenerado el: ${new Date().toLocaleString('es-ES')}\n\n`;
   pacientes.forEach(p=>{
     const r = resp(p.n);
     out += `PACIENTE ${p.n}: «${p.texto}»\n`;
