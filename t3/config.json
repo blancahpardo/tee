@@ -5,5 +5,6 @@
   "recurso1": false,
   "practica": false,
   "quiz": false,
-  "asincronaClinica": true
+  "asincronaClinica": true,
+  "asincronaMaster": true
 }
