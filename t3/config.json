@@ -4,5 +4,6 @@
   "comic": true,
   "recurso1": false,
   "practica": false,
-  "quiz": false
+  "quiz": false,
+  "asincronaClinica": true
 }
