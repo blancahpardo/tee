@@ -4,7 +4,7 @@
   "comic": true,
   "recurso1": false,
   "practica": false,
-  "quiz": false,
+  "quiz": true,
   "asincronaClinica": true,
   "asincronaMaster": true
 }
