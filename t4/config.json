@@ -1,7 +1,7 @@
 {
   "manual": true,
   "videos": true,
-  "comics": false,
+  "comics": true,
   "avf": false,
   "practica": false,
   "quiz": false
