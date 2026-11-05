@@ -1,6 +1,6 @@
 {
   "manual": true,
-  "videos": false,
+  "videos": true,
   "comics": false,
   "avf": false,
   "practica": false,
