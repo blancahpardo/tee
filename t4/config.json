@@ -2,7 +2,7 @@
   "manual": true,
   "videos": true,
   "comics": true,
-  "avf": false,
+  "avf": true,
   "practica": false,
   "quiz": false
 }
